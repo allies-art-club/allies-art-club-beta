@@ -6,7 +6,7 @@
   "scripts": {
     "client": "cd client && npm start",
     "server": "node src/server.js",
-    "test": "cross-env NODE_ENV=test jest --coverage",
+    "test": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
     "dev": "concurrently taskkill /IM node.exe \"npm run client\" \"npm run server\"",
     "coverage": "cross-env NODE_ENV=test nyc npm run test"
   },
@@ -26,12 +26,13 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.2",
-    "jest": "^26.0.1",
     "nock": "^12.0.3",
     "nodemon": "^2.0.4",
     "nyc": "^15.0.1",
     "supertest": "^4.0.2",
-    "tap-spec": "^5.0.0"
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.1"
   }
 }

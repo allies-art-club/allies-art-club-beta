@@ -1,6 +1,8 @@
 const supertest = require('supertest');
+const tape = require('tape')
 const app = require('../src/app.js');
 
-test('Jest be working', ()=>{
-    expect(1).toBe(1);
+tape('Tape be working', (t)=>{
+    t.equals(1,1)
+    t.end()
 })
