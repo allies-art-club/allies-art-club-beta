@@ -1,6 +1,13 @@
 language: node_js
 node_js:
-  - 11.6.0
+  - "11.6.0"
+dist:
 cache:
   directories: 
-    - "node_modules"
+    - node_modules
+    - client/node_modules
+services:
+  -mongodb
+  -redis
+env:
+  - NODE_ENV = ci
