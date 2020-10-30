@@ -1,0 +1,21 @@
+.chevron-wrapper {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.right-arrow{
+    border-left: 
+      30px solid black;
+  }
+.left-arrow{
+border-right:
+    30px solid black;
+}
+
+.left-arrow,
+.right-arrow{
+  border-top:
+    18px solid transparent;
+  border-bottom:
+    18px solid transparent;
+}
