@@ -1,13 +1,12 @@
 language: node_js
 node_js:
-  - "11.6.0"
-dist:
+  - "12.8.3"
 cache:
   directories: 
     - node_modules
     - client/node_modules
-services:
-  -mongodb
-  -redis
 env:
   - NODE_ENV = ci
+install:
+  - npm install
+  - npm run build
