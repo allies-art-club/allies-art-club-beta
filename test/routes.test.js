@@ -12,16 +12,6 @@ tape('Tape be working', (t)=>{
     })
     
 })
-tape('Tape be working', (t)=>{
-    supertest(app)
-    .get('/')
-    .expect(200)
-    .then((response)=>{
-        t.equals(response.statusCode,200)
-        t.end()
-    })
-    
-})
 tape('404 route works',(t)=>{
     supertest(app)
     .get('/thisIsNotARoute')
