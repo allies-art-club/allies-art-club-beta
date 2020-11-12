@@ -11,3 +11,12 @@ services:
   -redis
 env:
   - NODE_ENV = ci // switch environment to CI to use different set of env variables
+install
+  -
+//nohup - if the shell is closed, don't kill anything this command creates
+// & - run this command in the subshell in the background
+ script:
+  - nohup npm run server &
+//do not want travis running tests before server loaded up
+  - sleep 3
+  - npm run test
