@@ -10,7 +10,7 @@
     "test": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
     "dev": "concurrently taskkill /IM node.exe \"npm run client\" \"npm start\"",
     "coverage": "cross-env NODE_ENV=test nyc npm run test",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
