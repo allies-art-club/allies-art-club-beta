@@ -7,6 +7,9 @@ const appReducer = (state={
                 ...state,
                 loggedIn: true
             }
+            break;
+        default:
+            break;
     }
     return state
 }
