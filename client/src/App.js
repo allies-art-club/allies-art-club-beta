@@ -9,17 +9,29 @@ import About from './Pages/about.js';
 import Thoughts from './Pages/thoughts.js';
 import ClubsAndProjects from './Pages/clubsAndProjects.js';
 import BeAnAllie from './Pages/beAnAllie.js';
-import PageContainer from './Utils/main.js';
+import {createGlobalStyle} from 'styled-components';
+import {PageContainer} from './Utils/Components/Styled/styled.js'
+import Bricks from './assets/white-bricks.jpg'
+
 const Route = require("react-router-dom").Route;
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin:0;
+    padding:0;
+    background-image: url(${Bricks})
+  }
+`
+
 
 const App= (props) =>{
   
     return (
       <>
-        
+        <GlobalStyle />
         <Router>
           <Header />
-          <main style={{margin: 'auto'}}>
+          <PageContainer>
             <Route path="/" exact strict render={
                     ()=>{
                         return(
@@ -50,7 +62,7 @@ const App= (props) =>{
                         <Thoughts />
                       )
                   }
-              }
+              }class
               />
               <Route path="/allies-clubs-and-projects" exact strict render={
                   ()=>{
@@ -60,7 +72,7 @@ const App= (props) =>{
                   }
               }
               />
-          </main>
+          </PageContainer>
           <Footer />
         </Router>
       </>
