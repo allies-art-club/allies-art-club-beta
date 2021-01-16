@@ -1,5 +1,34 @@
 import styled from 'styled-components';
 
+
+//Headings
+const HeadingMain = styled.h1`
+
+`
+const SubHeading = styled.h2`
+
+`
+//Page Navigation
+const PageNavWrap = styled.nav`
+
+`
+const PageNavList = styled.ul`
+
+`
+const PageNavItem = styled.li`
+
+`
+//Main page elements
+const Section = styled.section`
+
+`
+const SubSection = styled.div`
+
+`
+const Paragraph = styled.p`
+
+`
+//Carousel elements
 const CarouselContainer =styled.div`
     width: 80%;
     border: 2px solid yellow;
@@ -15,6 +44,7 @@ const Slide = styled.div`
 const CarouselImage = styled.img`
     position: absolute;
     width: 100%;
+    border-radius: 50%;
     left: ${props=>{
         return props.index*100;
     }
@@ -30,4 +60,4 @@ const CarouselImage = styled.img`
 `
 
 
-export {CarouselImage,CarouselContainer,Slide};
+export {HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,CarouselImage,CarouselContainer,Slide,};
