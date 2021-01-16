@@ -32,8 +32,10 @@ const homeReducer = (state={
                     else{
                         return el=2                    }
                 })
-            }
+            };
         break;
+        default:
+            break;
     }
     return state
 }

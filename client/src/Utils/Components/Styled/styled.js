@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-
-
+//Main
+const PageContainer = styled.main`
+  margin:auto;
+`
 //Headings
 const HeadingMain = styled.h1`
 
@@ -60,4 +62,4 @@ const CarouselImage = styled.img`
 `
 
 
-export {HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,CarouselImage,CarouselContainer,Slide,};
+export {PageContainer,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,CarouselImage,CarouselContainer,Slide,};
