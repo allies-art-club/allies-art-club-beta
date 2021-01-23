@@ -1,35 +1,28 @@
 import React from 'react';
-import image1 from '../../assets/smiling-face.png';
-import image2 from '../../assets/smiley.jpg';
-import image3 from '../../assets/grinning-face-with-smiling-eyes.png';
-import image4 from '../../assets/smiling-face-with-open-mouth.png';
-import './component.css';
-import {CarouselImage,CarouselContainer, Slide} from './Styled/styled.js'
+import {CarouselImage,CarouselContainer, Slide,ChevronWrapper,Arrow} from './Styled/carousel.styled.js';
+
 const Carousel = (props) => {
     return(
         <CarouselContainer>
+
             <Slide>
-                <CarouselImage index={props.imageIndices[0]} direction={props.direction} src={image1} alt='smile'/>
-                <CarouselImage index={props.imageIndices[1]} direction={props.direction} src={image2} alt='smile'/>
-                <CarouselImage index={props.imageIndices[2]} direction={props.direction} src={image3} alt='smile'/>
-                <CarouselImage index={props.imageIndices[3]} direction={props.direction} src={image4} alt='smile'/>
+                    {
+                        props.photos.map((photo,i)=>{
+                            props.imageIndices.push(i-1);
+                            console.log(i-1)
+                            return(
+                                <>
+                                    <CarouselImage key={i-1} index={props.imageIndices[i]} direction={props.direction} src={props.photoLoc+photo} alt={'photo'+i}/>
+                                </>
+                            )
+                        })
+                    }
+            
             </Slide>
-            <div className="chevron-wrapper">
-                <div className="left-arrow" onClick={()=>{props.carouselClick('left')}}>
-                    
-                </div>
-                <div className="right-arrow" onClick={()=>{props.carouselClick('right')}}>
-
-                </div>
-            </div>
-            {/* <div className="curtains">
-                <div className="left-curtain">
-
-                </div>
-                <div className="right-curtain">
-
-                </div>
-            </div> */}
+            <ChevronWrapper>
+                <Arrow onClick={()=>{props.carouselClick('left')}} direction={"left"} src={'../../../assets/carousel/arrow.png'} />
+                <Arrow onClick={()=>{props.carouselClick('right')}} direction={"right"} src={'../../../assets/carousel/arrow.png'} />
+            </ChevronWrapper>
         </CarouselContainer>
     )
 }

@@ -11,7 +11,6 @@ import ClubsAndProjects from './Pages/clubsAndProjects.js';
 import BeAnAllie from './Pages/beAnAllie.js';
 import {createGlobalStyle} from 'styled-components';
 import {PageContainer} from './Utils/Components/Styled/styled.js'
-import Bricks from './assets/white-bricks.jpg'
 
 const Route = require("react-router-dom").Route;
 
@@ -19,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin:0;
     padding:0;
-    background-image: url(${Bricks})
+    background-image: url(/assets/white-bricks.jpg)
   }
 `
 
