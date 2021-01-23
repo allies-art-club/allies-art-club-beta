@@ -1,5 +1,5 @@
 const homeReducer = (state={
-    imageIndices: [-1,0,1,2],
+    imageIndices: [],
     direction: 'right'
 },action) =>{
     switch(action.type){

@@ -1,43 +1,38 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
-import AllieLogo from "../assets/header/logo.png"
-import {HeaderContainer, HeaderNav,HeaderNavList, HeaderNavListElement, Logo, Figure} from './Components/Styled/header.styled.js';
+import {HeaderContainer, HeaderNav,HeaderNavList, HeaderNavListElement,NavLinkStyled, Logo, Figure,Slogan} from './Components/Styled/header.styled.js';
 
 const Header = () => {
     return(
         <HeaderContainer>
+            <Slogan>Creating a culture of community</Slogan>
             <HeaderNav>
                 <Figure>
-                    <NavLink
+                    <NavLinkStyled
                         exact to='/'>
-                        <Logo src={AllieLogo} aria-label="Allie 's Art Club Logo"/>
-                    </NavLink>
+                        <Logo src={'/assets/header/logo.png'} aria-label="Allie 's Art Club Logo"/>
+                    </NavLinkStyled>
                     
                 </Figure>
                 <HeaderNavList>
                     <HeaderNavListElement>
-                        <NavLink 
+                        <NavLinkStyled 
                             exact to='/about'
-                            activeStyle={{color:'red'}}
-                            >About</NavLink>
+                            >About</NavLinkStyled>
                     </HeaderNavListElement>
                     <HeaderNavListElement>
-                        <NavLink 
+                        <NavLinkStyled 
                             exact to='/allies-thoughts'
-                            activeStyle={{color:'red'}}
-                            >Thoughts</NavLink>
+                            >Thoughts</NavLinkStyled>
                     </HeaderNavListElement>
                     <HeaderNavListElement>
-                        <NavLink 
+                        <NavLinkStyled 
                             exact to='/allies-clubs-and-projects'
-                            activeStyle={{color:'red'}}
-                            >Projects</NavLink>
+                            >Projects</NavLinkStyled>
                     </HeaderNavListElement>
                     <HeaderNavListElement>
-                        <NavLink 
+                        <NavLinkStyled 
                             exact to='/how-to-be-an-allie'
-                            activeStyle={{color:'red'}}
-                            >Be an Allie</NavLink>
+                            >Be an Allie</NavLinkStyled>
                     </HeaderNavListElement>
                 </HeaderNavList>
             </HeaderNav>
