@@ -1,11 +1,11 @@
 import React from 'react';
-import {HeaderContainer, HeaderNav,HeaderNavList, HeaderNavListElement,NavLinkStyled, Logo, Figure,Slogan} from './Components/Styled/header.styled.js';
+import {HeaderContainer, HeaderNav,HeaderNavList, HeaderNavListElement,NavLinkStyled, Logo, Figure,Slogan} from '../Styled/header.styled.js';
 
 const Header = () => {
     return(
-        <HeaderContainer>
+        <HeaderContainer data-test="header">
             <Slogan>Creating a culture of community</Slogan>
-            <HeaderNav>
+            <HeaderNav id="nav">
                 <Figure>
                     <NavLinkStyled
                         exact to='/'>

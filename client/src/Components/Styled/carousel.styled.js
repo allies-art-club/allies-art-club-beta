@@ -53,6 +53,7 @@ const ChevronWrapper = styled.div`
     display: flex;
     width: 900px;
     justify-content: space-between;
+    z-index:100;
 `
 const Arrow= styled.img`
     transform: rotate(${props=>props.direction==='right'?'180deg': 'none'});
