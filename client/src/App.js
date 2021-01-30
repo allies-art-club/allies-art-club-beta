@@ -1,25 +1,25 @@
-import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import React, {Suspense, lazy} from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {logOut} from './Actions/appActions.js';
-import Header from './Utils/header.js';
-import Footer from './Utils/footer.js';
-import Home from './Pages/home.js';
-import About from './Pages/about.js';
-import Thoughts from './Pages/thoughts.js';
-import ClubsAndProjects from './Pages/clubsAndProjects.js';
-import BeAnAllie from './Pages/beAnAllie.js';
+import Header from './Components/header/header.js';
 import {createGlobalStyle} from 'styled-components';
-import {PageContainer} from './Utils/Components/Styled/styled.js'
-import Bricks from './assets/white-bricks.jpg'
+import {PageContainer} from './Components/Styled/styled.js'
 
-const Route = require("react-router-dom").Route;
+const Home = lazy(()=> import('./Pages/home.js'));
+const About = lazy(()=>import('./Pages/about.js'));
+const Thoughts = lazy(()=> import('./Pages/thoughts.js'));
+const ClubsAndProjects = lazy(()=> import('./Pages/clubsAndProjects.js'));
+const BeAnAllie = lazy(()=> import('./Pages/beAnAllie.js'));
+const Footer = lazy(()=> import('./Components/footer/footer.js'));
+
+
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin:0;
     padding:0;
-    background-image: url(${Bricks})
+    background-image: url(/assets/white-bricks.jpg)
   }
 `
 
@@ -31,49 +31,55 @@ const App= (props) =>{
         <GlobalStyle />
         <Router>
           <Header />
+
+          <Suspense fallback={<div>loading</div>}>
           <PageContainer>
-            <Route path="/" exact strict render={
+            <Switch>
+              <Route path="/" exact strict render={
+                      ()=>{
+                          return(
+                            <Home />
+                          )
+                      }
+                  }
+                  />
+              <Route path="/about" exact strict render={
                     ()=>{
                         return(
-                          <Home />
+                          <About />
                         )
                     }
                 }
                 />
-            <Route path="/about" exact strict render={
-                  ()=>{
-                      return(
-                        <About />
-                      )
-                  }
-              }
-              />
-            <Route path="/how-to-be-an-allie" exact strict render={
-                  ()=>{
-                      return(
-                        <BeAnAllie />
-                      )
-                  }
-              }
-              />
-            <Route path="/allies-thoughts" exact strict render={
-                  ()=>{
-                      return(
-                        <Thoughts />
-                      )
-                  }
-              }class
-              />
-              <Route path="/allies-clubs-and-projects" exact strict render={
-                  ()=>{
-                      return(
-                        <ClubsAndProjects />
-                      )
-                  }
-              }
-              />
+              <Route path="/how-to-be-an-allie" exact strict render={
+                    ()=>{
+                        return(
+                          <BeAnAllie />
+                        )
+                    }
+                }
+                />
+              <Route path="/allies-thoughts" exact strict render={
+                    ()=>{
+                        return(
+                          <Thoughts />
+                        )
+                    }
+                }class
+                />
+                <Route path="/allies-clubs-and-projects" exact strict render={
+                    ()=>{
+                        return(
+                          <ClubsAndProjects />
+                        )
+                    }
+                }
+                />
+            </Switch>
           </PageContainer>
           <Footer />
+          </Suspense>
+
         </Router>
       </>
       
