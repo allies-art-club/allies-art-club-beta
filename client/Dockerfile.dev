@@ -2,7 +2,5 @@ FROM node:alpine
 WORKDIR '/app'
 COPY ./package.json ./
 RUN npm install
-#workaround for babel-jest problem.. may need better fix
-RUN rm -rf ./node_modules/babel-jest ./node_modules/jest
 COPY . .
 CMD ["npm","run","start"]
