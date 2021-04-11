@@ -26,3 +26,11 @@ multi-container setup flow
 - travis pushes built prod images to docker hub
 - travis pushes project to heroku
 - heroku pulls images from Docker Hub, deploys (may swap out for AWS later)
+
+travis flow
+- specify docker as a dependency
+- build test version of react project
+- run tests
+- build prod version of all projects
+- push all to docker hub
+- tell heroku to update
