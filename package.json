@@ -7,8 +7,10 @@
     "client": "npm start --prefix client",
     "build": "npm install --prefix client && npm run build --prefix client",
     "start": "node src/server.js",
-    "test": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
+    "test-src": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
+    "test-client": "npm run test --prefix client",
     "dev": "concurrently taskkill /IM node.exe \"npm run client\" \"npm start\"",
+    "test": "npm run test-src && npm run test-client",
     "coverage": "cross-env NODE_ENV=test nyc npm run test",
     "heroku-postbuild": "npm install && npm run build"
   },

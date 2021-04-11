@@ -21,3 +21,16 @@ export async function logOut(event,dispatch){
     }
     
 }
+
+export function toggleMenu(event,dispatch){
+    try {
+        dispatch({
+            type: 'TOGGLE_MENU',
+            payload: ''
+        })
+    }
+    catch(e){
+        console.log(e)
+    }
+
+}
