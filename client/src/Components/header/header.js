@@ -12,7 +12,8 @@ const Header = (props) => {
                     }} 
                     id="burgerMenu"
                     aria-label="open menu" 
-                    tabIndex={0}>
+                    tabIndex={0}
+                    data-test="burgerMenu">
                     <BurgerLayers open={props.open}/>
                 </BurgerMenu>
                 <Figure>
@@ -23,7 +24,7 @@ const Header = (props) => {
                 </Figure>
                 <NavLinkStyled 
                                 nav={false}
-                                data-test="thoughtsLink"
+                                data-test="donate"
                                 exact to='/donate'
                                 >Donate</NavLinkStyled>
                 <HeaderNavListWrap onClick={(e)=>{

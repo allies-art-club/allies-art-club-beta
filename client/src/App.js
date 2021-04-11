@@ -5,6 +5,7 @@ import {logOut,toggleMenu} from './Actions/appActions.js';
 import Header from './Components/header/header.js';
 import {createGlobalStyle} from 'styled-components';
 import {Container} from './Components/Styled/styled.js';
+import Clipboard from './Components/clipboard/clipboard.js';
 
 const Home = lazy(()=> import('./Pages/home.js'));
 const About = lazy(()=>import('./Pages/about.js'));
@@ -56,7 +57,9 @@ const App= (props) =>{
               <Route path="/about" exact strict render={
                     ()=>{
                         return(
-                          <About />
+                          <Clipboard children={
+                            <About />
+                          } />
                         )
                     }
                 }
@@ -64,7 +67,9 @@ const App= (props) =>{
               <Route path="/how-to-be-an-allie" exact strict render={
                     ()=>{
                         return(
-                          <BeAnAllie />
+                          <Clipboard children={
+                            <BeAnAllie />
+                          } />
                         )
                     }
                 }
@@ -72,7 +77,9 @@ const App= (props) =>{
               <Route path="/allies-thoughts" exact strict render={
                     ()=>{
                         return(
-                          <Thoughts />
+                          <Clipboard children={
+                            <Thoughts />
+                          }/>
                         )
                     }
                 }class
@@ -80,7 +87,9 @@ const App= (props) =>{
               <Route path="/allies-clubs-and-projects" exact strict render={
                     ()=>{
                         return(
-                          <ClubsAndProjects />
+                          <Clipboard children={
+                            <ClubsAndProjects />
+                          }/>
                         )
                     }
                 }
