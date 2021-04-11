@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import { ClipboardContainer,ClipboardIcon} from '../Styled/clipboard.styled.js';
 const Clipboard = (props)=> {
     return (
