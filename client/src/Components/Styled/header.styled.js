@@ -99,7 +99,6 @@ border: none;
 
 `
 
-const CrossSpan = styled.span
 const HeaderNavList = styled.ul`
     list-style:none;
     @media(max-width:767px){

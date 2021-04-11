@@ -33,5 +33,4 @@ const Paragraph = styled.p`
 `
 
 
-
 export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph};
