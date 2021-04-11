@@ -23,7 +23,7 @@ const Header = (props) => {
                     </NavLinkLogo>
                 </Figure>
                 <NavLinkStyled 
-                                nav={false}
+                                nav={'nav'?0:1}
                                 data-test="donate"
                                 exact to='/donate'
                                 >Donate</NavLinkStyled>
@@ -37,28 +37,28 @@ const Header = (props) => {
                     <HeaderNavList id="pageNavList" data-test="navList" open={props.open} >
                         <HeaderNavListElement>
                             <NavLinkStyled 
-                                nav={true}
+                                nav={'nav'?1:0}
                                 data-test="aboutLink"
                                 exact to='/about'
                                 >About</NavLinkStyled>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavLinkStyled 
-                                nav={true}
+                                nav={'nav'?1:0}
                                 data-test="thoughtsLink"
                                 exact to='/allies-thoughts'
                                 >Thoughts</NavLinkStyled>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavLinkStyled 
-                                nav={true}
+                                nav={'nav'?1:0}
                                 data-test="clubsAndProjectsLink"
                                 exact to='/allies-clubs-and-projects'
                                 >Projects</NavLinkStyled>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavLinkStyled 
-                                nav={true}
+                                nav={'nav'?1:0}
                                 data-test="beAnAllieLink"
                                 exact to='/how-to-be-an-allie'
                                 >Be an Allie</NavLinkStyled>
