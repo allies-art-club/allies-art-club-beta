@@ -1,14 +1,20 @@
-language: node_js
-node_js:
-  - "12.18.3"
-cache:
-  directories: 
-    - node_modules
-    - client/node_modules
-install:
-  - npm install
-  - npm run build
-script:
-  - nohup npm start &
-  - sleep 3
-  - npm run test
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t harryyy27/allies_art_club/frontend -f ./client/Dockerfile.dev ./client
+  - docker build -t harryyy27/allies_art_club/backend -f ./src/Dockerfile.dev ./src
+scripts:
+  - docker run -e CI=true harryyy27/allies_art_club/frontend npm test
+  - docker run -e CI=true harryyy27/allies_art_club/backend npm test
+
+after_success:
+  - docker build -t harryyy27/allies_art_club/client ./client
+  - docker build -t harryyy27/allies_art_club/src ./src
+  - docker build -t harryyy27/allies_art_club/nginx ./nginx
+# Log in to docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push harryyy27/allies_art_club/client
+  - docker push harryyy27/allies_art_club/src
+  - docker push harryyy27/allies_art_club/nginx
