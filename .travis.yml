@@ -1,4 +1,5 @@
 sudo: required
+
 services:
   - docker
 
@@ -11,10 +12,19 @@ scripts:
 
 after_success:
   - docker build -t harryyy27/allies_art_club/client ./client
+  - docker tag harryyy27/allies_art_club/client client
   - docker build -t harryyy27/allies_art_club/src ./src
+  - docker tag harryyy27/allies_art_club/src src
   - docker build -t harryyy27/allies_art_club/nginx ./nginx
+  - docker tag harryyy27/allies_art_club/nginx nginx
 # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push harryyy27/allies_art_club/client
   - docker push harryyy27/allies_art_club/src
   - docker push harryyy27/allies_art_club/nginx
+  - wget -qO- https://toolbelt.heroku.com/install.sh | sh
+  - echo "$HEROKU_API | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
+deploy:
+  provider: script
+  script:
+    - heroku container:push client src nginx --recursive
