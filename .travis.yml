@@ -27,6 +27,7 @@ after_success:
 deploy:
   provider: script
   script:
+    - ls -R
     - heroku container:login
     - heroku container:push client src nginx --recursive
     - heroku container:release
