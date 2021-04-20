@@ -28,5 +28,3 @@ deploy:
   provider: script
   script:
     - heroku container:login
-    - heroku container:push client src nginx --recursive
-    - heroku container:release client src nginx
