@@ -35,8 +35,6 @@ deploy:
   provider: script
   script:
     docker ps -a;
-    heroku login;
-    heroku container:login;
     docker push harryyy27/allies_art_club/client;
     docker push registry.heroku.com/$HEROKU_APP/client;
     docker push harryyy27/allies_art_club/src;
