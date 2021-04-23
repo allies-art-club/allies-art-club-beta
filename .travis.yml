@@ -25,11 +25,13 @@ deploy:
   skip_cleanup: true
   provider: script
   script:
-    - docker push harryyy27/allies_art_club/client
-    - docker push harryyy27/allies_art_club/src
-    - docker push harryyy27/allies_art_club/nginx
-    - heroku container:login
-    - heroku container:push client src nginx --recursive
-    - heroku container:release
+    heroku container:login;
+    docker push harryyy27/allies_art_club/client;
+    docker push registry.heroku.com/$HEROKU_APP/client;
+    docker push harryyy27/allies_art_club/src;
+    docker push registry.heroku.com/$HEROKU_APP/src;
+    docker push harryyy27/allies_art_club/nginx;
+    docker push registry.heroku.com/$HEROKU_APP/nginx;
+    heroku container:release client src nginx;
   on:
     branch: master
