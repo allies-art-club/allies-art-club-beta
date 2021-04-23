@@ -12,11 +12,11 @@ scripts:
 
 after_success:
   - docker build -t harryyy27/allies_art_club/client ./client
-  - docker tag harryyy27/allies_art_club/client client
+  - docker tag harryyy27/allies_art_club/client registry.heroku.com/$HEROKU_APP/client
   - docker build -t harryyy27/allies_art_club/src ./src
-  - docker tag harryyy27/allies_art_club/src src
+  - docker tag harryyy27/allies_art_club/src registry.heroku.com/$HEROKU_APP/src
   - docker build -t harryyy27/allies_art_club/nginx ./nginx
-  - docker tag harryyy27/allies_art_club/nginx nginx
+  - docker tag harryyy27/allies_art_club/nginx registry.heroku.com/$HEROKU_APP/nginx
 # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - wget -qO- https://toolbelt.heroku.com/install.sh | sh
@@ -25,9 +25,11 @@ deploy:
   skip_cleanup: true
   provider: script
   script:
-    - ls -R;
-    - heroku container:login;
-    - heroku container:push client src nginx --recursive;
-    - heroku container:release;
+    - docker push harryyy27/allies_art_club/client
+    - docker push harryyy27/allies_art_club/src
+    - docker push harryyy27/allies_art_club/nginx
+    - heroku container:login
+    - heroku container:push client src nginx --recursive
+    - heroku container:release
   on:
     branch: master
