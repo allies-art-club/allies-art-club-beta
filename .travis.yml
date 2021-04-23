@@ -3,6 +3,14 @@ sudo: required
 services:
   - docker
 
+stages:
+  - name: before_deploy
+    if: branch = master
+  - name: before_install
+    if: branch != master
+  - name: scripts
+    if: branch != master
+
 before_install:
   - docker build -t harryyy27/allies_art_club/frontend -f ./client/Dockerfile.dev ./client
   - docker build -t harryyy27/allies_art_club/backend -f ./src/Dockerfile.dev ./src
@@ -10,7 +18,8 @@ scripts:
   - docker run -e CI=true harryyy27/allies_art_club/frontend npm test
   - docker run -e CI=true harryyy27/allies_art_club/backend npm test
 
-after_success:
+
+before_deploy:
   - docker build -t harryyy27/allies_art_club/client ./client
   - docker tag harryyy27/allies_art_club/client registry.heroku.com/$HEROKU_APP/client
   - docker build -t harryyy27/allies_art_club/src ./src
@@ -25,11 +34,14 @@ deploy:
   skip_cleanup: true
   provider: script
   script:
-    - docker push harryyy27/allies_art_club/client
-    - docker push harryyy27/allies_art_club/src
-    - docker push harryyy27/allies_art_club/nginx
-    - heroku container:login
-    - heroku container:push client src nginx --recursive
-    - heroku container:release
+    docker ps -a;
+    heroku container:login;
+    docker push harryyy27/allies_art_club/client;
+    docker push registry.heroku.com/$HEROKU_APP/client;
+    docker push harryyy27/allies_art_club/src;
+    docker push registry.heroku.com/$HEROKU_APP/src;
+    docker push harryyy27/allies_art_club/nginx;
+    docker push registry.heroku.com/$HEROKU_APP/nginx;
+    heroku container:release client src nginx;
   on:
     branch: master
