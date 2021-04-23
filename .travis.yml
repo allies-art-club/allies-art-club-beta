@@ -19,17 +19,14 @@ after_success:
   - docker tag harryyy27/allies_art_club/nginx nginx
 # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push harryyy27/allies_art_club/client
-  - docker push harryyy27/allies_art_club/src
-  - docker push harryyy27/allies_art_club/nginx
   - wget -qO- https://toolbelt.heroku.com/install.sh | sh
   - echo "$HEROKU_API | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
 deploy:
   provider: script
   script:
-    - ls -R
-    - heroku container:login
-    - heroku container:push client src nginx --recursive
-    - heroku container:release
+    - ls -R;
+    - heroku container:login;
+    - heroku container:push client src nginx --recursive;
+    - heroku container:release;
   on:
     branch: master
