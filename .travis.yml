@@ -41,6 +41,6 @@ deploy:
     docker push registry.heroku.com/$HEROKU_APP/src;
     docker push harryyy27/allies_art_club/nginx;
     docker push registry.heroku.com/$HEROKU_APP/nginx;
-    heroku container:release client src nginx;
+    heroku container:release client src nginx --app $HEROKU_APP;
   on:
     branch: master
