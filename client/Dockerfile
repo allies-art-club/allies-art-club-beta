@@ -2,6 +2,7 @@ FROM node:alpine as builder
 WORKDIR '/app'
 COPY ./package.json ./
 RUn npm install
+RUN rm -rf /app/node_modules/jest
 COPY . .
 RUN npm run build
 
