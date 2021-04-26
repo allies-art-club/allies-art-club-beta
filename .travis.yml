@@ -35,11 +35,11 @@ deploy:
   provider: script
   script:
     docker ps -a;
-    docker push harryyy27/allies_art_club/client;
+    docker push harryyy27/aac-client;
     docker push registry.heroku.com/$HEROKU_APP/client;
-    docker push harryyy27/allies_art_club/src;
+    docker push harryyy27/aac-src;
     docker push registry.heroku.com/$HEROKU_APP/src;
-    docker push harryyy27/allies_art_club/nginx;
+    docker push harryyy27/aac-nginx;
     docker push registry.heroku.com/$HEROKU_APP/nginx;
     heroku container:release client src nginx --app $HEROKU_APP;
   on:
