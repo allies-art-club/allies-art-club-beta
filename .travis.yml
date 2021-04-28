@@ -4,14 +4,13 @@ services:
   - docker
 
 stages:
-  - name: prod
-    if: branch = master
-  - name: test
-    if: NOT(branch = master)
+  - test
+  - prod
 
 jobs:
   include:
     - stage: test
+      if: NOT(branch=master)
       before_install:
         - docker build -t harryyy27/allies_art_club/frontend -f ./client/Dockerfile.dev ./client
         - docker build -t harryyy27/allies_art_club/backend -f ./src/Dockerfile.dev ./src
@@ -19,6 +18,7 @@ jobs:
         - docker run -e CI=true harryyy27/allies_art_club/frontend npm test
         - docker run -e CI=true harryyy27/allies_art_club/backend npm test
     - stage: prod
+      if: branch=master
       before_deploy:
         - docker build -t harryyy27/aac-client ./client
         - docker tag harryyy27/aac-client registry.heroku.com/$HEROKU_APP/client
