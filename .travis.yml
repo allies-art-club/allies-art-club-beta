@@ -7,9 +7,9 @@ stages:
   - name: before_deploy
     if: branch = master
   - name: before_install
-    if: branch != master
+    if: NOT(branch = master)
   - name: scripts
-    if: branch != master
+    if: NOT(branch = master)
 
 before_install:
   - docker build -t harryyy27/allies_art_club/frontend -f ./client/Dockerfile.dev ./client
