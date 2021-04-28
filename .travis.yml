@@ -1,5 +1,7 @@
 sudo: required
+
 language: node_js
+
 services:
   - docker
 
@@ -11,10 +13,9 @@ jobs:
   include:
     - stage: test
       if: NOT(branch=master)
-      before_install:
+      scripts:
         - docker build -t harryyy27/allies_art_club/frontend -f ./client/Dockerfile.dev ./client
         - docker build -t harryyy27/allies_art_club/backend -f ./src/Dockerfile.dev ./src
-      scripts:
         - docker run -e CI=true harryyy27/allies_art_club/frontend npm test
         - docker run -e CI=true harryyy27/allies_art_club/backend npm test
     - stage: prod
