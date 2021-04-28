@@ -6,12 +6,12 @@ services:
   - docker
 
 stages:
-  - test
+  - dev
   - prod
 
 jobs:
   include:
-    - stage: test
+    - stage: dev
       if: NOT(branch=master)
       scripts:
         - docker build -t harryyy27/allies_art_club/frontend -f ./client/Dockerfile.dev ./client
