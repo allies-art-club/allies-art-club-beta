@@ -43,6 +43,3 @@ jobs:
           (echo "$HEROKU_USERNAME" echo "$HEROKU_PASSWORD") | heroku login;
           heroku container:login;
           heroku container:release client src nginx --app $HEROKU_APP;
-
-
-
