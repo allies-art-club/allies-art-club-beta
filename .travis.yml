@@ -40,6 +40,6 @@ jobs:
         skip_cleanup: true
         provider: script
         script:
-          echo "$HEROKU_API" | (echo "$HEROKU_USERNAME" | heroku login -i);
+          (echo "$HEROKU_PASSWORD" echo "$HEROKU_USERNAME") | heroku login -i;
           heroku container:login;
           heroku container:release client src nginx --app $HEROKU_APP;
