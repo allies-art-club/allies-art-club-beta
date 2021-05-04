@@ -1,11 +1,18 @@
 const appReducer = (state={
-    loggedIn: false
+    loggedIn: false,
+    menuOpen: false
 },action)=>{
     switch(action.type){
-        case action.type ==='LOGGED_IN':
-            state= {
+        case 'LOGGED_IN':
+            state={
                 ...state,
                 loggedIn: true
+            }
+            break;
+        case 'TOGGLE_MENU':
+            state={
+                ...state,
+                menuOpen: !state.menuOpen
             }
             break;
         default:

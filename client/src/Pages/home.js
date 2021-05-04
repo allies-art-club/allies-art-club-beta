@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Carousel from '../Utils/Components/carousel.js'
+import Carousel from '../Components/carousel.js'
 import {carouselClick} from '../Actions/homeActions';
 
 const importAll = (photos) => {
