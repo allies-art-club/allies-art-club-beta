@@ -1,0 +1,7 @@
+FROM node:alpine
+WORKDIR '/app'
+COPY ./package.json ./
+RUN npm install
+RUN rm -rf /app/node_modules/jest
+COPY . .
+CMD ["npm","run","start"]
