@@ -1,6 +1,6 @@
 import React from 'react';
-import {HeadingMain,Section} from '../Utils/Components/Styled/styled'
-import PageNav from '../Utils/Components/pageNav'
+import {HeadingMain,Section} from '../Components/Styled/styled'
+import PageNav from '../Components/pageNav'
 const Thoughts = () => {
     return (
         <>
