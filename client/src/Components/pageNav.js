@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {PageNavWrap,PageNavList,PageNavItem} from './Styled/styled.js'
 const PageNav = (props) => {
     return(
@@ -9,7 +9,7 @@ const PageNav = (props) => {
                         return (
                             !(typeof item === 'object'&& item !== null)?<PageNavItem  key={i}><a href={'#'+item.replace(/[^A-Z^a-z^0-9]/g,'')}>{item}</a></PageNavItem>
                             :
-                            <>
+                            <Fragment key={i}>
                                 <PageNavItem href={'#'+item.section.replace(/[^A-Z^a-z^0-9]/g,'')}>{item.section}</PageNavItem>
                                 <PageNavList>
                                     {
@@ -20,7 +20,7 @@ const PageNav = (props) => {
                                         })
                                     }
                                 </PageNavList>
-                            </>
+                            </Fragment>
                             )
                     })
                 }

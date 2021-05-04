@@ -1,0 +1,7 @@
+#USE EXISTING DOCKER IMAGE AS BASE
+FROM node:14.16.1-alpine
+WORKDIR '/app'
+COPY ./package.json ./
+RUN npm install
+COPY . .
+CMD ["npm","run", "start"]
