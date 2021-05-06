@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const dbRouter = require('./router/dbrouter');
-
+const path = require('path');
 const app = express();
 // set up cors for server
 const cors = require('cors');
@@ -18,7 +18,10 @@ let corsOptions = {
 app.use(cors(corsOptions))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+console.log(process.env.NODE_ENV)
+if(process.env.NODE_ENV==='production'){
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+}
 app.use('/db',dbRouter)
 
 // app.use(router);
