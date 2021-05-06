@@ -6,8 +6,8 @@
   "scripts": {
     "client": "npm start --prefix client",
     "build": "npm run build --prefix client",
-    "start": "node ./src/server.js ",
-    "dev": "concurrently taskkill /IM node.exe \"npm run client\" \"npm run start\"",
+    "start": "cross-env NODE_ENV=production node ./src/server.js ",
+    "dev": "concurrently taskkill /IM node.exe \"npm run client\" \"nodemon ./src/server.js\"",
     "test": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
     "coverage": "cross-env NODE_ENV=test nyc npm run test",
     "heroku-postbuild": "npm install && npm install --prefix client  && rm -r ./client/node_modules/jest && npm run build"
