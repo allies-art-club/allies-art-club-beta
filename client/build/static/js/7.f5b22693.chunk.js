@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[7],{61:function(e,n,t){"use strict";t.r(n);t(0);var c=t(1);n.default=function(){return Object(c.jsx)(c.Fragment,{children:Object(c.jsx)("h1",{children:"Be An Allie"})})}}}]);
+//# sourceMappingURL=7.f5b22693.chunk.js.map
