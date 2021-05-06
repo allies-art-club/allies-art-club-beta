@@ -12,7 +12,9 @@ jobs:
     - stage: test
       if: NOT(branch=master)
       scripts:
+        - npm install
         - npm run test
+        - npm install --prefix client
         - npm run test --prefix client
     - stage: prod
       if: branch=master
