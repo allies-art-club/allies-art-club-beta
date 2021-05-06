@@ -22,7 +22,7 @@
     "url": "https://github.com/harryyy27/allies-art-club/issues"
   },
   "engines": {
-    "node": "14.6.1",
+    "node": "14.16.1",
     "npm": "7.9.0"
   },
   "homepage": "https://github.com/harryyy27/allies-art-club#readme",
