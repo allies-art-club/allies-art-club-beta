@@ -1,44 +1,23 @@
 sudo: required
-language: generic
-
-services:
-  - docker
+language: node_js
+node_js:
+  - "14.16.1"
 
 stages:
-  - dev
+  - test
   - prod
 
 jobs:
   include:
-    - stage: dev
+    - stage: test
       if: NOT(branch=master)
       scripts:
-        - docker build -t harryyy27/allies_art_club/frontend -f ./client/Dockerfile.dev ./client
-        - docker build -t harryyy27/allies_art_club/backend -f ./src/Dockerfile.dev ./src
-        - docker run -e CI=true harryyy27/allies_art_club/frontend npm test
-        - docker run -e CI=true harryyy27/allies_art_club/backend npm test
+        - npm run test
+        - npm run test --prefix client
     - stage: prod
       if: branch=master
-      before_deploy:
-        - docker build -t harryyy27/aac-client ./client
-        - docker tag harryyy27/aac-client registry.heroku.com/$HEROKU_APP/client
-        - docker build -t harryyy27/aac-src ./src
-        - docker tag harryyy27/aac-src registry.heroku.com/$HEROKU_APP/src
-        - docker build -t harryyy27/aac-nginx ./nginx
-        - docker tag harryyy27/aac-nginx registry.heroku.com/$HEROKU_APP/nginx
-      # Log in to docker CLI
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-        - curl https://cli-assets.heroku.com/install.sh | sh
-        - echo "$HEROKU_API_KEY" | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
-        - docker push harryyy27/aac-client;
-        - docker push registry.heroku.com/$HEROKU_APP/client;
-        - docker push harryyy27/aac-src;
-        - docker push registry.heroku.com/$HEROKU_APP/src;
-        - docker push harryyy27/aac-nginx;
-        - docker push registry.heroku.com/$HEROKU_APP/nginx;
       deploy:
-        skip_cleanup: true
-        provider: script
-        script:
-          heroku container:login;
-          heroku container:release client src nginx --app $HEROKU_APP;
+        provider: heroku
+        api_key:
+          secure: $HEROKU_API_KEY
+        

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "client": "npm start --prefix client",
-    "build": "npm install --prefix client && npm run build --prefix client",
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "build": "npm run build --prefix client",
+    "start": "node ./src/server.js ",
+    "dev": "concurrently taskkill /IM node.exe \"npm run client\" \"npm run start\"",
     "test": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
     "coverage": "cross-env NODE_ENV=test nyc npm run test",
     "heroku-postbuild": "npm install && npm run build"
