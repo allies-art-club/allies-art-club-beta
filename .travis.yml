@@ -19,7 +19,8 @@ jobs:
     - stage: prod
       if: branch=master
       deploy:
-        provider: heroku
+        skip_cleanup: true
+        provider: script
         api_key:
           secure: $HEROKU_API_KEY
         app: allies-art-club-beta
