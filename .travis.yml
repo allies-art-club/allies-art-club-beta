@@ -24,4 +24,5 @@ jobs:
         api_key:
           secure: $HEROKU_API_KEY
         app: allies-art-club-beta
+        strategy: git
         
