@@ -1,1 +1,0 @@
-{"version":3,"sources":["Pages/beAnAllie.js"],"names":["BeAnAllie"],"mappings":"iGAAA,uBAUeA,UARG,WACd,OACI,mCACI","file":"static/js/7.f5b22693.chunk.js","sourcesContent":["import React from 'react';\n\nconst BeAnAllie = () => {\n    return (\n        <>\n            <h1>Be An Allie</h1>\n        </>\n    )\n}\n\nexport default BeAnAllie;"],"sourceRoot":""}
