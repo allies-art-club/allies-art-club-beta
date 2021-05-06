@@ -1,6 +1,6 @@
 const supertest = require('supertest');
 const tape = require('tape');
-const app = require('../app.js');
+const app = require('../src/app.js');
 
 // tape('Tape be working', (t)=>{
 //     supertest(app)
