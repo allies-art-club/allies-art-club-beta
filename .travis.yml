@@ -16,3 +16,11 @@ jobs:
         - npm run test
         - npm install --prefix client
         - npm run test --prefix client
+    - stage: prod
+      if: branch=master
+      deploy:
+        skip_cleanup: true
+        provider: script
+        api_key:
+          secure: $HEROKU_API_KEY
+        
