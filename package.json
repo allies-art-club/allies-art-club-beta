@@ -10,7 +10,7 @@
     "dev": "concurrently taskkill /IM node.exe \"npm run client\" \"nodemon ./src/server.js\"",
     "test": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
     "coverage": "cross-env NODE_ENV=test nyc npm run test",
-    "heroku-postbuild": "npm install && npm install --prefix client  && rm -r ./client/node_modules/jest && npm run build && npm run start"
+    "heroku-postbuild": "npm install && npm install --prefix client  && rm -r ./client/node_modules/jest && npm run build"
   },
   "repository": {
     "type": "git",
