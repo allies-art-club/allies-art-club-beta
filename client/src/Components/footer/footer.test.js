@@ -25,6 +25,7 @@ describe("Footer Component",()=>{
     let subComponent;
     it("All subcomponents should render correctly",()=>{
         for(var i=0; i<componentsList.length;i++){
+            console.log(componentsList[i]);
             subComponent=findByAttribute(component,componentsList[i]);
 
             expect(subComponent.length).toBe(1);

@@ -28,7 +28,7 @@ const Donate = (props) => {
                 <FormInput type="number" name="donationAmount" id="donationAmount"onChange={(event)=>props.handleChange(event.target)} value={props.donate.donationAmount}></FormInput>
             </FormInputWrapper>
             <FormInputWrapper>
-                <FormLabel htmlFor="cardType">Cardholder name:*</FormLabel>
+                <FormLabel htmlFor="cardType">Card type:*</FormLabel>
                 <FormInput type="text" name="cardType" id="cardType" onChange={(event)=>props.handleChange(event.target)} value={props.donate.cardType}></FormInput>
             </FormInputWrapper>
             <FormInputWrapper>
@@ -55,6 +55,7 @@ const Donate = (props) => {
                 <FormSubmit type="submit" value="Submit">Submit</FormSubmit>
             </FormInputWrapper>
         </Form>
+        <Paragraph>Please note: all of your information will be kept private, and we will NOT share any of this with other parties</Paragraph>
         </>
     )
 }
