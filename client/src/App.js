@@ -98,7 +98,9 @@ const App= (props) =>{
               <Route path="/donate" exact strict render={
                     ()=>{
                         return(
-                          <Donate />
+                          <Clipboard children={
+                            <Donate />
+                          }/>
                         )
                     }
                 }

@@ -3,14 +3,19 @@ const Donation = require('../db_model/donation');
 const postDonation = (req,res,next)=>{
     //post donation to mongo db
     // (name,email,organisation,billingAddress,amountDonated,cardType,message)
+    console.log('BODY',req.body)
     const name = req.body.name;
     const email = req.body.email;
     const organisation = req.body.organisation;
-    const billingAddress = req.body.billingAddress;
-    const amountDonated = req.body.amountDonated;
+    const donationAmount = req.body.donationAmount;
     const cardType = req.body.cardType;
     const message = req.body.message;
-    const donation = new Donation(name,email,organisation,billingAddress,amountDonated,cardType,message);
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    const date = dd + '-' + mm + '-' + yyyy;
+    const donation = new Donation(date,name,email,organisation,donationAmount,cardType,message);
     donation
     .save()
     .then((res)=>{
