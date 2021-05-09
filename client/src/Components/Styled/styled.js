@@ -31,6 +31,31 @@ const SubSection = styled.div`
 const Paragraph = styled.p`
 
 `
+const Form= styled.form`
 
+`
+const FormInputWrapper=styled.div`
+  height:${props=>props.textarea===true?'auto':'50px'};
+  padding-top:20px;
+`
+const FormLabel=styled.label`
+  display:block;
+`
+const FormInput =styled.input`
+width:100%;
+border: 4px solid black;
+height: 25px;
+line-height:25px;
+@media(min-width: 768px){
+  width: 50%;
+}
+`
+const FormTextArea = styled.textarea`
+  width:100%;
+  border:4px solid black;
+`
+const FormSubmit = styled.button`
 
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph};
+`
+
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,Form,FormInputWrapper,FormLabel,FormInput,FormTextArea,FormSubmit};

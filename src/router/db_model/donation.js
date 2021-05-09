@@ -1,12 +1,12 @@
 const {getDb}= require('../database/connection')
 
 class Donation {
-    constructor(name,email,organisation,billingAddress,amountDonated,cardType,message){
+    constructor(date, name,email,organisation,donationAmount,cardType,message){
+        this.date = date
         this.name=name,
         this.email=email,
         this.organisation=organisation,
-        this.billingAddress=billingAddress,
-        this.amountDonated=amountDonated,
+        this.donationAmount=donationAmount,
         this.cardType=cardType,
         this.message =message
     }

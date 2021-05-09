@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import Header from './header.js';
 import {findByAttribute} from '../../../Utils/index.js';
