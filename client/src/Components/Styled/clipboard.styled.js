@@ -36,10 +36,15 @@ const ClipboardContainer = styled.div`
 `
 const ClipboardIcon = styled.img`
     position:absolute;
-    top:-110px;
-    left:-150px;
-    width:400px;
-    height:400px;
+    top:0px;
+    left: -5px;
+    width: 50px;
+    height: 50px;
+    @media(min-width:768px){
+        left:-20px;
+        width:100px;
+        height:100px;
+    }
 `
 
 export {ClipboardContainer,ClipboardIcon}

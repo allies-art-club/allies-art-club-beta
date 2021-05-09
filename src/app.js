@@ -18,7 +18,6 @@ let corsOptions = {
 app.use(cors(corsOptions))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-console.log(process.env.NODE_ENV)
 if(process.env.NODE_ENV==='production'){
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 }
