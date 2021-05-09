@@ -18,7 +18,6 @@ const boxGlow768 =  keyframes`
 `
 const ClipboardContainer = styled.div`
     position:relative;
-    padding:20px 40px;
     width: 80%;
     margin:40px auto;
     background-color: white;
