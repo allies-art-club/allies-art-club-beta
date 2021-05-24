@@ -36,7 +36,7 @@ const Form= styled.form`
 `
 const FormInputWrapper=styled.div`
   height:${props=>props.textarea===true?'auto':'50px'};
-  padding-top:20px;
+  margin-top:20px;
 `
 const FormLabel=styled.label`
   display:block;
@@ -44,8 +44,8 @@ const FormLabel=styled.label`
 const FormInput =styled.input`
 width:100%;
 border: 4px solid black;
-height: 25px;
-line-height:25px;
+height: 40px;
+line-height:40px;
 @media(min-width: 768px){
   width: 50%;
 }
@@ -58,4 +58,12 @@ const FormSubmit = styled.button`
 
 `
 
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,Form,FormInputWrapper,FormLabel,FormInput,FormTextArea,FormSubmit};
+const ErrorMessage = styled.p`
+  color:red
+`
+const ErrorWrapper = styled.div`
+  height: 50px;
+  margin-top:20px;
+`
+
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,Form,FormInputWrapper,FormLabel,FormInput,FormTextArea,FormSubmit,ErrorMessage,ErrorWrapper};

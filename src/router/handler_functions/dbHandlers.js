@@ -2,27 +2,59 @@ const Donation = require('../db_model/donation');
 
 const postDonation = (req,res,next)=>{
     //post donation to mongo db
-    // (name,email,organisation,billingAddress,amountDonated,cardType,message)
-    console.log('BODY',req.body)
+    // (name,email,organisation,billingAddress,amountDonated,message)
+    const stripeId = req.body.stripeId
     const name = req.body.name;
     const email = req.body.email;
     const organisation = req.body.organisation;
     const donationAmount = req.body.donationAmount;
-    const cardType = req.body.cardType;
     const message = req.body.message;
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
     const date = dd + '-' + mm + '-' + yyyy;
-    const donation = new Donation(date,name,email,organisation,donationAmount,cardType,message);
-    donation
+    const status = 'DONATION_CREATED';
+    const donation = new Donation(stripeId,date,name,email,organisation,donationAmount,message,status);
+    return donation
     .save()
     .then((res)=>{
-        console.log('fuck yes', res)
+        return res;
+    })
+    .catch((err)=>{
+        console.log(err);
+        err.status=500;
+        next(err);
     })
 }
 
+const putDonation = (req,res,next,status)=>{
+    return Donation
+    .updateDonationStatus(req.body.stripeId,status)
+    .then((res)=>{
+        return res
+    })
+    .catch((err)=>{
+        console.log(err);
+        err.status(500);
+        next(err);
+
+    })
+}
+
+const deleteDonation = (req,res,next)=>{
+    return Donation
+    .deleteDonation(req.body.stripeId)
+    .then((res)=>{
+        console.log(res)
+        return res
+    })
+    .catch((err)=>{
+        console.log(err)
+        err.status(500);
+        next(err);
+    })
+}
 // postDonation({body:{
 //     name: 'HARRY',
 //     email: 'harry@harry.harry',
@@ -33,4 +65,4 @@ const postDonation = (req,res,next)=>{
 //     message: 'that was quick'
 // }})
 
-module.exports = postDonation;
+module.exports = {postDonation,putDonation,deleteDonation};

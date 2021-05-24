@@ -5,7 +5,6 @@ const TitleWrapper = styled.div`
     display:flex;
     flex-wrap: wrap;
     align-items: start;
-
 `
 const CentreImage = styled.img`
     width:56%;
