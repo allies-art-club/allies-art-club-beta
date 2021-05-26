@@ -23,7 +23,7 @@ class Donation {
         .catch((e)=>{
             console.log(e);
             e.status=500;
-            next(e);
+            return next(e);
         })
     }
     static fetchAll(){
@@ -38,7 +38,7 @@ class Donation {
             console.log(e);
             e.status=500;
             console.log(e);
-            next(e);
+            return next(e);
         })
 
     }
@@ -53,7 +53,7 @@ class Donation {
         .catch((err)=>{
             err.status=500;
             console.log(err);
-            next(err);
+            return next(err);
         })
     }
     static updateDonationStatus(stripeId,donationStatus){
@@ -73,7 +73,7 @@ class Donation {
         .catch((e)=>{
             console.log(e);
             e.status=500;
-            next(e);
+            return next(e);
         })
     }
     static deleteDonation(stripeId){
@@ -84,11 +84,12 @@ class Donation {
         })
         .then((res)=>{
             console.log('DELETED ENTRY',res)
+            return res
         })
         .catch((err)=>{
             console.log(err)
             err.status=500;
-            next(err);
+            return next(err);
         })
     }
 

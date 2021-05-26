@@ -24,7 +24,7 @@ const postDonation = (req,res,next)=>{
     .catch((err)=>{
         console.log(err);
         err.status=500;
-        next(err);
+        return next(err);
     })
 }
 
@@ -37,7 +37,7 @@ const putDonation = (req,res,next,status)=>{
     .catch((err)=>{
         console.log(err);
         err.status(500);
-        next(err);
+        return next(err);
 
     })
 }
@@ -52,7 +52,7 @@ const deleteDonation = (req,res,next)=>{
     .catch((err)=>{
         console.log(err)
         err.status(500);
-        next(err);
+        return next(err);
     })
 }
 // postDonation({body:{
