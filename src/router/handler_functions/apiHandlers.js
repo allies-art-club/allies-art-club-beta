@@ -6,11 +6,18 @@ const {postDonation,putDonation,deleteDonation} = require('./dbHandlers.js');
 const webhookSecret = "whsec_g0ox62SlHmIwTkhTaTJV95CRMWUcMHGY";
 const payment = async(req,res,next) => {
     const {email} = req.body;
-    console.log(req.body);
+    console.log('YESSSSSSSSS', email)
+    if(!email){
+        console.log('yes')
+        res.status(500).json({'error':'Please enter your email address'})
+        throw new Error('No email detected')
+    }
     const idempotencyKey = uuid();
+    console.log(idempotencyKey);
     // add product to database + return id
 
     try{
+        console.log('1')
         var paymentIntent = await stripe.paymentIntents.create({
             amount: 500,
             currency: 'GBP',
@@ -20,14 +27,16 @@ const payment = async(req,res,next) => {
             //prevents double payments, additional layer of protection on front end (disable button + spinner until payment over)
             idempotencyKey: idempotencyKey
         });
+        console.log(paymentIntent);
         req.body.stripeId=paymentIntent.id;
         var donation = await postDonation(req,res,next);
-        res.status(200).json({
+        return res.status(200).json({
             'client_secret': paymentIntent['client_secret'],
             'stripeId': paymentIntent['id']
         });
     }
     catch(e){
+        console.log(e);
         if(e.statusCode){
             //delete from database
             var statusCode=e.statusCode.toString();
@@ -48,8 +57,9 @@ const payment = async(req,res,next) => {
             }
         }
         else {
-            e.status=e.statusCode;
+            console.log('ERRR')
             res.json({'error':e});
+            e.status=e.statusCode;
             throw e;
         }
         
@@ -61,7 +71,7 @@ const updatePayment = async(req,res,next)=>{
         //complete
         var result = await putDonation(req,res,next,'DONATION_ATTEMPT_RECEIVED');
         //SEND EMAIL
-        res.status(200).json({'YEH':'YEHHHHH'})
+        return res.status(200).json({updated:true})
     }
     catch(e){
         e.status=500;
@@ -72,9 +82,10 @@ const updatePayment = async(req,res,next)=>{
 const deletePayment = async(req,res,next)=>{
     try{
         var result = await deleteDonation(req,res,next)
-        res.status(200).json({deleted:'deleted'})
+        return res.status(200).json({deleted:true})
     }
     catch(err){
+        console.log(err);
         err.status=500
         throw err
     }
@@ -129,12 +140,12 @@ const stripeWebhook = async(req,res,next)=>{
             }
           
             // Return a response to acknowledge receipt of the event
-            res.json({received: true});
+            return res.json({received: true});
 
         }
         catch(e){
             console.log(e)
-            const error = new Error('Error with webhook event payments')
+            const error = new Error(`Error with webhook event payments: ${e}`)
             error.status= 500
             res.json({received:false});
             throw error;
@@ -143,7 +154,7 @@ const stripeWebhook = async(req,res,next)=>{
 }
 const csrfToken = (req,res,next) => {
     if(req.csrfToken){
-        res.send({token:req.csrfToken()});
+        return res.send({token:req.csrfToken()});
     }
     else{
         const error = new Error('No csrfToken present');
@@ -152,4 +163,10 @@ const csrfToken = (req,res,next) => {
     }
 }
 
-module.exports = {payment,updatePayment,deletePayment,stripeWebhook,csrfToken};
+const route_404 = (req,res,next) => {
+    const error = new Error(`404 - ${req.url} route not found`);
+    error.status=404;
+    throw error;
+}
+
+module.exports = {payment,updatePayment,deletePayment,stripeWebhook,csrfToken,route_404};
