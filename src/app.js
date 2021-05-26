@@ -27,8 +27,8 @@ let store;
     expires: 1000*60*60*24
   }) 
   store.on('error',function(err){
-    throw new Error('Mongodb failed to create session', err)
     console.log(err)
+    throw new Error('Mongodb failed to create session', err)
     
   })
 
@@ -71,17 +71,9 @@ app.use(function (err,req, res, next) {
 app.use((err,req,res,next)=>{
   //LOGGING FUNCTION + EMAIL SEND TO ME
   console.log(err)
-  sgMail.send({
-    to:'harryyy27@gmail.com',
-    from: 'harryyy27@gmail.com',
-    subject: 'error',
-    text: 'YESe',
-    html: `<h1>${err}</h1>`
-  })
-  .then((res)=>console.log(res))
-  .catch((err)=>console.log(err))
   if(err.status===404){
-    res.send({error: 'Endpoint could not be found'})
+    console.log('404')
+    res.status(404).send({error: 'Endpoint could not be found'})
   }
   else if(err.status===403){
     res.send({error: 'Forbidden, access denied'})
@@ -92,10 +84,18 @@ app.use((err,req,res,next)=>{
   else {
     res.send({error: 'An error has occurred, we are working to resolve this'})
   }
-  console.log('yo i erred')
+  console.log('yo i erred');
 
+  // sgMail.send({
+  //   to:'harryyy27@gmail.com',
+  //   from: 'harryyy27@gmail.com',
+  //   subject: 'error',
+  //   text: 'YESe',
+  //   html: `<h1>${err}</h1>`
+  // })
+  // .then((res)=>console.log(res))
+  // .catch((err)=>console.log(err))
 })
 
-// app.use(router);
 
 module.exports = app;
