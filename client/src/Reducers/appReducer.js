@@ -1,6 +1,7 @@
 const appReducer = (state={
     loggedIn: false,
-    menuOpen: false
+    menuOpen: false,
+    token: '',
 },action)=>{
     switch(action.type){
         case 'LOGGED_IN':
@@ -13,6 +14,13 @@ const appReducer = (state={
             state={
                 ...state,
                 menuOpen: !state.menuOpen
+            }
+            break;
+        case 'SET_TOKEN':
+            console.log('PAAAAAAAAAAAAAAAAYLOAD');
+            state={
+                ...state,
+                token: action.payload
             }
             break;
         default:

@@ -2,6 +2,7 @@ const supertest = require('supertest');
 const tape = require('tape');
 const app = require('../src/app.js');
 
+
 // tape('Tape be working', (t)=>{
 //     supertest(app)
 //     .get('/')
@@ -13,11 +14,16 @@ const app = require('../src/app.js');
     
 // })
 tape('404 route works',(t)=>{
+    console.log(supertest.toString())
     supertest(app)
-    .get('/thisIsNotARoute')
+    .get('/api/thisIsNotARoute')
     .expect(404)
     .then(res=> {
         t.equals(res.statusCode,404)
         t.end()
     })
+})
+tape('crsfToken route',(t)=>{
+    t.equals(1,1)
+    t.end()
 })
