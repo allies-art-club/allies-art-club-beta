@@ -2,11 +2,11 @@ const tape = require('tape');
 const stripe = require('stripe')('test');
 const sinon = require('sinon');
 const nock = require('nock');
-
+const {stripeWebhook}= require('../src/router/handler_functions/csrfExemptHandlers');
 const uuid = require('uuid');
 const donation = require('../src/router/db_model/donation.js');
 
-const {payment,updatePayment,deletePayment,stripeWebhook,csrfToken,route_404} = require('../src/router/handler_functions/apiHandlers');
+const {payment,updatePayment,deletePayment,csrfToken,route_404} = require('../src/router/handler_functions/apiHandlers');
 
 tape('crsf token generates',(t)=>{
     const req = {
@@ -72,7 +72,7 @@ tape('Stripe webhook functions as expected',async(t)=>{
     }
     sinon.stub(stripe.webhooks,'constructEvent');
     sinon.stub(donation, 'updateDonationStatus');
-    const potentialOutcomes = ['payment_intent.succeeded','payment_intent.created','charge.succeeded']
+    const potentialOutcomes = ['charge.dispute.created','charge.dispute.funds_reinstated','charge.dispute.funds_withdrawn','random.event','charge.succeeded']
     
     donation.updateDonationStatus.returns(new Promise((resolve,reject)=>{
         return resolve(true)

@@ -13,7 +13,10 @@ const postDonation = (req,res,next)=>{
     const dd = String(today.getDate()).padStart(2, '0');
     const mm = String(today.getMonth() + 1).padStart(2, '0');
     const yyyy = today.getFullYear();
-    const date = dd + '-' + mm + '-' + yyyy;
+    const hours = String(today.getHours());
+    const minutes = String(today.getMinutes());
+    const seconds = String(today.getSeconds());
+    const date = dd + '-' + mm + '-' + yyyy+'T'+hours+':'+minutes+':'+seconds;
     const status = 'DONATION_CREATED';
     const donation = new Donation(stripeId,date,name,email,organisation,donationAmount,message,status);
     return donation
@@ -46,11 +49,11 @@ const deleteDonation = (req,res,next)=>{
     return Donation
     .deleteDonation(req.body.stripeId)
     .then((res)=>{
-        console.log(res)
+        console.log('delete donation res',res)
         return res
     })
     .catch((err)=>{
-        console.log(err)
+        console.log('delete donation err',err)
         err.status(500);
         return next(err);
     })
