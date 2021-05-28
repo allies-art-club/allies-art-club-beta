@@ -31,8 +31,10 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
             type: "ERROR_AMEND",
             payload: 'A problem has occurred with our payment connections. We are working to resolve this issue. You have not been charged.'
         })
+        return;
     }
-    console.log('yehhh')
+    console.log('yehhh',res)
+    console.log(process.env.REACT_APP_STRIPE_KEY)
     const jsonRes = await res.json();
     const clientSecret = jsonRes['client_secret'];
     const stripeId = jsonRes['stripeId'];
