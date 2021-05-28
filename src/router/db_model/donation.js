@@ -78,9 +78,9 @@ class Donation {
     }
     static deleteDonation(stripeId){
         const db=getDb()
-        return db.colection('donation')
+        return db.collection('donation')
         .deleteOne({
-            stripeId:new mongodb.ObjectId(stripeId)
+            stripeId:stripeId
         })
         .then((res)=>{
             console.log('DELETED ENTRY',res)

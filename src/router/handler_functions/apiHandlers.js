@@ -3,7 +3,8 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY,{
 });
 const uuid = require('uuid/v4');
 const {postDonation,putDonation,deleteDonation} = require('./dbHandlers.js');
-const webhookSecret = "whsec_g0ox62SlHmIwTkhTaTJV95CRMWUcMHGY";
+
+
 const payment = async(req,res,next) => {
     const {email} = req.body;
     console.log('YESSSSSSSSS', email)
@@ -81,6 +82,7 @@ const updatePayment = async(req,res,next)=>{
 
 const deletePayment = async(req,res,next)=>{
     try{
+        console.log('yerrrr');
         var result = await deleteDonation(req,res,next)
         return res.status(200).json({deleted:true})
     }
@@ -91,67 +93,7 @@ const deletePayment = async(req,res,next)=>{
     }
 }
 
-const stripeWebhook = async(req,res,next)=>{
-        let event;
-        const sig = req.headers['stripe-signature'];
 
-        try {
-            console.log(Object.keys(req))
-            console.log(webhookSecret)
-            event = await stripe.webhooks.constructEvent(req.rawBody, sig, webhookSecret);
-            
-          }
-          catch (err) {
-            console.log('YOYOYOYO WHAT?', err);
-            const error = new Error(`Webhook Error: ${err.message}`);
-            error.status=500;
-            res.status(400).send(`Webhook Error: ${err.message}`);
-            return next(error)
-          }
-        // Handle the event
-        try{
-            switch (event.type) {
-              case 'payment_intent.succeeded':
-                console.log('PAYMENT INTENT SUCCEEDED');
-                let paymentIntentSucceeded = event.data.object;
-                req.body.stripeId = paymentIntentSucceeded.id
-                var result = await putDonation(req,res,next,'PAYMENT_INTENT_SUCCEEDED')
-                // Then define and call a method to handle the successful payment intent.
-                // handlePaymentIntentSucceeded(paymentIntent);
-                break;
-              case 'payment_intent.created':
-                  console.log('PAYMENT INTENT CREATED');
-                let paymentIntentCreated = event.data.object;
-                req.body.stripeId = paymentIntentCreated.id;
-                var result = await putDonation(req,res,next,'PAYMENT_INTENT_CREATED');
-    
-                break;
-              case 'charge.succeeded':
-                console.log('CHARGE SUCCEEDED');
-                let chargeSucceeded = event.data.object;
-                req.body.stripeId = chargeSucceeded.payment_intent;
-                var result = await putDonation(req,res,next,'DONATION_SUCCESSFUL');
-                break;
-    
-              default:
-
-              // ... handle other event types
-                  console.log(`Unhandled event type ${event.type}`);
-            }
-          
-            // Return a response to acknowledge receipt of the event
-            return res.json({received: true});
-
-        }
-        catch(e){
-            console.log(e)
-            const error = new Error(`Error with webhook event payments: ${e}`)
-            error.status= 500
-            res.json({received:false});
-            throw error;
-        }
-   
-}
 const csrfToken = (req,res,next) => {
     if(req.csrfToken){
         return res.send({token:req.csrfToken()});
@@ -169,4 +111,4 @@ const route_404 = (req,res,next) => {
     throw error;
 }
 
-module.exports = {payment,updatePayment,deletePayment,stripeWebhook,csrfToken,route_404};
+module.exports = {payment,updatePayment,deletePayment,csrfToken,route_404};

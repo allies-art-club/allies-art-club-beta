@@ -52,20 +52,22 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
     })
     if(result.error){
         //show error to customer
-        console.log(result.error);
+        console.log('RESULT ERROR',result.error);
         dispatch({
             type: "ERROR_AMEND",
             payload: result.error.message
         })
-        await fetch('/api/deletePayment',{
-            method: 'PUT',
+        const res = await fetch('/api/deletePayment',{
+            method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
                 "csrf-token":csrf
             },
             credentials: "include",
-            body: JSON.stringify({stripeId:stripeId})
+            body: JSON.stringify({stripeId:stripeId}),
+            mode: 'cors'
         })
+        console.log(res);
     }
     else {
         dispatch({
