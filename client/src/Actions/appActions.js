@@ -34,3 +34,11 @@ export function toggleMenu(event,dispatch){
     }
 
 }
+
+export function setCsrfToken(token,dispatch){
+    console.log('TOOOOOOOOOOOKEN',token);
+    dispatch({
+        type: 'SET_TOKEN',
+        payload: token
+    })
+}
