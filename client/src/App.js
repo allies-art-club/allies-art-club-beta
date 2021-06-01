@@ -1,4 +1,4 @@
-import React, {Suspense, lazy, useEffect} from 'react';
+import React, {Fragment,Suspense, lazy, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {logOut,toggleMenu,setCsrfToken} from './Actions/appActions.js';
@@ -18,6 +18,8 @@ const BeAnAllie = lazy(()=> import('./Pages/beAnAllie.js'));
 const Footer = lazy(()=> import('./Components/footer/footer.js'));
 const Donate = lazy(()=>import('./Pages/donate.js'));
 const ThankYou = lazy(()=>import('./Pages/thankyou.js'));
+const DonateFunds = lazy(()=>import('./Pages/donateFunds.js'));
+const DonateSupplies = lazy(()=>import('./Pages/donateSupplies.js'));
 const GlobalStyle = createGlobalStyle`
   html,body {
     box-sizing: border-box;
@@ -58,7 +60,7 @@ const App= (props) =>{
 
     },[setCsrf])
     return (
-      <>
+      <Fragment>
         <GlobalStyle menuOpen={props.app.menuOpen}/>
         <Router>
           <Header open={props.app.menuOpen} toggleMenu={props.toggleMenu}/>
@@ -118,11 +120,33 @@ const App= (props) =>{
               <Route path="/donate" exact strict render={
                     ()=>{
                         return(
-                          <Elements stripe={stripePromise}>
                             <Clipboard children={
                               <Donate />
                             }/>
+                        )
+                    }
+                }
+                />
+
+              <Route path="/donateFunds" exact strict render={
+                    ()=>{
+                        return(
+                          <Elements stripe={stripePromise}>
+                            <Clipboard children={
+                              <DonateFunds />
+                            }/>
                           </Elements>
+                        )
+                    }
+                }
+                />
+      
+              <Route path="/donateSupplies" exact strict render={
+                    ()=>{
+                        return(
+                            <Clipboard children={
+                              <DonateSupplies />
+                            }/>
                         )
                     }
                 }
@@ -143,7 +167,7 @@ const App= (props) =>{
           </Suspense>
 
         </Router>
-      </>
+      </Fragment>
     );
 }
 const mapStateToProps=(state)=>{

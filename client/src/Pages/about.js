@@ -1,10 +1,10 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import {HeadingMain,Section,SubSection,Paragraph,SubHeading} from '../Components/Styled/styled'
 import PageNav from '../Components/pageNav'
 
 const About = () => {
     return (
-        <>
+        <Fragment>
             <HeadingMain>About Allie's Art Club</HeadingMain>
             <PageNav pageSections={["Allie's Story",{section:'The Allie Way',subSectionArray:['Values','Commitments','Strategy']},'The Allie Foundation']} />
 
@@ -47,7 +47,7 @@ She left behind a huge number of admiring friends and a devoted family, as well 
 
                 </Paragraph>
             </Section>
-        </>
+        </Fragment>
     )
 }
 
