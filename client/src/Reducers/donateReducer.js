@@ -1,14 +1,22 @@
 const donateReducer = (state={
-    donateObj: {
-        name: '',
-        email: '',
-        organisation: '',
-        donationAmount: '',
-        message: '',
+    card: {
+        cardExpiry: {
+            errorMessage:'',
+            valid:false,
+        },
+        cardNumber: {
+            errorMessage:'',
+            valid:false,
+        },
+        cardCvc: {
+            errorMessage:'',
+            valid:false,
+        }
     },
     spinnerVisible: false,
-    submitActive: true,
-    errorMessage: ''
+    errorMessage: '',
+    errorMessageSupplies: '',
+    supplyError: ''
 },action) =>{
     switch(action.type){
         case 'UPDATE_INPUT_VALUE':
@@ -38,6 +46,29 @@ const donateReducer = (state={
                 errorMessage: action.payload
             }
             break;
+
+        case 'CARD_ERROR_AMEND':
+            console.log('res');
+            state= {
+                ...state,
+            }
+            var type = action.payload.elementType;
+            var error = action.payload.errorMessage;
+            if(error){
+                state.card[type].valid=false;
+            }
+            else {
+                state.card[type].valid = true;
+            }
+            state.card[type].errorMessage=error;
+            break;
+        case 'ERROR_AMEND_SUPPLIES':
+            state={
+                ...state,
+                supplyError: action.payload
+            }
+            break;
+            
         default:
             break;
     }

@@ -2,7 +2,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY,{
     maxNetworkRetries: 3
 });
 const uuid = require('uuid/v4');
-const {postDonation,putDonation,deleteDonation} = require('./dbHandlers.js');
+const {postDonation,putDonation,deleteDonation,postSupplies} = require('./dbHandlers.js');
 
 
 const payment = async(req,res,next) => {
@@ -104,11 +104,22 @@ const csrfToken = (req,res,next) => {
         throw error;
     }
 }
-
+const supplies = async(req,res,next)=>{
+    try {
+        const response = await postSupplies(req,res,next);
+        console.log('yohoo',response);
+        res.send({success: true})
+    }
+    catch(e){
+        console.log('YERRR',e)
+        e.status=500;
+        throw e;
+    }
+}
 const route_404 = (req,res,next) => {
     const error = new Error(`404 - ${req.url} route not found`);
     error.status=404;
     throw error;
 }
 
-module.exports = {payment,updatePayment,deletePayment,csrfToken,route_404};
+module.exports = {payment,supplies,updatePayment,deletePayment,csrfToken,route_404};
