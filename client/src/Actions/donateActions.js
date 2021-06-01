@@ -1,16 +1,82 @@
 
-const handleChange = (input,dispatch)=>{
-    dispatch({
-        type:'UPDATE_INPUT_VALUE',
-        payload: input
-    })
+const handleCardElementChange =(event,dispatch)=>{
+    console.log(event)
+    console.log(Object.keys(event).length)
+    if(event.error){
+        dispatch({
+            type: "CARD_ERROR_AMEND",
+            payload: {
+                elementType: event.elementType,
+                errorMessage:event.error.message
+            }
+        })
+    }
+    else if(Object.keys(event).length>1) {
+        dispatch({
+            type: "CARD_ERROR_AMEND",
+            payload: {
+                elementType: event.elementType,
+                errorMessage: ''
+            }
+        })
+    }
+}
+const handleSubmitSupplies=async(values,csrf,dispatch)=>{
+    try{
+        const res = await fetch('/api/supplies',{
+            method: 'POST',
+            headers: {
+                "Content-Type":"application/json",
+                "csrf-token":csrf,
+            },
+            credentials: "include",
+            body: JSON.stringify(values)
+        })
+        console.log('HI!')
+        console.log(res)
+        if(res.status!==200){
+            dispatch({
+                type:"ERROR_AMEND_SUPPLIES",
+                payload:"Our database update has not been successful. We are working to fix this. Please try again later."
+            })
+        }
+        else {
+            console.log(res)
+            return true
+        }
+
+    }
+    catch(e){
+        console.log(e)
+        dispatch({
+            type:"ERROR_AMEND_SUPPLIES",
+            payload:"Unknown error. We are working to fix this. Please try again later."
+        })
+    }
+}
+const cardValidate=(card,dispatch)=>{
+    console.log('CARD',card)
+    const fields = Object.keys(card);
+    var valid = true;
+    for(var i=0;i<fields.length;i++){
+        console.log(card[fields[i]])
+        if(card[fields[i]].valid===false){
+            if(!card[fields[i]].errorMessage){
+                dispatch({
+                    type: "CARD_ERROR_AMEND",
+                    payload: {
+                        elementType: fields[i],
+                        errorMessage:'Required'
+                    }
+                })
+            }
+            valid=false
+        }
+    }
+    return valid;
 }
 const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
-    console.log('CSRFFFFFFFFFFFFFFFFFFFFF',csrf)
-    dispatch({
-        type: "TOGGLE_SUBMIT",
-        payload: undefined
-    })
+    console.log(csrf)
     //add validation
     const res = await fetch('/api/payment',{
         method: 'POST',
@@ -19,22 +85,16 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
             "csrf-token":csrf
         },
         credentials: "include",
-        body: JSON.stringify(donation.donateObj)
+        body: JSON.stringify(donation)
     })
     if(res.status!==200){
-        dispatch({
-            type: "TOGGLE_SUBMIT",
-            payload: undefined
-        })
 
         dispatch({
             type: "ERROR_AMEND",
             payload: 'A problem has occurred with our payment connections. We are working to resolve this issue. You have not been charged.'
         })
-        return;
+        throw new Error('Connection to stripe failed');
     }
-    console.log('yehhh',res)
-    console.log(process.env.REACT_APP_STRIPE_KEY)
     const jsonRes = await res.json();
     const clientSecret = jsonRes['client_secret'];
     const stripeId = jsonRes['stripeId'];
@@ -48,10 +108,6 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
     })
     console.log('HEYAAA',result);
 
-    dispatch({
-        type: "TOGGLE_SUBMIT",
-        payload: undefined
-    })
     if(result.error){
         //show error to customer
         console.log('RESULT ERROR',result.error);
@@ -70,6 +126,7 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
             mode: 'cors'
         })
         console.log(res);
+        throw new Error('Payment failed')
     }
     else {
         dispatch({
@@ -100,13 +157,4 @@ const toggleSpinner = (dispatch) => {
         payload: undefined
     })
 }
-const validation = {
-    name: function(value){
-
-    },
-    email: function(value){
-
-    },
-    
-}
-export {handleChange,handleSubmit,toggleSpinner}
+export {handleCardElementChange, handleSubmit,toggleSpinner,cardValidate,handleSubmitSupplies}

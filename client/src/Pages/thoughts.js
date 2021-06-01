@@ -1,9 +1,9 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import {HeadingMain,Section} from '../Components/Styled/styled'
 import PageNav from '../Components/pageNav'
 const Thoughts = () => {
     return (
-        <>
+        <Fragment>
             <HeadingMain>Thoughts</HeadingMain>
             <PageNav pageSections={[{section:"Allie's Blog",subSectionArray:['Art & Creativity','Activism','Social Justice','Environment']},'Club News']}/>
             <Section id="AlliesBlog">
@@ -11,7 +11,7 @@ const Thoughts = () => {
             <Section id="ClubNews">
 
             </Section>
-        </>
+        </Fragment>
     )
 }
 

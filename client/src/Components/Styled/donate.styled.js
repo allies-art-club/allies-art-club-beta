@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {NavLink} from 'react-router-dom';
 
 const TitleWrapper = styled.div`
     width:100%;
@@ -12,4 +13,16 @@ const CentreImage = styled.img`
 const SideImage = styled.img`
     width:22%;
 `
-export {TitleWrapper,CentreImage,SideImage}
+const DonationWrapper = styled.div`
+    display: flex;    
+`
+const DonateLink = styled(NavLink)`
+    
+`
+const DonateImage = styled.img`
+    width:60%;
+`
+const DonateParagraph = styled.p`
+    width:40%;
+`
+export {TitleWrapper,CentreImage,SideImage,DonationWrapper,DonateLink,DonateImage,DonateParagraph}

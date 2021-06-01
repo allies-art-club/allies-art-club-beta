@@ -76,18 +76,18 @@ app.use(function (err,req, res, next) {
 app.use((err,req,res,next)=>{
   //LOGGING FUNCTION + EMAIL SEND TO ME
   console.log(err)
-  if(err.status===404){
+  if(!err.status){
+    res.status(500).send({error:"Something peculiar has happend here"})
+  }
+  else if(err.status===404){
     console.log('404')
     res.status(404).send({error: 'Endpoint could not be found'})
   }
-  else if(err.status===403){
-    res.send({error: 'Forbidden, access denied'})
-  }
   else if(err.status===500){
-    res.send({error: 'An error has occurred, we are working to resolve this'})
+    res.status(500).send({error: 'An error has occurred, we are working to resolve this'})
   }
   else {
-    res.send({error: 'An error has occurred, we are working to resolve this'})
+    res.status(err.status).send({error:"An unknown error has occurred. We are working to fix this."})
   }
   console.log('yo i erred');
   if(process.env.NODE_ENV!=='test'){
