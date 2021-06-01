@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import {connect} from 'react-redux';
 import Carousel from '../Components/carousel.js'
 import {carouselClick} from '../Actions/homeActions';
@@ -12,9 +12,9 @@ const photos = importAll(require.context('../../public/assets/carouselHome',fals
 
 const Home = (props) => {
     return (
-        <>
+        <Fragment>
             <Carousel photoLoc={'../../assets/carouselHome/'} photos={photos}carouselClick={props.carouselClick} imageIndices={props.home.imageIndices} direction={props.home.direction}/>
-        </>
+        </Fragment>
     )
 }
 
