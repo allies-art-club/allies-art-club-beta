@@ -219,7 +219,7 @@ const Figure = styled.figure`
 `
 const Slogan = styled.p`
     width: 100%;
-    background-color: #FF66C4;
+    background-color: rgba(255,102,196,0.65);
     text-align: center;
     color: white;
     height: 2rem;
