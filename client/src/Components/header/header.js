@@ -4,7 +4,7 @@ import {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap,Hea
 const Header = (props) => {
     return(
         <HeaderContainer id="header" data-test="header">
-            <Slogan>Creating a culture of community</Slogan>
+            <Slogan>CONNECT. CREATE. EMPOWER.</Slogan>
             <HeaderNav id="nav" data-test="nav">
                 <BurgerMenu onClick={(e)=>{
                     console.log(props.open)
