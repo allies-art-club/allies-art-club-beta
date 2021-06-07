@@ -13,11 +13,11 @@ const homeReducer = (state={
             state= {
                 ...state,
                 imageIndices: state.imageIndices.map(el=>{
-                    if(el+1<3){
-                        return el+=1
+                    if(el+1<(state.imageIndices.length-1)){
+                        return el+1
                     }
                     else{
-                        return el=-1
+                        return -1
                     }
                 })
             }
@@ -27,10 +27,11 @@ const homeReducer = (state={
                 ...state,
                 imageIndices: state.imageIndices.map(el=>{
                     if(el-1>-2){
-                        return el-=1
+                        return el-1;
                     }
                     else{
-                        return el=2                    }
+                        return state.imageIndices.length-2;                    
+                    }
                 })
             };
         break;
