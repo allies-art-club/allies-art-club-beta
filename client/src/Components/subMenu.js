@@ -13,7 +13,8 @@ const SubMenu = (props) => {
                             <SideNavListElement key={i}>
                                 <NavLinkSide onClick={(e)=>{
                                     if(window.innerWidth<768){
-                                        props.toggleMenu(e)
+                                        props.toggleMenu(e);
+                                        props.toggleSubMenu(props.subMenu);
                                     }
                                     }}exact to={`/${props.mainCategory}/${pageNavigate(el)}`}>{el}</NavLinkSide>
                             </SideNavListElement>
