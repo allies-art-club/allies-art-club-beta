@@ -1,12 +1,19 @@
 import React from 'react';
-import {TitleWrapper,SideImage,CentreImage} from '../Styled/donate.styled';
+import {TitleWrapper,SideImage,SideImageWrapper,CentreImage,CentreImageWrapper,ImageTitle} from '../Styled/titleBanner.styled';
 
 const TitleBanner = (props) => {
     return (
         <TitleWrapper>
-            <SideImage src={props.sideSrc1}></SideImage>
-            <CentreImage src={props.centreSrc}></CentreImage>
-            <SideImage src={props.sideSrc2}></SideImage>
+            <SideImageWrapper>
+                <SideImage src={props.sideSrc1}/>
+            </SideImageWrapper>
+            <CentreImageWrapper>
+                <CentreImage src={props.centreSrc}></CentreImage>
+                <ImageTitle>{props.title}</ImageTitle>
+            </CentreImageWrapper>
+            <SideImageWrapper>
+                <SideImage src={props.sideSrc2} />
+            </SideImageWrapper>
         </TitleWrapper>
     )
 }

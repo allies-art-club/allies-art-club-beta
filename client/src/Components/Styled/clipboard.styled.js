@@ -18,11 +18,22 @@ const boxGlow768 =  keyframes`
 `
 const ClipboardContainer = styled.div`
     position:relative;
-    width: 80%;
-    padding: 20px 40px;
+    width: 90%;
+    @media(min-width:768px){
+        width:70%;
+    }
+    padding: 20px 0px;
     margin:40px auto;
     background-color: white;
-    min-height: calc(100vh - 120px - 0.5*100vw*0.5627329192546584 - 57px);
+    @media(max-width:767px){
+        min-height: calc(100vh - 120px - 0.5*100vw*0.5627329192546584 - 57px);
+
+    }
+    @media(min-width:768px){
+        min-height: calc(100vh - 342.828px - 170px - 40px);
+
+
+    }
     -webkit-animation: ${boxGlowMob} 1.5s ease-in-out infinite alternate;
     -moz-animation: ${boxGlowMob} 1.5s ease-in-out infinite alternate;
     animation: ${boxGlowMob} 1.5s ease-in-out infinite alternate;
