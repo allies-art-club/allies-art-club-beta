@@ -28,10 +28,7 @@ const appReducer = (state={
                 ...state,
             }
             var subMenu = action.payload;
-            console.log(subMenu)
-            console.log(state.subMenu)
             state.subMenu[subMenu]=!state.subMenu[subMenu];
-            console.log(state.subMenu);
             break;
         case 'SET_TOKEN':
             console.log('PAAAAAAAAAAAAAAAAYLOAD');

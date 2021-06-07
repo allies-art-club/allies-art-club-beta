@@ -49,7 +49,7 @@ const Header = (props) => {
                                 nav={'nav'?1:0}
                                 data-test="aboutLink"
                                 >About</NavMainCategory>
-                            <SubMenu toggleMenu={props.toggleMenu}visible={props.subMenu.about}mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}></SubMenu>
+                            <SubMenu subMenu={'about'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu}visible={props.subMenu.about}mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavMainCategory
@@ -62,7 +62,7 @@ const Header = (props) => {
                                 nav={'nav'?1:0}
                                 data-test="updatesLink"
                                 >Updates</NavMainCategory>
-                                <SubMenu toggleMenu={props.toggleMenu} visible={props.subMenu.updates} mainCategory={'updates'} navLinks={["Club Articles","Project News","Artist Conversations","Personal Stories"]}></SubMenu>
+                                <SubMenu subMenu={'updates'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.updates} mainCategory={'updates'} navLinks={["Club Articles","Project News","Artist Conversations","Personal Stories"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavMainCategory
@@ -75,7 +75,7 @@ const Header = (props) => {
                                 nav={'nav'?1:0}
                                 data-test="clubsAndProjectsLink"
                                 >Projects</NavMainCategory>
-                                <SubMenu toggleMenu={props.toggleMenu} visible={props.subMenu.projects} mainCategory={'projects'} navLinks={["Access 2 Art"]}></SubMenu>
+                                <SubMenu subMenu={'projects'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.projects} mainCategory={'projects'} navLinks={["Access 2 Art"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavMainCategory
@@ -89,7 +89,7 @@ const Header = (props) => {
                                 data-test="beAnAllieLink"
                                 
                                 >Be an Allie</NavMainCategory>
-                                <SubMenu toggleMenu={props.toggleMenu} visible={props.subMenu.beAnAllie} mainCategory={'be-an-allie'} navLinks={["Membership","Donate","Volunteer","Contact Us"]}></SubMenu>
+                                <SubMenu subMenu={'beAnAllie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.beAnAllie} mainCategory={'be-an-allie'} navLinks={["Membership","Donate","Volunteer","Contact Us"]}></SubMenu>
                         </HeaderNavListElement>
                     </HeaderNavList>
                 </HeaderNavListWrap>
