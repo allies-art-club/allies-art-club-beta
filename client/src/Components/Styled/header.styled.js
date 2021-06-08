@@ -1,5 +1,6 @@
 import styled, {keyframes} from 'styled-components';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
+import {textGlow} from './theme/theme.js';
 //Header
 const boxGlowNav = keyframes`
     from {
@@ -11,14 +12,7 @@ const boxGlowNav = keyframes`
 `
 const activeClassName = 'nav-active-item';
 
-const textGlow = keyframes`
-    from {
-        text-shadow: 1px 1px 5px #38B6FF,1px -1px 5px #38B6FF,-1px 1px 5px #38B6FF,-1px -1px 5px #38B6FF;
-    }
-    to {
-        text-shadow:  0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF;
-    }
-`
+
 const donateGlow = keyframes`
 from {
     text-shadow: 1px 1px 5px #FFF859,1px -1px 5px #FFF859,-1px 1px 5px #FFF859,-1px -1px 5px #FFF859;
@@ -124,6 +118,7 @@ const HeaderNavList = styled.ul`
 `
 const HeaderNavListElement = styled.li`
     text-decoration: none;
+    position:relative;
 
 `
 const BurgerMenu = styled.button`
@@ -177,7 +172,7 @@ const DonateLinkWrapper = styled.div`
     position: relative;
 
 `
-const NavLinkStyled = styled(NavLink).attrs({activeClassName})`
+const NavMainCategory = styled.a`
     text-decoration: none;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -226,4 +221,4 @@ const Slogan = styled.p`
     line-height:2rem;
     margin:0px;
 `
-export {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap, Cross,HeaderNavList, HeaderNavListElement, DonateLinkWrapper,NavLinkStyled,NavLinkLogo,Logo, Figure,Slogan};
+export {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap, Cross,HeaderNavList, HeaderNavListElement, DonateLinkWrapper,NavMainCategory,NavLinkLogo,Logo, Figure,Slogan};

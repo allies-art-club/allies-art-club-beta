@@ -1,20 +1,23 @@
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
+const ImageWrapper = styled.div`
+    width:80%;
+    margin:auto;
+    position:relative;
 
-const TitleWrapper = styled.div`
-    width:100%;
-    display:flex;
-    flex-wrap: wrap;
-    align-items: start;
 `
-const CentreImage = styled.img`
-    width:56%;
-`
-const SideImage = styled.img`
-    width:22%;
+const ImageText=styled.p`
+    left:50%;
+    color:white;
+    position:absolute;
+    width:80%;
+    text-align:center;
+    top: 25%;
+    transform:translate(-50%,-50%);
+
 `
 const DonationWrapper = styled.div`
-    display: flex;    
+    display: flex;
 `
 const DonateLink = styled(NavLink)`
     
@@ -25,4 +28,4 @@ const DonateImage = styled.img`
 const DonateParagraph = styled.p`
     width:40%;
 `
-export {TitleWrapper,CentreImage,SideImage,DonationWrapper,DonateLink,DonateImage,DonateParagraph}
+export {ImageWrapper,ImageText,DonationWrapper,DonateLink,DonateImage,DonateParagraph}

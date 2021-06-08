@@ -2,17 +2,22 @@ import React,{Fragment} from 'react';
 import {CarouselImage,CarouselContainer, Slide,ChevronWrapper,Arrow} from './Styled/carousel.styled.js';
 
 const Carousel = (props) => {
+    if(!props.imageIndices.length){
+        for(var i = 0; i<props.photos.length;i++){
+            props.imageIndices.push(i-1);
+        }
+
+    }
     return(
         <CarouselContainer data-test="carouselContainer">
 
             <Slide>
                     {
                         props.photos.map((photo,i)=>{
-                            props.imageIndices.push(i-1);
                             console.log(i-1)
                             return(
                                 <Fragment key={i-1}>
-                                    <CarouselImage index={props.imageIndices[i]} direction={props.direction} src={props.photoLoc+photo} alt={'photo'+i}/>
+                                    <CarouselImage index={props.imageIndices[i]} length={props.imageIndices.length-2}direction={props.direction} src={props.photoLoc+photo} alt={'photo'+i}/>
                                 </Fragment>
                             )
                         })
