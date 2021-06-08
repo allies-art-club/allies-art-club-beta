@@ -6,13 +6,13 @@ import {DonationWrapper,DonateLink,DonateImage,DonateParagraph} from '../Compone
 const Donate = () => {
     return(
         <Fragment>
-            <TitleBanner sideSrc1={"../../assets/donateBanner/heartsL.png"} sideSrc2={"../../assets/donateBanner/heartsR.png"} centreSrc={"../../assets/donateBanner/centreSrc.png"} />
+            <TitleBanner sideSrc1={"/assets/general/heartsL.png"} sideSrc2={"/assets/general/heartsR.png"} centreSrc={"/assets/general/ribbon.png"} />
             <Paragraph>Thank you for considering donating to Allie's Art Club. We are a charitable organisation led by volunteers and 100% of funds and donations we receive go towards supporting local communities in London and our Club members through art and creative activities. How would you like to donate to our club?</Paragraph>
             <DonationWrapper>
                 <DonateLink
                     data-test="clubsAndProjectsLink"
                     exact to='/donateFunds'>
-                        <DonateImage src={"../../assets/donateBanner/centreSrc.png"}></DonateImage>
+                        <DonateImage src={"/assets/general/ribbon.png"}></DonateImage>
                         Donate Funds
                 </DonateLink>
                 <DonateParagraph>Make a direct Payment to Allie's Art Club</DonateParagraph>
@@ -24,7 +24,7 @@ const Donate = () => {
                     data-test="clubsAndProjectsLink"
                     exact to='/donateSupplies'>
 
-                        <DonateImage src={"../../assets/donateBanner/centreSrc.png"}></DonateImage>
+                        <DonateImage src={"/assets/general/ribbon.png"}></DonateImage>
                         Donate Supplies</DonateLink>
             </DonationWrapper>
         </Fragment>

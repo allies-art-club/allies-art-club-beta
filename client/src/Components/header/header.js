@@ -1,7 +1,8 @@
 import React from 'react';
-import {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap,HeaderNavList, HeaderNavListElement,Cross,NavLinkStyled,NavLinkLogo, Logo, Figure,Slogan} from '../Styled/header.styled.js';
-
+import {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap,HeaderNavList, HeaderNavListElement,Cross,NavMainCategory,NavLinkLogo, Logo, Figure,Slogan} from '../Styled/header.styled.js';
+import SubMenu from '../subMenu.js'
 const Header = (props) => {
+    console.log(props.subMenu)
     return(
         <HeaderContainer id="header" data-test="header">
             <Slogan>CONNECT. CREATE. EMPOWER.</Slogan>
@@ -22,46 +23,73 @@ const Header = (props) => {
                         <Logo id="aacLogo" data-test="aacLogo" src={'/assets/header/logo.png'} aria-label="Allie 's Art Club Logo" alt="Allie 's Art Club Logo"/>
                     </NavLinkLogo>
                 </Figure>
-                <NavLinkStyled 
+                <NavMainCategory 
                                 nav={'nav'?0:1}
                                 data-test="donate"
-                                exact to='/donate'
-                                >Donate</NavLinkStyled>
-                <HeaderNavListWrap onClick={(e)=>{
-                    if(e.target!==document.getElementById("pageNavList")){
+                                >Donate</NavMainCategory>
+                <HeaderNavListWrap
+                id="pageNavWrap" 
+                onClick={(e)=>{
+                    if(e.target===document.getElementById("pageNavWrap")||e.target===document.getElementById("closeNav")){
                         props.toggleMenu(e)
                     }
                 }}
                 open={props.open}>
-                    <Cross/>
+                    <Cross id="closeNav"/>
                     <HeaderNavList id="pageNavList" data-test="navList" open={props.open} >
                         <HeaderNavListElement>
-                            <NavLinkStyled 
+                            <NavMainCategory
+                                onClick={(e)=>{
+                                    if(window.innerWidth<768){
+                                        console.log('ye')
+                                        props.toggleSubMenu('about')
+                                    }
+                                    
+                                }}
                                 nav={'nav'?1:0}
                                 data-test="aboutLink"
-                                exact to='/about'
-                                >About</NavLinkStyled>
+                                >About</NavMainCategory>
+                            <SubMenu subMenu={'about'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu}visible={props.subMenu.about}mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
-                            <NavLinkStyled 
+                            <NavMainCategory
+                                onClick={(e)=>{
+                                    if(window.innerWidth<768){
+                                        props.toggleSubMenu('updates')
+                                    }
+                                    
+                                }} 
                                 nav={'nav'?1:0}
-                                data-test="thoughtsLink"
-                                exact to='/allies-thoughts'
-                                >Thoughts</NavLinkStyled>
+                                data-test="updatesLink"
+                                >Updates</NavMainCategory>
+                                <SubMenu subMenu={'updates'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.updates} mainCategory={'updates'} navLinks={["Club Articles","Project News","Artist Conversations","Personal Stories"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
-                            <NavLinkStyled 
+                            <NavMainCategory
+                                onClick={(e)=>{
+                                    if(window.innerWidth<768){
+                                        props.toggleSubMenu('projects')
+                                    }
+                                    
+                                }} 
                                 nav={'nav'?1:0}
                                 data-test="clubsAndProjectsLink"
-                                exact to='/allies-clubs-and-projects'
-                                >Projects</NavLinkStyled>
+                                >Projects</NavMainCategory>
+                                <SubMenu subMenu={'projects'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.projects} mainCategory={'projects'} navLinks={["Access 2 Art"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
-                            <NavLinkStyled 
+                            <NavMainCategory
+                                onClick={(e)=>{
+                                    if(window.innerWidth<768){
+                                        props.toggleSubMenu('beAnAllie')
+                                    }
+                                    
+                                }} 
                                 nav={'nav'?1:0}
                                 data-test="beAnAllieLink"
-                                exact to='/how-to-be-an-allie'
-                                >Be an Allie</NavLinkStyled>
+                                
+                                >Be an Allie</NavMainCategory>
+                                <SubMenu subMenu={'beAnAllie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.beAnAllie} mainCategory={'be-an-allie'} navLinks={["Membership","Donate","Volunteer","Contact Us"]}></SubMenu>
                         </HeaderNavListElement>
                     </HeaderNavList>
                 </HeaderNavListWrap>

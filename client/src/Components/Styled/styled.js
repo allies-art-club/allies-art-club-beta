@@ -4,6 +4,10 @@ import {Form,Field,FieldArray} from 'formik';
 const Container = styled.main`
   margin:auto;
   min-height: calc(100vh - 120px - 0.5*100vw*0.5627329192546584 - 37px);
+
+  @media(min-width:768px){
+    min-height: calc(100vh - 342.828px - 170px - 80px);
+  }
 `
 //Headings
 const HeadingMain = styled.h1`
@@ -24,13 +28,13 @@ const PageNavItem = styled.li`
 `
 //Main page elements
 const Section = styled.section`
-
+  padding:0 20px;
 `
 const SubSection = styled.div`
 
 `
 const Paragraph = styled.p`
-
+  font-size: 1.2rem;
 `
 const FormStyled= styled(Form)`
 
@@ -126,5 +130,12 @@ const ErrorWrapper = styled.div`
   height: 50px;
   margin-top:20px;
 `
-
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,FormStyled,FormCheckboxWrapper,FormInputWrapper,CheckboxLabel,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo};
+const Image = styled.img`
+  width:10%;
+  float:${props=>props.right?"right":"left"};
+`
+const Link = styled.a`
+    color:pink;
+    text-decoration:none;
+`
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,FormStyled,FormCheckboxWrapper,FormInputWrapper,CheckboxLabel,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,Link};

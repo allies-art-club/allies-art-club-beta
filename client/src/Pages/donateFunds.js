@@ -33,7 +33,7 @@ const DonateFunds = (props) => {
     })
     return(
         <Fragment>
-            <TitleBanner sideSrc1={"../../assets/donateBanner/sideSrc2.png"} sideSrc2={"../../assets/donateBanner/sideSrc2.png"} centreSrc={"../../assets/donateBanner/centreSrc.png"}></TitleBanner>
+            <TitleBanner sideSrc1={"/assets/general/starsL.png"} sideSrc2={"/assets/general/starsR.png"} centreSrc={"/assets/general/ribbon.png"}></TitleBanner>
             <Paragraph>Please fill in your details into the form below to make a direct payment to Allie's Art Club</Paragraph>
             <Formik
                 initialValues={{

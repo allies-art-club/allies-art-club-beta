@@ -34,6 +34,19 @@ export function toggleMenu(event,dispatch){
     }
 
 }
+export function toggleSubMenu(subMenu,dispatch){
+
+    try{
+        console.log('err')
+        dispatch({
+            type: 'TOGGLE_SUBMENU',
+            payload:subMenu
+        })
+    }
+    catch(e){
+        console.log(e);
+    }
+}
 
 export function setCsrfToken(token,dispatch){
     console.log('TOOOOOOOOOOOKEN',token);

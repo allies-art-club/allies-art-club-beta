@@ -56,7 +56,7 @@ const CarouselImage = styled.img`
     animation: ${boxGlowMob} 1.5s ease-in-out infinite alternate;
 
     transition-duration: ${props=>{
-        if((props.direction==='left'&& props.index===-1)||(props.direction==='right'&&props.index===2)){
+        if((props.direction==='left'&& props.index===-1)||(props.direction==='right'&&props.index===props.length)){
             return 'none';
         }
         else{
