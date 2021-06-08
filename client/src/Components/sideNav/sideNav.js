@@ -11,7 +11,7 @@ const SideNav = (props) => {
                     {
                         props.navLinks.map((el,i)=>
                             <SideNavListElement key={i}>
-                                <NavLinkSide exact to={`/about/${pageNavigate(el)}`}>{el}</NavLinkSide>
+                                <NavLinkSide exact to={`/${props.mainCategory}/${pageNavigate(el)}`}>{el}</NavLinkSide>
                             </SideNavListElement>
                         )
                     }

@@ -6,7 +6,7 @@ const appReducer = (state={
         about:false,
         updates:false,
         projects:false,
-        beAnAllie:false
+        "be-an-allie":false
     }
 },action)=>{
     switch(action.type){
