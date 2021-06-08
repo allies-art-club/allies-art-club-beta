@@ -81,7 +81,7 @@ const Header = (props) => {
                             <NavMainCategory
                                 onClick={(e)=>{
                                     if(window.innerWidth<768){
-                                        props.toggleSubMenu('beAnAllie')
+                                        props.toggleSubMenu('be-an-allie')
                                     }
                                     
                                 }} 
@@ -89,7 +89,7 @@ const Header = (props) => {
                                 data-test="beAnAllieLink"
                                 
                                 >Be an Allie</NavMainCategory>
-                                <SubMenu subMenu={'beAnAllie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.beAnAllie} mainCategory={'be-an-allie'} navLinks={["Membership","Donate","Volunteer","Contact Us"]}></SubMenu>
+                                <SubMenu subMenu={'be-an-allie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu["be-an-allie"]} mainCategory={'be-an-allie'} navLinks={["Membership","Donate","Volunteer","Contact Us"]}></SubMenu>
                         </HeaderNavListElement>
                     </HeaderNavList>
                 </HeaderNavListWrap>
