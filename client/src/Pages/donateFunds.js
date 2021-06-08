@@ -167,7 +167,7 @@ const DonateFunds = (props) => {
 
                 <FormSubmitWrapper>
                     <SubmitInfo>
-                        <StarImg src={"../../assets/donateBanner/shootingStarSingleL.png"}></StarImg>
+                        <StarImg src={"/assets/general/starL.png"}></StarImg>
                         <Paragraph>Please note: all of your information will be kept private, and we will NOT share any of this with other parties</Paragraph>
                     </SubmitInfo>
                     <FormSubmit type="submit" value="Submit" disabled={isSubmitting}>

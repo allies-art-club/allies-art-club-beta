@@ -11,7 +11,7 @@ const Donate = () => {
             <DonationWrapper>
                 <DonateLink
                     data-test="clubsAndProjectsLink"
-                    exact to='/donateFunds'>
+                    exact to='/be-an-allie/donateFunds'>
                         <DonateImage src={"/assets/general/ribbon.png"}></DonateImage>
                         Donate Funds
                 </DonateLink>
@@ -22,7 +22,7 @@ const Donate = () => {
                 <DonateParagraph>Send art supplies, books and resources to Allie's Art Club</DonateParagraph>
                 <DonateLink
                     data-test="clubsAndProjectsLink"
-                    exact to='/donateSupplies'>
+                    exact to='/be-an-allie/donateSupplies'>
 
                         <DonateImage src={"/assets/general/ribbon.png"}></DonateImage>
                         Donate Supplies</DonateLink>

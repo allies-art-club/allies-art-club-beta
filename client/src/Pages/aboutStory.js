@@ -8,7 +8,7 @@ import TextRibbon from '../Components/textRibbon.js';
 const AboutAlliesStory=()=>{
     return(
         <Fragment>
-            <SideNav navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}/>
+            <SideNav mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}/>
 
             <TitleBanner
                 sideSrc1={'/assets/general/heartsL.png'}

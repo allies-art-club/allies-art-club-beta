@@ -22,7 +22,9 @@ const Donate = lazy(()=>import('./Pages/donate.js'));
 const ThankYou = lazy(()=>import('./Pages/thankyou.js'));
 const DonateFunds = lazy(()=>import('./Pages/donateFunds.js'));
 const DonateSupplies = lazy(()=>import('./Pages/donateSupplies.js'));
-
+const Membership=lazy(()=>import('./Pages/membership.js'));
+const Volunteer=lazy(()=>import('./Pages/volunteer.js'));
+const ContactUs=lazy(()=>import('./Pages/contactUs'));
 const Access2Art = lazy(()=>import('./Pages/access2Art.js'));
 
 const ArtistConversations = lazy(()=>import('./Pages/artistConversations.js'));
@@ -151,7 +153,7 @@ const App= (props) =>{
                 }
                 />
 
-              <Route path="/donate" exact strict render={
+              <Route path="/be-an-allie/donate" exact strict render={
                     ()=>{
                         return(
                             <Clipboard children={
@@ -162,7 +164,7 @@ const App= (props) =>{
                 }
                 />
 
-              <Route path="/donateFunds" exact strict render={
+              <Route path="/be-an-allie/donateFunds" exact strict render={
                     ()=>{
                         return(
                           <Elements stripe={stripePromise}>
@@ -175,7 +177,7 @@ const App= (props) =>{
                 }
                 />
       
-              <Route path="/donateSupplies" exact strict render={
+              <Route path="/be-an-allie/donateSupplies" exact strict render={
                     ()=>{
                         return(
                             <Clipboard children={
@@ -185,6 +187,46 @@ const App= (props) =>{
                     }
                 }
                 />
+                <Route path="/be-an-allie/contact-us" exact strict render={
+                      ()=>{
+                          return(
+                              <Clipboard children={
+                                <ContactUs />
+                              }/>
+                          )
+                      }
+                  }
+                  />
+                <Route path="/be-an-allie/membership" exact strict render={
+                      ()=>{
+                          return(
+                              <Clipboard children={
+                                <Membership />
+                              }/>
+                          )
+                      }
+                  }
+                  />
+                  <Route path="/be-an-allie/volunteer" exact strict render={
+                        ()=>{
+                            return(
+                                <Clipboard children={
+                                  <Volunteer/>
+                                }/>
+                            )
+                        }
+                    }
+                    />
+                    <Route path="/be-an-allie/contact" exact strict render={
+                          ()=>{
+                              return(
+                                  <Clipboard children={
+                                    <Volunteer/>
+                                  }/>
+                              )
+                          }
+                      }
+                      />
                 <Route path="/thank-you" exact strict render={
                       ()=>{
                           return(
@@ -193,6 +235,14 @@ const App= (props) =>{
                       }
                   }
                   />
+                  <Route path="/welcome" exact strict render={
+                        ()=>{
+                            return(
+                                <ThankYou></ThankYou>
+                            )
+                        }
+                    }
+                    />
                   <Route path="/projects/access-2-art" exact strict render={
                         ()=>{
                             return(
