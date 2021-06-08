@@ -138,4 +138,10 @@ const Link = styled.a`
     color:pink;
     text-decoration:none;
 `
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,FormStyled,FormCheckboxWrapper,FormInputWrapper,CheckboxLabel,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,Link};
+const List=styled.ul`
+  
+`
+const ListElement=styled.li`
+
+`
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,FormStyled,FormCheckboxWrapper,FormInputWrapper,CheckboxLabel,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,Link,List,ListElement};
