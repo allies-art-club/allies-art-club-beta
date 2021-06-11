@@ -1,5 +1,20 @@
 const Donation = require('../db_model/donation');
 const DonationSupplies = require('../db_model/donationSupplies');
+const Member = require('../db_model/member.js')
+
+const createDate =()=>{
+
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+    const hours = String(today.getHours());
+    const minutes = String(today.getMinutes());
+    const seconds = String(today.getSeconds());
+    const date = dd + '-' + mm + '-' + yyyy+'T'+hours+':'+minutes+':'+seconds;
+    return date
+}
+/**********************DONATE FUNDS ***************************************/
 const postDonation = (req,res,next)=>{
     //post donation to mongo db
     // (name,email,organisation,billingAddress,amountDonated,message)
@@ -9,15 +24,8 @@ const postDonation = (req,res,next)=>{
     const organisation = req.body.organisation;
     const donationAmount = req.body.donationAmount;
     const message = req.body.message;
-    const today = new Date();
-    const dd = String(today.getDate()).padStart(2, '0');
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const yyyy = today.getFullYear();
-    const hours = String(today.getHours());
-    const minutes = String(today.getMinutes());
-    const seconds = String(today.getSeconds());
-    const date = dd + '-' + mm + '-' + yyyy+'T'+hours+':'+minutes+':'+seconds;
     const status = 'DONATION_CREATED';
+    const date = createDate()
     const donation = new Donation(stripeId,date,name,email,organisation,donationAmount,message,status);
     return donation
     .save()
@@ -58,6 +66,7 @@ const deleteDonation = (req,res,next)=>{
         next(err);
     })
 }
+/**********************DONATE SUPPLIES  ***************************************/
 const postSupplies=(req,res,next)=>{
     try{
         const name = req.body.name;
@@ -65,14 +74,7 @@ const postSupplies=(req,res,next)=>{
         const organisation = req.body.organisation;
         const supplies = req.body.supplies;
         const message = req.body.message;
-        const today = new Date();
-        const dd = String(today.getDate()).padStart(2, '0');
-        const mm = String(today.getMonth() + 1).padStart(2, '0');
-        const yyyy = today.getFullYear();
-        const hours = String(today.getHours());
-        const minutes = String(today.getMinutes());
-        const seconds = String(today.getSeconds());
-        const date = dd + '-' + mm + '-' + yyyy+'T'+hours+':'+minutes+':'+seconds;
+        const date = createDate();
         var donation = new DonationSupplies(date,name,email,organisation,supplies,message);
     }
     catch(e){
@@ -86,19 +88,39 @@ const postSupplies=(req,res,next)=>{
         return res
     })
     .catch((e)=>{
-        console.log('delete donation err',err)
+        console.log('delete donation err',e)
         e.status=500;
         next(err)
     })
 }
-// postDonation({body:{
-//     name: 'HARRY',
-//     email: 'harry@harry.harry',
-//     organisation: 'mead ltd',
-//     billingAddress: 'harrys house',
-//     amountDonated: '75 quid',
-//     cardType: 'Visa',
-//     message: 'that was quick'
-// }})
 
-module.exports = {postDonation,putDonation,deleteDonation,postSupplies};
+/********************** MEMBER  ***************************************/
+
+const postMember=(req,res,next)=>{
+    try {
+        const name = req.body.name;
+        const email = req.body.email;
+        const dob = req.body.dob;
+        const opportunities = req.body.opportunities;
+        const art = req.body.art;
+        const date = createDate();
+        var member = new Member(date,name,email,dob,opportunities,art)
+    }
+    catch(e){
+        console.log('post member error',e)
+        e.status=500
+    }
+    return member
+    .save(req,res,next)
+    .then((res)=>{
+        return res
+    })
+    .catch((e)=>{
+        console.log('Submission error',)
+        e.status=500;
+        next(e);
+    })
+
+}
+
+module.exports = {postDonation,putDonation,deleteDonation,postSupplies,postMember};

@@ -6,7 +6,7 @@ const dbRouter = require('./router/dbrouter');
 const exemptRouter =require('./router/csrfExemptRouter')
 const session = require('express-session');
 const path = require('path');
-const sgMail = require('@sendgrid/mail');
+const sgMail = require('./router/mail/sgMail.js');
 const cookieParser = require('cookie-parser');
 const csrf = require('csurf');
 const app = express();
@@ -21,7 +21,6 @@ app.use(bodyParser.json({verify: rawBodySaver}));
 //do not run the following during tests
 if(process.env.NODE_ENV!=='test'){
   var MongoDBStore = require('connect-mongodb-session')(session);
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 let store;
   console.log('yep');
   store = new MongoDBStore({

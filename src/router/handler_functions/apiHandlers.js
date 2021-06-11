@@ -2,8 +2,8 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY,{
     maxNetworkRetries: 3
 });
 const uuid = require('uuid/v4');
-const {postDonation,putDonation,deleteDonation,postSupplies} = require('./dbHandlers.js');
-
+const {postDonation,putDonation,deleteDonation,postSupplies,postMember} = require('./dbHandlers.js');
+const sgMail=require('../mail/sgMail.js');
 
 const payment = async(req,res,next) => {
     const {email} = req.body;
@@ -48,20 +48,20 @@ const payment = async(req,res,next) => {
                 console.log('YAR');
                 res.status(e.statusCode).json({'error':'An error has occurred. Please return later while we fix the error.'});
                 e.status=500;
-                throw e;
+                next(e);
             }
             else if(statusCode.match(/^5/)){
                 console.log('SOMETHING UP WITH STRIPE');
                 res.status(e.statusCode).json({'error':'An error has occurred with our payment provider. Please try again later.'});
                 e.status=500;
-                throw e;
+                next(e);
             }
         }
         else {
             console.log('ERRR')
             res.json({'error':e});
             e.status=e.statusCode;
-            throw e;
+            next(e);
         }
         
     }
@@ -76,7 +76,7 @@ const updatePayment = async(req,res,next)=>{
     }
     catch(e){
         e.status=500;
-        throw e;
+        next(e);
     }
 }
 
@@ -89,7 +89,7 @@ const deletePayment = async(req,res,next)=>{
     catch(err){
         console.log(err);
         err.status=500
-        throw err
+        next(err)
     }
 }
 
@@ -104,6 +104,40 @@ const csrfToken = (req,res,next) => {
         throw error;
     }
 }
+const contactUs=async(req,res,next)=>{
+    try {
+        var from = req.body.email;
+        var name = req.body.name;
+        var message = req.body.message
+        var response = await sgMail.send({
+          to:'harryyy27@gmail.com',
+          from: `${from}`,
+          subject: `Message from ${name}`,
+          text: `${message}`,
+          html: `<p>${message}</p>`
+        })
+        console.log(response);
+
+        res.send({received:true})
+    }
+    catch(e){
+        console.log(e);
+        const error = new Error('Email not sent',e);
+        error.status=500;
+        next(e);
+    }
+}
+const membershipPost = async(req,res,next)=>{
+    try {
+        await postMember(req,res,next);
+        res.send({success:true});
+    }
+    catch(e){
+        console.log(e);
+        e.status=500;
+        throw e;
+    }
+}
 const supplies = async(req,res,next)=>{
     try {
         const response = await postSupplies(req,res,next);
@@ -113,7 +147,7 @@ const supplies = async(req,res,next)=>{
     catch(e){
         console.log('YERRR',e)
         e.status=500;
-        throw e;
+        next(e);
     }
 }
 const route_404 = (req,res,next) => {
@@ -122,4 +156,4 @@ const route_404 = (req,res,next) => {
     throw error;
 }
 
-module.exports = {payment,supplies,updatePayment,deletePayment,csrfToken,route_404};
+module.exports = {payment,supplies,updatePayment,deletePayment,membershipPost,contactUs,csrfToken,route_404};

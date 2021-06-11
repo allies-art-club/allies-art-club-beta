@@ -216,16 +216,19 @@ tape('Delete payment handler works',async(t)=>{
             }
         }
     }
+    const next = (err)=>{
+        return err;
+    }
     donation.deleteDonation.returns(new Promise((resolve,reject)=>{
         return resolve(true)}
         ));
-    const payment = await deletePayment(req,res);
+    const payment = await deletePayment(req,res,next);
     console.log(payment)
     t.equals(payment.deleted,true)
     const error = new Error('yes');
     donation.deleteDonation.throws(error);
     try {
-        const payment = await deletePayment(req,res);
+        const payment = await deletePayment(req,res,next);
     }
     catch(e){
         error.status=500
@@ -251,16 +254,19 @@ tape('Update payment handler works',async(t)=>{
             }
         }
     }
+    const next = function(err){
+        return err;
+    }
     donation.updateDonationStatus.returns(new Promise((resolve,reject)=>{
         return resolve(true)}
     ));
-    const payment = await updatePayment(req,res);
+    const payment = await updatePayment(req,res,next);
     console.log(payment)
     t.equals(payment.updated,true)
     const error = new Error('yes');
     donation.updateDonationStatus.throws(error);
     try {
-        const payment = await updatePayment(req,res);
+        const payment = await updatePayment(req,res,next);
     }
     catch(e){
         error.status=500
