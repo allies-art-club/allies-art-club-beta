@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react';
-import { Paragraph,Section } from '../Components/Styled/styled.js';
+import { Paragraph,Section,TextImage } from '../Components/Styled/styled.js';
 import SideNav from '../Components/sideNav/sideNav.js';
-import {Quote,SubTitle,AboutImage} from '../Components/Styled/about.styled.js';
+import {Quote,SubTitle} from '../Components/Styled/about.styled.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import TextRibbon from '../Components/textRibbon.js';
 
@@ -25,7 +25,7 @@ const AboutAlliesStory=()=>{
                 </TextRibbon>
                 <Paragraph>Allie was known for her dazzling smile, vibrant personality and fantastic sense of humour. She loved to explore a huge range of creative pursuits, and was particularly talented at ice-skating, theatre, cello and singing. She was an incredibly hard-working and intelligent student receiving 9A*s for her GCSEs.</Paragraph>
                 
-                <AboutImage src={'/assets/about/allieSoup.png'}/>
+                <TextImage src={'/assets/about/allieSoup.png'}/>
                   
                         <Paragraph>As well as her dedication to pursuing artand education, Allie was committed to treating others with kindness and compassion.</Paragraph>
                          <Paragraph>With a strong desire to help those in need, Allie began volunteering at a local soup kitchen as a teenager and organised a fundraising event for the charity Wings of Hope.</Paragraph>

@@ -54,18 +54,6 @@ const TextWrapper=styled.div`
         width:50%;
     }
 `
-const AboutImage = styled.img`
-    border-radius:50%;
-    width:80%;
-    display:block;
-    margin:auto;
-
-    @media(min-width:768px){
-        float:${props=>props.right?'right':'left'};
-        width:40%;
-    }
-
-`
 
 
-export {Quote,SubTitle,FoundationImage,MissionWrapper,MissionDesc,Mission,ValuesWrap,Values,Tag,AllieWrap,TextWrapper,AboutImage}
+export {Quote,SubTitle,FoundationImage,MissionWrapper,MissionDesc,Mission,ValuesWrap,Values,Tag,AllieWrap,TextWrapper}

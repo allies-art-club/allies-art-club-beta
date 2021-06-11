@@ -91,6 +91,12 @@ const FieldSet = styled(FieldArray)`
 const FieldSetWrap = styled.div`
   position:relative;
 `
+const FormSelect = styled.select`
+
+`
+const FormSelectOption= styled.option`
+
+`
 const FormSubmit = styled.button`
   height:auto;
   background: none;
@@ -144,4 +150,26 @@ const List=styled.ul`
 const ListElement=styled.li`
 
 `
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,FormStyled,FormCheckboxWrapper,FormInputWrapper,CheckboxLabel,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,Link,List,ListElement};
+
+const TextImage = styled.img`
+    border-radius:50%;
+    width:80%;
+    display:block;
+    margin:auto;
+
+    @media(min-width:768px){
+        float:${props=>props.right?'right':'left'};
+        width:40%;
+    }
+`
+const Article = styled.article`
+
+`
+const Icon=styled.img`
+    display: inline-block;
+    width: 1rem;
+`
+const Quote=styled.p`
+    
+`
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,FormStyled,FormCheckboxWrapper,FormInputWrapper,CheckboxLabel,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,Link,List,ListElement,TextImage,Article,Icon,Quote};
