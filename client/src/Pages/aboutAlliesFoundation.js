@@ -1,8 +1,7 @@
 import React, {Fragment} from 'react';
 import SideNav from '../Components/sideNav/sideNav.js';
-import {Section,Paragraph,Image,Link} from '../Components/Styled/styled.js';
+import {Section,Paragraph,Image,Link,TextImage} from '../Components/Styled/styled.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import {AboutImage} from '../Components/Styled/about.styled.js';
 import TextRibbon from '../Components/textRibbon.js';
 const AboutAlliesFoundation = () =>{
     return(
@@ -15,14 +14,14 @@ const AboutAlliesFoundation = () =>{
                     title={"Allie's Foundation"}
                 ></TitleBanner>
             <Section id="alliesFoundation">
-                <AboutImage right={true}src={'/assets/footer/awtf_icon.png'}></AboutImage>
+                <TextImage right={true}src={'/assets/footer/awtf_icon.png'}></TextImage>
                 <Paragraph>The Alexandra Wylie Foundation (AWTF) was founded in 2010 after the death of Alexandra Wylie.</Paragraph>
                 <Paragraph>Alexandra (known as Allie) was a curious, fun-loving individual who cared deeply about societal issues and believed every person should have the opportunities she had to lead a happy and fulfilling life.</Paragraph>
                 <Paragraph>Allie's family were inspired to set up a charitable foundation in her name because of her strong desire to help others. Like Allie, the foundation supports social equality and the rights that everyone has to lead a safe and healthy life, filled with opportunities for learning, creativity and fun.</Paragraph>
                 <TextRibbon>AWTF aims to support underprivileged children adults and families and provide opportunities for them to cultivate "a passion for life".</TextRibbon>
                 <Paragraph>AWTF aims to honour Allie's memory by supporting the health and wellbeing of underprivileged children, adults and families in London.</Paragraph>
                 <Paragraph>In addition to providing essentials such as food and clothing, Allie's Foundation also works to improve underprivileged people's access to education and extra-curricular activities.</Paragraph>
-                <AboutImage  />
+                <TextImage  />
                 <Paragraph>Running for over 10 years, AWTF has delivered numerous projects that have helped those in need and brightened people's lives</Paragraph>
                 <Paragraph>Working with young people, the charity has helped provide mentorship programmes, exciting expeditions and extra-curricular activities such as art classes, sports clubs and cooking lessons.</Paragraph>
                 <Paragraph>With awareness of high levels of food poverty in London, the charity has also provided food parcels to families in need during the Summer holidays and has been running a food bank with the Pilion Trust at a North London community centre since 2017.</Paragraph>

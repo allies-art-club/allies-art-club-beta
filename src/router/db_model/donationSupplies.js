@@ -22,7 +22,7 @@ class DonationSupplies {
         .catch((e)=>{
             console.log(e);
             e.status=500;
-            next(e);
+            throw e;
         })
     }
     
