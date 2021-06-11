@@ -2,7 +2,7 @@ import React from 'react';
 import {SideNavWrapper,SideNavList, SideNavListElement,NavLinkSide} from '../Styled/sideNav.styled.js';
 const SideNav = (props) => {
     const pageNavigate=(el)=>{
-        const strippedStr = el.replace(/[\']/g,'').replace(/\s/g,'-').toLowerCase();
+        const strippedStr = el.replace(/[']/g,'').replace(/\s/g,'-').toLowerCase();
         return strippedStr
     }
     return(

@@ -1,5 +1,6 @@
 import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
+import {useHistory} from 'react-router-dom';
 import {Paragraph, Link,FormInput,FormInputWrapper,FormLabel,FormTextArea,FormStyled,FormInputValidation,FormSubmitWrapper,SubmitInfo,StarImg,FormSubmit,FormSubmitCaption,FormSubmitFigure,FormSubmitImage,ErrorWrapper,ErrorMessage} from '../Components/Styled/styled.js';
 import * as yup from 'yup';
 import {Formik} from 'formik';
@@ -7,11 +8,11 @@ import { toggleSpinner } from '../Actions/donateActions.js';
 import {handleSubmitContactUs} from '../Actions/beAnAllieActions.js';
 import {connect} from 'react-redux';
 const ContactUs =(props)=>{
-    
+    const history = useHistory();
     const ContactUsSchema = yup.object().shape({
         name: yup.string().max(70,'Please enter a name of 50 or less characters').required('Required'),
         email: yup.string().email('Invalid email').required('Required'),
-        message: yup.string().max(1000,'Please enter a message less than 1000 characters')
+        message: yup.string().required("Please enter a message").max(1000,'Please enter a message less than 1000 characters')
     })
     return (
         <Fragment>
@@ -34,9 +35,10 @@ const ContactUs =(props)=>{
                     try{
                         formik.setSubmitting(true);
                         await props.toggleSpinner()
-                        await props.handleSubmitContactUs(values)
-                        await toggleSpinner();
+                        await props.handleSubmitContactUs(values,props.csrf)
+                        await props.toggleSpinner();
                         formik.setSubmitting(false);
+                        history.push('/thank-you');
                     }
                     catch(e){
                         formik.setSubmitting(false);
@@ -55,11 +57,7 @@ const ContactUs =(props)=>{
                 isValid
             })=>(
                 
-            <FormStyled onSubmit={(event)=>{
-                event.preventDefault();
-                props.cardValidate(props.donate.card);
-                handleSubmit();
-                }}>
+            <FormStyled onSubmit={handleSubmit}>
                 <FormInputWrapper>
                     <FormLabel htmlFor="name">Full Name:*</FormLabel>
                     <FormInput type="text" name="name" id="name" onChange={handleChange} onBlur={handleBlur}value={values.name}></FormInput>
@@ -100,7 +98,7 @@ const ContactUs =(props)=>{
                         </FormSubmitFigure>
                     </FormSubmit>
                 {
-                    props.donate.errorMessage?<ErrorWrapper><ErrorMessage>{props.donate.errorMessage}</ErrorMessage></ErrorWrapper>:null
+                    props.beAnAllie.errorMessage.contactUs?<ErrorWrapper><ErrorMessage>{props.beAnAllie.errorMessage.contactUs}</ErrorMessage></ErrorWrapper>:null
                 }
                 </FormSubmitWrapper>
             </FormStyled>
@@ -112,7 +110,7 @@ const ContactUs =(props)=>{
 }
 const mapStateToProps=(state)=>{
     return {
-        donate:state.donate,
+        beAnAllie:state.beAnAllie,
         csrf:state.app.token
         
     }
@@ -120,6 +118,7 @@ const mapStateToProps=(state)=>{
 const mapDispatchToProps=(dispatch)=>{
     return {
         toggleSpinner: ()=>toggleSpinner(dispatch),
+        handleSubmitContactUs:(values,csrf)=>handleSubmitContactUs(values,csrf,dispatch)
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(ContactUs);
