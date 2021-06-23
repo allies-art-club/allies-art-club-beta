@@ -3,8 +3,10 @@ import {Section,Paragraph} from '../Components/Styled/styled';
 import SideNav from '../Components/sideNav/sideNav.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {ImageWrapper,ImageText} from '../Components/Styled/donate.styled';
-import {MissionWrapper,Mission,MissionDesc,ValuesWrap,Values,Tag} from '../Components/Styled/about.styled';
+import Value from '../Components/value.js';
+import {MissionWrapper,Mission,MissionDesc,ValuesWrap,ValuesImage} from '../Components/Styled/about.styled';
 import {CentreImage} from '../Components/Styled/titleBanner.styled'
+import tagMessageArray from './about/tagMessageArray.js'
 const AboutAac = () => {
     return (
         <Fragment>
@@ -18,7 +20,7 @@ const AboutAac = () => {
                 ></TitleBanner>
             <Section id="alliesArtClub">
 
-                <Paragraph>Allie's Art CLub is a community of change-makers and creatives. Formed by passionate volunteers during the Coronavirus pandemic, our club is open to anyone who loves to create and wants to make a positive impact in their community.</Paragraph>
+                <Paragraph>Allie's Art Club is a community of change-makers and creatives. Formed by passionate volunteers during the Coronavirus pandemic, our club is open to anyone who loves to create and wants to make a positive impact in their community.</Paragraph>
                 <Paragraph>We aim to create a safe and inclusive environment where participants feel empowered and connected, able to develop their skills and sense of wellbeing and make a difference in their community through artistic expression, collaboration and creative problem solving.</Paragraph>
                 
                 <ImageWrapper>
@@ -65,7 +67,24 @@ const AboutAac = () => {
                 <Paragraph>Allie's Art Club is built on a strong base of core values. These values are central to the work we do, directing both the way we work and the outcomes we aim to create.</Paragraph>
                 <Paragraph>The image below outlines the Club's 9 core values. You can click on each value to read more about how they guide our mission and ways of working.</Paragraph>
                 <ValuesWrap>
-                    <Values src={'/assets/about/Values.png'}/>
+                    <ValuesImage src={'/assets/about/Values.png'}/>
+                    {
+                        tagMessageArray.map((el,i)=>{
+                            return <Value key={i}
+                                        id={i+1}
+                                        tagWidth={el.tagWidth}
+                                        tagHorizontal={el.tagHorizontal}
+                                        tagVertical={el.tagVertical}
+                                        tagHeight={el.tagHeight}
+                                        messageWidth={el.messageWidth}
+                                        messageLeft={el.messageLeft}
+                                        messageHorizontal={el.messageHorizontal}
+                                        messageVertical={el.messageVertical}>
+                                            {el.messageContent}
+                                    </Value>
+
+                        })
+                    }
                 </ValuesWrap>
             </Section>
         </Fragment>

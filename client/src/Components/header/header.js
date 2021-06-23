@@ -23,7 +23,8 @@ const Header = (props) => {
                         <Logo id="aacLogo" data-test="aacLogo" src={'/assets/header/logo.png'} aria-label="Allie 's Art Club Logo" alt="Allie 's Art Club Logo"/>
                     </NavLinkLogo>
                 </Figure>
-                <NavMainCategory 
+                <NavMainCategory
+                                exact to={'/be-an-allie/donate'} 
                                 nav={'nav'?0:1}
                                 data-test="donate"
                                 >Donate</NavMainCategory>
@@ -41,11 +42,13 @@ const Header = (props) => {
                             <NavMainCategory
                                 onClick={(e)=>{
                                     if(window.innerWidth<768){
+                                        e.preventDefault()
                                         console.log('ye')
                                         props.toggleSubMenu('about')
                                     }
                                     
                                 }}
+                                exact to={"/about/allies-art-club"}
                                 nav={'nav'?1:0}
                                 data-test="aboutLink"
                                 >About</NavMainCategory>
@@ -55,36 +58,57 @@ const Header = (props) => {
                             <NavMainCategory
                                 onClick={(e)=>{
                                     if(window.innerWidth<768){
-                                        props.toggleSubMenu('updates')
+                                        e.preventDefault()
+                                        props.toggleSubMenu('discussions')
                                     }
                                     
-                                }} 
+                                }}
+                                exact to={"/discussions"}
                                 nav={'nav'?1:0}
-                                data-test="updatesLink"
-                                >Updates</NavMainCategory>
-                                <SubMenu subMenu={'updates'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.updates} mainCategory={'updates'} navLinks={["Club Articles","Project News","Artist Conversations","Personal Stories"]}></SubMenu>
+                                data-test="discussionsLink"
+                                >Discussions</NavMainCategory>
+                                <SubMenu subMenu={'discussions'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.discussions} mainCategory={'discussions'} navLinks={["All Discussions","Club Articles","Project News","Artist Conversations","Personal Stories"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavMainCategory
                                 onClick={(e)=>{
                                     if(window.innerWidth<768){
-                                        props.toggleSubMenu('projects')
+                                        e.preventDefault();
+                                        props.toggleSubMenu('activities');
                                     }
                                     
-                                }} 
+                                }}
+                                exact to={"/activities"}
                                 nav={'nav'?1:0}
-                                data-test="clubsAndProjectsLink"
-                                >Projects</NavMainCategory>
-                                <SubMenu subMenu={'projects'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.projects} mainCategory={'projects'} navLinks={["Access 2 Art"]}></SubMenu>
+                                data-test="activitiesLink"
+                                >Activities</NavMainCategory>
+                                <SubMenu subMenu={'activities'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.activities} mainCategory={'activities'} navLinks={["All Activities","Projects","Events"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavMainCategory
                                 onClick={(e)=>{
                                     if(window.innerWidth<768){
-                                        props.toggleSubMenu('be-an-allie')
+                                        e.preventDefault();
+                                        props.toggleSubMenu('resources');
                                     }
                                     
-                                }} 
+                                }}
+                                exact to={"/resources"}
+                                nav={'nav'?1:0}
+                                data-test="resourcesLink"
+                                >Resources</NavMainCategory>
+                                <SubMenu subMenu={'resources'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.resources} mainCategory={'resources'} navLinks={["All Resources","Fact Sheets","Work Sheets"]}></SubMenu>
+                        </HeaderNavListElement>
+                        <HeaderNavListElement>
+                            <NavMainCategory
+                                onClick={(e)=>{
+                                    if(window.innerWidth<768){
+                                        e.preventDefault();
+                                        props.toggleSubMenu('be-an-allie');
+                                    }
+                                    
+                                }}
+                                exact to={"/be-an-allie/donate"}
                                 nav={'nav'?1:0}
                                 data-test="beAnAllieLink"
                                 

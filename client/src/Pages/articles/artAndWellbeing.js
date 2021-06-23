@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Section,SubHeading,Article,Image} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,Section,SubHeading,Article,Image,ImageWrapper,Floater} from '../../Components/Styled/styled.js';
 const ArtAndWellbeing=()=>{
     return(
         <Article>
@@ -68,7 +68,10 @@ Art projects with people dealing with dementia and Alzheimer's disease have also
             </Section>
             <Section>
                 <Paragraph>So there we have it! Art and creative activities bring a huge range of benefits to people's health and wellbeing, whether through helping us heal and express our feelings, improve our mental states and fitness levels, or develop our social support networks and local communities. We hope you enjoyed this article and have more inspiration than ever to pursue your creative interests and take care of your wellbeing.</Paragraph>
-                <Image src={'/assets/general/heartL.png'}/>
+                <ImageWrapper>
+                    <Floater right={true}/>
+                    <Image alt="hearts right" src={'/assets/general/heartsR.png'}/>
+                </ImageWrapper>
             </Section>
         </Article>
     )

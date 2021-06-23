@@ -5,6 +5,11 @@ import {HeaderNavListElement}from '../Styled/header.styled.js';
 const SideNavWrapper = styled.div`
     display:${props=>props.visible?"block":"none"};
     width:${props=>props.menu?"auto":"15%"};
+    
+    padding-top: 20px;
+    @media(min-width: 768px){
+        padding-top: 40px;
+    }
     position:relative;
     @media(min-width:768px){
         display:${props=>props.menu?"none":"block"};
@@ -16,7 +21,7 @@ const SideNavWrapper = styled.div`
             display: block;
         }
     }
-    z-index: 10;
+    z-index: ${props=>props.sideNav?"20":"30"};
 `
 
 const SideNavList = styled.ul`
@@ -28,6 +33,9 @@ const SideNavListElement=styled.li`
     list-style-type: none;
     width:100%;
     margin-bottom:1rem;
+    @media(min-width:768px){
+        display:${props=>props.allCategory?"none":"block"};
+    }
 `
 const activeClassName = 'nav-active-item';
 const NavLinkSide = styled(NavLink).attrs({activeClassName})`
