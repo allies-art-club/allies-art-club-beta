@@ -4,7 +4,6 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY,{
 const uuid = require('uuid/v4');
 const {postDonation,putDonation,deleteDonation,postSupplies,postMember} = require('./dbHandlers.js');
 const sgMail=require('../mail/sgMail.js');
-const { fakeServer } = require('sinon');
 
 const payment = async(req,res,next) => {
     const {email} = req.body;
