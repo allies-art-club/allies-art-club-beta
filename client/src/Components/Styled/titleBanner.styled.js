@@ -35,15 +35,12 @@ const ImageTitle=styled.h1`
     font-weight:100;
     width:100%;
     text-align:center;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: nickainley;
     @media(min-width:320px){
-        font-size: 1.5rem;
-    }
-    @media(min-width:421px){
         font-size: 2rem;
     }
-    @media(min-width: 768px){
+    @media(min-width:421px){
         font-size: 2.5rem;
     }
     @media(min-width: 1025px){

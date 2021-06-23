@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Form,Field,FieldArray} from 'formik';
+import {theme} from './theme/theme.js';
 //Main
 const Container = styled.main`
   margin:auto;
@@ -9,12 +10,15 @@ const Container = styled.main`
     min-height: calc(100vh - 342.828px - 170px - 80px);
   }
 `
+
 //Headings
 const HeadingMain = styled.h1`
 
+  font-family: nickainley;
 `
 const SubHeading = styled.h2`
 
+  font-family: nickainley;
 `
 //Page Navigation
 const PageNavWrap = styled.nav`
@@ -34,7 +38,7 @@ const SubSection = styled.div`
 
 `
 const Paragraph = styled.p`
-  font-size: 1.2rem;
+  font-size: 1rem;
 `
 const FormStyled= styled(Form)`
 
@@ -137,11 +141,18 @@ const ErrorWrapper = styled.div`
   margin-top:20px;
 `
 const Image = styled.img`
-  width:10%;
-  float:${props=>props.right?"right":"left"};
+  display:block;
+  width:15%;
+`
+const ImageWrapper=styled.div`
+  display:flex;
+`
+const Floater=styled.div`
+  width:85%;
+  float:${props=>props.right?"auto":"right"};
 `
 const Link = styled.a`
-    color:pink;
+    color:${theme.pink};
     text-decoration:none;
 `
 const List=styled.ul`
@@ -172,4 +183,4 @@ const Icon=styled.img`
 const Quote=styled.p`
     
 `
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,FormStyled,FormCheckboxWrapper,FormInputWrapper,CheckboxLabel,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,Link,List,ListElement,TextImage,Article,Icon,Quote};
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,FormStyled,FormCheckboxWrapper,FormInputWrapper,CheckboxLabel,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,ImageWrapper,Floater,Link,List,ListElement,TextImage,Article,Icon,Quote};
