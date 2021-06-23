@@ -13,7 +13,17 @@ const Donate = () => {
                     data-test="clubsAndProjectsLink"
                     exact to='/be-an-allie/donateFunds'>
                         <DonateImage src={"/assets/general/ribbon.png"}></DonateImage>
-                        Donate Funds
+                        <svg style={{"width":"100%"}}viewport="0 0 300 300" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                      
+                            <path id="MyPath" fill="none" stroke="red"
+                                    d="M 10 100 C 100 80, 200 80, 290 100" />
+
+                           
+                            <text style={{"font-family":"'Big Shoulders Text','cursive'","font-size":"50px","width":"100%"}} >
+                                <textPath href="#MyPath">
+                                    DONATE FUNDS</textPath>
+                            </text>
+                        </svg>
                 </DonateLink>
                 <DonateParagraph>Make a direct Payment to Allie's Art Club</DonateParagraph>
             </DonationWrapper>

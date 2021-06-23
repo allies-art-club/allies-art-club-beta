@@ -6,7 +6,7 @@ const SideNav = (props) => {
         return strippedStr
     }
     return(
-        <SideNavWrapper>
+        <SideNavWrapper sideNav={true}>
             <SideNavList>
                     {
                         props.navLinks.map((el,i)=>

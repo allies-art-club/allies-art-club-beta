@@ -18,48 +18,91 @@ const boxGlow768 =  keyframes`
 `
 const ClipboardContainer = styled.div`
     position:relative;
-    width: 90%;
+    width: 95%;
+    @media(max-width:767px){
+        min-height: calc(100vh - 120px - 0.5*100vw*0.5627329192546584 - 57px);
+        left: 2.5%;
+    }
     @media(min-width:768px){
         width:70%;
     }
-    padding: 20px 10px;
-    @media(min-width:768px){
-    padding: 20px 60px;
-
-    }
     margin:40px auto;
-    background-color: white;
-    @media(max-width:767px){
-        min-height: calc(100vh - 120px - 0.5*100vw*0.5627329192546584 - 57px);
-
-    }
     @media(min-width:768px){
         min-height: calc(100vh - 342.828px - 170px - 40px);
 
 
     }
+`
+const ClipboardWrapper=styled.div`
+    width:100%;
+    background-color: white;
+    padding: 20px 10px;
+    border-radius:0;
+    @media(min-width:768px){
+        border-radius: 50px;
+        padding: 20px 60px;
+    }
+    z-index:3;
+`
+const GlowingColumn = styled.div`
+    height:100%;
+    width: 100%;
+    @media(min-width:768px){
+        border-radius: 50px;
+        width:100px;
+    }
     -webkit-animation: ${boxGlowMob} 1.5s ease-in-out infinite alternate;
     -moz-animation: ${boxGlowMob} 1.5s ease-in-out infinite alternate;
     animation: ${boxGlowMob} 1.5s ease-in-out infinite alternate;
-    border-radius: 50px;
-
     @media(min-width:768px){
         -webkit-animation: ${boxGlow768} 1.5s ease-in-out infinite alternate;
         -moz-animation: ${boxGlow768} 1.5s ease-in-out infinite alternate;
         animation: ${boxGlow768} 1.5s ease-in-out infinite alternate;
     }
 `
+const GlowingColumnContainer=styled.div`
+    position:absolute;
+    display:flex;
+    left:0;
+    top:0;
+    z-index:-1;
+    justify-content:space-between;
+    height:100%;
+    width:100%;
+    @media(max-width:767px){
+        ${GlowingColumn}:nth-child(2){
+            display:none;
+        }
+
+    }
+`
 const ClipboardIcon = styled.img`
     position:absolute;
     top:0px;
-    left: -5px;
-    width: 50px;
-    height: 50px;
+    left:-10px;
+    width:30px;
+    height:30px;
+    @media(min-width:421px){
+        left:-10px;
+        width:40px;
+        height:40px;
+    }
     @media(min-width:768px){
+        left: -15px;
+        width: 50px;
+        height: 50px;
+
+    }
+    @media(min-width:1025px){
         left:-20px;
         width:100px;
         height:100px;
     }
 `
+const Content = styled.div`
+    margin:0;
+    padding:0;
+    width:100%;
+`
 
-export {ClipboardContainer,ClipboardIcon}
+export {ClipboardContainer,ClipboardWrapper,ClipboardIcon,GlowingColumn,GlowingColumnContainer,Content}

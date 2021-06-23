@@ -5,22 +5,67 @@ const ArticleWrapper=styled.div`
 
 display:flex;
 flex-direction:${props=>props.right?"row-reverse":"row"};
+align-items: center;
+margin:20px 0px;
+@media(min-width:768px){
+    margin:40px 0px;
+}
+`
+const TextContainer=styled.div`
+    position:relative;
+    width:55%;
+    height: 80px;
+    display:table-cell;
+    vertical-align:middle;
+    @media(min-width:421px){
+        height:100px;
+    }
+    @media(min-width:768px){
+        height: 150px;
+    }
+    @media(min-width:1025px){
+        height: 200px;
+    }
+    @media(min-width:1300px){
+        height: 250px;
+    }
+    border-top: 5px dashed red;
+    border-bottom: 5px dashed red;
 `
 const TextWrap=styled.div`
-    width:50%;
+    margin:auto;
+    display:inline-block;
 `
 const ArticleTitle=styled.h2`
     text-align:center;
+    font-size: 1.2rem;
+    font-family: nickainley;
+    font-weight: 100;
+    margin:0;
+    
+    @media(min-width:320px){
+        font-size: 1.6rem;
+    }
+    @media(min-width: 1025px){
+        font-size: 2.5rem;
+        margin:10px 0;
+    }
+    @media(min-width:1300px){
+        font-size: 3rem;
+    }
 `
 const ArticleLink = styled(NavLink)`
     text-decoration:none;
     color: black;
 `
 const ArticleSummary = styled.p`
+    margin: 0;
+    font-size:0.8rem;
+
 
 `
 const Figure=styled.figure`
-    width:50%;
+    width:45%;
     margin:0;
 `
 const ArticleImage=styled.img`
@@ -35,4 +80,23 @@ const PublishingDate=styled.figcaption`
 const RememberAllieHeading=styled.h2`
     
 `
-export {ArticleWrapper,ArticleLink,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading}
+const ArticleDetailsWrapper=styled.div`
+    position:absolute;
+    bottom:-25px;
+    @media(min-width:421px){
+        bottom:-30px;
+    }
+    @media(min-width:768px){
+        bottom:-50px;
+    }
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+`
+const ArticleItem=styled.p`
+    font-size:0.7rem;
+    @media(min-width:768px){
+        font-size:0.8rem;
+    }
+`
+export {ArticleWrapper,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem}
