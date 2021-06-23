@@ -52,7 +52,7 @@ const HeaderNavListWrap= styled.div`
     width: 100vw;
     height:100vh;
     overflow:hidden;
-    z-index:1000;
+    z-index:20;
 }
  
 
@@ -102,7 +102,6 @@ const HeaderNavList = styled.ul`
         top: 100px;
         display:${props=>props.open?'flex':'none'};
         flex-direction: column;
-        z-index:101;
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         transition: all 0.5s;
@@ -172,7 +171,7 @@ const DonateLinkWrapper = styled.div`
     position: relative;
 
 `
-const NavMainCategory = styled.a`
+const NavMainCategory = styled(NavLink)`
     text-decoration: none;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -180,9 +179,6 @@ const NavMainCategory = styled.a`
     -webkit-animation:${props=>props.nav?textGlow:donateGlow} 1.5s ease-in-out infinite alternate;
     -moz-animation: ${props=>props.nav?textGlow:donateGlow} 1.5s ease-in-out infinite alternate;
     animation: ${props=>props.nav?textGlow:donateGlow} 1.5s ease-in-out infinite alternate;
-    &.${activeClassName}{
-        color: red;
-    }
     font-size: 2rem;
     text-decoration:none;
     color:white;

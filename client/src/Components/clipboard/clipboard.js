@@ -1,12 +1,24 @@
 import React from 'react';
-import { ClipboardContainer,ClipboardIcon} from '../Styled/clipboard.styled.js';
+import { ClipboardContainer,ClipboardWrapper,ClipboardIcon,GlowingColumn,GlowingColumnContainer,Content} from '../Styled/clipboard.styled.js';
 const Clipboard = (props)=> {
     return (
         <ClipboardContainer>
-                <ClipboardIcon src='/assets/clipboard/Paperclip.png'/>
-                {
-                    props.children
-                }
+                
+                <GlowingColumnContainer>
+                    <GlowingColumn />
+                    <GlowingColumn />
+                </GlowingColumnContainer>
+                <ClipboardWrapper>
+
+                    <ClipboardIcon src='/assets/clipboard/Paperclip.png'/>
+                    
+                    <Content>
+                        {
+                            props.children
+                        }
+                    </Content>
+
+                </ClipboardWrapper>
         </ClipboardContainer>
     )
 }

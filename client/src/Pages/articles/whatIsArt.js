@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Article} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,Article,ImageWrapper,Floater,Image} from '../../Components/Styled/styled.js';
 const WhatIsArt=()=>{
     return(
         <Article>
@@ -25,6 +25,11 @@ const WhatIsArt=()=>{
             <TextImage alt={"Heart"} src={"/assets/articles/whatIsArt/whatIsArt4.png"}/>
             <Paragraph>Communicating through art can also help others see our point of view and understand our experiences. Somtimes art can do this sublty, like a beautiful piece of embroidery which expresses the maker's feelings of joy and belonging. Other times art can make bold statements, like placards at political demonstrations, depictions of violent war zones or meaningful illustrated quotes.</Paragraph>
             <Paragraph>Art is everywhere and all around us - no matter who we are or where we are from human imagination has come into form in some shape or size in the variety of places we exist. Art is a powerful way to express ourselves and influence the world around us as individuals and as a colective. Whether we create to educate, inspire, heal or persuade, build beautiful places or useful objects, or simply to play and have fun, how we choose to use art is up to us.</Paragraph>
+
+            <ImageWrapper>
+                <Floater right={true}/>
+                <Image alt={"starsR"}src={"/assets/general/starsR.png"}/>
+            </ImageWrapper>
             
         </Article>
     )

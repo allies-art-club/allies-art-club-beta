@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Article,Section,Image} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,Article,Section,Image, ImageWrapper,Floater} from '../../Components/Styled/styled.js';
 import {RememberAllieHeading} from "../../Components/Styled/article.styled.js";
 const RememberingAllie=()=>{
     return(
@@ -121,7 +121,10 @@ Panis Angelicus in a perfect duet before an adoring congregation.
 Allie was a truly angelic neighbour and her wisdom and kindness will
 always be left with me.</Paragraph>
 </Section>
-<Image alt={"heartsL"}src={"/assets/general/heartsR.png"}/>
+<ImageWrapper>
+    <Floater right={true}/>
+    <Image alt={"heartsR"}src={"/assets/general/heartsR.png"}/>
+</ImageWrapper>
         </Article>
     )
 }

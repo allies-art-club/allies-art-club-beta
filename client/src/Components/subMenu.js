@@ -10,13 +10,17 @@ const SubMenu = (props) => {
             <SideNavList>
                     {
                         props.navLinks.map((el,i)=>
-                            <SideNavListElement key={i}>
+                            <SideNavListElement 
+                                key={i}
+                                allCategory={el.match(/All /)?true:false}
+                            >
                                 <NavLinkSide onClick={(e)=>{
                                     if(window.innerWidth<768){
                                         props.toggleMenu(e);
                                         props.toggleSubMenu(props.subMenu);
                                     }
-                                    }}exact to={`/${props.mainCategory}/${pageNavigate(el)}`}>{el}</NavLinkSide>
+                                    }}
+                                    exact to={el.match(/All /)?`/${props.mainCategory}`:`/${props.mainCategory}/${pageNavigate(el)}`}>{el}</NavLinkSide>
                             </SideNavListElement>
                         )
                     }
