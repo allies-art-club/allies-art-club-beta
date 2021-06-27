@@ -25,7 +25,7 @@ const DonateSupplies = lazy(()=>import('./Pages/donateSupplies.js'));
 const Membership=lazy(()=>import('./Pages/membership.js'));
 const Volunteer=lazy(()=>import('./Pages/volunteer.js'));
 const ContactUs=lazy(()=>import('./Pages/contactUs'));
-const Access2Art = lazy(()=>import('./Pages/activities/access2Art.js'));
+const ArtCare = lazy(()=>import('./Pages/activities/artCare.js'));
 const NotFound = lazy(()=>import('./Pages/notFound.js'));
 const ArtistConversations = lazy(()=>import('./Pages/artistConversations.js'));
 const Resources= lazy(()=>import('./Pages/resources.js'));
@@ -71,8 +71,12 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: inherit;({cookie:true});
   }
-  p, figcaption,span {
+  p, figcaption,span,label,legend,li,input {
+    font-size: 1rem;
     font-family: "Architects Daughter";
+  }
+  p, figcaption {
+    text-align: justify;
   }
 `
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
@@ -264,11 +268,11 @@ const App= (props) =>{
                           }
                       }
                       />
-                    <Route path="/activities/projects/access-2-art" exact strict render={
+                    <Route path="/activities/projects/art-care" exact strict render={
                           ()=>{
                               return(
                                 <Clipboard children={
-                                  <Access2Art></Access2Art>
+                                  <ArtCare></ArtCare>
                                 }/>
                               )
                           }
