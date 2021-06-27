@@ -33,7 +33,7 @@ const DonateFunds = (props) => {
     })
     return(
         <Fragment>
-            <TitleBanner sideSrc1={"/assets/general/starsL.png"} sideSrc2={"/assets/general/starsR.png"} centreSrc={"/assets/general/ribbon.png"}></TitleBanner>
+            <TitleBanner sideSrc1={"/assets/general/starsL.png"} sideSrc2={"/assets/general/starsR.png"} centreSrc={"/assets/general/ribbon.png"} svgSrc={'../Components/Styled/donateBannerSvg/donateFunds.svg'}></TitleBanner>
             <Paragraph>Please fill in your details into the form below to make a direct payment to Allie's Art Club</Paragraph>
             <Formik
                 initialValues={{
@@ -90,7 +90,7 @@ const DonateFunds = (props) => {
                 props.cardValidate(props.donate.card);
                 handleSubmit();
                 }}>
-                <FormInputWrapper>
+                <FormInputWrapper error={errors.name&&touched.name?true:false}>
                     <FormLabel htmlFor="name">Full Name:*</FormLabel>
                     <FormInput type="text" name="name" id="name" onChange={handleChange} onBlur={handleBlur}value={values.name}></FormInput>
                     {
@@ -99,7 +99,7 @@ const DonateFunds = (props) => {
                     ): null
                     }
                 </FormInputWrapper>
-                <FormInputWrapper>
+                <FormInputWrapper error={errors.email&&touched.email?true:false}>
                     <FormLabel htmlFor="email">Email:*</FormLabel>
                     <FormInput type="email" name="email" id="email" onChange={handleChange} onBlur={handleBlur} value={values.email}></FormInput>
                     {
@@ -108,7 +108,7 @@ const DonateFunds = (props) => {
                     ): null
                     }
                 </FormInputWrapper>
-                <FormInputWrapper>
+                <FormInputWrapper error={errors.organisation&&touched.organisation?true:false}>
                     <FormLabel htmlFor="organisation">Organisation (if applicable):</FormLabel>
                     <FormInput type="text" name="organisation" id="organisation" onChange={handleChange} onBlur={handleBlur} value={values.organisation}></FormInput>
                     <ErrorMessage></ErrorMessage>
@@ -118,7 +118,7 @@ const DonateFunds = (props) => {
                     ): null
                     }
                 </FormInputWrapper>
-                <FormInputWrapper>
+                <FormInputWrapper error={errors.donationAmount&&touched.donationAmount?true:false}>
                     <FormLabel htmlFor="donationAmount">Amount to pay:*</FormLabel>
                     <FormInput type="number" name="donationAmount" id="donationAmount" onChange={handleChange} onBlur={handleBlur} value={values.donationAmount}></FormInput>
                     {

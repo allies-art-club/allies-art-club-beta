@@ -1,42 +1,10 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-import {textGlow} from './theme/theme.js';
+import {theme} from './theme/theme.js';
 //Header
-const boxGlowNav = keyframes`
-    from {
-        box-shadow: 3px 0px 0px #FF66C4;
-    }
-    to {
-        box-shadow:  4px 0px 1px #FF66C4, 6px 0px 2px #FF66C4, 8px 0px 3px #FF66C4, 9px 0 5px #FF66C4;
-    }
-`
+
 const activeClassName = 'nav-active-item';
 
-
-const donateGlow = keyframes`
-from {
-    text-shadow: 1px 1px 5px #FFF859,1px -1px 5px #FFF859,-1px 1px 5px #FFF859,-1px -1px 5px #FFF859;
-}
-to {
-    text-shadow:  0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF;
-}
-`
-const boxGlowClosed = keyframes`
-    from {
-        box-shadow: 1px 1px 5px #38B6FF,1px -1px 5px #38B6FF,-1px 1px 5px #38B6FF,-1px -1px 5px #38B6FF;
-    }
-    to {
-        box-shadow:  0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF;
-    }
-`
-const boxGlowOpened = keyframes`
-    from {
-        box-shadow: 1px 1px 5px #FF66C4,1px -1px 5px #FF66C4,-1px 1px 5px #FF66C4,-1px -1px 5px #FF66C4;
-    }
-    to {
-        box-shadow:  0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF66C4, 0 0 35px #FF66C4
-    }
-`
 const HeaderContainer = styled.header`
 `
 const HeaderNav = styled.nav`
@@ -75,13 +43,11 @@ border: none;
     background-color: white;
     width:2.2rem;
     height:3px;
-    transform ;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
-    -webkit-animation:${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
-    -moz-animation: ${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
-    animation: ${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
+    
+    box-shadow:${props=>props.open?`0px 0px 6px 2px ${theme.blue}`:`0px 0px 6px 2px ${theme.blue}`};
 
 }
 &:after {
@@ -92,7 +58,7 @@ border: none;
 }
 
 `
-
+//box glow nav
 const HeaderNavList = styled.ul`
     list-style:none;
     @media(max-width:767px){
@@ -102,17 +68,11 @@ const HeaderNavList = styled.ul`
         top: 100px;
         display:${props=>props.open?'flex':'none'};
         flex-direction: column;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        transition: all 0.5s;
-        -webkit-animation:${boxGlowNav} 1.5s ease-in-out infinite alternate;
-        -moz-animation: ${boxGlowNav} 1.5s ease-in-out infinite alternate;
-        animation: ${boxGlowNav} 1.5s ease-in-out infinite alternate;
+        box-shadow:7px 0 7px ${theme.pink};
     }
     @media(min-width:768px){
         display:flex;
         justify-content:space-around;
-        padding-top: 25px;
     }
 `
 const HeaderNavListElement = styled.li`
@@ -132,19 +92,14 @@ const BurgerMenu = styled.button`
     }
 `
 
-
+//boxGlowClosed
 const BurgerLayers = styled.span`
     display: block;
     margin: auto;
     width: 1.6rem;
     height: 4px;
     background-color:white;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-animation:${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
-    -moz-animation: ${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
-    animation: ${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
+    box-shadow:${props=>props.open?`0px 0px 6px 2px ${theme.blue}`:`0px 0px 6px 2px ${theme.blue}`};
     &:after,&:before {
         position: absolute;
         content:'';
@@ -152,12 +107,7 @@ const BurgerLayers = styled.span`
         width: 1.6rem;
         height: 4px;
         background-color:white;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        transition: all 0.5s;
-        -webkit-animation:${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
-        -moz-animation: ${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
-        animation: ${props=>props.open?boxGlowOpened:boxGlowClosed} 1.5s ease-in-out infinite alternate;
+        box-shadow:${props=>props.open?`0px 0px 6px 2px ${theme.blue}`:`0px 0px 6px 2px ${theme.blue}`};
     }
     &:after {
 
@@ -171,14 +121,13 @@ const DonateLinkWrapper = styled.div`
     position: relative;
 
 `
+
+//START HERE TOMORROW TEXT SHADOW ALL SIDES
 const NavMainCategory = styled(NavLink)`
     text-decoration: none;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-animation:${props=>props.nav?textGlow:donateGlow} 1.5s ease-in-out infinite alternate;
-    -moz-animation: ${props=>props.nav?textGlow:donateGlow} 1.5s ease-in-out infinite alternate;
-    animation: ${props=>props.nav?textGlow:donateGlow} 1.5s ease-in-out infinite alternate;
+    
+    text-shadow:${props=>props.nav?`0px 0px 1rem ${theme.blue}`:`0px 0px 1rem ${theme.yellow}`};
+ 
     font-size: 2rem;
     text-decoration:none;
     color:white;
@@ -186,8 +135,8 @@ const NavMainCategory = styled(NavLink)`
     font-family: 'Big Shoulders Text', cursive;
     text-transform: uppercase;
     position: ${props=>props.nav?'static':'absolute'};
-    top: ${props=>props.nav?'auto':'50%'};
-    right: ${props=>props.nav?'auto':'0'};
+    top: ${props=>props.nav?'auto':'38%'};
+    right: ${props=>props.nav?'auto':'8%'};
     transform: ${props=>props.nav?'auto':'translateY(-50%)'};
     @media(max-width:480px){
         font-size ${props=>props.nav?'2rem':'1.5rem'};

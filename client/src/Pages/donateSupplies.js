@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react';
 import {useHistory} from 'react-router-dom';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import {Paragraph, FormStyled,FormCheckboxWrapper,FormInputWrapper,FormInputValidation, FieldSet,FieldSetWrap, CheckboxLabel,FormLabel,FormInput,FormTextArea,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,FormSubmitWrapper, SubmitInfo,StarImg, FormSubmit,ErrorMessage,ErrorWrapper} from '../Components/Styled/styled';
+import {Paragraph, FormStyled,FormCheckboxWrapper,FormInputWrapper,FormInputValidation, FieldSet,FieldSetWrap, FormInputCheckboxWrapper, FormInputCheckbox,CheckboxLabel,FormLabel,FormInput,FormTextArea,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,FormSubmitWrapper, SubmitInfo,StarImg, FormSubmit,ErrorMessage,ErrorWrapper} from '../Components/Styled/styled';
 import {Formik} from 'formik';
 import * as yup from 'yup';
 import {connect} from 'react-redux';
@@ -101,7 +101,7 @@ const DonateSupplies=(props)=>{
                         ): null
                         }
                     </FormInputWrapper>
-                    <FormCheckboxWrapper>
+                    <FormCheckboxWrapper longList={true}>
 
                     <legend>Supplies to donate (check all that apply):*</legend>
                         <FieldSet role="group" aria-labelledBy="checkbox-group">
@@ -109,25 +109,27 @@ const DonateSupplies=(props)=>{
                             { (options && options.length)?
                                 options.map((el,i)=>
 
-                                    <FieldSetWrap key={i}>
+                                    <FieldSetWrap longList={true} key={i}>
+                                        <FormInputCheckboxWrapper>
+                                            <FormInputCheckbox type="checkbox" name="supplies" onChange={(event)=>{
+                                                    console.log(
+                                                        errors
+                                                    )
+                                                    const checked = event.target.checked;
+                                                    console.log(checked);
+                                                    const valueArray = [...values.supplies]||[];
+                                                    console.log(valueArray);
+                                                    if (checked) {
+                                                        valueArray.push(event.target.value);
+                                                    } else {
+                                                        valueArray.splice(valueArray.indexOf(event.target.value), 1);
+                                                    }
+                                                    console.log(handleChange.toString())
+                                                    values.supplies=[...valueArray]||[];
+                                                    event.target.blur()
+                                                }} value={el}/>
+                                            </FormInputCheckboxWrapper>
                                         <CheckboxLabel htmlFor="supplies">{el}</CheckboxLabel>
-                                        <FormInput type="checkbox" name="supplies" onChange={(event)=>{
-                                                console.log(
-                                                    errors
-                                                )
-                                                const checked = event.target.checked;
-                                                console.log(checked);
-                                                const valueArray = [...values.supplies]||[];
-                                                console.log(valueArray);
-                                                if (checked) {
-                                                    valueArray.push(event.target.value);
-                                                } else {
-                                                    valueArray.splice(valueArray.indexOf(event.target.value), 1);
-                                                }
-                                                console.log(handleChange.toString())
-                                                values.supplies=[...valueArray]||[];
-                                                event.target.blur()
-                                            }} value={el}></FormInput>
                                     </FieldSetWrap>
 
                                 ):null
