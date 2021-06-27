@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {Formik} from 'formik';
 import * as yup from 'yup';
-import {Paragraph, FormCheckboxWrapper,FormInput,FormInputWrapper,FormLabel,FieldSet,FieldSetWrap,CheckboxLabel,FormStyled,FormInputValidation,FormSubmitWrapper,SubmitInfo,StarImg,FormSubmit,FormSubmitCaption,FormSubmitFigure,FormSubmitImage,ErrorWrapper,ErrorMessage,FormSelect,FormSelectOption} from '../Components/Styled/styled.js';
+import {Paragraph, FormCheckboxWrapper,FormInput,FormInputCheckbox,FormInputCheckboxWrapper,FormInputWrapper,FormLabel,RadioWrap,RadioInputWrap,FormRadio,RadioLabel,FieldSet,FieldSetWrap,CheckboxLabel,DatePickWrap,FormStyled,FormInputValidation,FormSubmitWrapper,SubmitInfo,StarImg,FormSubmit,FormSubmitCaption,FormSubmitFigure,FormSubmitImage,ErrorWrapper,ErrorMessage} from '../Components/Styled/styled.js';
 import {toggleSpinner} from '../Actions/donateActions';
 import {handleSubmitMember,handleError} from '../Actions/beAnAllieActions';
 import {connect} from 'react-redux';
@@ -37,7 +37,9 @@ const Membership = (props)=>{
                     dob:"",
                     opportunities: [],
                     art: [],
-                    receiveEmail: "Yes"
+                    receiveEmail: "Yes",
+                    opportunitiesOther: "",
+                    artOther: "",
                 }}
                 validationSchema={MembershipSchema}
                 onSubmit={async(values,formik)=>{
@@ -95,7 +97,7 @@ const Membership = (props)=>{
                     ): null
                     }
                 </FormInputWrapper>
-                <FormInputWrapper>
+                <DatePickWrap>
                     <FormLabel htmlFor="dob">Date of Birth:*</FormLabel>
                     <DatePickerComponent name={"dob"} value={values.dob}/>
                     {
@@ -103,7 +105,8 @@ const Membership = (props)=>{
                     <FormInputValidation>{errors.dob}</FormInputValidation>
                     ): null
                     }
-                </FormInputWrapper>
+
+                </DatePickWrap>
                 <FormCheckboxWrapper>
 
                     <legend>What opportunities are you interested in?: (check all that apply):</legend>
@@ -113,24 +116,27 @@ const Membership = (props)=>{
                                 opportunities.map((el,i)=>
 
                                     <FieldSetWrap key={i}>
+                                        <FormInputCheckboxWrapper>
+                                            <FormInputCheckbox type="checkbox" name="opportunities" onChange={(event)=>{
+                                                    console.log(
+                                                        errors
+                                                    )
+                                                    const checked = event.target.checked;
+                                                    console.log(checked);
+                                                    const valueArray = [...values.opportunities]||[];
+                                                    console.log(valueArray);
+                                                    if (checked) {
+                                                        valueArray.push(event.target.value);
+                                                    } else {
+                                                        valueArray.splice(valueArray.indexOf(event.target.value), 1);
+                                                    }
+                                                    console.log(handleChange.toString())
+                                                    values.opportunities=[...valueArray]||[];
+                                                    event.target.blur()
+                                                }} value={el}></FormInputCheckbox>
+                                        </FormInputCheckboxWrapper>
+
                                         <CheckboxLabel htmlFor="opportunities">{el}</CheckboxLabel>
-                                        <FormInput type="checkbox" name="opportunities" onChange={(event)=>{
-                                                console.log(
-                                                    errors
-                                                )
-                                                const checked = event.target.checked;
-                                                console.log(checked);
-                                                const valueArray = [...values.opportunities]||[];
-                                                console.log(valueArray);
-                                                if (checked) {
-                                                    valueArray.push(event.target.value);
-                                                } else {
-                                                    valueArray.splice(valueArray.indexOf(event.target.value), 1);
-                                                }
-                                                console.log(handleChange.toString())
-                                                values.opportunities=[...valueArray]||[];
-                                                event.target.blur()
-                                            }} value={el}></FormInput>
                                     </FieldSetWrap>
 
                                 ):null
@@ -144,33 +150,45 @@ const Membership = (props)=>{
                             ): null
                         }
                     </FormCheckboxWrapper>
-                    <FormCheckboxWrapper>
-
-                    <legend>Which forms of art interest you?: (tick all that apply)*</legend>
-                        <FieldSet role="group" aria-labelledBy="checkbox-group">
+                    
+                    <FormInputWrapper>
+                        <FormLabel style={{"display":"none"}}htmlFor="opportunitiesOther">Opportunities Other:*</FormLabel>
+                        <FormInput type="text" name="opportunitiesOther" id="opportunitiesOther" onChange={handleChange} onBlur={handleBlur} value={values.opportunitiesOther}></FormInput>
+                        {
+                        errors.opportunitiesOther && touched.opportunitiesOther ?(
+                        <FormInputValidation>{errors.opportunitiesOther}</FormInputValidation>
+                        ): null
+                        }
+                    </FormInputWrapper>
+                    <FormCheckboxWrapper longList={true}>
+                        <FieldSet  role="group" aria-labelledBy="checkbox-group">
                             <Fragment>
+
+                            <legend style={{"border":"none"}} >Which forms of art interest you?: (tick all that apply)*</legend>
                             { (art && art.length)?
                                 art.map((el,i)=>
 
-                                    <FieldSetWrap key={i}>
-                                        <CheckboxLabel htmlFor="art">{el}</CheckboxLabel>
-                                        <FormInput type="checkbox" name="art" onChange={(event)=>{
-                                                console.log(
-                                                    errors
-                                                )
-                                                const checked = event.target.checked;
-                                                console.log(checked);
-                                                const valueArray = [...values.art]||[];
-                                                console.log(valueArray);
-                                                if (checked) {
-                                                    valueArray.push(event.target.value);
-                                                } else {
-                                                    valueArray.splice(valueArray.indexOf(event.target.value), 1);
-                                                }
-                                                console.log(handleChange.toString())
-                                                values.art=[...valueArray]||[];
-                                                event.target.blur()
-                                            }} value={el}></FormInput>
+                                    <FieldSetWrap longList={true}key={i}>
+                                        <FormInputCheckboxWrapper>
+                                            <FormInputCheckbox type="checkbox" name="art" onChange={(event)=>{
+                                                    console.log(
+                                                        errors
+                                                    )
+                                                    const checked = event.target.checked;
+                                                    console.log(checked);
+                                                    const valueArray = [...values.art]||[];
+                                                    console.log(valueArray);
+                                                    if (checked) {
+                                                        valueArray.push(event.target.value);
+                                                    } else {
+                                                        valueArray.splice(valueArray.indexOf(event.target.value), 1);
+                                                    }
+                                                    console.log(handleChange.toString())
+                                                    values.art=[...valueArray]||[];
+                                                    event.target.blur()
+                                                }} value={el}></FormInputCheckbox>
+                                        </FormInputCheckboxWrapper>
+                                            <CheckboxLabel htmlFor="art">{el}</CheckboxLabel>
                                     </FieldSetWrap>
 
                                 ):null
@@ -184,14 +202,30 @@ const Membership = (props)=>{
                             ): null
                         }
                     </FormCheckboxWrapper>
+                    
                     <FormInputWrapper>
-                        <FormSelect name="receiveEmail"value={values.receiveEmail} onChange={handleChange} onBlur={handleBlur}>
-                            <FormSelectOption label="Yes" value={"Yes"}>Yes</FormSelectOption>
-
-                            <FormSelectOption label="No" value={"No"}>No</FormSelectOption>
-                        </FormSelect>
-
+                        <FormLabel style={{"display":"none"}} htmlFor="artOther">Art Other:*</FormLabel>
+                        <FormInput type="text" name="artOther" id="artOther" onChange={handleChange} onBlur={handleBlur} value={values.artOther}></FormInput>
+                        {
+                        errors.artOther && touched.artOther ?(
+                        <FormInputValidation>{errors.artOther}</FormInputValidation>
+                        ): null
+                        }
                     </FormInputWrapper>
+                    <Paragraph>Are you happy to receive news about the club and upcoming events from us via email?</Paragraph>
+                        <RadioWrap>
+                            <RadioInputWrap>
+                                <FormRadio type="radio" name="receiveEmail" value={"Yes"}/>
+                            </RadioInputWrap>
+                            <RadioLabel htmlFor="Yes">Yes</RadioLabel>
+
+                        </RadioWrap>
+                        <RadioWrap>
+                            <RadioInputWrap>
+                                <FormRadio type="radio" name="receiveEmail" value={"No"}/>
+                            </RadioInputWrap>
+                            <RadioLabel htmlFor="No">No</RadioLabel>
+                        </RadioWrap>
                 <FormSubmitWrapper>
                     <SubmitInfo>
                         <StarImg src={"/assets/general/starL.png"}></StarImg>

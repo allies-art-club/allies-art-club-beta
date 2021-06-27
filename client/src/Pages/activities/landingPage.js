@@ -1,6 +1,6 @@
 const activities = [{
-    src: "/assets/activities/access2art/access2art.png",
-    title: "Access 2 Art",
+    src: "/assets/activities/projects/artCare/artCare.png",
+    title: "Art Care",
     date: "3rd March 2021",
     category: "Projects",
     subcategory: "Ongoing",

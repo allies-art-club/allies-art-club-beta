@@ -17,13 +17,13 @@ const Volunteer = ()=>{
                 <ListElement>Start a project to raise funds or art supplies to donate</ListElement>
                 <ListElement>Tell us about an art class or event you'd like to start with us</ListElement>
                 <ListElement>Send us your art to be featured on our Instagram page</ListElement>
-                <ListElement>Volunteer at Allie's food bank (read <Link>Allie's Food Bank</Link> for info)</ListElement>
+                <ListElement>Volunteer at Allie's food bank (read <Link href="/discussions/project-updates/allies-food-bank">Allie's Food Bank</Link> for info)</ListElement>
                 <ListElement>Follow us on social media and tell your friends about us!</ListElement>
 
             </List>
             <Paragraph>If you're interested in volunteering with us, please send an email with any ideas of how you can help to: <Link href="mailto:alliesartclub@gmail.com">alliesartclub@gmail.com</Link></Paragraph>
-            <Paragraph>You can send your art to our instragram page @alliesartclub on:
-                <Link>www.instagram.com/alliesartclub</Link>
+            <Paragraph>You can send your art to our instragram page @alliesartclub on: 
+                <Link target="_blank"href="www.instagram.com/alliesartclub">www.instagram.com/alliesartclub</Link>
             </Paragraph>
         </Fragment>
     )

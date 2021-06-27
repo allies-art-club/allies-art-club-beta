@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-import {textGlow} from './theme/theme.js';
+import {theme} from './theme/theme.js';
 import {HeaderNavListElement}from '../Styled/header.styled.js';
 const SideNavWrapper = styled.div`
     display:${props=>props.visible?"block":"none"};
@@ -42,14 +42,9 @@ const NavLinkSide = styled(NavLink).attrs({activeClassName})`
     display:block;
     width:100%;
     text-decoration: none;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-animation:${textGlow} 1.5s ease-in-out infinite alternate;
-    -moz-animation: ${textGlow} 1.5s ease-in-out infinite alternate;
-    animation: ${textGlow} 1.5s ease-in-out infinite alternate;
+    text-shadow: 0px 0px 1rem ${theme.blue};
     &.${activeClassName}{
-        color: red;
+        text-shadow: 0px 0px 1rem ${theme.pink};
     }
     color:white;
     
