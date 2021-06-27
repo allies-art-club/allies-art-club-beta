@@ -19,19 +19,21 @@ const boxGlow768 =  keyframes`
 const ClipboardContainer = styled.div`
     position:relative;
     width: 95%;
+    min-height: calc(100vh - 0.5*100vw*0.5627329192546584 - 148px);
+  @media(min-width:421px){
+    min-height: calc(100vh - 0.5*100vw*0.5627329192546584 - 148px);
+  }
+  @media(min-width:768px){
+    min-height: calc(100vh  - 464.83px);
+    width:70%;
+  }
+  @media(min-width:1300px){
+    min-height: calc(100vh  - 494.83px);
+  }
     @media(max-width:767px){
-        min-height: calc(100vh - 120px - 0.5*100vw*0.5627329192546584 - 57px);
         left: 2.5%;
     }
-    @media(min-width:768px){
-        width:70%;
-    }
     margin:40px auto;
-    @media(min-width:768px){
-        min-height: calc(100vh - 342.828px - 170px - 40px);
-
-
-    }
 `
 const ClipboardWrapper=styled.div`
     width:100%;
