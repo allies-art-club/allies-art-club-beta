@@ -55,14 +55,38 @@ const ImageText=styled.p`
 `
 const DonationWrapper = styled.div`
     display: flex;
+    margin-bottom: 200px;
 `
 const DonateLink = styled(NavLink)`
+    position:relative;
+    width:60%;
     
 `
 const DonateImage = styled.img`
-    width:80%;
+    width:100%;
 `
-const DonateParagraph = styled.p`
+const DonateParagraphWrapper=styled.div`
     width:40%;
 `
-export {ImageWrapper,ImageText,DonationWrapper,DonateLink,DonateImage,DonateParagraph}
+const DonateParagraph = styled.p`
+    width:100%;
+`
+const BannerTextImg = styled.img`
+    position: absolute;
+    left: 10%;
+    width:80%;
+    top: 10%;
+`
+const DonateBannerStars = styled.img`
+    position:absolute;
+    width: 35%;
+    left: ${props=>props.top?"22%":"auto"};
+    right: ${props=>props.top?"auto":"22%"};
+    bottom:-25%;
+`
+const DonateBannerStar=styled.img`
+    width:60%;
+    position:relative;
+    right:${props=>props.top?"-50%":"auto"};
+`
+export {ImageWrapper,ImageText,DonationWrapper,DonateLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,DonateBannerStars,DonateBannerStar}
