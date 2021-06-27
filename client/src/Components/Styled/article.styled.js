@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-
+import {theme} from './theme/theme.js';
 const ArticleWrapper=styled.div`
 
 display:flex;
@@ -29,8 +29,8 @@ const TextContainer=styled.div`
     @media(min-width:1300px){
         height: 250px;
     }
-    border-top: 5px dashed red;
-    border-bottom: 5px dashed red;
+    border-top: 5px dashed ${theme.pink};
+    border-bottom: 5px dashed ${theme.pink};
 `
 const TextWrap=styled.div`
     margin:auto;

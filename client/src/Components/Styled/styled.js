@@ -4,10 +4,16 @@ import {theme} from './theme/theme.js';
 //Main
 const Container = styled.main`
   margin:auto;
-  min-height: calc(100vh - 120px - 0.5*100vw*0.5627329192546584 - 37px);
 
+  min-height: calc(100vh - 0.5*100vw*0.5627329192546584 - 148px);
+  @media(min-width:421px){
+    min-height: calc(100vh - 0.5*100vw*0.5627329192546584 - 148px);
+  }
   @media(min-width:768px){
-    min-height: calc(100vh - 342.828px - 170px - 80px);
+    min-height: calc(100vh  - 464.83px);
+  }
+  @media(min-width:1300px){
+    min-height: calc(100vh  - 494.83px);
   }
 `
 
