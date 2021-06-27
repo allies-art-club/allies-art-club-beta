@@ -2,9 +2,6 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import {theme} from './theme/theme.js';
 //Header
-
-const activeClassName = 'nav-active-item';
-
 const HeaderContainer = styled.header`
 `
 const HeaderNav = styled.nav`
@@ -61,6 +58,7 @@ border: none;
 //box glow nav
 const HeaderNavList = styled.ul`
     list-style:none;
+    margin:0;
     @media(max-width:767px){
         position: absolute;
         padding: 25px;
@@ -82,10 +80,12 @@ const HeaderNavListElement = styled.li`
 `
 const BurgerMenu = styled.button`
     position:absolute;
-    margin: 10px;
+    top: 38%;
+    left: 8%;
+    transform: translateY(-50%);
     width: 2.2rem;
     height: 2.2rem;
-    border: 1px solid white;
+    border: none;
     padding:0;
     @media(min-width: 768px){
         display: none;
@@ -127,7 +127,7 @@ const NavMainCategory = styled(NavLink)`
     text-decoration: none;
     
     text-shadow:${props=>props.nav?`0px 0px 1rem ${theme.blue}`:`0px 0px 1rem ${theme.yellow}`};
- 
+    
     font-size: 2rem;
     text-decoration:none;
     color:white;
@@ -136,14 +136,13 @@ const NavMainCategory = styled(NavLink)`
     text-transform: uppercase;
     position: ${props=>props.nav?'static':'absolute'};
     top: ${props=>props.nav?'auto':'38%'};
-    right: ${props=>props.nav?'auto':'8%'};
+    right: ${props=>props.nav?'auto':'8.25%'};
     transform: ${props=>props.nav?'auto':'translateY(-50%)'};
     @media(max-width:480px){
         font-size ${props=>props.nav?'2rem':'1.5rem'};
     }
 `
 const NavLinkLogo = styled(NavLink)`
-    height:0px;
 `
 
 const Logo = styled.img`
@@ -151,6 +150,8 @@ const Logo = styled.img`
     @media(min-width:768px){
         width:364px;
     }
+    display:block;
+    margin:auto;
 `
 const Figure = styled.figure`
     width:100%;

@@ -49,7 +49,9 @@ const GlobalStyle = createGlobalStyle`
   html,body {
     box-sizing: border-box;
     font-size: 12px;
-    @media(min-width:420px){
+    overflow-x: hidden;
+    min-height:100vh;
+    @media(min-width:421px){
       font-size: 14px
     }
     @media(min-width: 768px){
@@ -61,7 +63,8 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     @media(max-width:767px){
-      overflow: ${props=>props.menuOpen?'hidden':'auto'};
+      overflow-y: ${props=>props.menuOpen?'hidden':'auto'};
+
     }
   }
   body {
