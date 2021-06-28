@@ -75,6 +75,7 @@ app.use(function (err,req, res, next) {
 app.use((err,req,res,next)=>{
   //LOGGING FUNCTION + EMAIL SEND TO ME
   console.log(err)
+  console.log('STACK:',`${err.stack}`)
   if(!err.status){
     res.status(500).send({error:"Something peculiar has happend here"})
   }
@@ -95,7 +96,9 @@ app.use((err,req,res,next)=>{
       from: 'harryyy27@gmail.com',
       subject: 'error',
       text: 'YESe',
-      html: `<h1>${err}</h1>`
+      html: `<h1>New Error!</h1>
+             <p>${err}</p>
+             <p>${err.stack}</p>`
     })
     .then((res)=>console.log(res))
     .catch((err)=>console.log(err))
