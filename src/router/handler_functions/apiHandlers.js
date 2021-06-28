@@ -5,6 +5,7 @@ const uuid = require('uuid/v4');
 const {postDonation,putDonation,deleteDonation,postSupplies,postMember} = require('./dbHandlers.js');
 const sgMail=require('../mail/sgMail.js');
 const fs = require('fs');
+const path = require('path');
 
 const payment = async(req,res,next) => {
     const {email} = req.body;
@@ -117,7 +118,6 @@ const contactUs=async(req,res,next)=>{
           text: `${message}`,
           html: `<p>${message}</p>`
         })
-        console.log(response);
 
         res.send({received:true})
     }
@@ -153,9 +153,8 @@ const supplies = async(req,res,next)=>{
 }
 const resourceHandler=(req,res,next)=>{
     try{
-        console.log(req.body)
-        const article= req.url.split('/')[2]
-        var file = fs.readFileSync(path.joint(__dirname,'..','resources',req.body,article+'.pdf'));
+        const article= req.url.split('/')[2];
+        var file = fs.readFileSync(path.join(__dirname,'..','resources',req.body,article+'.pdf'));
         res.download(file);
 
     }
