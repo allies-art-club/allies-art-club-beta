@@ -307,51 +307,51 @@ tape('Email address not enterred',async(t)=>{
     }
     t.end()
 })
-tape('Payment function works',async(t)=>{
-    nock('https://api.stripe.com:443')
-    .post('/v1/customers', "email=user1%40example.com&card=tok_5I6lor706YkUbj")
-    .reply(200,{
-        object: 'customer',  
-        id: 'cus_somestripeid',
-    })
-    .post('/v1/payment_intents',"amount=500&currency=GBP&metadata[integration_check]=accept_a_payment&receipt_email=bla%40gmail.com")
-    .reply(200,{
-        client_secret: 'yes;)',  
-        id: '1',
-    })
-    var req = {
-        body: {
-            email: 'bla@gmail.com'
-        }
-    }
-    var res = {
-        status: function(){
-            return {
-                json:function(obj){
-                    return obj
-                }
-            }
-        },
-        json: function(err){
-            console.log(err)
-        }
-    }
+// tape('Payment function works',async(t)=>{
+//     nock('https://api.stripe.com:443')
+//     .post('/v1/customers', "email=user1%40example.com&card=tok_5I6lor706YkUbj")
+//     .reply(200,{
+//         object: 'customer',  
+//         id: 'cus_somestripeid',
+//     })
+//     .post('/v1/payment_intents',"amount=500&currency=GBP&metadata[integration_check]=accept_a_payment&receipt_email=bla%40gmail.com")
+//     .reply(200,{
+//         client_secret: 'yes;)',  
+//         id: '1',
+//     })
+//     var req = {
+//         body: {
+//             email: 'bla@gmail.com'
+//         }
+//     }
+//     var res = {
+//         status: function(){
+//             return {
+//                 json:function(obj){
+//                     return obj
+//                 }
+//             }
+//         },
+//         json: function(err){
+//             console.log(err)
+//         }
+//     }
     
-    var next= function(err){
-        return err
-    }
-    var donationReplace= {
-        save:function(){return new Promise((resolve,reject)=>resolve())}
-    }
+//     var next= function(err){
+//         return err
+//     }
+//     var donationReplace= {
+//         save:function(){return new Promise((resolve,reject)=>resolve())}
+//     }
 
-    sinon.replace(donation.prototype, "save",sinon.fake(donationReplace.save))
-    const result = await payment(req,res,next);
-    t.equals(result.stripeId,"1");
-    t.equals(result.client_secret,'yes;)');
-    sinon.restore()
-    nock.cleanAll();
-    t.end()
-})
+//     sinon.replace(donation.prototype, "save",sinon.fake(donationReplace.save))
+//     const result = await payment(req,res,next);
+//     t.equals(result.stripeId,"1");
+//     t.equals(result.client_secret,'yes;)');
+//     sinon.restore()
+//     nock.cleanAll();
+//     t.end()
+// })
 // tape('Payment function handles 400 from stripe',async(t)=>{
 //     nock('https://api.stripe.com:443')
 //     .post('/v1/customers', "email=user1%40example.com&card=tok_5I6lor706YkUbj")
