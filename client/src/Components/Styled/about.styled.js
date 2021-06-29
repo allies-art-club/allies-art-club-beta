@@ -52,6 +52,7 @@ const ValuesImage=styled.img`
 `
 const Tag = styled.div`
     position: absolute;
+    cursor: pointer;
     width:${props=>props.tagWidth}%;
     top:${props=>props.tagVertical}%;
     left:${props=>props.tagHorizontal}%;

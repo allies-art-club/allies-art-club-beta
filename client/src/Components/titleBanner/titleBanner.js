@@ -8,7 +8,7 @@ const TitleBanner = (props) => {
                 props.sideSrc1?
 
                     <SideImageWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
-                        <SideImage src={props.sideSrc1}/>
+                        <SideImage alt={props.sideSrc1.split('/')[3].split('.')[0]}src={props.sideSrc1}/>
                     </SideImageWrapper>:
                 null
 
@@ -16,16 +16,16 @@ const TitleBanner = (props) => {
                     <CentreImageWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
             {
                     props.centreSrc?
-                        <CentreImage src={props.centreSrc}></CentreImage>:
+                        <CentreImage alt={props.centreSrc.split('/')[3].split('.')[0]}src={props.centreSrc}></CentreImage>:
                         null
                         }
-                        <ImageTitle>{props.title}</ImageTitle>
+                        <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title}</ImageTitle>
                     </CentreImageWrapper>
                     
             {
                 props.sideSrc2?
                     <SideImageWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
-                        <SideImage src={props.sideSrc2} />
+                        <SideImage alt={props.sideSrc2.split('/')[3].split('.')[0]}src={props.sideSrc2} />
                     </SideImageWrapper>:
                 null
 

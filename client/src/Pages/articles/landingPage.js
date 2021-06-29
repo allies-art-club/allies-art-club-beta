@@ -24,7 +24,7 @@ const articles =[
         description: "A personal story by artist Lydia Rose on how practicing calligraphy improved her mindset."
     },
     {
-        src: "/assets/articles/rememberingAllie/rememberingAllie.webp",
+        src: "/assets/articles/rememberingAllie/rememberingAllie.png",
         title: "Remembering Allie",
         date:"3rd March 2021",
         category:"Club articles",
@@ -46,6 +46,14 @@ const articles =[
         category:"Club articles",
         subcategory: "3 minute read",
         description: "About the Club's Foundation, AWTF, and why we trust this charity to support us."
+    },
+    {
+        src: "/assets/activities/projects/artCare/artCarePacks.png",
+        title: "Art Care Packs: Tools For Mental Wellbeing",
+        date:"1st July 2021",
+        category:"Project news",
+        subcategory: "3 minute read",
+        description: "Details about our project to support the mental health of underprivileged communities through art."
     }
 ]
 

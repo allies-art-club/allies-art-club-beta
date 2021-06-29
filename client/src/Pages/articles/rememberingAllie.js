@@ -1,22 +1,19 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Article,Section,Image, ImageWrapper,Floater} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,TextImageTop,Article,Section,Image, ImageWrapper,Floater} from '../../Components/Styled/styled.js';
 import {RememberAllieHeading} from "../../Components/Styled/article.styled.js";
 const RememberingAllie=()=>{
     return(
         <Article>
             <Section>
-            <TextImage right={true} alt="Allie" src={"/assets/articles/rememberingAllie/rememberingAllie.webp"}/>
             <TitleBanner 
-                sideSrc2={"/assets/general/starsL.png"}
                 title={"Remembering Allie"}
                 ></TitleBanner>
-            <Paragraph>Alexandra Wylie was born in London on
-the 2nd of January, 1993.</Paragraph>
-<Paragraph>Known for her dazzling smile, charming
-wit and exceptional talent, Allie was a
-bright star who brought so much
-energy, warmth and humour to thoseshe touched.</Paragraph>
+            <TextImage  alt="Allie" src={"/assets/articles/rememberingAllie/rememberingAllie.png"}/>
+
+            <Paragraph>Alexandra Wylie was born in London on the 2nd of January, 1993.</Paragraph>
+            <Paragraph>Known for her dazzling smile, charming wit and exceptional talent, Allie was a bright star who brought so much
+            energy, warmth and humour to thoseshe touched.</Paragraph>
 <Paragraph>Throughout her life, Allie shone with so much passion, strength and
 vibrancy, until she passed away from a rare form of cancer at the
 age of 17.</Paragraph>

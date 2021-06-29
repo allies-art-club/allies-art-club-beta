@@ -24,7 +24,7 @@ const AboutAac = () => {
                 <Paragraph>We aim to create a safe and inclusive environment where participants feel empowered and connected, able to develop their skills and sense of wellbeing and make a difference in their community through artistic expression, collaboration and creative problem solving.</Paragraph>
                 
                 <ImageWrapper>
-                    <CentreImage src={'/assets/general/ribbon.png'}></CentreImage>
+                    <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
                     <ImageText>We believe in the power of human imagination, creative collaboration and artistic expression in creating positive changes for ourselves and our society.</ImageText>
                 </ImageWrapper>
             </Section>
@@ -67,7 +67,7 @@ const AboutAac = () => {
                 <Paragraph>Allie's Art Club is built on a strong base of core values. These values are central to the work we do, directing both the way we work and the outcomes we aim to create.</Paragraph>
                 <Paragraph>The image below outlines the Club's 9 core values. You can click on each value to read more about how they guide our mission and ways of working.</Paragraph>
                 <ValuesWrap>
-                    <ValuesImage src={'/assets/about/Values.png'}/>
+                    <ValuesImage alt={"Values"}src={'/assets/about/Values.png'}/>
                     {
                         tagMessageArray.map((el,i)=>{
                             return <Value key={i}

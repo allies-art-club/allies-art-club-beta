@@ -1,14 +1,16 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Article,Section,Link,Image,Icon} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,TextImageTop,Article,Section,Link,Image,InlineIcon} from '../../Components/Styled/styled.js';
 const CharityWeCanTrust=()=>{
     return(
         <Article>
             <Section>
-                <TextImage alt="awtf logo" src={'/assets/footer/awtf_icon.png'} />
+
                 <TitleBanner 
                     title={"AWTF\nA Charity We Can Trust"}
                 ></TitleBanner>
+
+                <TextImageTop alt={"awtf logo"}right={true} src={'/assets/footer/awtf_icon.png'}/>
                 <Paragraph>The Alexandra Wylie Tower Foundation (AWTF) was founded in November 2010 by Lindsey and Rob Wylie.</Paragraph>
                 <Paragraph>Lindsey and Rob created the charitable foundation after their daughter, Alexandra (known as Allie), passed away from a rare form of cancer at the age of 17.</Paragraph>
                 <Paragraph>The charity supports the health and wellbeing of underpriveleged children, adults and families in London by providing essentials such as food and clothing, as well as creating opportunities for young people to engage in extra-curricular activities.</Paragraph>
@@ -41,7 +43,7 @@ const CharityWeCanTrust=()=>{
                 </Paragraph>
             </Section>
             <Section>
-                <TextImage alt="AWTF members" right={true} src={'/assets/articles/aCharityWeCanTrust3.png'} />
+                <TextImage alt="AWTF members" right={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3.png'} />
                 <TitleBanner
                     sub={true}
                     title={"A Trustworthy Charity"}
@@ -52,7 +54,7 @@ const CharityWeCanTrust=()=>{
 extra-curricular activities such as art classes, sports clubs and cooking lessons. With awareness of high levels of food poverty in London, the charity has also provided food parcels to families in need during the Summer holidays, and has been running a food bank with the Pilion Trust at the Ringcross Community Centre in North London since 2017.
                 </Paragraph>
                 <Paragraph>
-                To learn more about AWTF'S food bank, you can read our article <Link href="/articles/allies-food-bank">Allie's Food Bank</Link>.
+                To learn more about AWTF'S food bank, you can read our article <Link href="/discussions/project-updates/allies-food-bank">Allie's Food Bank</Link>.
                 </Paragraph>
                 <TextImage alt={"AWTF members"} right={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust4.png'}/>
                 <Paragraph>To raise funds that support young people and families in London, AWTF has delivered a number of fundraising fairs and events. Every year, AWTF
@@ -72,12 +74,12 @@ about the way they work, why they exist and what their goals are.
                 >
 
                 </TitleBanner>
-                <TextImage alt={"Art @ AWTF"} right={true} src={'/assets/articles/aCharityWeCanTrust5.png'}/>
+                <TextImage alt={"Art @ AWTF"} right={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5.png'}/>
                 <Paragraph>AWTF functions as the stronghold of Allie's Art Club, storing all funds and resources and working on the ground to deliver goods and services to those in need.</Paragraph>
                 <Paragraph>
                 The Club trusts the Foundation to support our needs and help us create a fair and inclusive environment that makes a difference to our community. In turn, we support the Foundation by raising awareness and funding, championing their values and actualizing their goals to broaden people's horizons and cultivate a "passion for life" through artistic pursuits and creative expression.
                 </Paragraph>
-                <Paragraph>We <Icon alt={"Heart"}/> AWTF and have great faith that this trust-worthy and reliable Foundation can support us in building an ethical and collaborative community of empowered artists and change-makers.</Paragraph>
+                <Paragraph>We <InlineIcon alt={"Heart"} src={"/assets/general/blackHeart.png"}/> AWTF and have great faith that this trust-worthy and reliable Foundation can support us in building an ethical and collaborative community of empowered artists and change-makers.</Paragraph>
                 <Image alt="stars" src={"/assets/general/starsR.png"}/>
             </Section>
         </Article>

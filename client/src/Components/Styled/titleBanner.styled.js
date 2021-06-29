@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 const TitleWrapper = styled.div`
-    margin-left:-10px;
-    width:${props=>(props.sideSrc1&&props.sideSrc2)?"calc(100% + 10px)":"calc(56% + 10px)"};
+    width:100%;
     @media(min-width:768px){
-        margin-left:-60px;
-        width:${props=>(props.sideSrc1&&props.sideSrc2)?"calc(100% + 120px)":"calc(56% + 60px)"};
+        width:${props=>(props.sideSrc1&&props.sideSrc2)?"calc(100% + 40px)":"56%"};
     }
     display:inline-flex;
     flex-wrap: wrap;
@@ -30,24 +28,30 @@ const CentreImageWrapper=styled.div`
 `
 
 const ImageTitle=styled.h1`
-    position:${props=>props.centreSrc?"absolute":"static"};
-    top:120%;
+    position:${props=>props.centreSrc?"relative":"static"};
     font-weight:100;
     width:100%;
     text-align:center;
-    font-size: 1.4rem;
+    font-size: ${props=>props.sideSrc1||props.sideSrc2?"1.4rem":"2.5rem"};
     font-family: nickainley;
     @media(min-width:320px){
-        font-size: 2rem;
+
+        font-size: ${props=>props.sideSrc1||props.sideSrc2?"2rem":"3rem"};
     }
     @media(min-width:421px){
+
+    font-size: ${props=>props.sideSrc1&&props.sideSrc2?"2.5rem":"4rem"};
+    }
+    @media(min-width: 768px){
         font-size: 2.5rem;
+        text-align:${props=>props.sideSrc1||props.sideSrc2?"centre":"left"};
+        padding:${props=>props.sideSrc1||props.sideSrc2?"0":"20px"};
     }
     @media(min-width: 1025px){
         font-size: 3rem;
     }
     @media(min-width:1300px){
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     margin:0;
     text-align:center;

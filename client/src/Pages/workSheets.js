@@ -16,7 +16,7 @@ const WorkSheets=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Work sheets"}
             ></TitleBanner>
-            <Paragraph>Work sheets to learn about and engage in art, self-care and activism.</Paragraph>
+            <Paragraph>Work sheets with ideas and prompts related to art, self-care and activism.</Paragraph>
             {
                 resources.filter(el=>el.category==='Work sheet').map((el,i)=>{
                     return(

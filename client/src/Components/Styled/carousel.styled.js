@@ -86,6 +86,7 @@ const ChevronWrapper = styled.div`
 const Arrow= styled.img`
     transform: rotate(${props=>props.direction==='right'?'180deg': 'none'});
     width:35px;
+    cursor: pointer;
     @media(min-width:481px){
         width:50px;
     }

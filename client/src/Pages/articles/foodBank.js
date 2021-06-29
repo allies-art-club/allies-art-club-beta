@@ -1,14 +1,14 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Article,Quote} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,TextImageTop,Article,Quote} from '../../Components/Styled/styled.js';
 const FoodBank=()=>{
     return(
         <Article>
-            <TextImage alt="Child holding food" right={true} src={"/assets/carouselHome/Lexi.png"}/>
             <TitleBanner
-                sideSrc2={"/assets/general/starsR.png"}
                 title={"Allie's Food Bank"}
             ></TitleBanner>
+            <TextImage alt="Child holding food" right={true} src={"/assets/carouselHome/Lexi.png"}/>
+
             <Paragraph>Food poverty is a critical issue in the UK.
 Families living in London are particularly
 vulnerable to hunger and malnutrition, as
