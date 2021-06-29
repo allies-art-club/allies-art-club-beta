@@ -42,7 +42,8 @@ const NavLinkSide = styled(NavLink).attrs({activeClassName})`
     display:block;
     width:100%;
     text-decoration: none;
-    text-shadow: 0px 0px 1rem ${theme.blue};
+    text-shadow:1px 1px 0 ${theme.blue}, -1px -1px 0 ${theme.blue}, 0px 0px 1rem ${theme.blue};
+
     &.${activeClassName}{
         text-shadow: 0px 0px 1rem ${theme.pink};
     }

@@ -4,12 +4,12 @@ import {Paragraph,TextImage,Article,ImageWrapper,Floater,Image} from '../../Comp
 const WhatIsArt=()=>{
     return(
         <Article>
+
             <TitleBanner
                 title={'What is Art?'}
             >
-        
             </TitleBanner>
-            <TextImage alt="Art covering tunnnel walls"right={true}src={'/assets/articles/whatIsArt/whatIsArt1.png'}/>
+            <TextImage alt="Art covering tunnnel walls" right={true }src={'/assets/articles/whatIsArt/whatIsArt1.png'}/>
             <Paragraph>The definition of art has been analysed and debated for milennia by scholars, philosophers and artists alike. These debates usually exclude the views and opinions of the wider public, who experience art every day in their homes, cities, schools and places of worship.</Paragraph>
             <Paragraph>Nowadays, art is generally seen as a human activity that involves the creation of visual and/or auditory artifacts, appreciate for their beauty, emotional impact or conceptual ideas.</Paragraph>
 

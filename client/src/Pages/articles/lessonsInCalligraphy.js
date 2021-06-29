@@ -1,13 +1,14 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Article,Section} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,TextImageTop,Article,Section} from '../../Components/Styled/styled.js';
 const LessonsInCalligraphy=()=>{
     return(
         <Article>
-            <TextImage alt="pen"  right={true} src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1.png"}></TextImage>
             <TitleBanner
                 title={"Lessons in Calligraphy"}
             ></TitleBanner>
+            <TextImage alt="pen" right={true} src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1.png"}/>
+
             <Section>
             <Paragraph>As a writer, I have always been drawn
 to calligraphy as a beautiful way to display the contents of my mind.</Paragraph>

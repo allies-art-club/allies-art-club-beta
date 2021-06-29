@@ -15,7 +15,7 @@ const ProjectNews=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Project News"}
             ></TitleBanner>
-            <Paragraph>Project news.</Paragraph>
+            <Paragraph>Information, news and updates about Allie's projects, campaigns, workshops and events.</Paragraph>
             {
                 articles.filter(el=>el.category==="Project updates").map((el,i)=>{
                     return(

@@ -99,4 +99,18 @@ const ArticleItem=styled.p`
         font-size:0.8rem;
     }
 `
-export {ArticleWrapper,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem}
+const Benefit=styled.h3`
+    background-color:${theme.pink};
+    display:block;
+    line-height: 40px;
+    margin-bottom:10px;
+    @media(min-width: 768px) and (max-width:1024px){
+        line-height: 30px;
+        font-size:18px;
+    }
+    @media(min-width: 768px){
+        width: 25%;
+    }
+    text-align: center;
+`
+export {ArticleWrapper,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Benefit}

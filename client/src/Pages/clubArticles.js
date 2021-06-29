@@ -15,7 +15,7 @@ const Discussions=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Club Articles"}
             ></TitleBanner>
-            <Paragraph>Club Articles.</Paragraph>
+            <Paragraph>Informative articles about our Club and a range of topics related to art, creativity, culture and community.</Paragraph>
             {
                 articles.filter(el=>el.category==="Club articles").map((el,i)=>{
                     return(

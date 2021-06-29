@@ -16,7 +16,7 @@ const FactSheet=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Fact sheets"}
             ></TitleBanner>
-            <Paragraph>Fact sheets to learn about and engage in art, self-care and activism.</Paragraph>
+            <Paragraph>Fact sheets with information and tips on topics related to art, self-care and activism.</Paragraph>
             {
                 resources.filter(el=>el.category==='Fact sheet').map((el,i)=>{
                     return(
