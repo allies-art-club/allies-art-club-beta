@@ -167,84 +167,84 @@ tape('delete donation error handler works',async(t)=>{
 
 })
 
-tape('post donation success handler works',async(t)=>{
-    const req = {
-        rawBody: 'YEHYEHYEH',
-        headers: {
-            'stripe-signature': 'yo'
-        },
-        body: {
+// tape('post donation success handler works',async(t)=>{
+//     const req = {
+//         rawBody: 'YEHYEHYEH',
+//         headers: {
+//             'stripe-signature': 'yo'
+//         },
+//         body: {
 
-        }
-    }
-    const res = {
-        status: function(){
-            return {
-                send: function(err){
-                    return err
-                }
-            }
-        },
-        json: function(obj){
-            return obj;
-        }
+//         }
+//     }
+//     const res = {
+//         status: function(){
+//             return {
+//                 send: function(err){
+//                     return err
+//                 }
+//             }
+//         },
+//         json: function(obj){
+//             return obj;
+//         }
 
-    }
-    const next= function(err){
-        return err
-    }
+//     }
+//     const next= function(err){
+//         return err
+//     }
 
-    sinon.stub(donation.prototype, 'save');
+//     sinon.stub(donation.prototype, 'save');
 
-    donation.prototype.save.returns(new Promise((resolve,reject)=>{
-        return resolve(true)
-    }))
-    const result =await postDonation(req,res,next)
-    t.equals(result,true)
-    donation.prototype.save.restore()
-    t.end()
+//     donation.prototype.save.returns(new Promise((resolve,reject)=>{
+//         return resolve(true)
+//     }))
+//     const result =await postDonation(req,res,next)
+//     t.equals(result,true)
+//     donation.prototype.save.restore()
+//     t.end()
 
-})
-tape('post donation error handler works',async(t)=>{
-    const req = {
-        rawBody: 'YEHYEHYEH',
-        headers: {
-            'stripe-signature': 'yo'
-        },
-        body: {
+// })
+// tape('post donation error handler works',async(t)=>{
+//     const req = {
+//         rawBody: 'YEHYEHYEH',
+//         headers: {
+//             'stripe-signature': 'yo'
+//         },
+//         body: {
 
-        }
-    }
-    const res = {
-        status: function(){
-            return {
-                send: function(err){
-                    return err
-                }
-            }
-        },
-        json: function(obj){
-            return obj;
-        }
+//         }
+//     }
+//     const res = {
+//         status: function(){
+//             return {
+//                 send: function(err){
+//                     return err
+//                 }
+//             }
+//         },
+//         json: function(obj){
+//             return obj;
+//         }
 
-    }
-    const next= function(err){
-        return err
-    }
+//     }
+//     const next= function(err){
+//         return err
+//     }
 
-    sinon.stub(donation.prototype, 'save');
+//     sinon.stub(donation.prototype, 'save');
 
-    donation.prototype.save.throws(new Error('YES'))
-    try{
-        const result =await postDonation(req,res,next)
+//     donation.prototype.save.throws(new Error('YES'))
+//     try{
+//         const result =await postDonation(req,res,next)
 
-    }
-    catch(e){
-        console.log(e)
-        t.equals(e.toString(),"Error: YES")
+//     }
+//     catch(e){
+//         console.log(e)
+//         t.equals(e.toString(),"Error: YES")
 
-    }
-    donation.prototype.save.restore();
-    t.end()
+//     }
+//     donation.prototype.save.restore();
+//     t.end()
 
-})
+// })
