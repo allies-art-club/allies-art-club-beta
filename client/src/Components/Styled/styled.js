@@ -276,6 +276,12 @@ const TextImage = styled.img`
         width:40%;
     }
 `
+const TextImageTop=styled(TextImage)`
+    display: ${props=>props.mobile?"block":"none"};
+    @media(min-width:768px){
+      display: ${props=>props.mobile?"none":"block"};
+    }
+`
 const Article = styled.article`
 
 `
@@ -283,7 +289,16 @@ const Icon=styled.img`
     display: inline-block;
     width: 1rem;
 `
+const InlineIcon = styled.img`
+    width:1rem;
+    height:1rem;
+    display:inline-block;
+    transform:translateY(20%);
+`
 const Quote=styled.p`
     
 `
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,DatePickWrap, FormStyled,FormCheckboxWrapper,FormInputWrapper,RadioWrap,RadioInputWrap,FormRadio,RadioLabel,CheckboxLabel,FormLabel,FormInput,FormInputCheckbox,FormInputCheckboxWrapper,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,ImageWrapper,Floater,Link,List,ListElement,TextImage,Article,Icon,Quote};
+const NumberedList = styled.ol`
+
+`
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,DatePickWrap, FormStyled,FormCheckboxWrapper,FormInputWrapper,RadioWrap,RadioInputWrap,FormRadio,RadioLabel,CheckboxLabel,FormLabel,FormInput,FormInputCheckbox,FormInputCheckboxWrapper,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,ImageWrapper,Floater,Link,List,ListElement,TextImage,TextImageTop, Article,Icon,InlineIcon,Quote,NumberedList};

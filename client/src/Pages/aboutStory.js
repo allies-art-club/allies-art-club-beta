@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import { Paragraph,Section,TextImage } from '../Components/Styled/styled.js';
+import { Paragraph,Section,TextImage,InlineIcon} from '../Components/Styled/styled.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import {Quote,SubTitle} from '../Components/Styled/about.styled.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
@@ -37,7 +37,7 @@ const AboutAlliesStory=()=>{
                 <SubTitle>Allie's Memorial at Alexandra Palace:</SubTitle>
                 <Paragraph>If you would like to know more about Allie's short yet brilliant life, y ou can read our article Remembering Allie, a collection of memories by her friends and family.</Paragraph>
                 <Paragraph>Allie's Art Club is proud to be named after such an inspiring young woman. We believe everyone deserves the opportunities that Allie had to flourish into the talented young woman so many had grown to love. We hope to honour Allie's memory in all of the work we do, continuing her lived principles of learning, kindness and fun.</Paragraph>
-                <Paragraph>Thank you Allie for all that you have inspired us to do</Paragraph>
+                <Paragraph>Thank you Allie for all that you have inspired us to do <InlineIcon alt={"Heart"} src={"/assets/general/blackHeart.png"}/>.</Paragraph>
             </Section>
         </Fragment>
 

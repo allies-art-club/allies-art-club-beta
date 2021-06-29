@@ -15,7 +15,7 @@ const Projects=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Projects"}
             ></TitleBanner>
-            <Paragraph>Information on Allie's projects and how you can get involved or support us.</Paragraph>
+            <Paragraph>Information on Allie's upcoming, ongoing and completed projects.</Paragraph>
             {
                 activities.filter(el=>el.category==='Projects').map((el,i)=>{
                     return(

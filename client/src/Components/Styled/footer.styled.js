@@ -60,6 +60,7 @@ const AwtfLogo= styled.img`
 
 const CenterParagraph= styled.p`
     position:absolute;
+    width:26%;
     top:50%;
     right:0px;
     left:0px;

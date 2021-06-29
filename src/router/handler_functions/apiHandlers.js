@@ -20,9 +20,8 @@ const payment = async(req,res,next) => {
     // add product to database + return id
 
     try{
-        console.log('1')
         var paymentIntent = await stripe.paymentIntents.create({
-            amount: 500,
+            amount: req.body.donationAmount*100,
             currency: 'GBP',
             metadata: {integration_check: 'accept_a_payment'},
             receipt_email: email

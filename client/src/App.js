@@ -35,6 +35,7 @@ const ProjectNews = lazy(()=>import('./Pages/projectNews'));
 //articles
 const WhatIsArt = lazy(()=>import('./Pages/articles/whatIsArt.js'));
 const FoodBank = lazy(()=>import('./Pages/articles/foodBank.js'));
+const ArtCarePacks = lazy(()=>import('./Pages/articles/artCarePacks.js'));
 
 const RememberingAllie = lazy(()=>import('./Pages/articles/rememberingAllie.js'));
 const CharityWeCanTrust = lazy(()=>import('./Pages/articles/charityWeCanTrust.js'));
@@ -314,6 +315,17 @@ const App= (props) =>{
                                 }
                             }
                             />
+                            <Route path="/discussions/project-news/art-care-packs-tools-for-mental-wellbeing" exact strict render={
+                                  ()=>{
+                                      return(
+  
+                              <Clipboard children={
+                                          <ArtCarePacks></ArtCarePacks>
+                              }/>
+                                      )
+                                  }
+                              }
+                              />
                             <Route path="/discussions/club-articles" exact strict render={
                                   ()=>{
                                       return(

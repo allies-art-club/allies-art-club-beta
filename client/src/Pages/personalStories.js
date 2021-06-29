@@ -15,7 +15,7 @@ const PersonalStories=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Personal Stories"}
             ></TitleBanner>
-            <Paragraph>Personal stories.</Paragraph>
+            <Paragraph>Personal experiences related to art, creativity, culture and community by our club members.</Paragraph>
             {
                 articles.filter(el=>el.category==="Personal stories").map((el,i)=>{
                     return(

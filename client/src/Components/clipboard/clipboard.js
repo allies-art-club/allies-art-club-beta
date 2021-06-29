@@ -8,9 +8,9 @@ const Clipboard = (props)=> {
                     <GlowingColumn />
                     <GlowingColumn />
                 </GlowingColumnContainer>
-                <ClipboardWrapper>
+                <ClipboardWrapper id="clipboardWrap">
 
-                    <ClipboardIcon src='/assets/clipboard/Paperclip.png'/>
+                    <ClipboardIcon alt={"Paperclip"} src='/assets/clipboard/Paperclip.png'/>
                     
                     <Content>
                         {

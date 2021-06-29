@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from '../Styled/styled.js'
 import { FooterContainer,FooterParagraph,FooterElementWrapper,Figure,IconWrapper,Icon,CenterParagraph,Caption,FooterLink} from '../Styled/footer.styled'
 const Footer = () => {
     return(
@@ -20,9 +21,9 @@ const Footer = () => {
             <FooterElementWrapper size={37}>
                     <FooterParagraph data-test="aacCaption">Follow us on social media</FooterParagraph>
                     <IconWrapper>
-                        <Icon left={false} src="/assets/footer/insta_icon.png" data-test="aacIcon" alt="instagram icon"></Icon>
-                        <Icon left={false} src="/assets/footer/insta_icon.png" data-test="aacIcon" alt="instagram icon"></Icon>
-                        <Icon left={false} src="/assets/footer/insta_icon.png" data-test="aacIcon" alt="instagram icon"></Icon>
+                        <Link rel="noopener" target="_blank"href="https://www.instagram.com/alliesartclub"><Icon left={false} src="/assets/footer/insta_icon.png" data-test="instaIcon" alt="instagram icon"></Icon></Link>
+                        <Link rel="noopener" target="_blank"href="https://www.facebook.com/alliesartclub"><Icon left={false} src="/assets/footer/facebook_icon.png" data-test="facebookIcon" alt="facebook icon"></Icon></Link>
+                        <Link rel="noopener" target="_blank"href="https://www.linkedin.com/alliesartclub"><Icon left={false} src="/assets/footer/linkedIn_icon.png" data-test="linkedInIcon" alt="linkedIn icon"></Icon></Link>
                     </IconWrapper>
             </FooterElementWrapper>
         </FooterContainer>
