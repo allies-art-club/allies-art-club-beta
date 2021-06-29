@@ -8,19 +8,17 @@ const HeaderNav = styled.nav`
     position:relative;
 `
 const HeaderNavListWrap= styled.div`
-@media(max-width:767px){
-    display: ${props=>props.open?'block':'none'};
-    position:fixed;
-    top:0;
-    left:0px;
-    background-color: rgba(0,0,0,0.5); 
-    width: 100vw;
-    height:100vh;
-    overflow:hidden;
-    z-index:20;
-}
- 
-
+    @media(max-width:767px){
+        display: ${props=>props.open?'block':'none'};
+        position:fixed;
+        top:0;
+        left:0px;
+        background-color: rgba(0,0,0,0.5); 
+        width: 100vw;
+        height:100vh;
+        overflow:hidden;
+        z-index:20;
+    }
 `
 const Cross = styled.button`
 height: 2.2rem;
@@ -125,9 +123,8 @@ const DonateLinkWrapper = styled.div`
 //START HERE TOMORROW TEXT SHADOW ALL SIDES
 const NavMainCategory = styled(NavLink)`
     text-decoration: none;
-    
-    text-shadow:${props=>props.nav?`0px 0px 1rem ${theme.blue}`:`0px 0px 1rem ${theme.yellow}`};
-    
+    text-shadow:${props=>props.nav?`1px 1px 0 ${theme.blue}, -1px -1px 0 ${theme.blue}, 0px 0px 1rem ${theme.blue}`:`1px 1px 0 ${theme.yellow}, -1px -1px 0 ${theme.yellow}, 0px 0px 1rem ${theme.yellow}`};
+
     font-size: 2rem;
     text-decoration:none;
     color:white;

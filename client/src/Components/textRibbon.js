@@ -6,7 +6,7 @@ const TextRibbon=(props)=>{
     return(
         <Fragment>
             <ImageWrapper>
-                <CentreImage src={'/assets/general/ribbon.png'}></CentreImage>
+                <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
                 <ImageText>
                 {
                     props.children

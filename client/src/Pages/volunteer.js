@@ -23,7 +23,7 @@ const Volunteer = ()=>{
             </List>
             <Paragraph>If you're interested in volunteering with us, please send an email with any ideas of how you can help to: <Link href="mailto:alliesartclub@gmail.com">alliesartclub@gmail.com</Link></Paragraph>
             <Paragraph>You can send your art to our instragram page @alliesartclub on: 
-                <Link target="_blank"href="www.instagram.com/alliesartclub">www.instagram.com/alliesartclub</Link>
+                <Link target="_blank"href="https://www.instagram.com/alliesartclub">www.instagram.com/alliesartclub</Link>
             </Paragraph>
         </Fragment>
     )

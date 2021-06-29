@@ -34,6 +34,18 @@ const ClipboardContainer = styled.div`
         left: 2.5%;
     }
     margin:40px auto;
+    #clipboardWrap {
+        min-height: calc(100vh - 0.5*100vw*0.5627329192546584 - 148px);
+        @media(min-width:421px){
+            min-height: calc(100vh - 0.5*100vw*0.5627329192546584 - 148px);
+        }
+        @media(min-width:768px){
+            min-height: calc(100vh  - 464.83px);
+        }
+        @media(min-width:1300px){
+            min-height: calc(100vh  - 494.83px);
+        }
+    }
 `
 const ClipboardWrapper=styled.div`
     width:100%;
@@ -42,7 +54,7 @@ const ClipboardWrapper=styled.div`
     border-radius:0;
     @media(min-width:768px){
         border-radius: 50px;
-        padding: 20px 60px;
+        padding: 20px 20px;
     }
     z-index:3;
 `

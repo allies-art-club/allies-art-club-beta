@@ -4,11 +4,11 @@ import {Paragraph,TextImage,Section,SubHeading,Article,Image,ImageWrapper,Floate
 const ArtAndWellbeing=()=>{
     return(
         <Article>
-            <TitleBanner
-                title={"Art & Wellbeing"}
-            ></TitleBanner>
+        <TitleBanner
+            title={"Art & Wellbeing"}
+        ></TitleBanner>
             <Section>
-                <TextImage alt={"Child with paint on her hands"}right={true} src={'/assets/articles/artAndWellbeing/artAndWellbeing1.png'}></TextImage>
+                <TextImage alt={"Child with paint on her hands"} right={true} src={'/assets/articles/artAndWellbeing/artAndWellbeing1.png'}></TextImage>
                 <Paragraph>It's no secret that engaging in art is good for our health and wellbeing.</Paragraph>
                 <Paragraph>While making finger-puppets with your kids or dancing to your favourite tune may just seem like a silly bit of fun, these kinds of activities can actually make a world of difference to your overall quality of life.</Paragraph>
                 <Paragraph>Although people have long appreciated the importance of art in social and cultural progress, doctors and scientists have more recently dsicovered just how effective art and creative activities can be in benefiting our physical mental and emotional health.</Paragraph>
