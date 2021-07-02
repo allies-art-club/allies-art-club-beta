@@ -201,7 +201,7 @@ const HeaderLogo = styled.h1`
     @media(min-width:768px){
         width:364px;
         font-size: 107px;
-        text-shadow: 1px 1px 0px ${theme.pink}, -1px -1px 0px ${theme.pink},1px -1px 0px ${theme.pink}, -1px 1px 0px ${theme.pink}, 0px 0px 2rem ${theme.pink}, 0px 0px 5rem ${theme.pink},  0px 0px 0.4rem ${theme.pink};
+        text-shadow: 1px 1px 0px ${theme.pink}, -1px -1px 0px ${theme.pink},1px -1px 0px ${theme.pink}, -1px 1px 0px ${theme.pink}, 0px 0px 2rem ${theme.pink}, 0px 0px 5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
         line-height:84px;
     }
 `

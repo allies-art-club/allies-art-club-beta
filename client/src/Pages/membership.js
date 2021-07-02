@@ -190,7 +190,7 @@ const Membership = (props)=>{
                                                     console.log(event.target.checked);
                                                 }} value={el}></FormInputCheckbox>
 
-                                            <CheckboxLabel htmlFor={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}>{el}</CheckboxLabel>
+                                            <CheckboxLabel longList={"true"}htmlFor={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}>{el}</CheckboxLabel>
                                         </FormInputCheckboxWrapper>
                                     </FieldSetWrap>
 
