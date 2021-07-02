@@ -1,7 +1,7 @@
 import React from 'react';
 import { toggleSpinner } from '../Actions/donateActions.js';
 import {connect} from 'react-redux';
-import {ArticleWrapper,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem} from '../Components/Styled/article.styled.js';
+import {ArticleWrapper,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from '../Components/Styled/article.styled.js';
 const Article=(props)=>{
     console.log(props.title)
     return(
@@ -26,15 +26,25 @@ const Article=(props)=>{
                 }:null}>
             <ArticleWrapper right={props.right} >
                     <Figure >
-                        <ArticleImage src={props.src}/>
+                        <ArticleImage alt={props.title} src={props.src}/>
                         <PublishingDate>{props.date}</PublishingDate>
                     </Figure>
                 <TextContainer>
                     <TextWrap>
-                        <ArticleTitle>
-                            {props.title}
+                        <Border alt="border top" top={true} src={"/assets/general/border.png"}/>
+                        <ArticleTitle largeHeading={props.largeHeading}>
+                            {props.title.split(': ')[0]}
                         </ArticleTitle>
-                        <ArticleSummary>{props.children}</ArticleSummary>
+                        {
+                            props.title.split(':').length===2?
+                            <ArticleTitle largeHeading={props.largeHeading}>
+                                {props.title.split(': ')[1]}
+                            </ArticleTitle>:
+                            null
+                        }
+
+                        <ArticleSummary largeHeading={props.largeHeading}>{props.children}</ArticleSummary>
+                        <Border alt="border bottom" src={"/assets/general/border.png"}/>
                     </TextWrap>
                     <ArticleDetailsWrapper>
                         <ArticleItem>{props.category}</ArticleItem>

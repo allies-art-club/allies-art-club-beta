@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {PageDescription} from '../Components/Styled/styled.js'
 import activities from './activities/landingPage.js';
 const Projects=()=>{
     return(
@@ -15,7 +15,7 @@ const Projects=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Projects"}
             ></TitleBanner>
-            <Paragraph>Information on Allie's upcoming, ongoing and completed projects.</Paragraph>
+            <PageDescription>Information on Allie's upcoming, ongoing and completed projects.</PageDescription>
             {
                 activities.filter(el=>el.category==='Projects').map((el,i)=>{
                     return(

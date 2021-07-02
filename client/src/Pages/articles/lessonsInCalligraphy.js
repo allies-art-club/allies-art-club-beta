@@ -1,29 +1,27 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,TextImageTop,Article,Section} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,TextImageTop,Article,Section,Image,SubHeading,SubTitle,ImageWrap} from '../../Components/Styled/styled.js';
 const LessonsInCalligraphy=()=>{
     return(
         <Article>
             <TitleBanner
+                
                 title={"Lessons in Calligraphy"}
             ></TitleBanner>
+            <SubHeading>A personal story by Lydia Rose</SubHeading>
             <TextImage alt="pen" right={true} src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1.png"}/>
 
             <Section>
             <Paragraph>As a writer, I have always been drawn
 to calligraphy as a beautiful way to display the contents of my mind.</Paragraph>
-<Paragraph>In my teens, I was gifted a neat calligraphy set, which was at first mymost prized piece of stationary. After a few months of errors, frustration and ink-stained fingertips, I quit alltogether. Calligraphy was too hard, too laborious, and I did not have the patience to pursue it.</Paragraph>
+<Paragraph>In my teens, I was gifted a neat calligraphy set, which was at first my most prized piece of stationary. After a few months of errors, frustration and ink-stained fingertips, I quit altogether. Calligraphy was too hard, too laborious, and I did not have the patience to pursue it.</Paragraph>
 <Paragraph>In my mid-twenties I was once again captivated by this elegant art form, and decided to treat myself to a new set that was too
 gorgeous to resist. Holding my new silver nib to the page, I was at first determined to get it right and become a skillful master of calligraphy. But my motivation soon dried up as pages of messy scribbles and in blots revealed my inadequacies.</Paragraph>
 <Paragraph>A few months later, when the pandemic had hit the UK and the whole country was placed under lock and key, my calligraphy pen called me into practice once again. Sitting at my desk with an abundance of free time on my hands, I met the page with a completely new attitude; I was not there to be perfect, I was there to learn.</Paragraph>
 <Paragraph>With a fresh outlook, the pressure to perform was replaced by a desire to explore this timeless craft without any expectations. And there, between ink pot and paper, I discovered many lessons that were more valuable to my life than I could have ever predicted.</Paragraph>
 </Section>
 <Section>
-    <TitleBanner
-        sub={true}
-        title={"Focus"}
-    >
-    </TitleBanner>
+    <SubTitle>Focus</SubTitle>
     <Paragraph>Focusing on one thing at a time has always been a particular challenge
 of mine. With so many things to think of at any given moment, I often
 find myself in a haze of contemplation instead of concentrating on
@@ -37,10 +35,7 @@ me the importance of building focus in order to engage in all areas
 of life with more refinement and skill.</Paragraph>
 </Section>
 <Section>
-    <TitleBanner
-        sub={true}
-        title={"Be Patient"}
-    ></TitleBanner>
+    <SubTitle>Be Patient</SubTitle>
     <Paragraph>In our digital age of instant entertainment and connectivity, delayed
 gratification may seem like a thing of the past. Living in the sprawling
 city of London, I've grown used to getting what I want when I want it
@@ -59,12 +54,7 @@ Patience is the antidote to apathy and frustration, providing a
 foundation on which intentions have space to blossom.</Paragraph>
 </Section>
 <Section>
-    <TitleBanner
-        sub={true}
-        title={"Be Committed"}
-    >
-        
-    </TitleBanner>
+    <SubTitle>Be Committed </SubTitle>
     <Paragraph>Commitment is the follow-through of motivation. When I'm fully
 committed to a cause, my passion and persistence fuel me towards
 achievement. If my energy and dedication begin to falter, I often ask
@@ -83,10 +73,7 @@ spur us into action, so committing to the path there might just be
 the best (and only) way to achieve progress.</Paragraph>
 </Section>
 <Section>
-    <TitleBanner
-        sub={true}
-        title={"Learn from Mistakes"}
-        ></TitleBanner>
+    <SubTitle>Learn from Mistakes</SubTitle>
     <Paragraph>Mistakes are an inevitable part of life. Big and small, I've made many
 mistakes in my 27 years here on Earth, and found that my biggest
 spurts of growth have always occurred after I take ownership of
@@ -109,10 +96,7 @@ attainable, calligraphy has given me a safe space to learn how.
 </Paragraph>
 </Section>
 <Section>
-    <TitleBanner
-        sub={true}
-        title={"Experiment"}
-        ></TitleBanner>
+    <SubTitle>Experiment</SubTitle>
     <Paragraph>Taking risks, exploring the unknown and trying something new can
 sometimes be daunting. I often experience anxiety when I put myself
 out there, exposing myself to uncertainty instead of hiding in the
@@ -130,6 +114,8 @@ not only essential in learning to adapt to these changes, but in creating
 better alternatives to how things were before. Calligraphy is just one
 demonstration on how experimentation is the golden ticket to progress
 and advancement.</Paragraph>
+
+<br/>
 <Paragraph>Calligraphy is an art form that has been practiced for millennia, and
 after my short delve into this intricate practice I certainly know why.
 Like all other forms of art, calligraphy does not just represent its
@@ -139,12 +125,18 @@ life. Though I am still far from a master calligrapher, I have enjoyed
 the wisdom my calligraphy pen has shared with me and look forward
 to many more lessons in calligraphy.</Paragraph>
 </Section>
-<Section>
-    <TextImage alt="Lydia Rose" src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2.png"}/>
-    <TitleBanner
-        sideSrc2={"/assets/general/starR.png"}
-        title={"Lydia Rose"}
-        ></TitleBanner>
+<Section>    
+<TextImageTop alt="Lydia Rose" src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2.png"}/>
+
+    <ImageWrap>
+    <SubTitle image={true}>Lydia Rose</SubTitle>
+    <Image flex={true} src={"/assets/general/starR.png"}/>
+    </ImageWrap>
+    
+    
+
+
+    <TextImageTop alt="Lydia Rose" mobile={true} src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2.png"}/>
 
     <Paragraph>Lydia Rose is an artist and activist
 from London. Her main artistic focus
@@ -154,6 +146,7 @@ Art Club and volunteers regularly with
 the Club's Foundation, AWTF.</Paragraph>
 <Paragraph>You can follow her on Instagram on
 @lydiarose_artist</Paragraph>
+<Image alt="stars" src={"/assets/general/starsR.png"}/>
 
 </Section>
         </Article>

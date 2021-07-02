@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {PageDescription} from '../Components/Styled/styled.js'
 import articles from './articles/landingPage.js';
 const Discussions=()=>{
     return(
@@ -15,7 +15,7 @@ const Discussions=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Discussions"}
             ></TitleBanner>
-            <Paragraph>Information, news, conversations and stories on art, creativity, culture and community.</Paragraph>
+            <PageDescription>Information, news, conversations and stories on art, creativity, culture and community.</PageDescription>
             {
                 articles.map((el,i)=>{
                     return(
@@ -23,6 +23,7 @@ const Discussions=()=>{
             <Article key={i} 
             src={el.src}
             title={el.title}
+            largeHeading={el.largeHeading}
             right={i%2===0} 
             date={el.date}
             landingPage={"discussions"}

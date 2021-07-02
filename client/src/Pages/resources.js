@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {PageDescription} from '../Components/Styled/styled.js'
 import resources from './resources/landingPage.js';
 import { downloadHandler } from '../Actions/articleActions.js';
 const Resources=()=>{
@@ -16,7 +16,7 @@ const Resources=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Resources"}
             ></TitleBanner>
-            <Paragraph>Fact sheets and work sheets to learn about and engage in art, self-care and activism.</Paragraph>
+            <PageDescription>Fact sheets and work sheets to learn about and engage in art, self-care and activism.</PageDescription>
             {
                 resources.map((el,i)=>{
                     return(

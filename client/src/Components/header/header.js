@@ -1,11 +1,11 @@
 import React from 'react';
-import {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap,HeaderNavList, HeaderNavListElement,Cross,NavMainCategory,NavLinkLogo, Logo, Figure,Slogan} from '../Styled/header.styled.js';
+import {HeaderContainer, HeaderLogo, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap,HeaderNavList, HeaderNavListElement,Cross,NavMainCategory,NavLinkLogo, Logo, Figure,Slogan} from '../Styled/header.styled.js';
 import SubMenu from '../subMenu.js'
 const Header = (props) => {
     console.log(props.subMenu)
     return(
         <HeaderContainer id="header" data-test="header">
-            <Slogan>CONNECT. CREATE. EMPOWER.</Slogan>
+            <Slogan>Creating a culture of community</Slogan>
             <HeaderNav id="nav" data-test="nav">
                 <BurgerMenu onClick={(e)=>{
                     console.log(props.open)
@@ -20,7 +20,7 @@ const Header = (props) => {
                 <Figure>
                     <NavLinkLogo
                         exact to='/'>
-                        <Logo id="aacLogo" data-test="aacLogo" src={'/assets/header/logo.png'} aria-label="Allie 's Art Club Logo" alt="Allie 's Art Club Logo"/>
+                        <HeaderLogo id="aacLogo" data-test="aacLogo" aria-label="Allie 's Art Club Logo">Allie's Art Club</HeaderLogo>
                     </NavLinkLogo>
                 </Figure>
                 <NavMainCategory

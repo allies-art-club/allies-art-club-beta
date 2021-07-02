@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,TextImageTop,Article,Quote} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,Article,Quote,Image,Link} from '../../Components/Styled/styled.js';
 const FoodBank=()=>{
     return(
         <Article>
@@ -67,9 +67,12 @@ losing his job, and after getting to know the staff and volunteers
 decided to help out; "I love it! We all get on, we all get down to work.".</Paragraph>
 <Paragraph>Allie's food bank is open every Monday, Wednesday and Friday from
 12pm - 4pm for anyone who needs support.</Paragraph>
+<Paragraph>Donations to Allie’s food bank are greatly appreciated, and you can find out how on <Link rel="noopener"target="_blank"href="https://www.awtf.org/food-appeal">AWTF’s website</Link>.</Paragraph>
 <Paragraph>New volunteers are more than welcome, and can arrive at the
 Ringcross Community Centre any time from 9am on the days the food
 bank is open.</Paragraph>
+<Image alt="hearts" right={true} src={"/assets/general/heartsR.png"}/>
+
         </Article>
     )
 }

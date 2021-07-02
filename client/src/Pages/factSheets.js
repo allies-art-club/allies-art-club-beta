@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {PageDescription} from '../Components/Styled/styled.js'
 import resources from './resources/landingPage.js';
 import { downloadHandler } from '../Actions/articleActions.js';
 const FactSheet=()=>{
@@ -16,7 +16,7 @@ const FactSheet=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Fact sheets"}
             ></TitleBanner>
-            <Paragraph>Fact sheets with information and tips on topics related to art, self-care and activism.</Paragraph>
+            <PageDescription>Fact sheets with information and tips on topics related to art, self-care and activism.</PageDescription>
             {
                 resources.filter(el=>el.category==='Fact sheet').map((el,i)=>{
                     return(

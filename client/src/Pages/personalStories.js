@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {PageDescription} from '../Components/Styled/styled.js'
 import articles from './articles/landingPage.js';
 const PersonalStories=()=>{
     return(
@@ -15,7 +15,7 @@ const PersonalStories=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Personal Stories"}
             ></TitleBanner>
-            <Paragraph>Personal experiences related to art, creativity, culture and community by our club members.</Paragraph>
+            <PageDescription>Personal experiences related to art, creativity, culture and community by our club members.</PageDescription>
             {
                 articles.filter(el=>el.category==="Personal stories").map((el,i)=>{
                     return(

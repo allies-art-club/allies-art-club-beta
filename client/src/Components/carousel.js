@@ -1,10 +1,12 @@
-import React,{Fragment} from 'react';
-import {CarouselImage,CarouselContainer, Slide,ChevronWrapper,Arrow} from './Styled/carousel.styled.js';
+import React from 'react';
+import {CarouselImage,CarouselContainer, Slide,ChevronWrapper,Arrow,NavClick,Figure,FigCaption,CaptionContent} from './Styled/carousel.styled.js';
 
 const Carousel = (props) => {
+    
     if(!props.imageIndices.length){
-        for(var i = 0; i<props.photos.length;i++){
+        for(var i = 0; i<props.carouselObj.length;i++){
             props.imageIndices.push(i-1);
+            console.log('YEHHH',props.imageIndices)
         }
 
     }
@@ -13,12 +15,14 @@ const Carousel = (props) => {
 
             <Slide>
                     {
-                        props.photos.map((photo,i)=>{
-                            console.log(i-1)
+                        props.carouselObj.map((photo,i)=>{
                             return(
-                                <Fragment key={i-1}>
-                                    <CarouselImage index={props.imageIndices[i]} length={props.imageIndices.length-2}direction={props.direction} src={props.photoLoc+photo} alt={'photo'+i}/>
-                                </Fragment>
+                                <NavClick length={props.imageIndices.length-2}direction={props.direction} index={props.imageIndices[i]} exact to={photo.url}key={i-1}>
+                                    <Figure>
+                                        <CarouselImage   src={photo.src} alt={'photo'+i}/>
+                                        <FigCaption><CaptionContent>{photo.caption}</CaptionContent></FigCaption>
+                                    </Figure>
+                                </NavClick>
                             )
                         })
                     }
