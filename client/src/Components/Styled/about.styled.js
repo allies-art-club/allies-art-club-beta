@@ -114,5 +114,11 @@ const SpeechBubble =styled.div`
 const Message = styled.figcaption`
     padding: 15px;
 `
-
-export {Quote,SubTitle,FoundationImage,MissionWrapper,MissionDesc,Mission,ValuesWrap,ValuesImage,Tag,AllieWrap,TextWrapper,Message,SpeechBubble};
+const IFrame = styled.iframe`
+    width:100%;
+    height:calc((100vw * 0.95 - 60px) * 9/16);
+    @media(min-width:768px){
+        height:calc((70vw - 80px) * 9/16);
+    }
+`
+export {Quote,SubTitle,FoundationImage,MissionWrapper,MissionDesc,Mission,ValuesWrap,ValuesImage,Tag,AllieWrap,TextWrapper,Message,SpeechBubble,IFrame};
