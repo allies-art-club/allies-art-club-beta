@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-const ImageWrapper = styled.div`
+const ThankYouWrap=styled.div`
     width:100%;
+    margin-top:30px;
+    @media(min-width:768px){
+        margin-top:70px;
+    }
+`
+const ImageWrapper = styled.div`
+    width:${props=>props.thankYou?"70":"100"}%;
     margin:auto;
     position:relative;
-    clear:both;
+    clear:${props=>props.thankYou?"inherit":"both"};
 
 `
 const DonationWrapper = styled.div`
@@ -59,4 +66,10 @@ const DonateBannerStar=styled.img`
 
     }
 `
-export {ImageWrapper,DonationWrapper,DonateLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStars,DonateBannerStar}
+const SideImg=styled.img`
+    width:10%;
+    margin-right:${props=>props.left?"2%":"3%"};
+    margin-left:${props=>props.left?"3%":"2%"};
+    float:${props=>props.left?"left":"right"};
+`
+export {ThankYouWrap,ImageWrapper,DonationWrapper,DonateLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStars,DonateBannerStar,SideImg}
