@@ -1,5 +1,5 @@
 import React from 'react';
-import {HeaderContainer, HeaderLogo, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap,HeaderNavList, HeaderNavListElement,Cross,NavMainCategory,NavLinkLogo, Logo, Figure,Slogan} from '../Styled/header.styled.js';
+import {HeaderContainer, HeaderLogo, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap,HeaderNavList, HeaderNavListElement,Cross,NavMainCategory,NavLinkLogo, Figure,Slogan} from '../Styled/header.styled.js';
 import SubMenu from '../subMenu.js'
 const Header = (props) => {
     console.log(props.subMenu)

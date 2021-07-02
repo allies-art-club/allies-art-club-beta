@@ -1,6 +1,8 @@
-<svg width="100%" viewBox="0 0 1800 600" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg">
-    <defs>
+<svg  width="100%" viewBox="0 0 1800 600" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg">
 
+<title>[title]</title>
+  <desc>[long description]</desc>
+    <defs>
     <style type="text/css">
 
         @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');

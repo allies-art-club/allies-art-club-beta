@@ -158,14 +158,6 @@ const NavLinkLogo = styled(NavLink)`
 }
 `
 
-const Logo = styled.img`
-    width:50%;
-    @media(min-width:768px){
-        width:364px;
-    }
-    display:block;
-    margin:auto;
-`
 const Figure = styled.div`
     width:100%;
     text-align:center;
@@ -205,4 +197,4 @@ const HeaderLogo = styled.h1`
         line-height:84px;
     }
 `
-export {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap, Cross,HeaderNavList, HeaderNavListElement, DonateLinkWrapper,NavMainCategory,NavLinkLogo,Logo, HeaderLogo,Figure,Slogan};
+export {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap, Cross,HeaderNavList, HeaderNavListElement, DonateLinkWrapper,NavMainCategory,NavLinkLogo,HeaderLogo,Figure,Slogan};

@@ -10,7 +10,7 @@ const CharityWeCanTrust=()=>{
                     title={"A W T F: A Charity We Can Trust"}
                 ></TitleBanner>
 
-                <TextImageTop alt={"awtf logo"}right={true} src={'/assets/footer/awtf_icon.png'}/>
+                <TextImageTop alt={"awtf logo"}right={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6.png'}/>
                 <Paragraph>The Alexandra Wylie Tower Foundation (AWTF) was founded in January 2011 by Lindsey and Rob Wylie.</Paragraph>
                 <Paragraph>Lindsey and Rob created the charitable foundation after their daughter, Alexandra (known as Allie), passed away from a rare form of cancer at the age of 17.</Paragraph>
                 <Paragraph>The charity supports the health and wellbeing of underprivileged children, adults and families in London by providing essentials such as food and clothing, as well as creating opportunities for young people to engage in extra-curricular activities.</Paragraph>

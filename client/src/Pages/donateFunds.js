@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import {Paragraph, FormStyled,FormSubmitWrapper,StarImg,SubmitInfo,FormInputWrapper,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FormSubmitImage,FormSubmitCaption,FormSubmitFigure,ErrorMessage,ErrorWrapper} from '../Components/Styled/styled';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
+import {SideImg} from '../Components/Styled/donate.styled';
+
 import donateFundsSvg from '../Components/Styled/bannerSvg/donateFunds.svg';
 import {handleSubmit, toggleSpinner,handleCardElementChange,cardValidate} from '../Actions/donateActions';
 import {useStripe, useElements, CardNumberElement, CardExpiryElement, CardCvcElement} from '@stripe/react-stripe-js';
@@ -112,6 +114,7 @@ const DonateFunds = (props) => {
                     ): null
                     }
                 </FormInputWrapper>
+                <SideImg alt={"Star right"} src={"/assets/general/starR.png"} donate={"true"}/>
                 <FormInputWrapper error={errors.organisation&&touched.organisation?true:false}>
                     <FormLabel htmlFor="organisation">Organisation (if applicable):</FormLabel>
                     <FormInput type="text" name="organisation" id="organisation" onChange={handleChange} onBlur={handleBlur} value={values.organisation}></FormInput>
@@ -141,21 +144,22 @@ const DonateFunds = (props) => {
                     }
                 </FormInputWrapper>
                 <FormInputWrapper>
+                    <FormLabel htmlFor="cardExpiryDate">Expiry Date:*</FormLabel>
+                    <CardExpiryElement id="cardExpiryDate" options={cardOptions} onChange={props.handleCardElementChange}/>
+                    {
+                        props.donate.card.cardExpiry.errorMessage?
+                        <FormInputValidation>{props.donate.card.cardExpiry.errorMessage}</FormInputValidation>:
+                        null
+                    }
+                </FormInputWrapper>
+                <SideImg donate={"true"}alt={"Stars Right"} src={"/assets/general/starsR.png"} />
+                <FormInputWrapper>
                     <FormLabel htmlFor="cardCvc">CVC:*</FormLabel>
                     <CardCvcElement id="cardCvc" options={cardOptions} onChange={props.handleCardElementChange}/>
 
                     {
                         props.donate.card.cardCvc.errorMessage?
                         <FormInputValidation>{props.donate.card.cardCvc.errorMessage}</FormInputValidation>:
-                        null
-                    }
-                </FormInputWrapper>
-                <FormInputWrapper>
-                    <FormLabel htmlFor="cardExpiryDate">Expiry Date:*</FormLabel>
-                    <CardExpiryElement id="cardExpiryDate" options={cardOptions} onChange={props.handleCardElementChange}/>
-                    {
-                        props.donate.card.cardExpiry.errorMessage?
-                        <FormInputValidation>{props.donate.card.cardExpiry.errorMessage}</FormInputValidation>:
                         null
                     }
                 </FormInputWrapper>
@@ -171,19 +175,20 @@ const DonateFunds = (props) => {
 
                 <FormSubmitWrapper>
                     <SubmitInfo>
-                        <StarImg src={"/assets/general/starL.png"}></StarImg>
+                        <StarImg alt="star left" src={"/assets/general/starL.png"}></StarImg>
                         <Paragraph>Please note: all of your information will be kept private and will not be shared with any other party.</Paragraph>
                     </SubmitInfo>
                     <FormSubmit type="submit" value="Submit" disabled={isSubmitting}>
                         <FormSubmitFigure>
-                            <FormSubmitImage src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
+                            <FormSubmitImage alt="submit" src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
                             <FormSubmitCaption>Submit!</FormSubmitCaption>
                         </FormSubmitFigure>
                     </FormSubmit>
+                </FormSubmitWrapper>
+
                 {
                     props.donate.errorMessage?<ErrorWrapper><ErrorMessage>{props.donate.errorMessage}</ErrorMessage></ErrorWrapper>:null
                 }
-                </FormSubmitWrapper>
             </FormStyled>
             )}
             </Formik>
