@@ -28,7 +28,7 @@ const AboutAac = () => {
                 
                 <ImageWrapper>
                     <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
-                    <BannerTextImg alt="about banner svg text" type="image/svg+xml" data={aboutAccSvg}/>
+                    <BannerTextImg aria-label="contains svg"alt="about banner svg text" type="image/svg+xml" data={aboutAccSvg}/>
                 </ImageWrapper>
             </Section>
             <TitleBanner

@@ -2,6 +2,7 @@ import React,{Fragment} from 'react';
 import {useHistory} from 'react-router-dom';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {Paragraph, FormStyled,FormCheckboxWrapper,FormInputWrapper,FormInputValidation, FieldSet,FieldSetWrap, FormInputCheckboxWrapper, FormInputCheckbox,CheckboxLabel,FormLabel,FormInput,FormTextArea,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,FormSubmitWrapper, SubmitInfo,StarImg, FormSubmit,ErrorMessage,ErrorWrapper} from '../Components/Styled/styled';
+import {SideImg} from "../Components/Styled/donate.styled.js";
 import {Formik} from 'formik';
 import * as yup from 'yup';
 import {connect} from 'react-redux';
@@ -76,6 +77,7 @@ const DonateSupplies=(props)=>{
             
 
                 <FormStyled onSubmit={handleSubmit}>
+                    <SideImg alt="star right" src={"/assets/general/starR.png"}/>
                     <FormInputWrapper>
                         <FormLabel htmlFor="name">Full Name:*</FormLabel>
                         <FormInput type="text" name="name" id="name" onChange={handleChange} onBlur={handleBlur}value={values.name}></FormInput>

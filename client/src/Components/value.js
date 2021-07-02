@@ -9,7 +9,6 @@ const Value = (props)=> {
         if(event.target.id !==id){
             setMessage(showMessage);
             window.removeEventListener('click',handleClick)
-            window.removeEventListener('beforeunload',handleClick)
         }
     }
     const toggleMessage=(event)=>{
@@ -18,9 +17,6 @@ const Value = (props)=> {
             setTimeout(function(){
                 setMessage(!showMessage);
                 window.addEventListener('click',handleClick);
-                window.addEventListener('beforeunload',function(){
-                    window.removeEventListener('click',handleClick);
-                })
                 return ;
             },100)
         }

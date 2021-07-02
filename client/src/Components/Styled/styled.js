@@ -119,12 +119,13 @@ const FormCheckboxWrapper=styled.fieldset`
 `
 const FormInputWrapper=styled.div`
   position:relative;
-  height:${props=>props.textarea===true?'auto':'50px'};
+  height:${props=>props.textarea?'auto':'50px'};
   margin-top:${props=>props.other?"20px":"50px"};
+  margin-bottom:${props=>props.textarea?"30px":"auto"};
   border: 4px solid ${props=>props.error?"red":"black"};
   padding: 0px 20px;
   @media(min-width: 768px){
-    width: 50%;
+    width: ${props=>props.textarea?"100%":"50%"};
   }
 
   }
@@ -349,6 +350,7 @@ const SubmitInfo = styled.div`
   width:60%;
   p {
     font-size: 0.8rem;
+    margin-right: 30px;
   }
 `
 const StarImg=styled.img`
@@ -418,7 +420,7 @@ const Icon=styled.img`
     width: 1rem;
 `
 const InlineIcon = styled.img`
-    width:1rem;
+    width:1.09rem;
     height:1rem;
     display:inline-block;
     transform:translateY(20%);

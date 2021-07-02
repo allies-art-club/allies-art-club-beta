@@ -27,11 +27,11 @@ const AboutAlliesStory=()=>{
                 
                 <ImageWrapper>
                     <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
-                    <BannerTextImg alt="allie's story banner svg text" type="image/svg+xml" data={alliesStory}/>
+                    <BannerTextImg alt={"allie story"} type="image/svg+xml" data={alliesStory}/>
                 </ImageWrapper>
                 <Paragraph>Allie was known for her dazzling smile, vibrant personality and fantastic sense of humour. She loved to explore a huge range of creative pursuits, and was particularly talented at ice-skating, theatre, cello and singing. She was an incredibly hard-working and intelligent student, receiving 9A*s for her GCSEs.</Paragraph>
                 
-                <TextImage src={'/assets/about/allieSoup.png'}/>
+                <TextImage alt="allie soup" src={'/assets/about/allieSoup.png'}/>
                   
                         <Paragraph>As well as her dedication to pursuing art and education, Allie was committed to treating others with kindness and compassion.</Paragraph>
                          <Paragraph>With a strong desire to help those in need, Allie volunteered at a local homeless shelter as a teen and organised multiple fundraising events for the charity Wings of Hope.</Paragraph>
