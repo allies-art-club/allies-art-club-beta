@@ -39,6 +39,8 @@ const payment = async(req,res,next) => {
     }
     catch(e){
         console.log(e);
+        e.status=500;
+        e.input=req.body;
         if(e.statusCode){
             //delete from database
             var statusCode=e.statusCode.toString();
@@ -48,20 +50,17 @@ const payment = async(req,res,next) => {
                 console.log(e.message);
                 console.log('YAR');
                 res.status(e.statusCode).json({'error':'An error has occurred. Please return later while we fix the error.'});
-                e.status=500;
                 next(e);
             }
             else if(statusCode.match(/^5/)){
                 console.log('SOMETHING UP WITH STRIPE');
                 res.status(e.statusCode).json({'error':'An error has occurred with our payment provider. Please try again later.'});
-                e.status=500;
                 next(e);
             }
         }
         else {
             console.log('ERRR')
             res.json({'error':e});
-            e.status=e.statusCode;
             next(e);
         }
         
@@ -77,6 +76,7 @@ const updatePayment = async(req,res,next)=>{
     }
     catch(e){
         e.status=500;
+        e.input=req.body;
         next(e);
     }
 }
@@ -90,6 +90,7 @@ const deletePayment = async(req,res,next)=>{
     catch(err){
         console.log(err);
         err.status=500
+        err.input=req.body;
         next(err)
     }
 }
@@ -102,6 +103,7 @@ const csrfToken = (req,res,next) => {
     else{
         const error = new Error('No csrfToken present');
         error.status=500;
+        error.input=req.body;
         throw error;
     }
 }
@@ -124,6 +126,7 @@ const contactUs=async(req,res,next)=>{
         console.log(e);
         const error = new Error('Email not sent',e);
         error.status=500;
+        e.input=req.body;
         next(e);
     }
 }
@@ -135,6 +138,7 @@ const membershipPost = async(req,res,next)=>{
     catch(e){
         console.log(e);
         e.status=500;
+        e.input=req.body;
         throw e;
     }
 }
@@ -147,6 +151,7 @@ const supplies = async(req,res,next)=>{
     catch(e){
         console.log('YERRR',e)
         e.status=500;
+        e.input=req.body;
         next(e);
     }
 }
@@ -160,6 +165,7 @@ const resourceHandler=(req,res,next)=>{
     catch(e){
         console.log(e);
         e.status=500;
+        e.input=req.body;
         throw e;
     }
 

@@ -69,6 +69,7 @@ const stripeWebhook = async(req,res,next)=>{
         console.log(e)
         const error = new Error(`Error with webhook event payments: ${e}`)
         error.status= 500
+        e.input=req.body;
         res.json({received:false});
         throw error;
     }
