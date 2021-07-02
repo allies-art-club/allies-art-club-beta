@@ -2,18 +2,14 @@ import React,{Fragment} from 'react';
 import {connect} from 'react-redux';
 import Carousel from '../Components/carousel.js'
 import {carouselClick} from '../Actions/homeActions';
+import carouselHome from './carouselHome/carouselHome.js'
 
-const importAll = (photos) => {
-    console.log(photos.keys())
-    return photos.keys()
-};
 
-const photos = importAll(require.context('../../public/assets/carouselHome',false,/\.png|\.jpg/));
 
 const Home = (props) => {
     return (
         <Fragment>
-            <Carousel photoLoc={'../../assets/carouselHome/'} photos={photos}carouselClick={props.carouselClick} imageIndices={props.home.imageIndices} direction={props.home.direction}/>
+            <Carousel photoLoc={'../../assets/carouselHome/'} carouselObj={carouselHome} carouselClick={props.carouselClick} imageIndices={props.home.imageIndices} direction={props.home.direction}/>
         </Fragment>
     )
 }

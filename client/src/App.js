@@ -1,7 +1,7 @@
 import React, {Fragment,Suspense, lazy, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {logOut,toggleMenu,toggleSubMenu,setCsrfToken} from './Actions/appActions.js';
+import {toggleMenu,toggleSubMenu,setCsrfToken} from './Actions/appActions.js';
 import Header from './Components/header/header.js';
 import {createGlobalStyle} from 'styled-components';
 import {Container} from './Components/Styled/styled.js';

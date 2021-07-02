@@ -35,7 +35,12 @@ const Mission=styled.h2`
     text-align: center;
 `
 const MissionDesc=styled.p`
-    width: 70%;
+    @media(min-width:768px){
+        width: 50%;
+    }
+    @media(min-width:1025px){
+        width: 65%;
+    }
     margin:auto;
     border-top: 1px dashed red;
 `

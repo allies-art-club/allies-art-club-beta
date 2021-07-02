@@ -1,7 +1,7 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,TextImageTop,Article,Section,Image, ImageWrapper,Floater} from '../../Components/Styled/styled.js';
-import {RememberAllieHeading} from "../../Components/Styled/article.styled.js";
+import {Paragraph,TextImage,Article,Section,Image, ImageWrapper,Floater} from '../../Components/Styled/styled.js';
+import {SubHeading} from "../../Components/Styled/styled.js";
 const RememberingAllie=()=>{
     return(
         <Article>
@@ -13,14 +13,14 @@ const RememberingAllie=()=>{
 
             <Paragraph>Alexandra Wylie was born in London on the 2nd of January, 1993.</Paragraph>
             <Paragraph>Known for her dazzling smile, charming wit and exceptional talent, Allie was a bright star who brought so much
-            energy, warmth and humour to thoseshe touched.</Paragraph>
+            energy, warmth and humour to those she touched.</Paragraph>
 <Paragraph>Throughout her life, Allie shone with so much passion, strength and
 vibrancy, until she passed away from a rare form of cancer at the
 age of 17.</Paragraph>
 <Paragraph>Allie's short yet brilliant life has inspired so many people - many who knew her while she lived and many who have heard of her legacy since. This article is a gathering of memories of a few people who knew Allie well and wanted to share a glimpse into her joy, her beauty and her humanity.</Paragraph>
 </Section>
 <Section>
-    <RememberAllieHeading>Elin, Allie's singing teacher & neighbour</RememberAllieHeading>
+    <SubHeading>Elin, Allie's singing teacher & neighbour</SubHeading>
     <Paragraph>Alexandra</Paragraph>
     <Paragraph>The girl next door.</Paragraph>
     <Paragraph>Kind and modest.</Paragraph>
@@ -31,7 +31,7 @@ age of 17.</Paragraph>
     <Paragraph>Because I would never sing at her wedding.</Paragraph>
 </Section>
 <Section>
-    <RememberAllieHeading>Courtney, Allie's school friend</RememberAllieHeading>
+    <SubHeading>Courtney, Allie's school friend</SubHeading>
     <Paragraph>Allie was one of my best friends and having been lucky enough to
 spend all my years at Channing with her, I have so many happy
 memories that I will always cherish. Out of our close group of friends
@@ -51,7 +51,7 @@ awful lot of laugher, and I miss her every day.</Paragraph>
 
 </Section>
 <Section>
-    <RememberAllieHeading>Kitty, Allie's school friend</RememberAllieHeading>
+    <SubHeading>Kitty, Allie's school friend</SubHeading>
     <Paragraph>As Allie was a ‘W’ and I am a ‘U’, Allie and I spent almost our whole
 secondary school life in classes together. You could always hear her
 giggle before she entered a room. Both of us also had a passion for
@@ -68,7 +68,7 @@ forget her laugh, her beaming smile, her infectious energy and her
 passion for life. She’ll always be my backstage pal.</Paragraph>
 </Section>
 <Section>
-    <RememberAllieHeading>Bonnie, Allie's school friend</RememberAllieHeading>
+    <SubHeading>Bonnie, Allie's school friend</SubHeading>
     <Paragraph>Allie was, and is, one of my best friends. We met in Year 7 and I was
 struck by how outgoing and smiley and friendly she was. Allie was neverfar from a laugh and she was my adventure partner. No ride in Thorpe
 Park was too big for her. She was also an incredibly intelligent person
@@ -79,9 +79,9 @@ ride or film, an interesting article or just a good laugh. Love you and
 miss you Allie.</Paragraph>
 </Section>
 <Section>
-    <RememberAllieHeading>
+    <SubHeading>
     Anna, Allie's school friend
-    </RememberAllieHeading>
+    </SubHeading>
     <Paragraph>We did a Channing choir tour to Venice in 2009, I have so many fond
 memories of us breaking into song on the public transport boats and at
 the top of the bell tower in St Marks Square, doing full on renditions
@@ -100,9 +100,9 @@ spent the rest of the evening chatting about rubbish and laughing A LOT.
 The photos, videos and memories from that trip I will cherish forever.</Paragraph>
 </Section>
 <Section>
-    <RememberAllieHeading>
+    <SubHeading>
     Lydia, Allie's next-door neighbour
-    </RememberAllieHeading>
+    </SubHeading>
     <Paragraph>Growing up next door to Allie with a close family bond, I spent much of
 my childhood learning, playing and creating beside her. Though we often
 fought like sisters - particularly over who got to hold her Mum's left
@@ -110,9 +110,9 @@ hand on the walk to school - we also had a wealth of joyful moments
 together. There was no better pastime in my younger years than to
 climb over our garden fence and jump for hours with Allie on her
 treasured trampoline, chattering away as we bounced beside a
-honeysuckle bush and two loyal dogs on her lawn</Paragraph>
+honeysuckle bush and two loyal dogs on her lawn.</Paragraph>
 <Paragraph>Every week, Allie would come over for singing lessons with my Mum.
-We bickered over who got to stand on the left side of the piano, ofcourse, but our voices always harmonised in song. One Sunday at
+We bickered over who got to stand on the left side of the piano, of course, but our voices always harmonised in song. One Sunday at
 church, dressed in white frocks and feathery angel wings, we sang
 Panis Angelicus in a perfect duet before an adoring congregation.
 Allie was a truly angelic neighbour and her wisdom and kindness will

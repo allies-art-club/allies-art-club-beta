@@ -6,7 +6,8 @@ import {ImageWrapper,ImageText} from '../Components/Styled/donate.styled';
 import Value from '../Components/value.js';
 import {MissionWrapper,Mission,MissionDesc,ValuesWrap,ValuesImage} from '../Components/Styled/about.styled';
 import {CentreImage} from '../Components/Styled/titleBanner.styled'
-import tagMessageArray from './about/tagMessageArray.js'
+import tagMessageArray from './about/tagMessageArray.js';
+import StickyNote from '../Components/stickyNote.js'
 const AboutAac = () => {
     return (
         <Fragment>
@@ -20,7 +21,7 @@ const AboutAac = () => {
                 ></TitleBanner>
             <Section id="alliesArtClub">
 
-                <Paragraph>Allie's Art Club is a community of change-makers and creatives. Formed by passionate volunteers during the Coronavirus pandemic, our club is open to anyone who loves to create and wants to make a positive impact in their community.</Paragraph>
+                <Paragraph>Allie's Art Club is a community of change-makers and creatives. Formed by passionate volunteers during the Coronavirus pandemic, our Club is open to anyone who loves to create and wants to make a positive impact in their community.</Paragraph>
                 <Paragraph>We aim to create a safe and inclusive environment where participants feel empowered and connected, able to develop their skills and sense of wellbeing and make a difference in their community through artistic expression, collaboration and creative problem solving.</Paragraph>
                 
                 <ImageWrapper>
@@ -39,21 +40,24 @@ const AboutAac = () => {
                     <Paragraph>We view art as a peaceful yet powerful way to express ourselves and communicate ideas which can lead to cultural, social and political change. Engaging in art and creative activities is also a healthy and effective way of improving personal wellbeing, connecting with others and building relationships.</Paragraph>
                     <Paragraph>Our mission is to:</Paragraph>
                     <MissionWrapper>
-                        <Mission>
-                            EMPOWER
-                        </Mission>
+                        <StickyNote
+                            values={"true"}
+                            benefit={"EMPOWER"}
+                        />
                         <MissionDesc>Empower individuals and communities by providing a platform and tools for them to take action in creating positive changes for themselves and others.</MissionDesc>
                     </MissionWrapper>
                     <MissionWrapper>
-                        <Mission>
-                            CONNECT
-                        </Mission>
+                        <StickyNote
+                            values={"true"}
+                            benefit={"CONNECT"}
+                        />
                         <MissionDesc>Connect people through common passions and interests and provide a space for them to build relationships and collaborate on creative projects.</MissionDesc>
                     </MissionWrapper>
                     <MissionWrapper>
-                        <Mission>
-                            CREATE
-                        </Mission>
+                        <StickyNote
+                            values={"true"}
+                            benefit={"CREATE"}
+                        />
                         <MissionDesc>Create opportunities for people to express themselves, develop skills and contribute to a more fun fair and democratic society through art and creativity.</MissionDesc>
                     </MissionWrapper>
             </Section>
@@ -65,7 +69,7 @@ const AboutAac = () => {
             ></TitleBanner>
             <Section id="alliesValues">
                 <Paragraph>Allie's Art Club is built on a strong base of core values. These values are central to the work we do, directing both the way we work and the outcomes we aim to create.</Paragraph>
-                <Paragraph>The image below outlines the Club's 9 core values. You can click on each value to read more about how they guide our mission and ways of working.</Paragraph>
+                <Paragraph>The image below outlines the Club's nine core values. You can click on each value to read more about how they guide our mission and way of working.</Paragraph>
                 <ValuesWrap>
                     <ValuesImage alt={"Values"}src={'/assets/about/Values.png'}/>
                     {

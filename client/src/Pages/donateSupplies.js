@@ -22,13 +22,13 @@ const DonateSupplies=(props)=>{
     return(
         <Fragment>
             <TitleBanner sideSrc1={"/assets/general/heartsL.png"} sideSrc2={"/assets/general/heartsR.png"} centreSrc={"/assets/general/ribbon.png"} />
-            <Paragraph>Please read the information below and fill out the form to send art supplies books or other resources to Allie's Art Club.</Paragraph>
-            <Paragraph>All donations must be delivered to the following address</Paragraph>
+            <Paragraph>Please read the information below and fill out the form to send art supplies, books or other resources to Allie's Art Club.</Paragraph>
+            <Paragraph>All donations must be delivered to the following address:</Paragraph>
             <Paragraph>Allie's Art Club</Paragraph>
             <Paragraph>Ringcross Community Center</Paragraph>
             <Paragraph>60 Lough Road</Paragraph>
             <Paragraph>London N7 8RH</Paragraph>
-            <Paragraph>Donations can be delivered by post or dropped off at the community centre in person from Monday - Friday 10am - 5pm. Please ensure all supplies are in usable condition.</Paragraph>
+            <Paragraph>Donations can be delivered by post or dropped off at the community centre in person from Monday - Friday 10am - 5pm. Please ensure all supplies are in a usable condition.</Paragraph>
             <Formik
                 initialValues={{
                     name:"",
@@ -156,12 +156,12 @@ const DonateSupplies=(props)=>{
                     <FormSubmitWrapper>
                         <SubmitInfo>
                             <StarImg src={"../../assets/donateBanner/shootingStarSingleL.png"}></StarImg>
-                            <Paragraph>Please note: all of your information will be kept private, and we will NOT share any of this with other parties</Paragraph>
+                            <Paragraph>Please note: all of your information will be kept private and will not be shared with any other party.</Paragraph>
                         </SubmitInfo>
                         <FormSubmit type="submit" value="Submit" >
                             <FormSubmitFigure>
                                 <FormSubmitImage src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
-                                <FormSubmitCaption>Submit</FormSubmitCaption>
+                                <FormSubmitCaption>Submit!</FormSubmitCaption>
                             </FormSubmitFigure>
                         </FormSubmit>
                     {
