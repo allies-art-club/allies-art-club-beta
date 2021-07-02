@@ -114,7 +114,7 @@ const DonateSupplies=(props)=>{
 
                                     <FieldSetWrap longList={true} key={i}>
                                         <FormInputCheckboxWrapper>
-                                            <FormInputCheckbox type="checkbox" name="supplies" onChange={(event)=>{
+                                            <FormInputCheckbox id={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}type="checkbox" name="supplies" onChange={(event)=>{
                                                     console.log(
                                                         errors
                                                     )
@@ -131,8 +131,9 @@ const DonateSupplies=(props)=>{
                                                     values.supplies=[...valueArray]||[];
                                                     event.target.blur()
                                                 }} value={el}/>
-                                            </FormInputCheckboxWrapper>
-                                        <CheckboxLabel htmlFor="supplies">{el}</CheckboxLabel>
+
+                                            <CheckboxLabel longList={"true"}htmlFor={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}>{el}</CheckboxLabel>
+                                        </FormInputCheckboxWrapper>
                                     </FieldSetWrap>
 
                                 ):null
