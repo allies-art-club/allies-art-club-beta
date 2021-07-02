@@ -1,9 +1,9 @@
 import React,{Fragment} from 'react';
 import {Paragraph} from '../Components/Styled/styled';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import {DonationWrapper,DonateLink,DonateImage,DonateParagraphWrapper,DonateParagraph,BannerTextImg,DonateBannerStars,DonateBannerStar} from '../Components/Styled/donate.styled.js';
-import donateFundsSvg from '../Components/Styled/donateBannerSvg/donateFunds.svg';
-import donateSuppliesSvg from '../Components/Styled/donateBannerSvg/donateSupplies.svg';
+import {DonationWrapper,DonateLink,DonateImage,DonateParagraphWrapper,DonateParagraph,BannerTextImg,DonateBannerStars,DonateBannerStar,BannerTextOverlay} from '../Components/Styled/donate.styled.js';
+import donateFundsSvg from '../Components/Styled/bannerSvg/donateFunds.svg';
+import donateSuppliesSvg from '../Components/Styled/bannerSvg/donateSupplies.svg';
 
 const Donate = () => {
     return(
@@ -15,7 +15,8 @@ const Donate = () => {
                     data-test="clubsAndProjectsLink"
                     exact to='/be-an-allie/donateFunds'>
                         <DonateImage alt="ribbon"src={"/assets/general/ribbon.png"}></DonateImage>
-                        <BannerTextImg alt="donate funds banner" src={donateFundsSvg} />
+                        <BannerTextImg type="image/svg+xml" alt="donate funds banner" data={donateFundsSvg} />
+                        <BannerTextOverlay/>
                         <DonateBannerStars top={true}src={"/assets/general/starsR.png"} alt="stars" />
                 </DonateLink>
                 <DonateParagraphWrapper>
@@ -33,7 +34,8 @@ const Donate = () => {
                     data-test="clubsAndProjectsLink"
                     exact to='/be-an-allie/donateSupplies'>
                         <DonateImage alt="ribbon"src={"/assets/general/ribbon.png"}></DonateImage>
-                        <BannerTextImg alt="donate funds banner" src={donateSuppliesSvg} />
+                        <BannerTextImg  type="image/svg+xml"alt="donate funds banner" data={donateSuppliesSvg} />
+                        <BannerTextOverlay/>
                         <DonateBannerStars src={"/assets/general/heartsR.png"} alt="stars" />
                 </DonateLink>
             </DonationWrapper>

@@ -5,7 +5,7 @@ import {Paragraph, FormStyled,FormCheckboxWrapper,FormInputWrapper,FormInputVali
 import {Formik} from 'formik';
 import * as yup from 'yup';
 import {connect} from 'react-redux';
-
+import donateSuppliesSvg from '../Components/Styled/bannerSvg/donateSupplies.svg';
 import { toggleSpinner,handleSubmitSupplies} from '../Actions/donateActions';
 
 const DonateSupplies=(props)=>{
@@ -21,7 +21,10 @@ const DonateSupplies=(props)=>{
     })
     return(
         <Fragment>
-            <TitleBanner sideSrc1={"/assets/general/heartsL.png"} sideSrc2={"/assets/general/heartsR.png"} centreSrc={"/assets/general/ribbon.png"} />
+            <TitleBanner sideSrc1={"/assets/general/heartsL.png"} sideSrc2={"/assets/general/heartsR.png"} centreSrc={"/assets/general/ribbon.png"} svgSrc={{
+                src: donateSuppliesSvg,
+                alt: "donate supplies banner"
+            }} />
             <Paragraph>Please read the information below and fill out the form to send art supplies, books or other resources to Allie's Art Club.</Paragraph>
             <Paragraph>All donations must be delivered to the following address:</Paragraph>
             <Paragraph>Allie's Art Club</Paragraph>
@@ -155,12 +158,12 @@ const DonateSupplies=(props)=>{
 
                     <FormSubmitWrapper>
                         <SubmitInfo>
-                            <StarImg src={"../../assets/donateBanner/shootingStarSingleL.png"}></StarImg>
+                            <StarImg alt={"star left"}src={"/assets/general/starL.png"}></StarImg>
                             <Paragraph>Please note: all of your information will be kept private and will not be shared with any other party.</Paragraph>
                         </SubmitInfo>
                         <FormSubmit type="submit" value="Submit" >
                             <FormSubmitFigure>
-                                <FormSubmitImage src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
+                                <FormSubmitImage alt="submit" src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
                                 <FormSubmitCaption>Submit!</FormSubmitCaption>
                             </FormSubmitFigure>
                         </FormSubmit>
