@@ -1,10 +1,19 @@
-import React, {Fragment} from 'react';
+import React from 'react';
+import thankYou from '../Components/Styled/bannerSvg/thankYou.svg';
 
+import {CentreImage} from '../Components/Styled/titleBanner.styled'
+
+import {ThankYouWrap,BannerTextImg,ImageWrapper, SideImg} from '../Components/Styled/donate.styled.js';
 const ThankYou = () => {
     return(
-        <Fragment>
-            <h1>THANK YOU</h1>
-        </Fragment>
+        <ThankYouWrap>
+            <SideImg left={"true"}alt={"hearts left"} src={"/assets/general/heartsL.png"}/>
+            <SideImg alt={"hearts right"} src={"/assets/general/heartsR.png"} />
+            <ImageWrapper thankYou={"true"}>
+                    <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
+                    <BannerTextImg alt="allie's story banner svg text" type="image/svg+xml" data={thankYou}/>
+                </ImageWrapper>
+        </ThankYouWrap>
     )
 }
 
