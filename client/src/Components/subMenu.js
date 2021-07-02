@@ -6,7 +6,7 @@ const SubMenu = (props) => {
         return strippedStr
     }
     return(
-        <SideNavWrapper visible={props.visible}menu={true}>
+        <SideNavWrapper subMenu={true} visible={props.visible}menu={true}>
             <SideNavList>
                     {
                         props.navLinks.map((el,i)=>

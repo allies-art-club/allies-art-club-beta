@@ -99,14 +99,15 @@ const Membership = (props)=>{
                 </FormInputWrapper>
                 <DatePickWrap>
                     <FormLabel htmlFor="dob">Date of Birth:*</FormLabel>
-                    <DatePickerComponent name={"dob"} value={values.dob}/>
+                    <DatePickerComponent  name={"dob"} value={values.dob}/>
                     {
                     errors.dob && touched.dob ?(
-                    <FormInputValidation>{errors.dob}</FormInputValidation>
+                    <FormInputValidation dob={"true"}>{errors.dob}</FormInputValidation>
                     ): null
                     }
 
                 </DatePickWrap>
+                <br/>
                 <FormCheckboxWrapper>
 
                     <legend>What opportunities are you interested in?: (check all that apply):</legend>
@@ -117,7 +118,7 @@ const Membership = (props)=>{
 
                                     <FieldSetWrap key={i}>
                                         <FormInputCheckboxWrapper>
-                                            <FormInputCheckbox type="checkbox" name="opportunities" onChange={(event)=>{
+                                            <FormInputCheckbox id={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')} type="checkbox" name={"opportunities"} onChange={(event)=>{
                                                     console.log(
                                                         errors
                                                     )
@@ -133,10 +134,10 @@ const Membership = (props)=>{
                                                     console.log(handleChange.toString())
                                                     values.opportunities=[...valueArray]||[];
                                                     event.target.blur()
-                                                }} value={el}></FormInputCheckbox>
+                                                }} value={el}/>
+                                            <CheckboxLabel htmlFor={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}>{el}</CheckboxLabel>
                                         </FormInputCheckboxWrapper>
 
-                                        <CheckboxLabel htmlFor="opportunities">{el}</CheckboxLabel>
                                     </FieldSetWrap>
 
                                 ):null
@@ -151,8 +152,8 @@ const Membership = (props)=>{
                         }
                     </FormCheckboxWrapper>
                     
-                    <FormInputWrapper>
-                        <FormLabel style={{"display":"none"}}htmlFor="opportunitiesOther">Opportunities Other:*</FormLabel>
+                    <FormInputWrapper other={true}>
+                        <FormLabel invisible={"true"} htmlFor="opportunitiesOther">Opportunities Other:*</FormLabel>
                         <FormInput type="text" name="opportunitiesOther" id="opportunitiesOther" onChange={handleChange} onBlur={handleBlur} value={values.opportunitiesOther}></FormInput>
                         {
                         errors.opportunitiesOther && touched.opportunitiesOther ?(
@@ -160,35 +161,37 @@ const Membership = (props)=>{
                         ): null
                         }
                     </FormInputWrapper>
+                    <br/>
                     <FormCheckboxWrapper longList={true}>
                         <FieldSet  role="group" aria-labelledBy="checkbox-group">
                             <Fragment>
 
-                            <legend style={{"border":"none"}} >Which forms of art interest you?: (tick all that apply)*</legend>
+                            <legend style={{"border":"none"}} >Which forms of art interest you?: (tick all that apply)</legend>
                             { (art && art.length)?
                                 art.map((el,i)=>
 
                                     <FieldSetWrap longList={true}key={i}>
                                         <FormInputCheckboxWrapper>
-                                            <FormInputCheckbox type="checkbox" name="art" onChange={(event)=>{
-                                                    console.log(
-                                                        errors
-                                                    )
+                                            <FormInputCheckbox id={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}type="checkbox" name={"art"} onChange={(event)=>{
+                                                    console.log(errors);
                                                     const checked = event.target.checked;
                                                     console.log(checked);
                                                     const valueArray = [...values.art]||[];
                                                     console.log(valueArray);
                                                     if (checked) {
+                                                        event.target.checked=true;
                                                         valueArray.push(event.target.value);
                                                     } else {
+                                                        event.target.checked=false;
                                                         valueArray.splice(valueArray.indexOf(event.target.value), 1);
                                                     }
-                                                    console.log(handleChange.toString())
                                                     values.art=[...valueArray]||[];
-                                                    event.target.blur()
+                                                    event.target.blur();
+                                                    console.log(event.target.checked);
                                                 }} value={el}></FormInputCheckbox>
+
+                                            <CheckboxLabel htmlFor={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}>{el}</CheckboxLabel>
                                         </FormInputCheckboxWrapper>
-                                            <CheckboxLabel htmlFor="art">{el}</CheckboxLabel>
                                     </FieldSetWrap>
 
                                 ):null
@@ -203,8 +206,8 @@ const Membership = (props)=>{
                         }
                     </FormCheckboxWrapper>
                     
-                    <FormInputWrapper>
-                        <FormLabel style={{"display":"none"}} htmlFor="artOther">Art Other:*</FormLabel>
+                    <FormInputWrapper other={true}>
+                        <FormLabel invisible={"true"} htmlFor="artOther">Art Other:*</FormLabel>
                         <FormInput type="text" name="artOther" id="artOther" onChange={handleChange} onBlur={handleBlur} value={values.artOther}></FormInput>
                         {
                         errors.artOther && touched.artOther ?(
@@ -215,32 +218,33 @@ const Membership = (props)=>{
                     <Paragraph>Are you happy to receive news about the club and upcoming events from us via email?</Paragraph>
                         <RadioWrap>
                             <RadioInputWrap>
-                                <FormRadio type="radio" name="receiveEmail" value={"Yes"}/>
+                                <FormRadio id="yesInput"type="radio" name="receiveEmail" value={"Yes"}/>
                             </RadioInputWrap>
-                            <RadioLabel htmlFor="Yes">Yes</RadioLabel>
+                            <RadioLabel htmlFor="yesInput">Yes</RadioLabel>
 
                         </RadioWrap>
                         <RadioWrap>
                             <RadioInputWrap>
-                                <FormRadio type="radio" name="receiveEmail" value={"No"}/>
+                                <FormRadio id="noInput" type="radio" name="receiveEmail" value={"No"}/>
                             </RadioInputWrap>
-                            <RadioLabel htmlFor="No">No</RadioLabel>
+                            <RadioLabel htmlFor="noInput">No</RadioLabel>
                         </RadioWrap>
                 <FormSubmitWrapper>
                     <SubmitInfo>
-                        <StarImg src={"/assets/general/starL.png"}></StarImg>
-                        <Paragraph>Please note: all of your information will be kept private, and we will NOT share any of this with other parties</Paragraph>
+                        <StarImg alt="star" src={"/assets/general/starL.png"}></StarImg>
+                        <Paragraph>Please note: all of your information will be kept private and will not be shared with any other party.</Paragraph>
                     </SubmitInfo>
                     <FormSubmit type="submit" value="Submit" disabled={isSubmitting}>
                         <FormSubmitFigure>
-                            <FormSubmitImage src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
+                            <FormSubmitImage alt="submit"src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
                             <FormSubmitCaption>SIGN UP!</FormSubmitCaption>
                         </FormSubmitFigure>
                     </FormSubmit>
+                </FormSubmitWrapper>
+
                 {
                     props.beAnAllie.errorMessage.member?<ErrorWrapper><ErrorMessage>{props.beAnAllie.errorMessage.member}</ErrorMessage></ErrorWrapper>:null
                 }
-                </FormSubmitWrapper>
             </FormStyled>
             )}
 

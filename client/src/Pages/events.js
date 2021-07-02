@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {Paragraph,PageDescription} from '../Components/Styled/styled.js'
 import activities from './activities/landingPage.js';
 const eventsArr = activities.filter(el=>el.category==='Events')
 const Events=()=>{
@@ -16,7 +16,7 @@ const Events=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Events"}
             ></TitleBanner>
-            <Paragraph>Information on Allie's upcoming, ongoing and completed events, classes and workshops.</Paragraph>
+            <PageDescription>Information on Allie's upcoming, ongoing and completed events, classes and workshops.</PageDescription>
             {
                 eventsArr&&eventsArr.length?
                 eventsArr.map((el,i)=>{
@@ -33,8 +33,11 @@ const Events=()=>{
                         {el.description}</Article>
                     )
                 }):
-                <Paragraph>We're sorry to say that currently we have no planned events to list at the moment. Please check back on our site at a later date or follow us on social media to hear when we have upcoming events.</Paragraph>
-
+                <Fragment>
+                <br/>
+                <br/>
+                <Paragraph>We're sorry to say that we have no planned events to list at the moment. Please check back on our site at a later date or follow us on social media to hear when we have upcoming events.</Paragraph>
+                </Fragment>
             }
            
         </Fragment>

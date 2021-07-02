@@ -121,15 +121,23 @@ const DonateLinkWrapper = styled.div`
 `
 
 //START HERE TOMORROW TEXT SHADOW ALL SIDES
-const NavMainCategory = styled(NavLink)`
-    text-decoration: none;
-    text-shadow:${props=>props.nav?`1px 1px 0 ${theme.blue}, -1px -1px 0 ${theme.blue}, 0px 0px 1rem ${theme.blue}`:`1px 1px 0 ${theme.yellow}, -1px -1px 0 ${theme.yellow}, 0px 0px 1rem ${theme.yellow}`};
+const activeClassName = 'nav-active-item';
 
-    font-size: 2rem;
+const NavMainCategory = styled(NavLink).attrs({activeClassName})`
+    text-decoration: none;
+    text-shadow:${props=>props.nav?`1px 1px 0 ${theme.blue}, -1px -1px 0 ${theme.blue},1px -1px 0 ${theme.blue}, -1px 1px 0 ${theme.blue}, 0px 0px 1rem ${theme.blue}`:`1px 1px 0 ${theme.yellow},1px -1px 0 ${theme.yellow}, -1px 1px 0 ${theme.yellow}, -1px -1px 0 ${theme.yellow}, 0px 0px 1rem ${theme.yellow}`};
+
     text-decoration:none;
+    @media(min-width:768px){
+        padding-bottom: 20px;
+    }
+    &.${activeClassName},&:hover{
+        text-shadow: 0px 0px 1rem ${theme.pink};
+    }
     color:white;
-    line-height: 3rem;
-    font-family: 'Big Shoulders Text', cursive;
+    line-height: 2.2rem;
+    font-size: 2.2rem;
+    font-family: Teko, cursive;
     text-transform: uppercase;
     position: ${props=>props.nav?'static':'absolute'};
     top: ${props=>props.nav?'auto':'38%'};
@@ -138,8 +146,16 @@ const NavMainCategory = styled(NavLink)`
     @media(max-width:480px){
         font-size ${props=>props.nav?'2rem':'1.5rem'};
     }
+    @media(min-width:768px){
+        font-size: 2.2rem;
+    }
 `
 const NavLinkLogo = styled(NavLink)`
+&:-webkit-any-link {
+    
+    text-decoration:none;
+
+}
 `
 
 const Logo = styled.img`
@@ -150,10 +166,10 @@ const Logo = styled.img`
     display:block;
     margin:auto;
 `
-const Figure = styled.figure`
+const Figure = styled.div`
     width:100%;
     text-align:center;
-    margin:0;
+    margin:5px 0px 30px;
 `
 const Slogan = styled.p`
     width: 100%;
@@ -164,4 +180,29 @@ const Slogan = styled.p`
     line-height:2rem;
     margin:0px;
 `
-export {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap, Cross,HeaderNavList, HeaderNavListElement, DonateLinkWrapper,NavMainCategory,NavLinkLogo,Logo, Figure,Slogan};
+const HeaderLogo = styled.h1`
+    font-weight: 100;
+    display:block;
+    margin:auto;
+    text-decoration:none;
+    font-family: nickainley;
+    color: white;
+    font-size: 58.8px;
+    line-height:49px;
+    width: 200px;
+    text-shadow: 0.5px 0.5px 0px ${theme.pink}, -0.5px -0.5px 0px ${theme.pink},0.5px -0.5px 0px ${theme.pink}, -0.5px 0.5px 0px ${theme.pink}, 0px 0px 1.5rem ${theme.pink}, 0px 0px 2.5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
+
+    @media(min-width:421px){
+        font-size: 4.2rem;
+        line-height:3.5rem;
+        width: 200px;
+        text-shadow: 0.5px 0.5px 0px ${theme.pink}, -0.5px -0.5px 0px ${theme.pink},0.5px -0.5px 0px ${theme.pink}, -0.5px 0.5px 0px ${theme.pink}, 0px 0px 1.5rem ${theme.pink}, 0px 0px 2.5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
+    }
+    @media(min-width:768px){
+        width:364px;
+        font-size: 107px;
+        text-shadow: 1px 1px 0px ${theme.pink}, -1px -1px 0px ${theme.pink},1px -1px 0px ${theme.pink}, -1px 1px 0px ${theme.pink}, 0px 0px 2rem ${theme.pink}, 0px 0px 5rem ${theme.pink},  0px 0px 0.4rem ${theme.pink};
+        line-height:84px;
+    }
+`
+export {HeaderContainer, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap, Cross,HeaderNavList, HeaderNavListElement, DonateLinkWrapper,NavMainCategory,NavLinkLogo,Logo, HeaderLogo,Figure,Slogan};

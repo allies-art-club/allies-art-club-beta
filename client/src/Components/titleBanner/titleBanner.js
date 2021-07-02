@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import {TitleWrapper,SideImage,SideImageWrapper,CentreImage,CentreImageWrapper,ImageTitle} from '../Styled/titleBanner.styled';
 
 const TitleBanner = (props) => {
+    console.log(props.title)
     return (
-        <TitleWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
+        <TitleWrapper>
             {
                 props.sideSrc1?
 
@@ -18,8 +19,17 @@ const TitleBanner = (props) => {
                     props.centreSrc?
                         <CentreImage alt={props.centreSrc.split('/')[3].split('.')[0]}src={props.centreSrc}></CentreImage>:
                         null
-                        }
-                        <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title}</ImageTitle>
+            }
+            {
+                props.title&& props.title.split(': ').length===2?
+                    <Fragment>
+                        <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title.split(': ')[0]}</ImageTitle>
+                        <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title.split(': ')[1]}</ImageTitle>
+                    </Fragment>
+                    :
+
+                    <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title}</ImageTitle>
+            }
                     </CentreImageWrapper>
                     
             {

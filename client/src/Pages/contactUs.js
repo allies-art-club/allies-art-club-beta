@@ -85,16 +85,15 @@ const ContactUs =(props)=>{
                     ): null
                     }
                 </FormInputWrapper>
-
                 <FormSubmitWrapper>
                     <SubmitInfo>
                         <StarImg src={"/assets/general/starL.png"}></StarImg>
-                        <Paragraph>Please note: all of your information will be kept private, and we will NOT share any of this with other parties</Paragraph>
+                        <Paragraph>Please note: all of your information will be kept private and will not be shared with any other party.</Paragraph>
                     </SubmitInfo>
                     <FormSubmit type="submit" value="Submit" disabled={isSubmitting}>
                         <FormSubmitFigure>
                             <FormSubmitImage src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
-                            <FormSubmitCaption>Submit</FormSubmitCaption>
+                            <FormSubmitCaption>Submit!</FormSubmitCaption>
                         </FormSubmitFigure>
                     </FormSubmit>
                 {

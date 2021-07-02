@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {PageDescription,Paragraph} from '../Components/Styled/styled.js'
 import articles from './articles/landingPage.js';
 const artistConversationsArr=articles.filter(el=>el.category==="Artist conversations");
 
@@ -17,7 +17,7 @@ const ArtistConversations=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Artist Conversations"}
             ></TitleBanner>
-            <Paragraph>Conversations with local artists about their work, personal experiences and viewpoints on various topics.</Paragraph>
+            <PageDescription>Conversations with local artists about their work, personal experiences and viewpoints on various topics.</PageDescription>
             {
                 artistConversationsArr && artistConversationsArr.length?
                 artistConversationsArr.map((el,i)=>{
@@ -35,8 +35,11 @@ const ArtistConversations=()=>{
                                 )
                             })
                 :
-                <Paragraph>We're sorry to say that currently we do not have any artist conversations on our site for you to read. Please check back on our site at a later date or follow us on social media to read our upcoming artist conversations.</Paragraph>
-
+                <Fragment>
+                <br/>
+                <br/>
+                <Paragraph>We're sorry to say that we do not have any artist conversations on our site for you to read. Please check back on our site at a later date or follow us on social media to read our upcoming artist conversations.</Paragraph>
+                </Fragment>
             }
            
         </Fragment>

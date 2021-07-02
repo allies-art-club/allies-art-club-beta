@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {PageDescription} from '../Components/Styled/styled.js'
 import articles from './articles/landingPage.js';
 const ProjectNews=()=>{
     return(
@@ -15,7 +15,7 @@ const ProjectNews=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Project News"}
             ></TitleBanner>
-            <Paragraph>Information, news and updates about Allie's projects, campaigns, workshops and events.</Paragraph>
+            <PageDescription>Information, news and updates about Allie's projects, campaigns, workshops and events.</PageDescription>
             {
                 articles.filter(el=>el.category==="Project updates").map((el,i)=>{
                     return(

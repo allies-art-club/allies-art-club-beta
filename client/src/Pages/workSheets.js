@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {PageDescription} from '../Components/Styled/styled.js'
 import resources from './resources/landingPage.js';
 import { downloadHandler } from '../Actions/articleActions.js';
 const WorkSheets=()=>{
@@ -16,7 +16,7 @@ const WorkSheets=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Work sheets"}
             ></TitleBanner>
-            <Paragraph>Work sheets with ideas and prompts related to art, self-care and activism.</Paragraph>
+            <PageDescription>Work sheets with ideas and prompts related to art, self-care and activism.</PageDescription>
             {
                 resources.filter(el=>el.category==='Work sheet').map((el,i)=>{
                     return(
