@@ -11,7 +11,7 @@ import { toggleSpinner,handleSubmitSupplies} from '../Actions/donateActions';
 const DonateSupplies=(props)=>{
     
     let history = useHistory();
-    const options = ["Books","Colouring-in books","Notepads/drawing pads","Craft/speciality paper", "Pencils / crayons", "Pens / felt tips", "Paint / paintbrushes", "Pastels / chalk", "Rulers / rubbers/ sharpeners", "Glue / glitter glue", "Stickers / kid's crafts", "Other (please describe)"]
+    const options = ["Books","Colouring-in books","Notepads / drawing pads","Craft / speciality paper", "Pencils / crayons", "Pens / felt tips", "Paint / paintbrushes", "Pastels / chalk", "Rulers / rubbers / sharpeners", "Glue / glitter glue", "Stickers / kid's crafts", "Other (please describe)"]
     const DonateFundsSchema = yup.object().shape({
         name: yup.string().max(70,'Please enter a name of 50 or less characters').required('Required'),
         email: yup.string().email('Invalid email').required('Required'),

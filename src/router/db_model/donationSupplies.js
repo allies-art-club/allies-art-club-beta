@@ -22,7 +22,8 @@ class DonationSupplies {
         .catch((e)=>{
             console.log(e);
             e.status=500;
-            throw e;
+            e.input=this;
+            next(e);
         })
     }
     
