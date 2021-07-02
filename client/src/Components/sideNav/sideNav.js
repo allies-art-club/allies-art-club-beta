@@ -6,12 +6,12 @@ const SideNav = (props) => {
         return strippedStr
     }
     return(
-        <SideNavWrapper sideNav={true}>
+        <SideNavWrapper sidenav={"true"}>
             <SideNavList>
                     {
                         props.navLinks.map((el,i)=>
                             <SideNavListElement key={i}>
-                                <NavLinkSide exact to={`/${props.mainCategory}/${pageNavigate(el)}`}>{el}</NavLinkSide>
+                                <NavLinkSide sidenav={"true"} exact to={`/${props.mainCategory}/${pageNavigate(el)}`}>{el}</NavLinkSide>
                             </SideNavListElement>
                         )
                     }

@@ -78,18 +78,19 @@ const CenterParagraph= styled.p`
 const IconWrapper=styled.div`
   display:flex;
   justify-content:space-around;
+  align-items: center;
 `
 const Icon =styled.img`
   display:inline-block;
   line-height:120px;
   
-  width: ${props=>props.left?"50":"40"}px;
+  width: ${props=>props.left?"50":"30"}px;
   @media(min-width:320px){
-    width: ${props=>props.left?"80":"40"}px;
+    width: ${props=>props.left?"80":"30"}px;
   }
   @media(min-width: 481px){
     
-    width: ${props=>props.left?"120":"50"}px;
+    width: ${props=>props.left?"120":"40"}px;
   }
   @media(min-width:1025px){
     width: ${props=>props.left?"140":"50"}px;
@@ -106,6 +107,9 @@ const FooterParagraph=styled.p`
   }
   @media(min-width:360px){
     font-size:0.8rem;
+  }
+  @media(min-width:768px){
+    display:${props=>props.mobile?"none":"block"};
   }
   @media(min-width:1025px){
     font-size:1rem;

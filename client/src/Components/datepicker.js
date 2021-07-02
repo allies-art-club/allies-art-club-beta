@@ -7,6 +7,7 @@ const DatePickerComponent = ({...props})=>{
     const [field] = useField(props)
     return(
         <DatePicker {...field} {...props} 
+            id={"dob"}
             selected={(field.value && new Date(field.value)) || null}
             placeholderText={"DD / MM / YYYY"}
             dateFormat="dd-MM-yyyy"
