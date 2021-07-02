@@ -67,9 +67,15 @@ const DonateBannerStar=styled.img`
     }
 `
 const SideImg=styled.img`
-    width:10%;
+    width:${props=>props.donate?"15%":"10%"};
     margin-right:${props=>props.left?"2%":"3%"};
     margin-left:${props=>props.left?"3%":"2%"};
     float:${props=>props.left?"left":"right"};
+    position:${props=>props.donate?"absolute":"static"};
+    botom:0;
+    right:5%;
+    @media(max-width:767px){
+        display:${props=>props.donate?"none":"block"};
+    }
 `
 export {ThankYouWrap,ImageWrapper,DonationWrapper,DonateLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStars,DonateBannerStar,SideImg}
