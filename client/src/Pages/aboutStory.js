@@ -2,8 +2,11 @@ import React,{Fragment} from 'react';
 import { Paragraph,Section,TextImage,InlineIcon,Link} from '../Components/Styled/styled.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import {Quote,SubTitle} from '../Components/Styled/about.styled.js';
+import {CentreImage} from '../Components/Styled/titleBanner.styled'
+
+import {BannerTextImg,ImageWrapper} from '../Components/Styled/donate.styled.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import TextRibbon from '../Components/textRibbon.js';
+import alliesStory from '../Components/Styled/bannerSvg/alliesStory.svg';
 
 const AboutAlliesStory=()=>{
     return(
@@ -21,8 +24,11 @@ const AboutAlliesStory=()=>{
                 <Paragraph>Allie was raised in a safe, loving and nurturing home with as many opportunities to learn, play and explore a young girl could dream of.</Paragraph>
                 <Paragraph>Her family blessed her with the most beautiful childhood they could, yet she was their most beautiful gift of all.</Paragraph>
                 <Paragraph>For 17 years, Alexandra shone with such a passion, strength and vibrancy, until her hard-fought battle with cancer claimed her life.</Paragraph>
-                <TextRibbon>Allie left behind a huge number of admiring friends and a devoted family, as well as her legacy as an extraordinary individual with "a passion for life".
-                </TextRibbon>
+                
+                <ImageWrapper>
+                    <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
+                    <BannerTextImg alt="allie's story banner svg text" type="image/svg+xml" data={alliesStory}/>
+                </ImageWrapper>
                 <Paragraph>Allie was known for her dazzling smile, vibrant personality and fantastic sense of humour. She loved to explore a huge range of creative pursuits, and was particularly talented at ice-skating, theatre, cello and singing. She was an incredibly hard-working and intelligent student, receiving 9A*s for her GCSEs.</Paragraph>
                 
                 <TextImage src={'/assets/about/allieSoup.png'}/>

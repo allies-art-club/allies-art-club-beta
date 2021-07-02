@@ -1,0 +1,39 @@
+<svg width="100%" viewBox="0 0 1800 600" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+        .text-style {
+            font-size:60px;
+            fill:white;
+            font-weight:500;
+            font-family:"Architects Daughter";
+            text-align:center;
+        }
+      </style>
+                     
+        <path id="MyPath" fill="none" stroke="red"
+            d="M 60 180 C 600 90, 1200 90, 1740 180" />
+        <path id="MyPath2" fill="none" stroke="red"
+            d="M 60 300 C 600 210, 1200 210, 1740 300" />
+        <path id="MyPath3" fill="none" stroke="red"
+            d="M 60 420 C 600 330, 1200 330, 1740 420" />
+
+    </defs>
+    <text x="10" y="-30" class="text-style" >
+        <textPath href="#MyPath" startOffset="50%" text-anchor="middle">
+            <tspan >AWTF aims to support underprivileged children adults</tspan><br/>
+        </textPath>
+    </text>
+    <text class="text-style">
+        <textPath href="#MyPath2" startOffset="50%" text-anchor="middle">
+            <tspan>and families and provide opportunities for them to</tspan>
+            </textPath>
+    </text>
+    <text class="text-style">
+        <textPath href="#MyPath3" startOffset="50%" text-anchor="middle">
+            <tspan>cultivate "a passion for life".</tspan>
+            </textPath>
+    </text>
+</svg>
