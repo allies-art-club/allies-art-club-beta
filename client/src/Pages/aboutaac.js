@@ -2,12 +2,14 @@ import React,{Fragment} from 'react';
 import {Section,Paragraph} from '../Components/Styled/styled';
 import SideNav from '../Components/sideNav/sideNav.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import {ImageWrapper,ImageText} from '../Components/Styled/donate.styled';
+import {ImageWrapper} from '../Components/Styled/donate.styled';
 import Value from '../Components/value.js';
-import {MissionWrapper,Mission,MissionDesc,ValuesWrap,ValuesImage} from '../Components/Styled/about.styled';
+import {MissionWrapper,MissionDesc,ValuesWrap,ValuesImage} from '../Components/Styled/about.styled';
 import {CentreImage} from '../Components/Styled/titleBanner.styled'
 import tagMessageArray from './about/tagMessageArray.js';
-import StickyNote from '../Components/stickyNote.js'
+import StickyNote from '../Components/stickyNote.js';
+import {BannerTextImg} from '../Components/Styled/donate.styled.js';
+import aboutAccSvg from '../Components/Styled/bannerSvg/aboutAac.svg';
 const AboutAac = () => {
     return (
         <Fragment>
@@ -26,7 +28,7 @@ const AboutAac = () => {
                 
                 <ImageWrapper>
                     <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
-                    <ImageText>We believe in the power of human imagination, creative collaboration and artistic expression in creating positive changes for ourselves and our society.</ImageText>
+                    <BannerTextImg alt="about banner svg text" type="image/svg+xml" data={aboutAccSvg}/>
                 </ImageWrapper>
             </Section>
             <TitleBanner

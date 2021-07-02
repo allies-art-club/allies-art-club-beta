@@ -2,7 +2,9 @@ import React, {Fragment} from 'react';
 import SideNav from '../Components/sideNav/sideNav.js';
 import {Section,Paragraph,Image,Link,TextImage} from '../Components/Styled/styled.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import TextRibbon from '../Components/textRibbon.js';
+import {CentreImage} from '../Components/Styled/titleBanner.styled'
+import {BannerTextImg,ImageWrapper} from '../Components/Styled/donate.styled.js';
+import alliesFoundation from '../Components/Styled/bannerSvg/alliesFoundation.svg';
 const AboutAlliesFoundation = () =>{
     return(
         <Fragment>
@@ -18,7 +20,10 @@ const AboutAlliesFoundation = () =>{
                 <Paragraph>The Alexandra Wylie Foundation (AWTF) was founded in 2011 after the death of Alexandra Wylie.</Paragraph>
                 <Paragraph>Alexandra (known as Allie) was a curious and fun-loving individual who cared deeply about societal issues and believed every person should have the opportunities she had to lead a happy and fulfilling life.</Paragraph>
                 <Paragraph>Allie's family were inspired to set up a charitable foundation in her name because of her strong desire to help others. Like Allie, the foundation supports social equality and the rights that everyone has to lead a safe and healthy life, filled with opportunities for learning, creativity and fun.</Paragraph>
-                <TextRibbon>AWTF aims to support underprivileged children adults and families and provide opportunities for them to cultivate "a passion for life".</TextRibbon>
+                <ImageWrapper>
+                    <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
+                    <BannerTextImg alt="allie's story banner svg text" type="image/svg+xml" data={alliesFoundation}/>
+                </ImageWrapper>
                 <Paragraph>AWTF aims to honour Allie's memory by supporting the health and wellbeing of underprivileged children, adults and families in London.</Paragraph>
                 <Paragraph>In addition to providing essentials such as food and clothing, Allie's Foundation also works to improve underprivileged people's access to education and extra-curricular activities.</Paragraph>
                 <TextImage  />

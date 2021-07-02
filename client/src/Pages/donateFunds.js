@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import {Paragraph, FormStyled,FormSubmitWrapper,StarImg,SubmitInfo,FormInputWrapper,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FormSubmitImage,FormSubmitCaption,FormSubmitFigure,ErrorMessage,ErrorWrapper} from '../Components/Styled/styled';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
+import donateFundsSvg from '../Components/Styled/bannerSvg/donateFunds.svg';
 import {handleSubmit, toggleSpinner,handleCardElementChange,cardValidate} from '../Actions/donateActions';
 import {useStripe, useElements, CardNumberElement, CardExpiryElement, CardCvcElement} from '@stripe/react-stripe-js';
 import {Formik} from 'formik';
@@ -33,7 +34,10 @@ const DonateFunds = (props) => {
     })
     return(
         <Fragment>
-            <TitleBanner sideSrc1={"/assets/general/starsL.png"} sideSrc2={"/assets/general/starsR.png"} centreSrc={"/assets/general/ribbon.png"} svgSrc={'../Components/Styled/donateBannerSvg/donateFunds.svg'}></TitleBanner>
+            <TitleBanner sideSrc1={"/assets/general/starsL.png"} sideSrc2={"/assets/general/starsR.png"} centreSrc={"/assets/general/ribbon.png"} svgSrc={{
+                src: donateFundsSvg,
+                alt: "donate funds banner"
+            }}></TitleBanner>
             <Paragraph>Please fill in your details into the form below to make a direct payment to Allie's Art Club.</Paragraph>
             <Formik
                 initialValues={{
