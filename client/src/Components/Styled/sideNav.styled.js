@@ -4,7 +4,7 @@ import {theme,boxGlow} from './theme/theme.js';
 import {HeaderNavListElement}from '../Styled/header.styled.js';
 const SideNavWrapper = styled.div`
     display:${props=>props.visible?"block":"none"};
-    width:${props=>props.menu?"auto":"15%"};
+    width:${props=>props.menu?"150px":"15%"};
     @media(min-width:768px){
         padding: ${props=>props.subMenu?"20px 20px 0px 20px":"5px"};
 
@@ -26,11 +26,20 @@ const SideNavWrapper = styled.div`
             display: block;
         }
     }
+    @media(min-width:1025px){
+        width:${props=>props.menu?"200px":"15%"};
+
+    }
+    @media(min-width:1300px){
+        width:${props=>props.menu?"250px":"15%"};
+
+    }
     z-index: ${props=>props.sidenav?"20":"30"};
 `
 
 const SideNavList = styled.ul`
     padding:0;
+    margin:auto;
 `
 
 

@@ -23,6 +23,7 @@ class Donation {
         .catch((e)=>{
             console.log(e);
             e.status=500;
+            e.input=this;
             throw e;
         })
     }
@@ -37,8 +38,9 @@ class Donation {
         .catch((e)=>{
             console.log(e);
             e.status=500;
+            e.input='Fetch All Requested - no input';
             console.log(e);
-            throw e;
+            next(e);
         })
 
     }
@@ -52,8 +54,9 @@ class Donation {
         })
         .catch((err)=>{
             err.status=500;
+            err.input=stripeId;
             console.log(err);
-            throw err;
+            next(err);
         })
     }
     static updateDonationStatus(stripeId,donationStatus){
@@ -73,7 +76,11 @@ class Donation {
         .catch((e)=>{
             console.log(e);
             e.status=500;
-            throw e;
+            e.input={
+                stripeId:stripeId,
+                donationStatus:donationStatus,
+            };
+            next(e);
         })
     }
     static deleteDonation(stripeId){
@@ -89,7 +96,8 @@ class Donation {
         .catch((err)=>{
             console.log(err)
             err.status=500;
-            throw err;
+            err.input=stripeId;
+            next(err);
         })
     }
 

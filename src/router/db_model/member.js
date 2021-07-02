@@ -20,13 +20,13 @@ class Member {
             })
             .catch((err)=>{
                 console.log('err');
-                throw err;
+                next(err);
             })
 
         }
         catch(e){
             console.log(e);
-            next(e);
+            throw e;
         }
 
     }

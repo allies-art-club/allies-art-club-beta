@@ -191,7 +191,27 @@ const CheckboxLabel=styled.label`
   position:relative;
   left:40px;
   display:block;
-    white-space:nowrap;
+  width:200px;
+  @media(min-width:320px){
+    width:90px;
+  }
+  @media(min-width:421px){
+    width:135px;
+  }
+  @media(min-width:768px){
+    width:170px;
+  }
+
+  @media(min-width:924px){
+    width:135px;
+  }
+  @media(min-width:1025px){
+    width:160px;
+  }
+  @media(min-width:1300px){
+    width:220px;
+  }
+    white-space:${props=>props.longList?"break-spaces":"nowrap"};
 `
 const FormInputValidation= styled.p`
   color:red;
@@ -254,6 +274,17 @@ const FormRadio=styled(Field)`
   appearance:none;
   &:checked {
     background:${theme.pink};
+  }
+  &::after{
+    content:'';
+    display:inline-block;
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:0;
+    transform:translate(-50%,-50%);
   }
 
 `
