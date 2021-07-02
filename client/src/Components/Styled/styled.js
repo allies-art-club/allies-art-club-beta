@@ -156,6 +156,7 @@ const FormInputCheckboxWrapper = styled.div`
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  margin-bottom:30px;
 `
 const FormInputCheckbox =styled(Field)`
 content:" ";
@@ -304,10 +305,12 @@ const FormSubmit = styled.button`
   padding:0;
   border: none;
   cursor:pointer;
+  position:relative;
+  right:0;
+  width:50%;
 `
 const FormSubmitFigure= styled.figure`
   margin:0;
-  position:relative;
 `
 const FormSubmitImage = styled.img`
   width:100%;
@@ -315,13 +318,20 @@ const FormSubmitImage = styled.img`
 const FormSubmitCaption = styled.figcaption`
   position:absolute;
   top:50%;
-  right:50%;
-  font-size: 2.5rem;
+  right:38%;
+  width:70%;
+  font-size: 1.7rem;
   @media(min-width:320px){
-    font-size: 3rem;
+    font-size: 2.4rem;
+  }
+  @media(min-width:768px){
+    font-size: 2.1rem;
   }
   @media(min-width:1024px){
-    font-size: 3.5rem;
+    font-size: 3.1rem;
+  }
+  @media(min-width:1300px){
+    font-size: 3.1rem;
   }
   transform-box: "content-box" !important;
   transform:translate(40%,-50%);
