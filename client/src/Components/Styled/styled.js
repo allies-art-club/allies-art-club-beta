@@ -120,7 +120,7 @@ const FormCheckboxWrapper=styled.fieldset`
 const FormInputWrapper=styled.div`
   position:relative;
   height:${props=>props.textarea===true?'auto':'50px'};
-  margin-top:${props=>props.other?"0":"50px"};
+  margin-top:${props=>props.other?"20px":"50px"};
   border: 4px solid ${props=>props.error?"red":"black"};
   padding: 0px 20px;
   @media(min-width: 768px){

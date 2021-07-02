@@ -4,6 +4,7 @@ const ImageWrapper = styled.div`
     width:100%;
     margin:auto;
     position:relative;
+    clear:both;
 
 `
 const ImageText=styled.p`
@@ -71,11 +72,19 @@ const DonateParagraphWrapper=styled.div`
 const DonateParagraph = styled.p`
     width:100%;
 `
-const BannerTextImg = styled.img`
+const BannerTextImg = styled.object`
     position: absolute;
     left: 10%;
     width:80%;
     top: 10%;
+`
+const BannerTextOverlay = styled.div`
+position: absolute;
+left: 10%;
+width:80%;
+height: calc(100vw * 0.7 * 0.6 * 0.33332769556);
+top: 10%;
+z-index:2;
 `
 const DonateBannerStars = styled.img`
     position:absolute;
@@ -89,4 +98,4 @@ const DonateBannerStar=styled.img`
     position:relative;
     right:${props=>props.top?"-50%":"auto"};
 `
-export {ImageWrapper,ImageText,DonationWrapper,DonateLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,DonateBannerStars,DonateBannerStar}
+export {ImageWrapper,ImageText,DonationWrapper,DonateLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStars,DonateBannerStar}
