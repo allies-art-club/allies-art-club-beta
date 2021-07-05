@@ -17,7 +17,7 @@ const ProjectNews=()=>{
             ></TitleBanner>
             <PageDescription>Information, news and updates about Allie's projects, campaigns, workshops and events.</PageDescription>
             {
-                articles.filter(el=>el.category==="Project updates").map((el,i)=>{
+                articles.filter(el=>el.category==="Project news").map((el,i)=>{
                     return(
 
             <Article key={i} 

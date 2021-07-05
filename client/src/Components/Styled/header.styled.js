@@ -53,7 +53,7 @@ border: none;
 }
 
 `
-//box glow nav
+
 const HeaderNavList = styled.ul`
     list-style:none;
     margin:0;
@@ -65,6 +65,8 @@ const HeaderNavList = styled.ul`
         display:${props=>props.open?'flex':'none'};
         flex-direction: column;
         box-shadow:7px 0 7px ${theme.pink};
+        max-height: calc(100vh - 100px);
+        overflow-y: scroll;
     }
     @media(min-width:768px){
         display:flex;
@@ -129,7 +131,7 @@ const NavMainCategory = styled(NavLink).attrs({activeClassName})`
 
     text-decoration:none;
     @media(min-width:768px){
-        padding-bottom: 20px;
+        padding-bottom: 5px;
     }
     &.${activeClassName},&:hover{
         text-shadow: 0px 0px 1rem ${theme.pink};

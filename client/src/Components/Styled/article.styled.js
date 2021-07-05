@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import {boxGlow} from './theme/theme.js';
+import {ListElement,Link} from './styled.js';
 const ArticleWrapper=styled.div`
     display:flex;
     flex-direction:${props=>props.right?"row-reverse":"row"};
@@ -30,7 +31,7 @@ const TextContainer=styled.div`
     }
 `
 const TextWrap=styled.div`
-    margin:auto;
+    margin:0 5%;
     display:inline-flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -58,21 +59,33 @@ const ArticleTitle=styled.h2`
     
     @media(min-width:320px){
         font-size: 1.3rem;
+        line-height: 1.3rem;
     }
     @media(min-width: 1025px){
         font-size: 2rem;
+        line-height: 2rem;
     }
     @media(min-width:1300px){
         font-size: 2.3rem;
+        line-height:2.3rem;
     }
 `
 const ArticleLink = styled(NavLink)`
     text-decoration:none;
     color: black;
 `
+const ArticleTitleWrap=styled.div`
+    padding:0px;
+    margin:0px;
+    margin-top:10px;
+    @media(min-width:768px){
+        margin-top:20px;
+
+    }
+`
 const ArticleSummary = styled.p`
     margin: 0;
-    font-size:0.8rem;
+    margin:auto;
     line-height: ${props=>props.largeHeading?"0.8rem":"1rem"};
 `
 const Figure=styled.figure`
@@ -91,6 +104,7 @@ const ArticleImage=styled.img`
     }
 `
 const PublishingDate=styled.figcaption`
+    font-size: 0.8rem;
     text-align: center;
     position: absolute;
     left:50%;
@@ -102,6 +116,7 @@ const RememberAllieHeading=styled.h2`
     
 `
 const ArticleDetailsWrapper=styled.div`
+    margin: 0 1rem;
     position:absolute;
     bottom:-25px;
     @media(min-width:421px){
@@ -112,13 +127,11 @@ const ArticleDetailsWrapper=styled.div`
     }
     display:flex;
     justify-content:space-between;
-    width:100%;
+    width:calc(100% - 2rem);
 `
 const ArticleItem=styled.p`
-    font-size:0.7rem;
-    @media(min-width:768px){
-        font-size:0.8rem;
-    }
+    text-align:center;
+    font-size:0.8rem;
 `
 const Border = styled.img`
     position:absolute;
@@ -156,17 +169,28 @@ const Benefit=styled.figcaption`
 
     @media(min-width:421px){
         width:110px;
-        font-size:${props=>props.values?"40px":"20px"};
-
+        font-size:${props=>props.values?"40px":"19px"};
     }
     line-height:${props=>props.values?"40px":"20px"};  
     @media(min-width: 768px){
         width:120px;
+        font-size:${props=>props.values?"40px":"24px"};
+
         font-weight:900;
     }
 `
 const ArticleList = styled.ul`
+    padding:0px;
     list-style-type: ${props=> props.bullets?"auto":"none"};
+    ${ListElement} {
+        display: flex;
+        @media(max-width:767px){
+            flex-direction:column;
+        }
+    }
+    ${Link}{
+        white-space:pre;
+    }
 `
 const StickyNote= styled.img`
     width: 100%;
@@ -176,4 +200,4 @@ const BenefitText=styled.p`
     
 `
 
-export {ArticleWrapper,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Border,Benefit,ArticleList, BenefitText,BenefitWrapper,StickyNote}
+export {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Border,Benefit,ArticleList, BenefitText,BenefitWrapper,StickyNote}

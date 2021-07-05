@@ -27,11 +27,12 @@ const AboutAlliesStory=()=>{
                 
                 <ImageWrapper>
                     <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
-                    <BannerTextImg alt={"allie story"} type="image/svg+xml" data={alliesStory}/>
+                    <BannerTextImg aria-label="contains svg" alt={"allie story"} type="image/svg+xml" data={alliesStory}/>
                 </ImageWrapper>
-                <Paragraph>Allie was known for her dazzling smile, vibrant personality and fantastic sense of humour. She loved to explore a huge range of creative pursuits, and was particularly talented at ice-skating, theatre, cello and singing. She was an incredibly hard-working and intelligent student, receiving 9A*s for her GCSEs.</Paragraph>
-                
+                <Paragraph>Allie was known for her dazzling smile, vibrant personality and fantastic sense of humour.</Paragraph>
                 <TextImage alt="allie soup" src={'/assets/about/allieSoup.png'}/>
+                <Paragraph>She loved to explore a huge range of creative pursuits, and was particularly talented at ice-skating, theatre, cello and singing. She was an incredibly hard-working and intelligent student, receiving 9A*s for her GCSEs.</Paragraph>
+                
                   
                         <Paragraph>As well as her dedication to pursuing art and education, Allie was committed to treating others with kindness and compassion.</Paragraph>
                          <Paragraph>With a strong desire to help those in need, Allie volunteered at a local homeless shelter as a teen and organised multiple fundraising events for the charity Wings of Hope.</Paragraph>
@@ -39,7 +40,7 @@ const AboutAlliesStory=()=>{
                     
                 <Paragraph>In a message after her death, Wings of Hope described Allie as:</Paragraph>
                 <Quote>"an extraordinary woman who truly encompassed the spirit of Wings of Hope, working with compassion, innovation and dedication to help those in need."</Quote>
-                <Paragraph>Allie loved ice-skating and spent a lot of time at Alexandra Palace skating rink in North London.</Paragraph>
+                <Paragraph>Allie loved ice-skating and spent a lot of time at Alexandra Palace skating rink in North London. The video below was created by friends at ‘Ally Pally’ to commemorate Allie’s life.</Paragraph>
                 <SubTitle>Allie's Memorial at Alexandra Palace:</SubTitle>
                 <IFrame  src="https://www.youtube.com/embed/55DNcB5R4hY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
                 <Paragraph>If you would like to know more about Allie's short yet brilliant life, you can read our article <Link href="/discussions/club-articles/remembering-allie">Remembering Allie</Link>, a collection of memories by her friends and family.</Paragraph>

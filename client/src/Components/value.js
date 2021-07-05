@@ -1,5 +1,5 @@
 import React, {Fragment,useState} from 'react';
-import {Message,SpeechBubble,Tag} from '../Components/Styled/about.styled.js'
+import {Message,SpeechBubble,Tag,ValueWrap} from '../Components/Styled/about.styled.js'
 const Value = (props)=> {
     const [showMessage,setMessage]=useState(false);
     const handleClick=(event)=>{
@@ -23,7 +23,7 @@ const Value = (props)=> {
 
     }
     return(
-        <Fragment>
+        <Fragment tagWidth={props.tagWidth}>
             <Tag tagWidth={props.tagWidth} tagVertical={props.tagVertical} tagHorizontal={props.tagHorizontal} tagHeight={props.tagHeight} onClick={(event)=>toggleMessage(event)}/>
             <SpeechBubble id={"value"+props.id}messageWidth={props.messageWidth} messageVertical={props.messageVertical} messageLeft={props.messageLeft} messageHorizontal={props.messageHorizontal} visible={showMessage}>
                 <Message >{props.children}</Message>

@@ -12,7 +12,7 @@ const articles =[
         src: "/assets/articles/foodBank/foodBank1.png",
         title: "Allie's Food Bank",
         date: "17th June 2021",
-        category: "Project updates",
+        category: "Project news",
         subcategory: "2 minute read",
         description: "The incredible work being done to address local food poverty by AWTF and the Pilion Trust."
     },

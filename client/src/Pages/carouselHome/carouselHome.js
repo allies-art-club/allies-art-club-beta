@@ -11,7 +11,7 @@ const carouselImage = [
         caption: "Allie's Story"
     },
     {
-        src: '/assets/about/Values.png',
+        src: '/assets/carouselHome/Values.png',
         url: '/about/allies-art-club',
         caption: "About Allie's Art Club"
     },
