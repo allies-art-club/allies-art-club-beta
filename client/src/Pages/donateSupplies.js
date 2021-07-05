@@ -40,7 +40,8 @@ const DonateSupplies=(props)=>{
                     organisation: "",
                     donationAmount: "",
                     message: "",
-                    supplies: []
+                    supplies: [],
+                    suppliesOther: ''
                 }}
                 validationSchema={DonateFundsSchema}
                 onSubmit={async(values,formik)=>{
@@ -148,6 +149,15 @@ const DonateSupplies=(props)=>{
                                 <FormInputValidation>{errors.supplies}</FormInputValidation>
                             ): null
                         }
+                        <FormInputWrapper other={true}>
+                            <FormLabel invisible={"true"} htmlFor="suppliesOther">Art Other:*</FormLabel>
+                            <FormInput type="text" name="suppliesOther" id="suppliesOther" onChange={handleChange} onBlur={handleBlur} value={values.suppliesOther}></FormInput>
+                            {
+                            errors.artOther && touched.artOther ?(
+                            <FormInputValidation>{errors.artOther}</FormInputValidation>
+                            ): null
+                            }
+                        </FormInputWrapper>
                     </FormCheckboxWrapper>
                         <FormInputWrapper textarea={true}>
                         <FormLabel htmlFor="message">Message / note for Allie's Art Club:</FormLabel>

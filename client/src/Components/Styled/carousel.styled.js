@@ -32,31 +32,38 @@ const CarouselImage = styled.img`
 `
 const ChevronWrapper = styled.div`
     position:absolute;
-    transform: translate(-50%,-50%);
     top:50%;
     left:50%;
     margin:auto;
     display: flex;
+    height:0px;
     justify-content: space-between;
     width: 280px;
+
+    transform: translate(-50%,-18.5px);
     @media(min-width:480px){
         width: 400px;
+        transform: translate(-50%,-26.5px);
     }
     @media(min-width:768px){
         width: 600px;
+        transform: translate(-50%,-40px);
     }
 
 `
 const Arrow= styled.img`
     transform: rotate(${props=>props.direction==='right'?'180deg': 'none'});
     width:35px;
+    height:37px;
     cursor: pointer;
     z-index:10;
     @media(min-width:481px){
         width:50px;
+        height:53px;
     }
     @media(min-width:768px){
         width: 75px;
+        height:80px;
     }
 
 `

@@ -4,7 +4,7 @@ import SideNav from '../Components/sideNav/sideNav.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {ImageWrapper} from '../Components/Styled/donate.styled';
 import Value from '../Components/value.js';
-import {MissionWrapper,MissionDesc,ValuesWrap,ValuesImage} from '../Components/Styled/about.styled';
+import {MissionWrapper,MissionDesc,MissionBorder,ValuesWrap,ValuesImage} from '../Components/Styled/about.styled';
 import {CentreImage} from '../Components/Styled/titleBanner.styled'
 import tagMessageArray from './about/tagMessageArray.js';
 import StickyNote from '../Components/stickyNote.js';
@@ -42,13 +42,17 @@ const AboutAac = () => {
                     <Paragraph>We view art as a peaceful yet powerful way to express ourselves and communicate ideas which can lead to cultural, social and political change. Engaging in art and creative activities is also a healthy and effective way of improving personal wellbeing, connecting with others and building relationships.</Paragraph>
                     <Paragraph>Our mission is to:</Paragraph>
                     <MissionWrapper>
+                        
+                    <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
                         <StickyNote
                             values={"true"}
                             benefit={"EMPOWER"}
                         />
-                        <MissionDesc>Empower individuals and communities by providing a platform and tools for them to take action in creating positive changes for themselves and others.</MissionDesc>
-                    </MissionWrapper>
+                            <MissionDesc>Empower individuals and communities by providing a platform and tools for them to take action in creating positive changes for themselves and others.</MissionDesc>
+                        </MissionWrapper>
                     <MissionWrapper>
+                        <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
+
                         <StickyNote
                             values={"true"}
                             benefit={"CONNECT"}
@@ -56,6 +60,8 @@ const AboutAac = () => {
                         <MissionDesc>Connect people through common passions and interests and provide a space for them to build relationships and collaborate on creative projects.</MissionDesc>
                     </MissionWrapper>
                     <MissionWrapper>
+                        <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
+
                         <StickyNote
                             values={"true"}
                             benefit={"CREATE"}
@@ -73,7 +79,9 @@ const AboutAac = () => {
                 <Paragraph>Allie's Art Club is built on a strong base of core values. These values are central to the work we do, directing both the way we work and the outcomes we aim to create.</Paragraph>
                 <Paragraph>The image below outlines the Club's nine core values. You can click on each value to read more about how they guide our mission and way of working.</Paragraph>
                 <ValuesWrap>
-                    <ValuesImage alt={"Values"}src={'/assets/about/Values.png'}/>
+                    <ValuesImage alt={"Values"} 
+                                src={"/assets/about/Values-small.png"}
+                                srcSet={'/assets/about/Values-small.png 320w, /assets/about/Values-medium.png 600w, /assets/about/Values-large.png 1080w'} sizes={"(max-width: 480px) 400px,(max-width: 1024px) 600px, 1080px"}/>
                     {
                         tagMessageArray.map((el,i)=>{
                             return <Value key={i}

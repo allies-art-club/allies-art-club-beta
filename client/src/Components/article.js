@@ -1,7 +1,7 @@
 import React from 'react';
 import { toggleSpinner } from '../Actions/donateActions.js';
 import {connect} from 'react-redux';
-import {ArticleWrapper,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from '../Components/Styled/article.styled.js';
+import {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from '../Components/Styled/article.styled.js';
 const Article=(props)=>{
     console.log(props.title)
     return(
@@ -32,17 +32,18 @@ const Article=(props)=>{
                 <TextContainer>
                     <TextWrap>
                         <Border alt="border top" top={true} src={"/assets/general/border.png"}/>
-                        <ArticleTitle largeHeading={props.largeHeading}>
-                            {props.title.split(': ')[0]}
-                        </ArticleTitle>
-                        {
-                            props.title.split(':').length===2?
+                        <ArticleTitleWrap>
                             <ArticleTitle largeHeading={props.largeHeading}>
-                                {props.title.split(': ')[1]}
-                            </ArticleTitle>:
-                            null
-                        }
-
+                                {props.title.split(': ')[0]}
+                            </ArticleTitle>
+                            {
+                                props.title.split(':').length===2?
+                                <ArticleTitle largeHeading={props.largeHeading}>
+                                    {props.title.split(': ')[1]}
+                                </ArticleTitle>:
+                                null
+                            }
+                        </ArticleTitleWrap>
                         <ArticleSummary largeHeading={props.largeHeading}>{props.children}</ArticleSummary>
                         <Border alt="border bottom" src={"/assets/general/border.png"}/>
                     </TextWrap>

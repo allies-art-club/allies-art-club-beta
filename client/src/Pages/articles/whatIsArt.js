@@ -6,6 +6,7 @@ const WhatIsArt=()=>{
         <Article>
 
             <TitleBanner
+                centreSrc={"/assets/general/curvedLine.png"}
                 title={'What is Art?'}
             >
             </TitleBanner>
