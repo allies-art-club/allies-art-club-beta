@@ -5,12 +5,9 @@ import {theme} from './theme/theme.js';
 const Container = styled.main`
   margin: 40px auto 4rem auto;
 
-  min-height: calc(100vh - 0.5*100vw*0.5627329192546584 - 148px);
-  @media(min-width:421px){
-    min-height: calc(100vh - 0.5*100vw*0.5627329192546584 - 148px);
-  }
+  min-height: calc(100vh - 4rem - 291px);
   @media(min-width:768px){
-    min-height: calc(100vh  - 464.83px);
+    min-height: calc(100vh  - 4rem - 488px);
   }
   @media(min-width:1300px){
     min-height: calc(100vh  - 494.83px);
@@ -113,7 +110,9 @@ const FormStyled= styled(Form)`
 
 `
 const FormCheckboxWrapper=styled.fieldset`
-  border:none;
+  border:none;  
+  margin-top: 15px;
+
   display:${props=>props.longList?"flex":"block"};
   flex-wrap:${props=>props.longList?"wrap":"no-wrap"};
 `
@@ -153,7 +152,7 @@ const FormInput =styled(Field)`
 `
 const FormInputCheckboxWrapper = styled.div`
   position:relative;
-  border: 1px solid blue;
+  border: 1px solid ${theme.pink};
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -235,7 +234,6 @@ const FormTextArea = styled.textarea`
 `
 const FieldSet = styled(FieldArray)`
   border: none;
-  
 `
 const FieldSetWrap = styled.div`
   position:relative;
@@ -351,6 +349,8 @@ const SubmitInfo = styled.div`
   p {
     font-size: 0.8rem;
     margin-right: 30px;
+    margin-bottom:0;
+    margin-top:35%;
   }
 `
 const StarImg=styled.img`
@@ -398,10 +398,13 @@ const TextImage = styled.img`
     margin:auto;
     shape-outside: circle();
     @media(min-width:421px){
-      width:60%
+      width:60%;
     }
     @media(min-width:768px){
         margin:1rem;
+        margin-right:${props=>props.right?'-1.5rem':'1rem'};
+        margin-left:${props=>props.right?'1rem':'-1.5rem'};
+        margin-top:-0.1rem;
         float:${props=>props.right?'right':'left'};
         width:40%;
     }

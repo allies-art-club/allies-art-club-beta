@@ -6,6 +6,7 @@ const LessonsInCalligraphy=()=>{
         <Article>
             <TitleBanner
                 
+                centreSrc={"/assets/general/curvedLine.png"}
                 title={"Lessons in Calligraphy"}
             ></TitleBanner>
             <SubHeading>A personal story by Lydia Rose</SubHeading>

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
-import {theme} from './theme/theme.js';
+import {theme,boxGlow} from './theme/theme.js';
 const Quote =styled.p`
-    font-size: 1.2rem;
     color:${theme.pink};
+    width:80%;
+    clear: both;
+    margin: 1rem auto;
 `
 const SubTitle=styled.p`
 
@@ -12,6 +14,8 @@ const FoundationImage=styled.img`
     border-radius:50%;
 `
 const MissionWrapper=styled.div`
+    position:relative;
+    margin:20px 0;
     display:flex;
     @media(max-width:767px){
         flex-direction: column;
@@ -34,7 +38,12 @@ const Mission=styled.h2`
     }
     text-align: center;
 `
+const MissionDescWraper=styled.div`
+
+
+`
 const MissionDesc=styled.p`
+    position:relative;
     @media(min-width:768px){
         width: 50%;
     }
@@ -42,7 +51,6 @@ const MissionDesc=styled.p`
         width: 65%;
     }
     margin:auto;
-    border-top: 1px dashed red;
 `
 const ValuesWrap=styled.figure`
     position:relative;
@@ -63,7 +71,22 @@ const Tag = styled.div`
     left:${props=>props.tagHorizontal}%;
     height:${props=>props.tagHeight}%;
 `
+const MissionBorder=styled.img`
+    position:absolute;
+    top:-10px;
+    right:0;
+    width:100%;
+    @media(min-width:768px){
+        right:calc((50% - 200px) / 2);
+        width:50%;
+    }
 
+    @media(min-width:1025px){
+        right:calc((35% - 200px) / 2);
+        width:65%;
+
+    }
+`
 const AllieWrap = styled.div`
     display:flex;
     @media(max-width:1024px){
@@ -121,4 +144,4 @@ const IFrame = styled.iframe`
         height:calc((70vw - 80px) * 9/16);
     }
 `
-export {Quote,SubTitle,FoundationImage,MissionWrapper,MissionDesc,Mission,ValuesWrap,ValuesImage,Tag,AllieWrap,TextWrapper,Message,SpeechBubble,IFrame};
+export {Quote,SubTitle,FoundationImage,MissionWrapper,MissionDesc,Mission,MissionBorder,ValuesWrap,ValuesImage,Tag,AllieWrap,TextWrapper,Message,SpeechBubble,IFrame};

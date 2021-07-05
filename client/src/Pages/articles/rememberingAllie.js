@@ -6,7 +6,8 @@ const RememberingAllie=()=>{
     return(
         <Article>
             <Section>
-            <TitleBanner 
+            <TitleBanner
+                centreSrc={"/assets/general/curvedLine.png"}
                 title={"Remembering Allie"}
                 ></TitleBanner>
             <TextImage  alt="Allie" src={"/assets/articles/rememberingAllie/rememberingAllie.png"}/>

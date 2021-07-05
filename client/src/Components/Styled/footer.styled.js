@@ -36,7 +36,7 @@ const Caption = styled.figcaption`
   display:inline-block;
   padding: 0px 5px;
   font-size: 0.75rem;
-  max-width: 60%;
+  max-width: 70%;
   @media(min-width:768px){
     padding: 0px 10px;
     font-size: 1rem;
@@ -51,6 +51,7 @@ const Figure =styled.div`
   margin: 0px;
   padding:auto;
   display:flex;
+  justify-content:space-evenly;
   align-items:center;
 `
 
@@ -84,16 +85,16 @@ const Icon =styled.img`
   display:inline-block;
   line-height:120px;
   
-  width: ${props=>props.left?"50":"30"}px;
+  width: ${props=>props.left?"50":"25"}px;
   @media(min-width:320px){
-    width: ${props=>props.left?"80":"30"}px;
+    width: ${props=>props.left?"60":"25"}px;
   }
   @media(min-width: 481px){
     
-    width: ${props=>props.left?"120":"40"}px;
+    width: ${props=>props.left?"100":"30"}px;
   }
   @media(min-width:1025px){
-    width: ${props=>props.left?"140":"50"}px;
+    width: ${props=>props.left?"140":"35"}px;
   }
   
 `
@@ -102,6 +103,12 @@ const FooterParagraph=styled.p`
   text-align:center;
   font-size: 0.5rem;
   margin: 5px 0;
+  transform:${props=>props.right?"translateY(-5px)":"none"};
+
+  @media(min-width:421px){
+    transform:${props=>props.right?"translateY(-10px)":"none"};
+
+  }
   @media(max-width:767px){
     word-break: break-word;
   }

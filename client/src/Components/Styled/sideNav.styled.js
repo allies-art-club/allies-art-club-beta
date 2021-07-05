@@ -20,7 +20,7 @@ const SideNavWrapper = styled.div`
         left:${props=>props.menu?'50%':'-19%'};
         transform:${props=>props.menu?'translateX(-50%)':'auto'};
 
-        top:${props=>props.menu?'70px':'0'};
+        top:${props=>props.menu?'55px':'0'};
 
         ${HeaderNavListElement}:hover & {
             display: block;

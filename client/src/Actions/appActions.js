@@ -1,6 +1,5 @@
 export async function logOut(event,dispatch){
     try{
-        console.log('here')
 
         // event.preventDefault()
         const myHeaders = new Headers({
@@ -49,7 +48,6 @@ export function toggleSubMenu(subMenu,dispatch){
 }
 
 export function setCsrfToken(token,dispatch){
-    console.log('TOOOOOOOOOOOKEN',token);
     dispatch({
         type: 'SET_TOKEN',
         payload: token

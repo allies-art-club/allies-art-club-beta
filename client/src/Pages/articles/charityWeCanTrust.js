@@ -7,6 +7,8 @@ const CharityWeCanTrust=()=>{
             <Section>
 
                 <TitleBanner 
+
+                centreSrc={"/assets/general/curvedLine.png"}
                     title={"A W T F: A Charity We Can Trust"}
                 ></TitleBanner>
 

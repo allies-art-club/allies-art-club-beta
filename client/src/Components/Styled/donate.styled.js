@@ -24,6 +24,25 @@ const DonationWrapper = styled.div`
 const DonateLink = styled(NavLink)`
     position:relative;
     width:60%;
+
+    &:hover {
+        img{
+            filter: hue-rotate(270deg);
+
+        }
+    }
+    
+`
+const ExternalLink = styled.a`
+    position:relative;
+    width:60%;
+
+    &:hover {
+        img{
+            filter: hue-rotate(270deg);
+
+        }
+    }
     
 `
 const DonateImage = styled.img`
@@ -78,4 +97,4 @@ const SideImg=styled.img`
         display:${props=>props.donate?"none":"block"};
     }
 `
-export {ThankYouWrap,ImageWrapper,DonationWrapper,DonateLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStars,DonateBannerStar,SideImg}
+export {ThankYouWrap,ImageWrapper,DonationWrapper,DonateLink,ExternalLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStars,DonateBannerStar,SideImg}

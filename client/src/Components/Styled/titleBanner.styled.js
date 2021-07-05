@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 const TitleWrapper = styled.div`
-    width:100%;
-    @media(min-width:768px){
-        width:100%;
-    }
+    width:${props=>props.sideSrc1&&props.sideSrc2?"calc(100% + 80px)":"100%"};
     display:inline-flex;
     flex-wrap: wrap;
     align-items: start;
     padding:0;
     margin-bottom: 1rem;
+    transform:${props=>props.sideSrc1&&props.sideSrc2?"translateX(-40px)":"none"};
     justify-content: ${props=>props.sideSrc1||props.sideSrc2?"auto":"center"};
 `
 
@@ -24,7 +22,7 @@ const CentreImage = styled.img`
     width:100%
 `
 const CentreImageWrapper=styled.div`
-    width:${props=>props.sideSrc1&&props.sideSrc2?"56%":(props.sideSrc1||props.sideSrc2)?"72%":"100%"};
+    width:56%;
     margin:auto;
     position:relative;
 `
