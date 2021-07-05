@@ -5,6 +5,7 @@ const ArtAndWellbeing=()=>{
     return(
         <Article>
         <TitleBanner
+            centreSrc={"/assets/general/curvedLine.png"}
             title={"Art & Wellbeing"}
         ></TitleBanner>
             <Section>

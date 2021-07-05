@@ -11,7 +11,7 @@ const ThankYou = () => {
             <SideImg alt={"hearts right"} src={"/assets/general/heartsR.png"} />
             <ImageWrapper thankYou={"true"}>
                     <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
-                    <BannerTextImg alt="allie's story banner svg text" type="image/svg+xml" data={thankYou}/>
+                    <BannerTextImg aria-label="contains svg" alt="allie's story banner svg text" type="image/svg+xml" data={thankYou}/>
                 </ImageWrapper>
         </ThankYouWrap>
     )

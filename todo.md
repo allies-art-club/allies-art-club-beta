@@ -6,4 +6,3 @@
 11. Shrink actual image sizes for mobile
 12. Background foreground contrast between Quote "A charity we can trust"
 13. carousel arrows
-14. svg object alt tag

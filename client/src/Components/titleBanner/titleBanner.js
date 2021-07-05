@@ -5,7 +5,7 @@ import {TitleWrapper,SideImage,SideImageWrapper,CentreImage,CentreImageWrapper,I
 const TitleBanner = (props) => {
     console.log(props.title)
     return (
-        <TitleWrapper>
+        <TitleWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
             {
                 props.sideSrc1?
 
@@ -29,7 +29,7 @@ const TitleBanner = (props) => {
                     </Fragment>
                     :
                     props.svgSrc?
-                    <BannerTextImg type="image/svg+xml" alt={props.svgSrc.alt} data={props.svgSrc.src}/>
+                    <BannerTextImg aria-label="contains svg"type="image/svg+xml" alt={props.svgSrc.alt} data={props.svgSrc.src}/>
                    :
                    <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title}</ImageTitle>
             }

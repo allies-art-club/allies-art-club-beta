@@ -31,7 +31,7 @@ const Access2Art=()=>{
             <Paragraph>With so many families struggling to make ends meet, they are usually unable to afford the materials and equipment needed to engage in art.</Paragraph>
             <Paragraph>Financial hardship can also put huge strains on people’s mental wellbeing, making accessible mental health support all the more important.</Paragraph>
             <Paragraph>To support the mental health of those struggling financially, we will be donating Art Care Packs to a number of food banks across London, where they can reach communities most affected. The Packs will include mental health information sheets and a range of art supplies such as notebooks, pens and pencils.</Paragraph>
-            <Paragraph>To read more details about our Art Care Packs, please read our article <Link href={"/discussions/project-news/art-care-packs-tools-for-mental-wellbeing"}>Art Care Packs: Tools for Mental Wellbeing</Link></Paragraph>
+            <Paragraph>To read more details about our Art Care Packs, please read our article <Link href={"/discussions/project-news/art-care-packs-tools-for-mental-wellbeing"}>Art Care Packs: Tools for Mental Wellbeing</Link>.</Paragraph>
         </Section>
         <Section>
             <TextImage right={true} alt="Art Care Events" src={"/assets/activities/projects/artCare/artCareEvents.png"} />

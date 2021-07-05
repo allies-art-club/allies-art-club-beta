@@ -88,14 +88,12 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 const App= (props) =>{
     var setCsrf = props.setCsrfToken;
     useEffect((props)=>{
-      console.log('ye')
       async function getToken(){
         const token =await fetch('/api/csrfToken',{
           credentials: "include"
 
         })
         const jsonTok = await token.json();
-        console.log(jsonTok);
         setCsrf(jsonTok.token)
       }
       getToken()
@@ -393,7 +391,7 @@ const App= (props) =>{
                                     }
                                 }
                                 />
-                                <Route path="/discussions/project-updates/allies-food-bank" exact strict render={
+                                <Route path="/discussions/project-news/allies-food-bank" exact strict render={
                                       ()=>{
                                           return(
       

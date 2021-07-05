@@ -19,7 +19,7 @@ const Footer = () => {
             </FooterElementWrapper>
 
             <FooterElementWrapper size={37}>
-                    <FooterParagraph data-test="aacCaption">Follow us on social media</FooterParagraph>
+                    <FooterParagraph right={"true"} data-test="aacCaption">Follow us on social media</FooterParagraph>
                     <IconWrapper>
                         <Link rel="noopener" target="_blank"href="https://www.twitter.com/alliesartclub"><Icon left={false} src="/assets/footer/twitter_icon.png" data-test="twitterIcon" alt="twitter icon"></Icon></Link>
                         <Link rel="noopener" target="_blank"href="https://www.instagram.com/alliesartclub"><Icon left={false} src="/assets/footer/insta_icon.png" data-test="instaIcon" alt="instagram icon"></Icon></Link>
