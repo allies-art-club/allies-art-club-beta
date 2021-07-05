@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 const TitleWrapper = styled.div`
-    width:${props=>props.sideSrc1&&props.sideSrc2?"calc(100% + 80px)":"100%"};
+    width:${props=>props.sideSrc1&&props.sideSrc2?"calc(100% + 80px + 2rem)":"100%"};
     display:inline-flex;
     flex-wrap: wrap;
     align-items: start;
     padding:0;
     margin-bottom: 1rem;
-    transform:${props=>props.sideSrc1&&props.sideSrc2?"translateX(-40px)":"none"};
+    transform:${props=>props.sideSrc1&&props.sideSrc2?"translateX(calc(-40px - 1rem))":"none"};
     justify-content: ${props=>props.sideSrc1||props.sideSrc2?"auto":"center"};
 `
 
 const SideImage = styled.img`
     width:60%;
+    transform:translateY(1rem);
     display:block;
     margin:auto;
 `

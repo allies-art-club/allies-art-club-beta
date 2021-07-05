@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {theme,boxGlow} from './theme/theme.js';
+import {theme} from './theme/theme.js';
 const Quote =styled.p`
     color:${theme.pink};
     width:80%;
@@ -38,10 +38,7 @@ const Mission=styled.h2`
     }
     text-align: center;
 `
-const MissionDescWraper=styled.div`
 
-
-`
 const MissionDesc=styled.p`
     position:relative;
     @media(min-width:768px){

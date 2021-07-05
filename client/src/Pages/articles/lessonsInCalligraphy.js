@@ -10,9 +10,10 @@ const LessonsInCalligraphy=()=>{
                 title={"Lessons in Calligraphy"}
             ></TitleBanner>
             <SubHeading>A personal story by Lydia Rose</SubHeading>
-            <TextImage alt="pen" right={true} src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1.png"}/>
 
             <Section>
+
+            <TextImage alt="pen" right={true} src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1.png"}/>
             <Paragraph>As a writer, I have always been drawn
 to calligraphy as a beautiful way to display the contents of my mind.</Paragraph>
 <Paragraph>In my teens, I was gifted a neat calligraphy set, which was at first my most prized piece of stationary. After a few months of errors, frustration and ink-stained fingertips, I quit altogether. Calligraphy was too hard, too laborious, and I did not have the patience to pursue it.</Paragraph>

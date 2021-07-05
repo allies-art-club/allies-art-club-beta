@@ -81,7 +81,7 @@ const AboutAac = () => {
                 <ValuesWrap>
                     <ValuesImage alt={"Values"} 
                                 src={"/assets/about/Values-small.png"}
-                                srcSet={'/assets/about/Values-small.png 320w, /assets/about/Values-medium.png 600w, /assets/about/Values-large.png 1080w'} sizes={"(max-width: 480px) 400px,(max-width: 1024px) 600px, 1080px"}/>
+                                srcSet={'/assets/about/Values-small.png 400w, /assets/about/Values-medium.png 600w, /assets/about/Values-large.png 1080w'} sizes={"(max-width: 767px) calc(95vw - 60px),(max-width: 1024px) 600w, 1080w"}/>
                     {
                         tagMessageArray.map((el,i)=>{
                             return <Value key={i}
