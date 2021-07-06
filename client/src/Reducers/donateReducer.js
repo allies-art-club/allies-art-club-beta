@@ -13,7 +13,6 @@ const donateReducer = (state={
             valid:false,
         }
     },
-    spinnerVisible: false,
     errorMessage: '',
     errorMessageSupplies: '',
     supplyError: ''
@@ -26,12 +25,7 @@ const donateReducer = (state={
             var name = action.payload.name;
             state.donateObj[name]= action.payload.value;
             break;
-        case 'TOGGLE_SPINNER':
-            state={
-                ...state,
-                spinnerVisible: !state.spinnerVisible
-            }
-            break;
+
 
         case 'TOGGLE_SUBMIT':
             state={

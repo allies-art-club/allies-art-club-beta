@@ -53,3 +53,10 @@ export function setCsrfToken(token,dispatch){
         payload: token
     })
 }
+
+export function toggleSpinner (dispatch){
+    dispatch({
+        type: 'TOGGLE_SPINNER',
+        payload: undefined
+    })
+}

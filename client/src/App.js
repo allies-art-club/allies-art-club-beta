@@ -101,6 +101,7 @@ const App= (props) =>{
     },[setCsrf])
     return (
       <Fragment>
+        <Spinner props={props.app.spinnerVisible}/>
         <GlobalStyle menuOpen={props.app.menuOpen}/>
         <Router>
 
