@@ -11,7 +11,7 @@ const Volunteer = ()=>{
                 title={'Volunteer'}
             ></TitleBanner>
             <Paragraph>Would you like to help Allie's Art Club achieve our mission to empower communities and bring art to the forefront of social progress?</Paragraph>
-            <Paragraph>Do you have skills (or want to develop skills) such as fundraising project development or artistic talents that could help our cause?</Paragraph>
+            <Paragraph>Do you have skills (or want to develop skills) such as fundraising, project development or artistic talents that could help our cause?</Paragraph>
             <Paragraph>Here are some ways in which you could help Allie's Art Club:</Paragraph>
             <List>
                 <ListElement>Start a project to raise funds or art supplies to donate</ListElement>
@@ -22,7 +22,7 @@ const Volunteer = ()=>{
 
             </List>
             <Paragraph>If you're interested in volunteering with us, please send an email with any ideas of how you can help to: <Link href="mailto:alliesartclub@gmail.com">alliesartclub@gmail.com</Link></Paragraph>
-            <Paragraph>You can send your art to our instragram page @alliesartclub on: <Link target="_blank"href="https://www.instagram.com/alliesartclub">www.instagram.com/alliesartclub</Link>
+            <Paragraph>You can send your art to our Instagram page @alliesartclub on: <Link target="_blank"href="https://www.instagram.com/alliesartclub">www.instagram.com/alliesartclub</Link>
             </Paragraph>
         </Fragment>
     )

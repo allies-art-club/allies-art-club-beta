@@ -130,9 +130,6 @@ const NavMainCategory = styled(NavLink).attrs({activeClassName})`
     text-shadow:${props=>props.nav?`1px 1px 0 ${theme.blue}, -1px -1px 0 ${theme.blue},1px -1px 0 ${theme.blue}, -1px 1px 0 ${theme.blue}, 0px 0px 1rem ${theme.blue}`:`1px 1px 0 ${theme.yellow},1px -1px 0 ${theme.yellow}, -1px 1px 0 ${theme.yellow}, -1px -1px 0 ${theme.yellow}, 0px 0px 1rem ${theme.yellow}`};
 
     text-decoration:none;
-    @media(min-width:768px){
-        padding-bottom: 5px;
-    }
     &.${activeClassName},&:hover{
         text-shadow: 0px 0px 1rem ${theme.pink};
     }
@@ -142,14 +139,16 @@ const NavMainCategory = styled(NavLink).attrs({activeClassName})`
     font-family: Teko, cursive;
     text-transform: uppercase;
     position: ${props=>props.nav?'static':'absolute'};
-    top: ${props=>props.nav?'auto':'38%'};
+    top: ${props=>props.nav?'auto':'40%'};
     right: ${props=>props.nav?'auto':'8.25%'};
     transform: ${props=>props.nav?'auto':'translateY(-50%)'};
     @media(max-width:480px){
         font-size ${props=>props.nav?'2rem':'1.5rem'};
     }
     @media(min-width:768px){
+        top: ${props=>props.nav?'auto':'35%'};
         font-size: 2.2rem;
+        padding-bottom: 5px;
     }
 `
 const NavLinkLogo = styled(NavLink)`
@@ -170,9 +169,19 @@ const Slogan = styled.p`
     background-color: rgba(255,102,196,0.65);
     text-align: center;
     color: white;
+    margin:0px;
     height: 2rem;
     line-height:2rem;
-    margin:0px;
+    @media(min-width:768px){
+        margin-bottom:40px;
+        height: 3rem;
+        line-height:3rem;
+    }
+    @media(min-width:1300px){
+        margin-bottom: 28px;
+        height: 2.5rem;
+        line-height:2.5rem;
+    }
 `
 const HeaderLogo = styled.h1`
     font-weight: 100;

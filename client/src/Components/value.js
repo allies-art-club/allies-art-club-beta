@@ -23,7 +23,7 @@ const Value = (props)=> {
 
     }
     return(
-        <Fragment tagWidth={props.tagWidth}>
+        <Fragment>
             <Tag tagWidth={props.tagWidth} tagVertical={props.tagVertical} tagHorizontal={props.tagHorizontal} tagHeight={props.tagHeight} onClick={(event)=>toggleMessage(event)}/>
             <SpeechBubble id={"value"+props.id}messageWidth={props.messageWidth} messageVertical={props.messageVertical} messageLeft={props.messageLeft} messageHorizontal={props.messageHorizontal} visible={showMessage}>
                 <Message >{props.children}</Message>

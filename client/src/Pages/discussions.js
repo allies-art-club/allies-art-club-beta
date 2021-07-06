@@ -10,6 +10,7 @@ const Discussions=()=>{
 
             <SideNav mainCategory={'discussions'}navLinks={["Club Articles","Project News","Artist Conversations","Personal Stories"]}/>
             <TitleBanner
+                shootingStar={true}
                 sideSrc1={'/assets/general/starL.png'}
                 sideSrc2={'/assets/general/starR.png'}
                 centreSrc={'/assets/general/curvedLine.png'}
