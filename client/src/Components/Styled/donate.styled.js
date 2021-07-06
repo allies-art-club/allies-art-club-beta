@@ -60,9 +60,9 @@ const DonateParagraph = styled.p`
 `
 const BannerTextImg = styled.object`
     position: absolute;
-    left: 10%;
-    width:80%;
-    top: 10%;
+    left: 3%;
+    width:90%;
+    top: 11%;
 `
 const BannerTextOverlay = styled.div`
 position: absolute;
@@ -77,7 +77,7 @@ const DonateBannerStars = styled.img`
     transform: translate(${props=>props.top?"55%,-50%":"110%,-45%"});
 `
 const DonateBannerStar=styled.img`
-    width:40%;
+    width:30%;
     position:relative;
     right:${props=>props.top?"-60%":"auto"};
     @media(min-width:768px){
@@ -86,7 +86,7 @@ const DonateBannerStar=styled.img`
     }
 `
 const SideImg=styled.img`
-    width:${props=>props.donate?"15%":"10%"};
+    width:${props=>props.donate?"13%":"10%"};
     margin-right:${props=>props.left?"2%":"3%"};
     margin-left:${props=>props.left?"3%":"2%"};
     float:${props=>props.left?"left":"right"};

@@ -10,7 +10,11 @@ import crowdFundSvg from '../Components/Styled/bannerSvg/crowdFund.svg';
 const Donate = () => {
     return(
         <Fragment>
-            <TitleBanner sideSrc1={"/assets/general/heartsL.png"} sideSrc2={"/assets/general/heartsR.png"} centreSrc={"/assets/general/curvedLine.png"} title={"Donate"}/>
+            <TitleBanner 
+                sideSrc1={"/assets/general/heartsL.png"} 
+                sideSrc2={"/assets/general/heartsR.png"} 
+                centreSrc={"/assets/general/curvedLine.png"} 
+                title={"Donate"}/>
             <Paragraph>Thank you for considering donating to Allie's Art Club. We are a charitable organisation led by volunteers and 100% of funds and donations we receive go towards supporting local communities in London and our Club members through art and creative activities.</Paragraph>
             <Paragraph>How would you like to donate to our club? Click on one of the ribbons below to support our art club. </Paragraph>
             <DonationWrapper>

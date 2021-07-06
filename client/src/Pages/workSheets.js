@@ -11,6 +11,7 @@ const WorkSheets=()=>{
 
             <SideNav mainCategory={'resources'}navLinks={["Fact Sheets","Work Sheets"]}/>
             <TitleBanner
+                shootingStar={true}
                 sideSrc1={'/assets/general/starL.png'}
                 sideSrc2={'/assets/general/starR.png'}
                 centreSrc={'/assets/general/curvedLine.png'}

@@ -14,7 +14,7 @@ const ArticleWrapper=styled.div`
 const TextContainer=styled.div`
     position:relative;
     width:55%;
-    height: 80px;
+    height: 92px;
     display:table-cell;
     vertical-align:middle;
     @media(min-width:421px){
@@ -35,7 +35,7 @@ const TextWrap=styled.div`
     display:inline-flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height:74px;
+    height:92px;
     @media(min-width:421px){
         height:94px;
         margin:0 15px;
@@ -58,16 +58,12 @@ const ArticleTitle=styled.h2`
     margin:0;
     
     @media(min-width:320px){
-        font-size: 1.3rem;
-        line-height: 1.3rem;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
     }
     @media(min-width: 1025px){
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-    @media(min-width:1300px){
-        font-size: 2.3rem;
-        line-height:2.3rem;
+        font-size: 1.7rem;
+        line-height: 1.7rem;
     }
 `
 const ArticleLink = styled(NavLink)`
@@ -79,7 +75,7 @@ const ArticleTitleWrap=styled.div`
     margin:0px;
     margin-top:10px;
     @media(min-width:768px){
-        margin-top:20px;
+        margin-top:15px;
 
     }
 `
@@ -116,7 +112,12 @@ const RememberAllieHeading=styled.h2`
     
 `
 const ArticleDetailsWrapper=styled.div`
-    margin: 0 1rem;
+    width:100%;
+    @media(min-width:320px){
+        margin: 0 1rem;
+        width:calc(100% - 2rem);
+    
+    }
     position:absolute;
     bottom:-25px;
     @media(min-width:421px){
@@ -127,7 +128,6 @@ const ArticleDetailsWrapper=styled.div`
     }
     display:flex;
     justify-content:space-between;
-    width:calc(100% - 2rem);
 `
 const ArticleItem=styled.p`
     text-align:center;
