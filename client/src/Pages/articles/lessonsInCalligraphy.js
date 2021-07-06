@@ -132,7 +132,7 @@ to many more lessons in calligraphy.</Paragraph>
 
     <ImageWrap>
     <SubHeading image={true}>Lydia Rose</SubHeading>
-    <Image flex={true} src={"/assets/general/starR.png"}/>
+    <Image  alt={"star"} flex={true} src={"/assets/general/starR.png"}/>
     </ImageWrap>
     
     
