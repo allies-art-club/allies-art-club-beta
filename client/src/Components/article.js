@@ -1,5 +1,5 @@
 import React from 'react';
-import { toggleSpinner } from '../Actions/donateActions.js';
+import {toggleSpinner} from '../Actions/appActions';
 import {connect} from 'react-redux';
 import {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from '../Components/Styled/article.styled.js';
 const Article=(props)=>{

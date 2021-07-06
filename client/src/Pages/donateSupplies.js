@@ -7,7 +7,9 @@ import {Formik} from 'formik';
 import * as yup from 'yup';
 import {connect} from 'react-redux';
 import donateSuppliesSvg from '../Components/Styled/bannerSvg/donateSupplies.svg';
-import { toggleSpinner,handleSubmitSupplies} from '../Actions/donateActions';
+import {handleSubmitSupplies} from '../Actions/donateActions';
+import {toggleSpinner} from '../Actions/appActions';
+
 
 const DonateSupplies=(props)=>{
     

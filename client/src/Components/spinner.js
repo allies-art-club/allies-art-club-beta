@@ -1,8 +1,10 @@
 import React from 'react';
-
-const Spinner =()=>{
+import {SpinnerWrapper,SpinnerInner} from './Styled/spinner.styled.js';
+const Spinner =(props)=>{
     return(
-        <h1>I AM SPINNER</h1>
+        <SpinnerWrapper visible={props.visible}>
+            <SpinnerInner />
+        </SpinnerWrapper>
     )
 }
 

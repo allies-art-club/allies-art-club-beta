@@ -101,13 +101,14 @@ const App= (props) =>{
     },[setCsrf])
     return (
       <Fragment>
+        <Spinner visible={props.app.spinnerVisible}/>
         <GlobalStyle menuOpen={props.app.menuOpen}/>
         <Router>
 
           <ErrorBoundary>
               <Header subMenu={props.app.subMenu}open={props.app.menuOpen} toggleMenu={props.toggleMenu} toggleSubMenu={props.toggleSubMenu}/>
           </ErrorBoundary>
-          <Suspense fallback={<Spinner/>}>
+          <Suspense fallback={<Spinner visible={true}/>}>
           <ErrorBoundary>
             <Container>
               <Switch>

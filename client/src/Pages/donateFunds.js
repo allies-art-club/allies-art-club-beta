@@ -6,7 +6,8 @@ import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {SideImg} from '../Components/Styled/donate.styled';
 
 import donateFundsSvg from '../Components/Styled/bannerSvg/donateFunds.svg';
-import {handleSubmit, toggleSpinner,handleCardElementChange,cardValidate} from '../Actions/donateActions';
+import {handleSubmit, handleCardElementChange,cardValidate} from '../Actions/donateActions';
+import {toggleSpinner} from '../Actions/appActions';
 import {useStripe, useElements, CardNumberElement, CardExpiryElement, CardCvcElement} from '@stripe/react-stripe-js';
 import {Formik} from 'formik';
 import * as yup from 'yup';
