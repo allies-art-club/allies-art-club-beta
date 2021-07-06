@@ -2,6 +2,7 @@ const appReducer = (state={
     loggedIn: false,
     menuOpen: false,
     token: '',
+    spinnerVisible: false,
     subMenu:{
         about:false,
         updates:false,
@@ -14,6 +15,12 @@ const appReducer = (state={
             state={
                 ...state,
                 loggedIn: true
+            }
+            break;
+        case 'TOGGLE_SPINNER':
+            state={
+                ...state,
+                spinnerVisible: !state.spinnerVisible
             }
             break;
         case 'TOGGLE_MENU':

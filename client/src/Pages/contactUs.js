@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom';
 import {Paragraph, Link,FormInput,FormInputWrapper,FormLabel,FormTextArea,FormStyled,FormInputValidation,FormSubmitWrapper,SubmitInfo,StarImg,FormSubmit,FormSubmitCaption,FormSubmitFigure,FormSubmitImage,ErrorWrapper,ErrorMessage} from '../Components/Styled/styled.js';
 import * as yup from 'yup';
 import {Formik} from 'formik';
-import { toggleSpinner } from '../Actions/donateActions.js';
+import {toggleSpinner} from '../Actions/appActions';
 import {handleSubmitContactUs} from '../Actions/beAnAllieActions.js';
 import {connect} from 'react-redux';
 const ContactUs =(props)=>{

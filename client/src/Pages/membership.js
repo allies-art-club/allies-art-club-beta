@@ -4,7 +4,7 @@ import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {Formik} from 'formik';
 import * as yup from 'yup';
 import {Paragraph, FormCheckboxWrapper,FormInput,FormInputCheckbox,FormInputCheckboxWrapper,FormInputWrapper,FormLabel,RadioWrap,RadioInputWrap,FormRadio,RadioLabel,FieldSet,FieldSetWrap,CheckboxLabel,DatePickWrap,FormStyled,FormInputValidation,FormSubmitWrapper,SubmitInfo,StarImg,FormSubmit,FormSubmitCaption,FormSubmitFigure,FormSubmitImage,ErrorWrapper,ErrorMessage} from '../Components/Styled/styled.js';
-import {toggleSpinner} from '../Actions/donateActions';
+import {toggleSpinner} from '../Actions/appActions';
 import {handleSubmitMember,handleError} from '../Actions/beAnAllieActions';
 import {connect} from 'react-redux';
 import DatePickerComponent from '../Components/datepicker.js';
