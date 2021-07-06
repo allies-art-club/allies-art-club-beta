@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import { Paragraph,Section,TextImage,InlineIcon,Link} from '../Components/Styled/styled.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import {Quote,SubTitle,IFrame} from '../Components/Styled/about.styled.js';
-import {CentreImage} from '../Components/Styled/titleBanner.styled'
+import {RibbonImage} from '../Components/Styled/titleBanner.styled'
 
 import {BannerTextImg,ImageWrapper} from '../Components/Styled/donate.styled.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
@@ -27,7 +27,7 @@ const AboutAlliesStory=()=>{
                 <Paragraph>For 17 years, Alexandra shone with such a passion, strength and vibrancy, until her hard-fought battle with cancer claimed her life.</Paragraph>
                 
                 <ImageWrapper>
-                    <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
+                    <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>
                     <BannerTextImg aria-label="contains svg" alt={"allie story"} type="image/svg+xml" data={alliesStory}/>
                 </ImageWrapper>
                 <Paragraph>Allie was known for her dazzling smile, vibrant personality and fantastic sense of humour.</Paragraph>

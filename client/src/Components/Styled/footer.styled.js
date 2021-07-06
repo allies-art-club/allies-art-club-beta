@@ -51,7 +51,7 @@ const Figure =styled.div`
   margin: 0px;
   padding:auto;
   display:flex;
-  justify-content:space-evenly;
+  justify-content:space-around;
   align-items:center;
 `
 
