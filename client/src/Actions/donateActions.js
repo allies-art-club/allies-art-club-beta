@@ -151,10 +151,4 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
     }
 }
 
-const toggleSpinner = (dispatch) => {
-    dispatch({
-        type: 'TOGGLE_SPINNER',
-        payload: undefined
-    })
-}
-export {handleCardElementChange, handleSubmit,toggleSpinner,cardValidate,handleSubmitSupplies}
+export {handleCardElementChange, handleSubmit,cardValidate,handleSubmitSupplies}
