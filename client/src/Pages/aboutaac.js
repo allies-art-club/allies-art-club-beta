@@ -5,7 +5,7 @@ import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {ImageWrapper} from '../Components/Styled/donate.styled';
 import Value from '../Components/value.js';
 import {MissionWrapper,MissionDesc,MissionBorder,ValuesWrap,ValuesImage} from '../Components/Styled/about.styled';
-import {CentreImage} from '../Components/Styled/titleBanner.styled'
+import {RibbonImage} from '../Components/Styled/titleBanner.styled'
 import tagMessageArray from './about/tagMessageArray.js';
 import StickyNote from '../Components/stickyNote.js';
 import {BannerTextImg} from '../Components/Styled/donate.styled.js';
@@ -27,7 +27,7 @@ const AboutAac = () => {
                 <Paragraph>We aim to create a safe and inclusive environment where participants feel empowered and connected, able to develop their skills and sense of wellbeing and make a difference in their community through artistic expression, collaboration and creative problem solving.</Paragraph>
                 
                 <ImageWrapper>
-                    <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
+                    <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>
                     <BannerTextImg aria-label="contains svg"alt="about banner svg text" type="image/svg+xml" data={aboutAccSvg}/>
                 </ImageWrapper>
             </Section>

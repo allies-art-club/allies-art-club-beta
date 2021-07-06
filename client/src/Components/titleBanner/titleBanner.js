@@ -17,7 +17,7 @@ const TitleBanner = (props) => {
                     <CentreImageWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
             {
                     props.centreSrc?
-                        <CentreImage alt={"decorative banner central"}src={props.centreSrc}></CentreImage>:
+                        <CentreImage alt={"decorative banner central"}src={props.centreSrc} sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2}></CentreImage>:
                         null
             }
             {
