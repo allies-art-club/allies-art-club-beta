@@ -28,10 +28,18 @@ const SideImageWrapper=styled.div`
     width:${props=>props.sideSrc1&&props.sideSrc2?"22%":"28%"};
 `
 const CentreImage = styled.img`
-    width:100%
+    display:block;
+    margin:auto;
+    width:${props=>props.sideSrc1&&props.sideSrc2?"100%":"56%"};
+
+`
+const RibbonImage = styled.img`
+    display:block;
+    margin:auto;
+    width:100%;
 `
 const CentreImageWrapper=styled.div`
-    width:56%;
+    width:${props=>props.sideSrc1&&props.sideSrc2?"56%":"100%"};
     margin:auto;
     position:relative;
 `
@@ -45,15 +53,16 @@ const ImageTitle=styled.h1`
     @media(min-width:320px){
         font-size: 2rem;
     }
-    @media(min-width: 1025px){
-        font-size: 2.2rem;
+
+    @media(min-width:481px){
+        font-size: 2.3rem;
     }
-    @media(min-width:1300px){
-        font-size:2rem;
+    @media(min-width: 1025px){
+        font-size: 2.5rem;
     }
     margin:0;
     text-align:center;
 `
 
 
-export {TitleWrapper,SideImage,SideImageWrapper,CentreImage,CentreImageWrapper,ImageTitle};
+export {TitleWrapper,SideImage,SideImageWrapper,CentreImage,RibbonImage,CentreImageWrapper,ImageTitle};

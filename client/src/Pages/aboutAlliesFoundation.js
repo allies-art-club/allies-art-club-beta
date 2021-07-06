@@ -4,7 +4,7 @@ import {Section,Paragraph,Image,Link,TextImage} from '../Components/Styled/style
 import {IFrame} from '../Components/Styled/about.styled.js';
 
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import {CentreImage} from '../Components/Styled/titleBanner.styled'
+import {RibbonImage} from '../Components/Styled/titleBanner.styled'
 import {BannerTextImg,ImageWrapper} from '../Components/Styled/donate.styled.js';
 import alliesFoundation from '../Components/Styled/bannerSvg/alliesFoundation.svg';
 const AboutAlliesFoundation = () =>{
@@ -23,7 +23,7 @@ const AboutAlliesFoundation = () =>{
                 <Paragraph>Alexandra (known as Allie) was a curious and fun-loving individual who cared deeply about societal issues and believed every person should have the opportunities she had to lead a happy and fulfilling life.</Paragraph>
                 <Paragraph>Allie's family were inspired to set up a charitable foundation in her name because of her strong desire to help others. Like Allie, the foundation supports social equality and the rights that everyone has to lead a safe and healthy life, filled with opportunities for learning, creativity and fun.</Paragraph>
                 <ImageWrapper>
-                    <CentreImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></CentreImage>
+                    <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>
                     <BannerTextImg aria-label="contains svg" alt="allie's story banner svg text" type="image/svg+xml" data={alliesFoundation}/>
                 </ImageWrapper>
                 <Paragraph>AWTF aims to honour Allie's memory by supporting the health and wellbeing of underprivileged children, adults and families in London.</Paragraph>
