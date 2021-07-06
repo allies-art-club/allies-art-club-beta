@@ -12,7 +12,7 @@ const SpinnerWrapper = styled.div`
     position:relative;
     top:0px;
     right:0px;
-    display:flex;
+    display:${props=>props.visible?"flex":"none"};
     justify-content:center;
     align-items:center;
     width:100vw;

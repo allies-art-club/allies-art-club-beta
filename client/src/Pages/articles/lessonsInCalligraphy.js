@@ -1,11 +1,9 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import Spinner from '../../Components/spinner.js'
 import {Paragraph,TextImage,TextImageTop,Article,Section,Image,SubHeading,ImageWrap} from '../../Components/Styled/styled.js';
 const LessonsInCalligraphy=()=>{
     return(
         <Article>
-            <Spinner></Spinner>
             <TitleBanner
                 
                 centreSrc={"/assets/general/curvedLine.png"}
