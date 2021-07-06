@@ -18,7 +18,7 @@ const AboutAlliesFoundation = () =>{
                     title={"Allie's Foundation"}
                 ></TitleBanner>
             <Section id="alliesFoundation">
-                <TextImage right={true}src={'/assets/footer/awtf_icon.png'} alt="allie's foundation logo"></TextImage>
+                <TextImage right={true}src={'/assets/about/awtf_logo.png'} alt="allie's foundation logo"></TextImage>
                 <Paragraph>The Alexandra Wylie Foundation (AWTF) was founded in 2011 after the death of Alexandra Wylie.</Paragraph>
                 <Paragraph>Alexandra (known as Allie) was a curious and fun-loving individual who cared deeply about societal issues and believed every person should have the opportunities she had to lead a happy and fulfilling life.</Paragraph>
                 <Paragraph>Allie's family were inspired to set up a charitable foundation in her name because of her strong desire to help others. Like Allie, the foundation supports social equality and the rights that everyone has to lead a safe and healthy life, filled with opportunities for learning, creativity and fun.</Paragraph>

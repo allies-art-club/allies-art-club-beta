@@ -1,20 +1,22 @@
 const downloadHandler=async(category,download,csrf)=>{
     try{
         console.log(csrf);
-        const result = await fetch(`/api/resources/${download}`,{
+        console.log(download);
+        console.log('category',category);
+        const result = await fetch(`/api/resources/${download.split(' ').join('_')}`,{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json",
+                    "csrf-token":csrf
+                },
 
-            method:"POST",
-            headers:{
-                "Content-Type":"application/pdf",
-                "csrf-token":csrf
-            },
-
-            credentials: "include",
-            body: category
+                credentials: "include",
+                body: JSON.stringify({"category":category})
             }
         )
         console.log(result);
-        const file= await result.json();
+        console.log(result.body);
+        const file= await result.blob();
         return file;
     }
     catch(e){

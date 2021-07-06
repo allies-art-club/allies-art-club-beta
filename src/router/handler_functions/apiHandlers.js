@@ -157,9 +157,17 @@ const supplies = async(req,res,next)=>{
 }
 const resourceHandler=(req,res,next)=>{
     try{
-        const article= req.url.split('/')[2];
-        var file = fs.readFileSync(path.join(__dirname,'..','resources',req.body,article+'.pdf'));
-        res.download(file);
+        console.log(req.body)
+        const article= req.url.split('/')[2]+'.pdf';
+        console.log('article',article)
+        console.log(typeof article)
+        console.log(path.join(__dirname,'..','resources',req.body.category,article).toString())
+        // var file = fs.readFileSync(path.join(__dirname,'..','resources',req.body.category,article));
+        res.download(path.join(__dirname,'..','resources',req.body.category,article),(err)=>{
+            if(err){
+                next(err)
+            }
+        });
 
     }
     catch(e){

@@ -10,12 +10,11 @@ const Article=(props)=>{
             onClick={props.downloadHandler?async(e)=>{
                 e.preventDefault();
                 await toggleSpinner;
-                var file = await props.downloadHandler(props.category,props.title,props.csrf);
+                var blob = await props.downloadHandler(props.category,props.title,props.csrf);
                 await toggleSpinner;
                 var downloadLink = document.createElement('a');
                 downloadLink.target = '_blank';
                 downloadLink.download = props.title+'.pdf';
-                var blob = new Blob([file], { type: 'application/pdf' });
                 var URL = window.URL || window.webkitURL;
                 var downloadUrl = URL.createObjectURL(blob);
                 downloadLink.href = downloadUrl;

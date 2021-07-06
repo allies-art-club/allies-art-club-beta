@@ -97,9 +97,9 @@ app.use((err,req,res,next)=>{
       subject: 'error',
       text: 'YESe',
       html: `<h1>New Error!</h1>
-             <p>${err}</p>
-             <p>${err.stack}</p>
-             <p>${err.input}</p>`
+             <p>ERROR - ${err}</p>
+             <p>STACK - ${err.stack}</p>
+             <p>INPUT BODY - ${err.input.toString()}</p>`
     })
     .then((res)=>console.log(res))
     .catch((err)=>console.log(err))

@@ -3,14 +3,13 @@ import {BannerTextImg} from '../Styled/donate.styled.js'
 import {TitleWrapper,SideImage,SideImageWrapper,CentreImage,CentreImageWrapper,ImageTitle} from '../Styled/titleBanner.styled';
 
 const TitleBanner = (props) => {
-    console.log(props.title)
     return (
         <TitleWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
             {
                 props.sideSrc1?
 
                     <SideImageWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
-                        <SideImage alt={"side decoration left"}src={props.sideSrc1}/>
+                        <SideImage shootingStar={props.shootingStar} alt={"side decoration left"}src={props.sideSrc1}/>
                     </SideImageWrapper>:
                 null
 
@@ -24,7 +23,7 @@ const TitleBanner = (props) => {
             {
                 props.title&& props.title.split(': ').length===2?
                     <Fragment>
-                        <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title.split(': ')[0]}</ImageTitle>
+                        <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title.split(': ')[0]+':'}</ImageTitle>
                         <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title.split(': ')[1]}</ImageTitle>
                     </Fragment>
                     :
@@ -38,7 +37,7 @@ const TitleBanner = (props) => {
             {
                 props.sideSrc2?
                     <SideImageWrapper sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>
-                        <SideImage alt={"side decoration right"}src={props.sideSrc2} />
+                        <SideImage shootingStar={props.shootingStar}right={"true"} alt={"side decoration right"}src={props.sideSrc2} />
                     </SideImageWrapper>:
                 null
 

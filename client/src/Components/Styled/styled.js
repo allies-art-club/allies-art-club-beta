@@ -60,7 +60,7 @@ const PageNavItem = styled.li`
 //Main page elements
 const Section = styled.section`
   padding:0 20px;
-  margin: 1rem 0;
+  margin: 1rem 0 1.5rem;
   #conclusion {
     margin-top:200px;
   }

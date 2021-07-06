@@ -36,9 +36,13 @@ const DonateFunds = (props) => {
     })
     return(
         <Fragment>
-            <TitleBanner sideSrc1={"/assets/general/starsL.png"} sideSrc2={"/assets/general/starsR.png"} centreSrc={"/assets/general/ribbon.png"} svgSrc={{
-                src: donateFundsSvg,
-                alt: "donate funds banner"
+            <TitleBanner 
+                sideSrc1={"/assets/general/starsL.png"} 
+                sideSrc2={"/assets/general/starsR.png"} 
+                centreSrc={"/assets/general/ribbon.png"} 
+                svgSrc={{
+                    src: donateFundsSvg,
+                    alt: "donate funds banner"
             }}></TitleBanner>
             <Paragraph>Please fill in your details into the form below to make a direct payment to Allie's Art Club.</Paragraph>
             <Formik

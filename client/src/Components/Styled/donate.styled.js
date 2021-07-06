@@ -60,9 +60,9 @@ const DonateParagraph = styled.p`
 `
 const BannerTextImg = styled.object`
     position: absolute;
-    left: 5%;
+    left: 3%;
     width:90%;
-    top: 10%;
+    top: 11%;
 `
 const BannerTextOverlay = styled.div`
 position: absolute;

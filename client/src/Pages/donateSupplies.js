@@ -22,9 +22,13 @@ const DonateSupplies=(props)=>{
     })
     return(
         <Fragment>
-            <TitleBanner sideSrc1={"/assets/general/heartsL.png"} sideSrc2={"/assets/general/heartsR.png"} centreSrc={"/assets/general/ribbon.png"} svgSrc={{
-                src: donateSuppliesSvg,
-                alt: "donate supplies banner"
+            <TitleBanner 
+                sideSrc1={"/assets/general/heartsL.png"} 
+                sideSrc2={"/assets/general/heartsR.png"} 
+                centreSrc={"/assets/general/ribbon.png"} 
+                svgSrc={{
+                    src: donateSuppliesSvg,
+                    alt: "donate supplies banner"
             }} />
             <Paragraph>Please read the information below and fill out the form to send art supplies, books or other resources to Allie's Art Club.</Paragraph>
             <Paragraph>All donations must be delivered to the following address:</Paragraph>
