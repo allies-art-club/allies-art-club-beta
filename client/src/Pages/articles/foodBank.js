@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Article,Quote,Image,Link,Section} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImageTop,Article,Quote,Image,Link,Section} from '../../Components/Styled/styled.js';
 const FoodBank=()=>{
     return(
         <Article>
@@ -9,7 +9,7 @@ const FoodBank=()=>{
                 title={"Allie's Food Bank"}
             ></TitleBanner>
     <Section>
-        <TextImage alt="Child holding food" right={true} src={"/assets/carouselHome/Lexi.png"}/>
+        <TextImageTop alt="Child holding food" right={true} src={"/assets/articles/foodBank/Lexi.png"}/>
 
         <Paragraph>Food poverty is a critical issue in the UK.
         Families living in London are particularly
@@ -17,6 +17,7 @@ const FoodBank=()=>{
         the nation's capital has the highest
         number of people living below the
         poverty line.</Paragraph>
+        <TextImageTop alt="Child holding food" mobile={true} src={"/assets/articles/foodBank/Lexi.png"}/>
         <Paragraph>
         A survey conducted by the Mayor of
         London in 2019 showed that almost 2 million
@@ -29,10 +30,12 @@ const FoodBank=()=>{
     
     </Section>
     <Section>
-    <TextImage alt={"Food Bank"} right={false}src={"/assets/articles/foodBank/foodBank1.png"}/>
+    <TextImageTop alt={"Food Bank"} right={false}src={"/assets/articles/foodBank/foodBank1.png"}/>
 <Paragraph>Allie's food bank has been running since
 2017 to help provide basic necessities to
 families in need in North London.</Paragraph>
+
+<TextImageTop alt={"Food Bank"} mobile={true}src={"/assets/articles/foodBank/foodBank1.png"}/>
 <Paragraph>Open three days a week at the Ringcross
 Community Centre in Holloway, the food
 bank provides an array of fresh,
@@ -47,8 +50,10 @@ donors, Allie's food bank has been able to support over 485 families
 during the global crisis.</Paragraph>
     </Section>
 <Section>
-<TextImage alt={"Iva"} right={true} src={"/assets/articles/foodBank/foodBank2.png"}/>
+<TextImageTop alt={"Iva"} right={true} src={"/assets/articles/foodBank/foodBank2.png"}/>
 <Quote>"The food bank is extraordinarily helpful and supportive."</Quote>
+<TextImageTop alt={"Iva"} mobile={true} src={"/assets/articles/foodBank/foodBank2.png"}/>
+
 <Paragraph>Iva has been a regular visitor at Allie's
 food bank since the start of the
 pandemic.</Paragraph>
@@ -61,12 +66,15 @@ way more."</Paragraph>
 and interacting with the volunteers has improved her mental health.</Paragraph>
 </Section>
 <Section>
-<TextImage alt={"David"} right={false} src={"/assets/articles/foodBank/foodBank3.png"}/>
+<TextImageTop alt={"David"} right={false} src={"/assets/articles/foodBank/foodBank3.png"}/>
 <Quote>"It's good to know you're helping out."</Quote>
+<TextImageTop alt={"David"} mobile={true} src={"/assets/articles/foodBank/foodBank3.png"}/>
 <Paragraph>David is a volunteer at Allie's food
 bank, and helps set up stalls,
 organise donations and give out items
 to visitors.</Paragraph>
+
+
 <Paragraph>"You meet a lot of different types
 of people in different states of
 need, and it's good to know you're
