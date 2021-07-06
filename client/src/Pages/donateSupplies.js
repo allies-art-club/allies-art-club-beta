@@ -82,7 +82,7 @@ const DonateSupplies=(props)=>{
             
 
                 <FormStyled onSubmit={handleSubmit}>
-                    <SideImg alt="star right" src={"/assets/general/starR.png"}/>
+                    <SideImg donate={true} alt="star right" src={"/assets/general/starR.png"}/>
                     <FormInputWrapper>
                         <FormLabel htmlFor="name">Full Name:*</FormLabel>
                         <FormInput type="text" name="name" id="name" onChange={handleChange} onBlur={handleBlur}value={values.name}></FormInput>

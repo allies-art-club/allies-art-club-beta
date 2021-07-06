@@ -365,10 +365,16 @@ const ErrorWrapper = styled.div`
 `
 const Image = styled.img`
   position:relative;
-  margin-left:${props=>props.flex?"0":"85%"};
+  margin-left:${props=>props.flex?"auto":"76%"};
   display:block;
-  width:15%;
-  height:auto;
+  width:${props=>props.flex?"30":"15"}%;
+  height:${props=>props.flex?"30%":"auto"};
+  @media(min-width:768px){  
+    margin-left:${props=>props.flex?"auto":"calc(85% + 40px)"};
+    width:${props=>props.flex?"24":"15"}%;
+    height:${props=>props.flex?"20%":"auto"};
+
+  }
 `
 const ImageWrapper=styled.div`
   display:flex;
