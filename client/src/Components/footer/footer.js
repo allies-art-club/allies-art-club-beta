@@ -6,7 +6,12 @@ const Footer = () => {
         <FooterContainer id="footer" data-test="footer">
             <FooterElementWrapper size={37}>
                 <Figure>
-                    <Icon left={true} src="/assets/footer/awtf_icon.png" data-test="awtfIcon" alt="Alexandra Wyley Tower Foundation Logo"></Icon>
+                    <picture>
+                        <source media="(max-width:480px)" srcSet="/assets/footer/awtf_icon-small.png"/>
+                        <source media="(min-width:481px)and(max-width:1024px)" srcSet="/assets/footer/awtf_icon-medium.png"/>
+                        <source media="(min-width:1025px)" srcSet="/assets/footer/awtf_icon-large.png" />
+                        <Icon left={true} src="/assets/footer/awtf_icon-medium.png" data-test="awtfIcon" alt="Alexandra Wyley Tower Foundation Logo"/>
+                    </picture>
                     <Caption>
                         <FooterParagraph data-test="awtfCaption">Created with AWTF<br/><FooterLink rel="noopener" target="_blank" href="https://www.awtf.org">www.awtf.org</FooterLink></FooterParagraph>
                         <FooterParagraph mobile={true}>Contact us: <br/> <FooterLink href="mailto:alliesartclub@gmail.com">alliesartclub@gmail.com</FooterLink></FooterParagraph>

@@ -79,9 +79,15 @@ const AboutAac = () => {
                 <Paragraph>Allie's Art Club is built on a strong base of core values. These values are central to the work we do, directing both the way we work and the outcomes we aim to create.</Paragraph>
                 <Paragraph>The image below outlines the Club's nine core values. You can click on each value to read more about how they guide our mission and way of working.</Paragraph>
                 <ValuesWrap>
-                    <ValuesImage alt={"Values"} 
-                                src={"/assets/about/Values-small.png"}
-                                srcSet={'/assets/about/Values-small.png 400w, /assets/about/Values-medium.png 600w, /assets/about/Values-large.png 1080w'} sizes={"(max-width: 767px) calc(95vw - 60px),(max-width: 1024px) 600w, 1080w"}/>
+                    <picture>
+                        <source media="(max-width: 480px)" srcSet="/assets/about/Values-small.png"/>
+                        <source media="(min-width: 481px) and (max-width: 1024px)" srcSet="/assets/about/Values-medium.png"/>
+                        <source media="(min-width: 1025px)" srcSet="/assets/about/Values-large.png"/>
+                        <ValuesImage alt={"Values"} 
+                                    src={"/assets/about/Values-small.png"}
+                        />
+
+                    </picture>
                     {
                         tagMessageArray.map((el,i)=>{
                             return <Value key={i}
