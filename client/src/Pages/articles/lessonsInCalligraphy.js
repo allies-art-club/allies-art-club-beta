@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,TextImageTop,Article,Section,Image,SubHeading,SubTitle,ImageWrap} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImage,TextImageTop,Article,Section,Image,SubHeading,ImageWrap} from '../../Components/Styled/styled.js';
 const LessonsInCalligraphy=()=>{
     return(
         <Article>
@@ -23,7 +23,7 @@ gorgeous to resist. Holding my new silver nib to the page, I was at first determ
 <Paragraph>With a fresh outlook, the pressure to perform was replaced by a desire to explore this timeless craft without any expectations. And there, between ink pot and paper, I discovered many lessons that were more valuable to my life than I could have ever predicted.</Paragraph>
 </Section>
 <Section>
-    <SubTitle>Focus</SubTitle>
+    <SubHeading>Focus</SubHeading>
     <Paragraph>Focusing on one thing at a time has always been a particular challenge
 of mine. With so many things to think of at any given moment, I often
 find myself in a haze of contemplation instead of concentrating on
@@ -37,7 +37,7 @@ me the importance of building focus in order to engage in all areas
 of life with more refinement and skill.</Paragraph>
 </Section>
 <Section>
-    <SubTitle>Be Patient</SubTitle>
+    <SubHeading>Be Patient</SubHeading>
     <Paragraph>In our digital age of instant entertainment and connectivity, delayed
 gratification may seem like a thing of the past. Living in the sprawling
 city of London, I've grown used to getting what I want when I want it
@@ -56,7 +56,7 @@ Patience is the antidote to apathy and frustration, providing a
 foundation on which intentions have space to blossom.</Paragraph>
 </Section>
 <Section>
-    <SubTitle>Be Committed </SubTitle>
+    <SubHeading>Be Committed </SubHeading>
     <Paragraph>Commitment is the follow-through of motivation. When I'm fully
 committed to a cause, my passion and persistence fuel me towards
 achievement. If my energy and dedication begin to falter, I often ask
@@ -75,7 +75,7 @@ spur us into action, so committing to the path there might just be
 the best (and only) way to achieve progress.</Paragraph>
 </Section>
 <Section>
-    <SubTitle>Learn from Mistakes</SubTitle>
+    <SubHeading>Learn from Mistakes</SubHeading>
     <Paragraph>Mistakes are an inevitable part of life. Big and small, I've made many
 mistakes in my 27 years here on Earth, and found that my biggest
 spurts of growth have always occurred after I take ownership of
@@ -98,7 +98,7 @@ attainable, calligraphy has given me a safe space to learn how.
 </Paragraph>
 </Section>
 <Section>
-    <SubTitle>Experiment</SubTitle>
+    <SubHeading>Experiment</SubHeading>
     <Paragraph>Taking risks, exploring the unknown and trying something new can
 sometimes be daunting. I often experience anxiety when I put myself
 out there, exposing myself to uncertainty instead of hiding in the
@@ -131,7 +131,7 @@ to many more lessons in calligraphy.</Paragraph>
 <TextImageTop alt="Lydia Rose" src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2.png"}/>
 
     <ImageWrap>
-    <SubTitle image={true}>Lydia Rose</SubTitle>
+    <SubHeading image={true}>Lydia Rose</SubHeading>
     <Image flex={true} src={"/assets/general/starR.png"}/>
     </ImageWrap>
     

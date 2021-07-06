@@ -13,7 +13,7 @@
       </style>
                      
         <path id="MyPath" fill="none" stroke="red"
-            d="M 10 60 C 100 45, 200 45, 290 60" />
+            d="M 10 60 C 100 35, 200 35, 290 60" />
     </defs>
     <text class="text-style" >
         <textPath href="#MyPath" startOffset="50%" text-anchor="middle">

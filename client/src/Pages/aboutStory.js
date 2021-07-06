@@ -21,6 +21,7 @@ const AboutAlliesStory=()=>{
             ></TitleBanner>
             <Section id="alliesStory">
                 <Paragraph>Alexandra Wylie (known as Allie) was born in January 1993 and was an extraordinarily unique, gifted and graceful individual.</Paragraph>
+                <TextImage right={"true"} alt="allie" src={"/assets/about/allie.png"} />
                 <Paragraph>Allie was raised in a safe, loving and nurturing home with as many opportunities to learn, play and explore a young girl could dream of.</Paragraph>
                 <Paragraph>Her family blessed her with the most beautiful childhood they could, yet she was their most beautiful gift of all.</Paragraph>
                 <Paragraph>For 17 years, Alexandra shone with such a passion, strength and vibrancy, until her hard-fought battle with cancer claimed her life.</Paragraph>

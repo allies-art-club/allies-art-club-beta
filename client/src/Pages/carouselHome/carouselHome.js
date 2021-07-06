@@ -1,6 +1,6 @@
 const carouselImage = [
     {
-        src: '/assets/articles/artCarePacks/artCarePacks1.png',
+        src: '/assets/carouselHome/awtf_logo.png',
         url: '/about/allies-foundation',
         caption: "Allie's Foundation"
 

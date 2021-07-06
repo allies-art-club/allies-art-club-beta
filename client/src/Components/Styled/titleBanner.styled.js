@@ -1,20 +1,28 @@
 import styled from 'styled-components';
 const TitleWrapper = styled.div`
-    width:${props=>props.sideSrc1&&props.sideSrc2?"calc(100% + 80px + 2rem)":"100%"};
+    width:100%;
+    @media(min-width:768px){
+        width:${props=>props.sideSrc1&&props.sideSrc2?"calc(100% + 80px + 2rem)":"100%"};
+        transform:${props=>props.sideSrc1&&props.sideSrc2?"translateX(calc(-40px - 1rem))":"none"};
+    }
     display:inline-flex;
     flex-wrap: wrap;
     align-items: start;
     padding:0;
     margin-bottom: 1rem;
-    transform:${props=>props.sideSrc1&&props.sideSrc2?"translateX(calc(-40px - 1rem))":"none"};
     justify-content: ${props=>props.sideSrc1||props.sideSrc2?"auto":"center"};
 `
 
 const SideImage = styled.img`
-    width:60%;
+    width:${props=>props.shootingStar?"55":"60"}%;
     transform:translateY(1rem);
     display:block;
-    margin:auto;
+    margin-left:${props=>props.right?"auto":"0"};
+    margin-right:${props=>props.right?"0":"auto"};
+    @media(min-width:768px){
+        margin:auto;
+    }
+
 `
 const SideImageWrapper=styled.div`
     width:${props=>props.sideSrc1&&props.sideSrc2?"22%":"28%"};
@@ -32,24 +40,16 @@ const ImageTitle=styled.h1`
     position:${props=>props.centreSrc?"relative":"static"};
     font-weight:100;
     width:100%;
-    font-size: ${props=>props.sideSrc1||props.sideSrc2?"1.4rem":"2.5rem"};
+    font-size: 1.4rem;
     font-family: nickainley;
     @media(min-width:320px){
-
-        font-size: ${props=>props.sideSrc1||props.sideSrc2?"2rem":"3rem"};
-    }
-    @media(min-width:421px){
-
-    font-size: ${props=>props.sideSrc1&&props.sideSrc2?"2.5rem":"4rem"};
-    }
-    @media(min-width: 768px){
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     @media(min-width: 1025px){
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
     @media(min-width:1300px){
-        font-size: 3.5rem;
+        font-size:2rem;
     }
     margin:0;
     text-align:center;

@@ -11,6 +11,7 @@ const Events=()=>{
 
             <SideNav mainCategory={'activities'}navLinks={["Projects","Events"]}/>
             <TitleBanner
+                shootingStar={true}
                 sideSrc1={'/assets/general/starL.png'}
                 sideSrc2={'/assets/general/starR.png'}
                 centreSrc={'/assets/general/curvedLine.png'}

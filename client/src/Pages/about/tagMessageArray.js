@@ -64,7 +64,7 @@ const tagMessageArray=[
         messageLeft: true,
         messageHorizontal: 30,
         messageVertical: 68,
-        messageContent: "We believe creating a more just society means developing communities in which resources, opportunities and priveleges are distrubuted equally among people."
+        messageContent: "We believe creating a more just society means developing communities in which resources, opportunities and privileges are distrubuted equally among people."
     },
     {
         tagWidth: 50,

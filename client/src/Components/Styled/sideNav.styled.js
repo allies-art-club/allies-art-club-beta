@@ -63,15 +63,15 @@ const NavLinkSide = styled(NavLink).attrs({activeClassName})`
     }
     color:white;
     
-    line-height: 1.5rem;
     font-family: Teko, cursive;
     text-transform: uppercase;
     position: static;
     font-size: ${props=>props.sidenav?"1rem":"1.2rem"};
+    line-height: ${props=>props.sidenav?"1rem":"1.2rem"};
     text-decoration:none;
     @media(min-width:1025px){
         font-size:${props=>props.sidenav?"1.5rem":"1.8rem"};
-        line-height:2rem;
+        line-height: 1.5rem;
     }
     font-stretch:condensed;
 

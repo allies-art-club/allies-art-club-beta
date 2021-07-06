@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import {theme} from './theme/theme.js';
 const Quote =styled.p`
     color:${theme.pink};
-    width:80%;
     clear: both;
     margin: 1rem auto;
 `
@@ -15,7 +14,11 @@ const FoundationImage=styled.img`
 `
 const MissionWrapper=styled.div`
     position:relative;
-    margin:20px 0;
+    margin: 20px 0;
+    @media(min-width:768px){
+        margin:40px 0;
+
+    }
     display:flex;
     @media(max-width:767px){
         flex-direction: column;
@@ -71,6 +74,10 @@ const Tag = styled.div`
 const MissionBorder=styled.img`
     position:absolute;
     top:-10px;
+    @media(min-width: 768px){
+        top:-20px;
+
+    }
     right:0;
     width:100%;
     @media(min-width:768px){
@@ -140,5 +147,6 @@ const IFrame = styled.iframe`
     @media(min-width:768px){
         height:calc((70vw - 80px) * 9/16);
     }
+    margin-bottom:2rem;
 `
 export {Quote,SubTitle,FoundationImage,MissionWrapper,MissionDesc,Mission,MissionBorder,ValuesWrap,ValuesImage,Tag,AllieWrap,TextWrapper,Message,SpeechBubble,IFrame};

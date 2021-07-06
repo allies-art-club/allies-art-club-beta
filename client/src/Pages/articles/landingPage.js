@@ -9,7 +9,7 @@ const articles =[
         largeHeading: true
     },
     {
-        src: "/assets/articles/foodBank/foodBank1.png",
+        src: "/assets/articles/foodBank/Lexi.png",
         title: "Allie's Food Bank",
         date: "17th June 2021",
         category: "Project news",
