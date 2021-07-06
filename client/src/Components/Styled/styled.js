@@ -354,7 +354,7 @@ const SubmitInfo = styled.div`
   }
 `
 const StarImg=styled.img`
-  width: 40%;
+  width: 25%;
 `
 const ErrorMessage = styled.p`
   color:red

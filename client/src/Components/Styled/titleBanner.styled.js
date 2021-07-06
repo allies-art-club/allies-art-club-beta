@@ -14,7 +14,7 @@ const TitleWrapper = styled.div`
 `
 
 const SideImage = styled.img`
-    width:${props=>props.shootingStar?"55":"60"}%;
+    width:${props=>props.shootingStar?"50":"60"}%;
     transform:translateY(1rem);
     display:block;
     margin-left:${props=>props.right?"auto":"0"};
