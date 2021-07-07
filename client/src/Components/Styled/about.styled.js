@@ -73,10 +73,12 @@ const Tag = styled.div`
 `
 const MissionBorder=styled.img`
     position:absolute;
-    top:-10px;
-    @media(min-width: 768px){
-        top:-20px;
+    top:${props=>props.top?"-10px":"auto"};
 
+    bottom:${props=>props.top?"auto":"-10px"};
+    @media(min-width: 768px){
+        top:${props=>props.top?"-20px":"auto"};
+        bottom:${props=>props.top?"auto":"-20px"};
     }
     right:0;
     width:100%;

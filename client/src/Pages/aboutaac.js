@@ -43,31 +43,32 @@ const AboutAac = () => {
                     <Paragraph>Our mission is to:</Paragraph>
                     <MissionWrapper>
                         
-                    <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
-                        <StickyNote
-                            values={"true"}
-                            benefit={"EMPOWER"}
-                        />
+                        <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
+                            <StickyNote
+                                values={"true"}
+                                benefit={"EMPOWER"}
+                            />
                             <MissionDesc>Empower individuals and communities by providing a platform and tools for them to take action in creating positive changes for themselves and others.</MissionDesc>
                         </MissionWrapper>
-                    <MissionWrapper>
-                        <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
+                        <MissionWrapper>
+                            <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
 
-                        <StickyNote
-                            values={"true"}
-                            benefit={"CONNECT"}
-                        />
-                        <MissionDesc>Connect people through common passions and interests and provide a space for them to build relationships and collaborate on creative projects.</MissionDesc>
-                    </MissionWrapper>
-                    <MissionWrapper>
-                        <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
+                            <StickyNote
+                                values={"true"}
+                                benefit={"CONNECT"}
+                            />
+                            <MissionDesc>Connect people through common passions and interests and provide a space for them to build relationships and collaborate on creative projects.</MissionDesc>
+                        </MissionWrapper>
+                        <MissionWrapper>
+                            <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
 
-                        <StickyNote
-                            values={"true"}
-                            benefit={"CREATE"}
-                        />
-                        <MissionDesc>Create opportunities for people to express themselves, develop skills and contribute to a more fun fair and democratic society through art and creativity.</MissionDesc>
-                    </MissionWrapper>
+                            <StickyNote
+                                values={"true"}
+                                benefit={"CREATE"}
+                            />
+                            <MissionDesc>Create opportunities for people to express themselves, develop skills and contribute to a more fun fair and democratic society through art and creativity.</MissionDesc>
+                            <MissionBorder alt="border bottom" src={"/assets/general/border.png"}/>
+                        </MissionWrapper>
             </Section>
             <TitleBanner
                 sideSrc1={'/assets/general/starL.png'}
@@ -86,7 +87,6 @@ const AboutAac = () => {
                         <ValuesImage alt={"Values"} 
                                     src={"/assets/about/Values-small.png"}
                         />
-
                     </picture>
                     {
                         tagMessageArray.map((el,i)=>{

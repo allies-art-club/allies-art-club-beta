@@ -1,7 +1,7 @@
 import React from 'react';
 import {Article,Section,Paragraph,SubHeading,ListElement,Link,TextImage,Image} from '../../Components/Styled/styled.js';
-import {ArticleList} from '../../Components/Styled/article.styled.js';
-import {MissionDesc} from '../../Components/Styled/about.styled.js';
+import {ArticleList,BenefitList} from '../../Components/Styled/article.styled.js';
+import {MissionDesc, MissionWrapper} from '../../Components/Styled/about.styled.js';
 import StickyNoteWrap from '../../Components/stickyNote.js';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js'
 const ArtCarePacks=()=>{
@@ -20,44 +20,61 @@ const ArtCarePacks=()=>{
             <Section>
                 <SubHeading clear={"true"} >Art for Mental Wellbeing</SubHeading>
                 <Paragraph>Engaging in artistic and creative activities has been proven to improve people’s mental health and sense of wellbeing for a number of reasons. Below are some examples:</Paragraph>
-                <ArticleList>
+                <BenefitList>
                     <ListElement>
-                        <StickyNoteWrap 
-                            benefit={"Reduces stress"}
-                        />
-                        <MissionDesc>Activities such as painting and drawing allow time for people to be calm and relax.</MissionDesc>
+                        <MissionWrapper>
+
+                            <StickyNoteWrap 
+                                benefit={"Reduces stress"}
+                            />
+                            <MissionDesc>Activities such as painting and drawing allow time for people to be calm and relax.</MissionDesc>
+                        </MissionWrapper>
                     </ListElement>
                     <ListElement>
-                        <StickyNoteWrap 
-                            benefit={"Improves mood"}
-                        />
-                        <MissionDesc>Creating art is fun and enjoyable and can help foster more positive emotions.</MissionDesc>
+                        <MissionWrapper>
+                            <StickyNoteWrap 
+                                benefit={"Improves mood"}
+                            />
+                            <MissionDesc>Creating art is fun and enjoyable and can help foster more positive emotions.</MissionDesc>
+                        </MissionWrapper>
                     </ListElement>
                     <ListElement>
-                        <StickyNoteWrap 
-                            benefit={"Encourages self-expression"}
-                        />
-                        <MissionDesc>Artistic activities such as poetry and drama allow people to express their thoughts and feelings.</MissionDesc>
+                        <MissionWrapper>
+                            <StickyNoteWrap 
+                                benefit={"Encourages self-expression"}
+                            />
+                            <MissionDesc>Artistic activities such as poetry and drama allow people to express their thoughts and feelings.</MissionDesc>
+
+                        </MissionWrapper>
                         </ListElement>
                     <ListElement>
-                        <StickyNoteWrap 
-                            benefit={"Helps process emotions"}
-                        />
-                        <MissionDesc>Creative expression helps people understand, work through and resolve their feelings.</MissionDesc>
+                        <MissionWrapper>
+                            <StickyNoteWrap 
+                                benefit={"Helps process emotions"}
+                            />
+                            <MissionDesc>Creative expression helps people understand, work through and resolve their feelings.</MissionDesc>
+                            
+                        </MissionWrapper>
                         </ListElement>
                     <ListElement>
+                        <MissionWrapper>
                         <StickyNoteWrap 
                             benefit={"Heals trauma"}
                         />
                         <MissionDesc>Artistic pursuits can create opportunities for people to heal from traumatic experiences.</MissionDesc>
+
+                        </MissionWrapper>
                         </ListElement>
                     <ListElement>
+                        <MissionWrapper>
                         <StickyNoteWrap 
                             benefit={"Creates social bonds"}
                         />
                         <MissionDesc>Art groups and events allow space for people to socialise and develop relationships.</MissionDesc>
+
+                        </MissionWrapper>
                         </ListElement>
-                </ArticleList>
+                </BenefitList>
                 <Paragraph>To learn more about how art can benefit mental health and wellbeing, you can read our article <Link href="/discussions/club-articles/art-and-wellbeing">Art & Wellbeing</Link>.</Paragraph>
             </Section>
             <Section>
@@ -73,13 +90,13 @@ While so many people are struggling to make ends meet, they are usually unable t
             </Section>
             <Section>
                 <SubHeading>Art Care Supporters</SubHeading>
-                <TextImage alt={"Crayons"} src={"/assets/carouselHome/crayons.png"} right={true}/>
+                <TextImage alt={"Crayons"} src={"/assets/carouselHome/crayons-large.png"} right={true}/>
                 <Paragraph>Allie’s Art Club is a community organisation developed with our charitable Foundation, <Link rel="noopener" target="_blank" href="https://www.awtf.org">AWTF</Link>.</Paragraph>
                 <Paragraph>For our Art Care Packs to be successfully delivered, we need funding and materials to be donated to us by generous individuals and organisations. 
 </Paragraph>
                 <Paragraph>If you are an individual who would like to take part in helping our Club deliver artistic resources for mental wellbeing to families in need, there are many ways you can support us.</Paragraph>
                 <Paragraph>For example:</Paragraph>
-                <ArticleList style={{clear:"both"}} bullets={true}>
+                <ArticleList bullets={"true"}style={{clear:"both"}}>
                     <ListElement>Donate through our <Link href="/be-an-allie/donateFunds"> donations page </Link> or via our <Link rel="noopener" target="_blank" href="https:www.crowdfunder.co.uk/art-care"> Crowdfunder </Link> campaign.</ListElement>
                     <ListElement>
                         <Link href="/be-an-allie/donateSupplies">Donate art supplies </Link> in person or by post.

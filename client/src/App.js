@@ -83,10 +83,11 @@ const GlobalStyle = createGlobalStyle`
     text-align: justify;
   }
 `
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 const App= (props) =>{
     var setCsrf = props.setCsrfToken;
+
     useEffect((props)=>{
       async function getToken(){
         const token =await fetch('/api/csrfToken',{

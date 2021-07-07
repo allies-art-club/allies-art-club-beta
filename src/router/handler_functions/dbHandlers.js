@@ -76,9 +76,10 @@ const postSupplies=(req,res,next)=>{
         const email = req.body.email;
         const organisation = req.body.organisation;
         const supplies = req.body.supplies;
+        const otherSupplies = req.body.suppliesOther;
         const message = req.body.message;
         const date = createDate();
-        var donation = new DonationSupplies(date,name,email,organisation,supplies,message);
+        var donation = new DonationSupplies(date,name,email,organisation,supplies,otherSupplies,message);
     }
     catch(e){
         console.log(e)
@@ -106,9 +107,11 @@ const postMember=(req,res,next)=>{
         const email = req.body.email;
         const dob = req.body.dob;
         const opportunities = req.body.opportunities;
+        const otherOpportunities= req.body.opportunitiesOther;
         const art = req.body.art;
+        const otherArt = req.body.artOther;
         const date = createDate();
-        var member = new Member(date,name,email,dob,opportunities,art)
+        var member = new Member(date,name,email,dob,opportunities,otherOpportunities,art,otherArt);
     }
     catch(e){
         console.log('post member error',e)

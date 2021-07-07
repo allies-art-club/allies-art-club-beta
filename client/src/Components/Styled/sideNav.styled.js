@@ -63,7 +63,7 @@ const NavLinkSide = styled(NavLink).attrs({activeClassName})`
     }
     color:white;
     
-    font-family: Teko, cursive;
+    font-family: "big_stemregular", cursive;
     text-transform: uppercase;
     position: static;
     font-size: ${props=>props.sidenav?"1rem":"1.2rem"};

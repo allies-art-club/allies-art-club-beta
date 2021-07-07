@@ -136,7 +136,7 @@ const NavMainCategory = styled(NavLink).attrs({activeClassName})`
     color:white;
     line-height: 2.2rem;
     font-size: 2.2rem;
-    font-family: Teko, cursive;
+    font-family: 'big_stemregular', cursive;
     text-transform: uppercase;
     position: ${props=>props.nav?'static':'absolute'};
     top: ${props=>props.nav?'auto':'40%'};

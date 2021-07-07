@@ -151,6 +151,7 @@ const BenefitWrapper = styled.figure`
         width:200px;
     }
     position: relative;
+    
 `
 const Benefit=styled.figcaption`
     position:absolute;
@@ -162,7 +163,7 @@ const Benefit=styled.figcaption`
     left: 50%;
     transform:translate(-40%,-35%);
     width:100px;
-    font-family: Teko;
+    font-family: "big_stemregular";
     text-transform:uppercase;
     font-size:${props=>props.values?"30px":"14px"};
     line-height:${props=>props.values?"30px":"14px"};
@@ -181,7 +182,13 @@ const Benefit=styled.figcaption`
 `
 const ArticleList = styled.ul`
     padding:0px;
-    list-style-type: ${props=> props.bullets?"auto":"none"};
+    ${Link}{
+        white-space:pre;
+    }
+`
+const BenefitList = styled.ul`
+    padding:0px;
+    list-style-type: none;
     ${ListElement} {
         display: flex;
         @media(max-width:767px){
@@ -199,5 +206,59 @@ const StickyNote= styled.img`
 const BenefitText=styled.p`
     
 `
+const ImageLabel = styled.figure`
+    position:relative;
+`
+const ImageLabelText = styled.figcaption`
+    position:absolute;
+    font-size:1.2rem;
+    top:-20px;
+    
+    right:${props=>props.right?"-10px":"auto"};
+    left: ${props=>props.right?"auto":"-10px"};
+    @media(min-width:481px){
+        top:1rem;;
+        right:${props=>props.right?"3%":"auto"};
+        left: ${props=>props.right?"auto":"3%"};
 
-export {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Border,Benefit,ArticleList, BenefitText,BenefitWrapper,StickyNote}
+    }
+    @media(min-width:768px){
+        top:-30px;
+        right:${props=>props.right?"-90px":"auto"};
+        left: ${props=>props.right?"auto":"-90px"};
+    }
+    @media(min-width:1300px){
+        top:${props=>props.right?"-50px":"-40px"};
+        right:${props=>props.right?"-100px":"auto"};
+        left: ${props=>props.right?"auto":"-100px"};
+    }
+`
+const ImageLabelArrow = styled.img`
+    position:absolute;
+    transform:${props=>props.right?"rotate(90deg)":"rotate(-90deg) scaleX(-1)"};
+    top:0;
+    width: 21px;
+    height: 12px;
+    transform:;
+    right:${props=>props.right?"0":"auto"};
+    left: ${props=>props.right?"auto":"0"};    
+    @media(min-width:481px){
+        top:50px;
+        right:${props=>props.right?"3%":"auto"};
+        left: ${props=>props.right?"auto":"3%"};
+        height:24.375px;
+        width:42px;
+    }
+    @media(min-width:768px){
+        top:10px;
+        height:24.375px;
+        width:42px;
+        right:${props=>props.right?"-90px":"auto"};
+        left: ${props=>props.right?"auto":"-90px"};
+    }
+    @media(min-width:1300px){
+        height:32.5px;
+        width:56px;
+    }
+`
+export {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Border,Benefit,ArticleList, BenefitList,BenefitText,BenefitWrapper,StickyNote,ImageLabel,ImageLabelText,ImageLabelArrow}
