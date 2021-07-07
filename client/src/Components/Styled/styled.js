@@ -334,7 +334,7 @@ const FormSubmitCaption = styled.figcaption`
   }
   transform-box: "content-box" !important;
   transform:translate(40%,-50%);
-  font-family: 'Big Shoulders Text',cursive;
+  font-family: "big_stemregular",cursive;
   text-transform: uppercase;
   color: ${theme.pink};
 `
@@ -435,7 +435,12 @@ const InlineIcon = styled.img`
     transform:translateY(20%);
 `
 const Quote=styled.p`
-    font-color:${theme.pink}
+    font-color:${theme.pink};
+    font-size:${props=>props.enlarge?"1.1rem":"1rem"};
+    text-align:${props=>props.enlarge?"center":"left"};
+    @media(min-width:767px){
+      text-align:${props=>props.enlarge&&props.right?"right":"left"};
+    }
 `
 const ImageWrap = styled.div`
     width:50%;
