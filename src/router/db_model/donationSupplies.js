@@ -2,12 +2,13 @@ const mongodb = require('mongodb');
 const {getDb}= require('../database/connection');
 
 class DonationSupplies {
-    constructor(date, name,email,organisation,supplies,message){
+    constructor(date, name,email,organisation,supplies,otherSupplies,message){
         this.date = date,
         this.name=name,
         this.email=email,
         this.organisation=organisation,
         this.supplies=supplies,
+        this.otherSupplies=otherSupplies,
         this.message =message,
         this.status='DONATION_DECLARATION_RECEIVED'
     }

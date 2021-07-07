@@ -3,11 +3,11 @@
 
     <style type="text/css">
 
-        @import url('https://fonts.googleapis.com/css2?family=Teko');
+        @import url('/assets/fonts/stylesheet.css');
         .text-style {
-            font-size:60px;
+            font-size:55px;
             font-weight:500;
-            font-family:Teko;
+            font-family:"big_stemregular";
             text-align:center;
         }
       </style>
