@@ -9,6 +9,7 @@ const CarouselContainer =styled.div`
     height:inherit;
     margin:auto;
     top:50%;
+    margin-top:4rem;
 `
 const Slide = styled.div`
     position: relative;

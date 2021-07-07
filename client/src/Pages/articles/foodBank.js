@@ -1,6 +1,7 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImageTop,Article,Quote,Image,Link,Section} from '../../Components/Styled/styled.js';
+import {ImageLabel,ImageLabelArrow,ImageLabelText} from '../../Components/Styled/article.styled.js'
+import {Paragraph,TextImage,TextImageTop,Article,Quote,Image,Link,Section} from '../../Components/Styled/styled.js';
 const FoodBank=()=>{
     return(
         <Article>
@@ -9,6 +10,10 @@ const FoodBank=()=>{
                 title={"Allie's Food Bank"}
             ></TitleBanner>
     <Section>
+    <ImageLabel>
+        <ImageLabelText right={true}>Lexi</ImageLabelText>
+        <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
+    </ImageLabel>
         <TextImageTop alt="Child holding food" right={true} src={"/assets/articles/foodBank/Lexi.png"}/>
 
         <Paragraph>Food poverty is a critical issue in the UK.
@@ -50,9 +55,12 @@ donors, Allie's food bank has been able to support over 485 families
 during the global crisis.</Paragraph>
     </Section>
 <Section>
-<TextImageTop alt={"Iva"} right={true} src={"/assets/articles/foodBank/foodBank2.png"}/>
-<Quote>"The food bank is extraordinarily helpful and supportive."</Quote>
-<TextImageTop alt={"Iva"} mobile={true} src={"/assets/articles/foodBank/foodBank2.png"}/>
+<Quote enlarge={true} right={true}>"The food bank is extraordinarily helpful and supportive."</Quote>
+<ImageLabel>
+    <ImageLabelText right={true}>Iva</ImageLabelText>
+    <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
+</ImageLabel>
+<TextImage alt={"Iva"} right={true} src={"/assets/articles/foodBank/foodBank2.png"}/>
 
 <Paragraph>Iva has been a regular visitor at Allie's
 food bank since the start of the
@@ -66,9 +74,13 @@ way more."</Paragraph>
 and interacting with the volunteers has improved her mental health.</Paragraph>
 </Section>
 <Section>
-<TextImageTop alt={"David"} right={false} src={"/assets/articles/foodBank/foodBank3.png"}/>
-<Quote>"It's good to know you're helping out."</Quote>
-<TextImageTop alt={"David"} mobile={true} src={"/assets/articles/foodBank/foodBank3.png"}/>
+<Quote enlarge={true}>"It's good to know you're helping out."</Quote>
+
+<ImageLabel>
+        <ImageLabelText >David</ImageLabelText>
+        <ImageLabelArrow src={"/assets/articles/foodBank/black-arrow.png"}/>
+    </ImageLabel>
+<TextImage alt={"David"} mobile={true} src={"/assets/articles/foodBank/foodBank3.png"}/>
 <Paragraph>David is a volunteer at Allie's food
 bank, and helps set up stalls,
 organise donations and give out items

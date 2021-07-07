@@ -78,13 +78,12 @@ const CenterParagraph= styled.p`
 `
 const IconWrapper=styled.div`
   display:flex;
-  justify-content:space-around;
+  justify-content:space-evenly;
   align-items: center;
 `
 const Icon =styled.img`
   display:inline-block;
   line-height:120px;
-  
   width: ${props=>props.left?"50":"25"}px;
   @media(min-width:320px){
     width: ${props=>props.left?"60":"25"}px;

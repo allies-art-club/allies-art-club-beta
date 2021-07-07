@@ -20,9 +20,9 @@ const Carousel = (props) => {
                                 <NavClick length={props.imageIndices.length-2}direction={props.direction} index={props.imageIndices[i]} exact to={photo.url}key={i-1}>
                                     <Figure>
                                         <picture>
-                                            <source media="(max-width:480px)" srcSet={`${photo.src}-small.png, ${photo.src+"-large.png 2x"}`} />
-                                            <source media="(min-width:481px) and (max-width:767px)" srcSet={`${photo.src}-medium.png, ${photo.src+'-large.png 2x'}`}/>
-                                            <source media="(min-width:768px)" srcSet={photo.src+"-large.png"} />
+                                            <source media="(max-width:480px)" srcSet={`${photo.src}-small.png 1x, ${photo.src+"-x2.png 2x"}`} />
+                                            <source media="(min-width:481px) and (max-width:767px)" srcSet={`${photo.src}-medium.png 1x, ${photo.src+'-x2.png 2x'}`}/>
+                                            <source media="(min-width:768px)" srcSet={`${photo.src}-large.png 1x, ${photo.src}-x2.png 2x`}/>
                                             <CarouselImage   src={photo.src+"-large.png"} srcSet={`${photo.src+"-small.png"} 180w,${photo.src+"-medium.png"} 260w, ${photo.src+"-large.png"} 400w`}alt={'photo'+i}/>
                                         </picture>
                                         <FigCaption><CaptionContent>{photo.caption}</CaptionContent></FigCaption>

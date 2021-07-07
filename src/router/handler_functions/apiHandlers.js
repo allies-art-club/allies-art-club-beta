@@ -132,6 +132,7 @@ const contactUs=async(req,res,next)=>{
 }
 const membershipPost = async(req,res,next)=>{
     try {
+        console.log(req.body)
         await postMember(req,res,next);
         res.send({success:true});
     }
@@ -144,8 +145,8 @@ const membershipPost = async(req,res,next)=>{
 }
 const supplies = async(req,res,next)=>{
     try {
+        console.log(req.body);
         const response = await postSupplies(req,res,next);
-        console.log('yohoo',response);
         res.send({success: true})
     }
     catch(e){

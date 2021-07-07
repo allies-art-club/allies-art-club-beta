@@ -3,17 +3,17 @@
 
     <style type="text/css">
 
-        @import url('https://fonts.googleapis.com/css2?family=Teko');
+        @import url('/assets/fonts/stylesheet.css');
         .text-style {
             font-size:70px;
             font-weight:500;
-            font-family:Teko;
+            font-family:"big_stemregular";
             text-align:center;
         }
       </style>
                      
         <path id="MyPath" fill="none" stroke="red"
-            d="M 10 60 C 100 45, 200 45, 290 60" />
+            d="M 10 70 C 100 45, 200 45, 290 70" />
     </defs>
     <text class="text-style" >
         <textPath href="#MyPath" startOffset="50%" text-anchor="middle">
