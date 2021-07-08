@@ -22,7 +22,7 @@ const ArtCarePacks=()=>{
                 <Paragraph>Engaging in artistic and creative activities has been proven to improve people’s mental health and sense of wellbeing for a number of reasons. Below are some examples:</Paragraph>
                 <BenefitList>
                     <ListElement>
-                        <MissionWrapper>
+                        <MissionWrapper artCare={true}>
 
                             <StickyNoteWrap 
                                 benefit={"Reduces stress"}
@@ -31,7 +31,7 @@ const ArtCarePacks=()=>{
                         </MissionWrapper>
                     </ListElement>
                     <ListElement>
-                        <MissionWrapper>
+                        <MissionWrapper artCare={true}>
                             <StickyNoteWrap 
                                 benefit={"Improves mood"}
                             />
@@ -39,41 +39,39 @@ const ArtCarePacks=()=>{
                         </MissionWrapper>
                     </ListElement>
                     <ListElement>
-                        <MissionWrapper>
+                        <MissionWrapper artCare={true}>
                             <StickyNoteWrap 
                                 benefit={"Encourages self-expression"}
                             />
                             <MissionDesc>Artistic activities such as poetry and drama allow people to express their thoughts and feelings.</MissionDesc>
 
                         </MissionWrapper>
-                        </ListElement>
+                    </ListElement>
                     <ListElement>
-                        <MissionWrapper>
+                        <MissionWrapper artCare={true}>
                             <StickyNoteWrap 
                                 benefit={"Helps process emotions"}
                             />
                             <MissionDesc>Creative expression helps people understand, work through and resolve their feelings.</MissionDesc>
                             
                         </MissionWrapper>
-                        </ListElement>
+                    </ListElement>
                     <ListElement>
-                        <MissionWrapper>
-                        <StickyNoteWrap 
-                            benefit={"Heals trauma"}
-                        />
-                        <MissionDesc>Artistic pursuits can create opportunities for people to heal from traumatic experiences.</MissionDesc>
-
+                        <MissionWrapper artCare={true}>
+                            <StickyNoteWrap 
+                                benefit={"Heals trauma"}
+                            />
+                            <MissionDesc>Artistic pursuits can create opportunities for people to heal from traumatic experiences.</MissionDesc>
                         </MissionWrapper>
-                        </ListElement>
+                    </ListElement>
                     <ListElement>
-                        <MissionWrapper>
-                        <StickyNoteWrap 
-                            benefit={"Creates social bonds"}
-                        />
-                        <MissionDesc>Art groups and events allow space for people to socialise and develop relationships.</MissionDesc>
-
+                        <MissionWrapper artCare={true}>
+                            <StickyNoteWrap 
+                                benefit={"Creates social bonds"}
+                            />
+                            <MissionDesc>Art groups and events allow space for people to socialise and develop relationships.</MissionDesc>
                         </MissionWrapper>
-                        </ListElement>
+                    </ListElement>
                 </BenefitList>
                 <Paragraph>To learn more about how art can benefit mental health and wellbeing, you can read our article <Link href="/discussions/club-articles/art-and-wellbeing">Art & Wellbeing</Link>.</Paragraph>
             </Section>
@@ -90,7 +88,7 @@ While so many people are struggling to make ends meet, they are usually unable t
             </Section>
             <Section>
                 <SubHeading>Art Care Supporters</SubHeading>
-                <TextImage alt={"Crayons"} src={"/assets/carouselHome/crayons-large.png"} right={true}/>
+                <TextImage alt={"Crayons"} src={"/assets/articles/artCarePacks/artCarePacks2.png"} right={true}/>
                 <Paragraph>Allie’s Art Club is a community organisation developed with our charitable Foundation, <Link rel="noopener" target="_blank" href="https://www.awtf.org">AWTF</Link>.</Paragraph>
                 <Paragraph>For our Art Care Packs to be successfully delivered, we need funding and materials to be donated to us by generous individuals and organisations. 
 </Paragraph>

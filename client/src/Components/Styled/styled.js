@@ -119,14 +119,15 @@ const FormCheckboxWrapper=styled.fieldset`
 const FormInputWrapper=styled.div`
   position:relative;
   height:${props=>props.textarea?'auto':'50px'};
-  margin-top:${props=>props.other?"20px":"50px"};
+  transform:translateY(${props=>props.oneLine&&props.other?"-20px":"0"});
+  margin-top:${props=>props.other?"0px":"50px"};
+
   margin-bottom:${props=>props.textarea?"30px":"auto"};
   border: 4px solid ${props=>props.error?"red":"black"};
   padding: 0px 20px;
   @media(min-width: 768px){
     width: ${props=>props.textarea?"100%":"50%"};
   }
-
   }
 `
 const FormLabel=styled.label`
@@ -442,8 +443,8 @@ const InlineIcon = styled.img`
     transform:translateY(20%);
 `
 const Quote=styled.p`
-    font-color:${theme.pink};
-    font-size:${props=>props.enlarge?"1.1rem":"1rem"};
+    color:${theme.pink};
+    font-size:${props=>props.enlarge?"1.2rem":"1rem"};
     text-align:center;
 `
 const ImageWrap = styled.div`
