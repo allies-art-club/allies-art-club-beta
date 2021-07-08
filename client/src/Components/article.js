@@ -33,7 +33,7 @@ const Article=(props)=>{
                         <Border alt="border top" top={true} src={"/assets/general/border.png"}/>
                         <ArticleTitleWrap>
                             <ArticleTitle largeHeading={props.largeHeading}>
-                                {props.title.split(': ')[0]+":"}
+                                {props.title.split(': ').length===2?props.title.split(': ')[0]+":":props.title}
                             </ArticleTitle>
                             {
                                 props.title.split(':').length===2?
