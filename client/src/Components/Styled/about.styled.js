@@ -16,8 +16,7 @@ const MissionWrapper=styled.div`
     position:relative;
     margin: 20px 0;
     @media(min-width:768px){
-        margin:40px 0;
-
+        margin:${props=>props.artCare?"20px 0":"40px 0px"};
     }
     display:flex;
     @media(max-width:767px){
@@ -44,13 +43,22 @@ const Mission=styled.h2`
 
 const MissionDesc=styled.p`
     position:relative;
+    margin:0;
+    width:100%;
     @media(min-width:768px){
+        margin:auto auto auto 2rem;
+        width: 40%;
+    }
+    @media(min-width:850px){
+        margin:auto auto auto 2rem;
         width: 50%;
     }
     @media(min-width:1025px){
+        width: 60%;
+    }
+    @media(min-width:1300px){
         width: 65%;
     }
-    margin:auto;
 `
 const ValuesWrap=styled.figure`
     position:relative;
@@ -83,12 +91,20 @@ const MissionBorder=styled.img`
     right:0;
     width:100%;
     @media(min-width:768px){
-        right:calc((50% - 200px) / 2);
+        left: calc(200px + 2rem);
+        width:40%;
+    }
+    @media(min-width:850px){
+        left: calc(200px + 2rem);
         width:50%;
     }
 
     @media(min-width:1025px){
-        right:calc((35% - 200px) / 2);
+        width:60%;
+
+    }
+
+    @media(min-width:1300px){
         width:65%;
 
     }

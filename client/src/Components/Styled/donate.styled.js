@@ -16,9 +16,15 @@ const ImageWrapper = styled.div`
 `
 const DonationWrapper = styled.div`
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     @media(min-width:767px){
-        margin-bottom: 30px;
+        margin-bottom: 50px;
+    }
+    @media(min-width:1025px){
+        margin-bottom: 70px;
+    }
+    @media(min-width:1300px){
+        margin-bottom: 100px;
     }
 `
 const DonateLink = styled(NavLink)`
@@ -62,7 +68,7 @@ const BannerTextImg = styled.object`
     position: absolute;
     left: 3%;
     width:90%;
-    top: 11%;
+    top: 15%;
 `
 const BannerTextOverlay = styled.div`
 position: absolute;
