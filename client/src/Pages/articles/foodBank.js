@@ -10,7 +10,7 @@ const FoodBank=()=>{
                 title={"Allie's Food Bank"}
             ></TitleBanner>
     <Section>
-    <ImageLabel>
+    <ImageLabel split={true} top={true}>
         <ImageLabelText right={true}>Lexi</ImageLabelText>
         <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
     </ImageLabel>
@@ -22,6 +22,11 @@ const FoodBank=()=>{
         the nation's capital has the highest
         number of people living below the
         poverty line.</Paragraph>
+
+        <ImageLabel split={true}>
+            <ImageLabelText right={true}>Lexi</ImageLabelText>
+            <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
+        </ImageLabel>
         <TextImageTop alt="Child holding food" mobile={true} src={"/assets/articles/foodBank/Lexi.png"}/>
         <Paragraph>
         A survey conducted by the Mayor of

@@ -24,7 +24,6 @@ const Donate = () => {
                         <DonateImage alt="ribbon"src={"/assets/general/ribbon.png"}></DonateImage>
                         <BannerTextImg aria-label="contains svg" type="image/svg+xml" alt="donate funds banner" data={donateFundsSvg} />
                         <BannerTextOverlay/>
-                        <DonateBannerStars top={true}src={"/assets/general/starsR.png"} alt="stars" />
                 </DonateLink>
                 <DonateParagraphWrapper>
                     <DonateBannerStar top={true}alt="star" src={"/assets/general/starR.png"}/>
@@ -43,7 +42,6 @@ const Donate = () => {
                         <DonateImage alt="ribbon"src={"/assets/general/ribbon.png"}></DonateImage>
                         <BannerTextImg  aria-label="contains svg" type="image/svg+xml"alt="donate funds banner" data={donateSuppliesSvg} />
                         <BannerTextOverlay/>
-                        <DonateBannerStars src={"/assets/general/heartsR.png"} alt="stars" />
                 </DonateLink>
             </DonationWrapper>
             <DonationWrapper>
@@ -55,12 +53,11 @@ const Donate = () => {
                         <DonateImage alt="ribbon"src={"/assets/general/ribbon.png"}></DonateImage>
                         <BannerTextImg  aria-label="contains svg" type="image/svg+xml"alt="crowd fund banner" data={crowdFundSvg} />
                         <BannerTextOverlay/>
-                        <DonateBannerStars top={true}src={"/assets/general/starsR.png"} alt="stars" />
                 </ExternalLink>
                 <DonateParagraphWrapper>
+                    <DonateBannerStar top={true} alt="star" src={"/assets/general/starR.png"}/>
                     <DonateParagraph>Donate funds to our Art Care project Crowdfunder</DonateParagraph>
 
-                    <DonateBannerStar top={true} alt="star" src={"/assets/general/starR.png"}/>
                 </DonateParagraphWrapper>
             </DonationWrapper>
         </Fragment>
