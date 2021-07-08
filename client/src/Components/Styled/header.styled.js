@@ -193,18 +193,18 @@ const HeaderLogo = styled.h1`
     font-size: 58.8px;
     line-height:49px;
     width: 200px;
-    text-shadow: 0.5px 0.5px 0px ${theme.pink}, -0.5px -0.5px 0px ${theme.pink},0.5px -0.5px 0px ${theme.pink}, -0.5px 0.5px 0px ${theme.pink}, 0px 0px 1.5rem ${theme.pink}, 0px 0px 2.5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
+    text-shadow: 0px 0px 0.1rem ${theme.pink}, 0px 0px 1.5rem ${theme.pink}, 0px 0px 2.5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
 
     @media(min-width:421px){
         font-size: 4.2rem;
         line-height:3.5rem;
         width: 200px;
-        text-shadow: 0.5px 0.5px 0px ${theme.pink}, -0.5px -0.5px 0px ${theme.pink},0.5px -0.5px 0px ${theme.pink}, -0.5px 0.5px 0px ${theme.pink}, 0px 0px 1.5rem ${theme.pink}, 0px 0px 2.5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
+        text-shadow: 0px 0px 0.1rem ${theme.pink}, 0px 0px 1.5rem ${theme.pink}, 0px 0px 2.5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
     }
     @media(min-width:768px){
         width:364px;
         font-size: 107px;
-        text-shadow: 1px 1px 0px ${theme.pink}, -1px -1px 0px ${theme.pink},1px -1px 0px ${theme.pink}, -1px 1px 0px ${theme.pink}, 0px 0px 2rem ${theme.pink}, 0px 0px 5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
+        text-shadow: 0px 0px 0.1rem ${theme.pink}, 0px 0px 2rem ${theme.pink}, 0px 0px 5rem ${theme.pink},  0px 0px 0.2rem ${theme.pink};
         line-height:84px;
     }
 `

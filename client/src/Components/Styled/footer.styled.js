@@ -37,6 +37,7 @@ const Caption = styled.figcaption`
   padding: 0px 5px;
   font-size: 0.75rem;
   max-width: 70%;
+  margin:auto;
   @media(min-width:768px){
     padding: 0px 10px;
     font-size: 1rem;
@@ -47,12 +48,31 @@ const Caption = styled.figcaption`
     float: left;
   }
 `
+const Icon =styled.img`
+  display:inline-block;
+  line-height:120px;
+  width: ${props=>props.left?"50":"25"}px;
+  @media(min-width:320px){
+    width: ${props=>props.left?"60":"25"}px;
+  }
+  @media(min-width: 481px){
+    
+    width: ${props=>props.left?"100":"30"}px;
+  }
+  @media(min-width:1025px){
+    width: ${props=>props.left?"140":"35"}px;
+  }
+  
+`
 const Figure =styled.div`
   margin: 0px;
   padding:auto;
   display:flex;
-  justify-content:space-around;
+  justify-content:flex-start;
   align-items:center;
+  ${Icon}{
+    margin-left: 0.5rem;
+  }
 `
 
 const AwtfLogo= styled.img`
@@ -80,23 +100,6 @@ const IconWrapper=styled.div`
   display:flex;
   justify-content:space-evenly;
   align-items: center;
-`
-const Icon =styled.img`
-  display:inline-block;
-  line-height:120px;
-  width: ${props=>props.left?"50":"25"}px;
-  @media(min-width:320px){
-    width: ${props=>props.left?"60":"25"}px;
-  }
-  @media(min-width: 481px){
-    
-    width: ${props=>props.left?"100":"30"}px;
-  }
-  @media(min-width:1025px){
-    width: ${props=>props.left?"140":"35"}px;
-    transform:translateX(-${props=>props.move?props.move:"0"}rem);
-  }
-  
 `
 const FooterParagraph=styled.p`
   color:white;
