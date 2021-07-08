@@ -138,6 +138,10 @@ const Border = styled.img`
     top:${props=>props.top?"0":"auto"};
     bottom:${props=>props.top?"auto":"0"};
     width:90%;
+    @media(min-width:481px){
+        width:calc(100% - 30px);
+
+    }
     left: 50%;
     transform: translateX(-50%);
 `
