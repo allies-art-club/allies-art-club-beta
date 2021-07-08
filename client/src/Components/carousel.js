@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {CarouselImage,CarouselContainer, Slide,ChevronWrapper,Arrow,NavClick,Figure,FigCaption,CaptionContent} from './Styled/carousel.styled.js';
 
 const Carousel = (props) => {
+    useEffect(() => {
+        const interval = setInterval(() => {
+                props.carouselClick('right');
+        }, 5000);
+        return () => clearInterval(interval);
     
+    }, []);
     if(!props.imageIndices.length){
         for(var i = 0; i<props.carouselObj.length;i++){
             props.imageIndices.push(i-1);
