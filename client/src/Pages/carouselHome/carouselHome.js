@@ -1,6 +1,6 @@
 const carouselImage = [
     {
-        src: '/assets/carouselHome/awtf_logo',
+        src: '/assets/carouselHome/awtf_girls',
         url: '/about/allies-foundation',
         caption: "Allie's Foundation"
 
