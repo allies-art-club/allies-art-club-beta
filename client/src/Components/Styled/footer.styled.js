@@ -94,6 +94,7 @@ const Icon =styled.img`
   }
   @media(min-width:1025px){
     width: ${props=>props.left?"140":"35"}px;
+    transform:translateX(-${props=>props.move?props.move:"0"}rem);
   }
   
 `
