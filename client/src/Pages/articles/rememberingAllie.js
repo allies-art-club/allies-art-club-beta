@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,Article,Section,Image, ImageWrapper,Floater} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImageTop,Article,Section,Image, ImageWrapper,Floater} from '../../Components/Styled/styled.js';
 import {SubHeading} from "../../Components/Styled/styled.js";
 const RememberingAllie=()=>{
     return(
@@ -10,9 +10,18 @@ const RememberingAllie=()=>{
                 centreSrc={"/assets/general/curvedLine.png"}
                 title={"Remembering Allie"}
                 ></TitleBanner>
-            <TextImage  alt="Allie" src={"/assets/articles/rememberingAllie/rememberingAllie.png"}/>
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/rememberingAllie/rememberingAllie-small.png 1x, /assets/articles/rememberingAllie/rememberingAllie-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/rememberingAllie/rememberingAllie-large.png"/>
+                    <TextImageTop src={'/assets/articles/rememberingAllie/rememberingAllie-large.png'} alt="Allie"/>
+                </picture>
 
             <Paragraph>Alexandra Wylie was born in London on the 2nd of January, 1993.</Paragraph>
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/rememberingAllie/rememberingAllie-small.png 1x, /assets/articles/rememberingAllie/rememberingAllie-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/rememberingAllie/rememberingAllie-large.png"/>
+                    <TextImageTop mobile={true} src={'/assets/articles/rememberingAllie/rememberingAllie-large.png'} alt="Allie"/>
+                </picture>
             <Paragraph>Known for her dazzling smile, charming wit and exceptional talent, Allie was a bright star who brought so much
             energy, warmth and humour to those she touched.</Paragraph>
 <Paragraph>Throughout her life, Allie shone with so much passion, strength and

@@ -13,7 +13,11 @@ const LessonsInCalligraphy=()=>{
 
             <Section>
 
-            <TextImage alt="pen" right={true} src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1.png"}/>
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-small.png 1x, /assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-large.png"/>
+                    <TextImage right={true} src={'/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-large.png'} alt="pen"/>
+                </picture>
             <Paragraph>As a writer, I have always been drawn
 to calligraphy as a beautiful way to display the contents of my mind.</Paragraph>
 <Paragraph>In my teens, I was gifted a neat calligraphy set, which was at first my most prized piece of stationary. After a few months of errors, frustration and ink-stained fingertips, I quit altogether. Calligraphy was too hard, too laborious, and I did not have the patience to pursue it.</Paragraph>
@@ -127,8 +131,13 @@ life. Though I am still far from a master calligrapher, I have enjoyed
 the wisdom my calligraphy pen has shared with me and look forward
 to many more lessons in calligraphy.</Paragraph>
 </Section>
-<Section>    
-<TextImageTop alt="Lydia Rose" src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2.png"}/>
+<Section>
+    
+<picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2-small.png 1x, /assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2-large.png"/>
+                    <TextImageTop src={'/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2-large.png'} alt="Lydia Rose"/>
+                </picture>    
 
     <ImageWrap>
     <SubHeading image={true}>Lydia Rose</SubHeading>
@@ -138,8 +147,11 @@ to many more lessons in calligraphy.</Paragraph>
     
 
 
-    <TextImageTop alt="Lydia Rose" mobile={true} src={"/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2.png"}/>
-
+    <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2-small.png 1x, /assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2-large.png"/>
+                    <TextImageTop mobile={true}src={'/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy2-large.png'} alt="Lydia Rose"/>
+                </picture>    
     <Paragraph>Lydia Rose is an artist and activist
 from London. Her main artistic focus
 is creative writing, poetry and spoken

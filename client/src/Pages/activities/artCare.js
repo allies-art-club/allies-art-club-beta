@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import {Paragraph,Link,Section,TextImage,SubHeading} from '../../Components/Styled/styled.js';
+import {Paragraph,Link,Section,TextImage,TextImageTop,SubHeading} from '../../Components/Styled/styled.js';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
 const Access2Art=()=>{
     return (
@@ -16,7 +16,12 @@ const Access2Art=()=>{
                 Approximately 14.4 million people are currently living in poverty in the UK. As the impacts of the Coronavirus pandemic continue, the number of people living in poverty is predicted to rise drastically. With many families struggling to make ends meet, they are usually unable to afford the materials and equipment needed to engage in art.
             </Paragraph>
             <Paragraph>Unfortunately, studies have also shown that mental health issues such as anxiety and depression are at an all-time high in the UK and abroad as many people struggle with the impacts of the Coronavirus pandemic. </Paragraph>
-            <TextImage alt={"Art Care"} right={true} src={"/assets/activities/projects/artCare/artCare.png"}/>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCare-small.png 1x, /assets/activities/projects/artCare/artCare-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/activities/projects/artCare/artCare-large.png"/>
+                    <TextImage right={true} src={'/assets/activities/projects/artCare/artCare-large.png'} alt="Art Care"/>
+                </picture>  
             <Paragraph>Allie’s Art Care project is all about supporting people’s mental health and wellbeing through providing opportunities for them to make and enjoy art.</Paragraph>
             <Paragraph>Artistic activities such as drawing and creative writing are fantastic ways for people to express themselves and process their emotions, as well as relax, have fun, socialise and improve their overall mood.</Paragraph>
             <Paragraph>Through providing resources and events that allow people to engage in art, we hope to address the mental health crisis facing our nation and brighten people’s lives with the magic of creativity.</Paragraph>
@@ -24,8 +29,19 @@ const Access2Art=()=>{
         </Section>
         <Section>
 
-            <TextImage right={false} alt="Art Care Packs" src={"/assets/activities/projects/artCare/artCarePacks.png"}/>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCarePacks-small.png 1x, /assets/activities/projects/artCare/artCarePacks-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/activities/projects/artCare/artCarePacks-large.png"/>
+                    <TextImageTop right={false} src={'/assets/activities/projects/artCare/artCarePacks-large.png'} alt="Art Care Packs"/>
+                </picture>            
             <SubHeading>Art Care Packs</SubHeading>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCarePacks-small.png 1x, /assets/activities/projects/artCare/artCarePacks-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/activities/projects/artCare/artCarePacks-large.png"/>
+                    <TextImageTop mobile={true} src={'/assets/activities/projects/artCare/artCarePacks-large.png'} alt="Art Care Packs"/>
+                </picture>    
             <Paragraph>We believe everyone should be able to access the many benefits that art can provide, including those who are underprivileged or struggling financially.</Paragraph>
             <Paragraph>Approximately 14.4 million people are currently living in poverty in the UK, with numbers predicted to rise drastically as the economic impacts of the Coronavirus continue.</Paragraph>
             <Paragraph>With so many families struggling to make ends meet, they are usually unable to afford the materials and equipment needed to engage in art.</Paragraph>
@@ -34,8 +50,18 @@ const Access2Art=()=>{
             <Paragraph>To read more details about our Art Care Packs, please read our article <Link href={"/discussions/project-news/art-care-packs-tools-for-mental-wellbeing"}>Art Care Packs: Tools for Mental Wellbeing</Link>.</Paragraph>
         </Section>
         <Section>
-            <TextImage right={true} alt="Art Care Events" src={"/assets/activities/projects/artCare/artCareEvents.png"} />
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCareEvents-small.png 1x, /assets/activities/projects/artCare/artCareEvents-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/activities/projects/artCare/artCareEvents-large.png"/>
+                    <TextImageTop right={true} src={'/assets/activities/projects/artCare/artCareEvents-large.png'} alt="Art Care Events"/>
+            </picture>  
             <SubHeading>Art Care Events</SubHeading>
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCareEvents-small.png 1x, /assets/activities/projects/artCare/artCareEvents-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/activities/projects/artCare/artCareEvents-large.png"/>
+                    <TextImageTop mobile={true} src={'/assets/activities/projects/artCare/artCareEvents-large.png'} alt="Art Care Events"/>
+            </picture>
             <Paragraph>Our Art Care Events aim to support a range of people’s mental health and wellbeing by providing opportunities for people to enjoy fun activities, learn new skills, express themselves, connect with others and develop a sense of community.  </Paragraph>
             <Paragraph>These events will be run as group sessions, classes, fairs and arts nights, and will include a range of artistic activities such as drawing, creative writing, music and dance. </Paragraph>
             <Paragraph>We aim to make our Art Care Events accessible to all, so most can be paid for on a donate-what-you-can basis. 

@@ -25,7 +25,12 @@ const Article=(props)=>{
                 }:null}>
             <ArticleWrapper right={props.right} >
                     <Figure >
-                        <ArticleImage alt={props.title} src={props.src}/>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet={`${props.src}-small.png 1x, ${props.src}-2x.png 2x`}/>
+                    <source media="(min-width: 1025px)" srcSet={`${props.src}-large.png`}/>
+                    <ArticleImage alt={props.title} src={`${props.src}-large.png`}/>
+                </picture>
                         <PublishingDate>{props.date}</PublishingDate>
                     </Figure>
                 <TextContainer>
