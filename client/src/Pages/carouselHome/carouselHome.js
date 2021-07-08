@@ -21,7 +21,7 @@ const carouselImage = [
         caption: "Allie's Food Bank"
     },
     {
-        src: '/assets/activities/projects/artCare/artCare',
+        src: '/assets/carouselHome/artCare',
         url: '/activities/projects/art-care',
         caption: "Art Care"
     }

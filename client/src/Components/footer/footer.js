@@ -10,7 +10,7 @@ const Footer = () => {
                         <source media="(max-width:480px)" srcSet="/assets/footer/awtf_icon-small.png 1x, /assets/footer/awtf_icon-large.png 2x, /assets/footer/awtf_icon-3x.png 3x"/>
                         <source media="(min-width:481px) and (max-width:1024px)" srcSet="/assets/footer/awtf_icon-medium.png 1x, /assets/footer/awtf_icon-3x.png 2x"/>
                         <source media="(min-width:1025px)" srcSet="/assets/footer/awtf_icon-large.png 1x, /assets/footer/awtf_icon-3x.png 2x"/>
-                        <Icon move={true} left={true}src="/assets/footer/awtf_icon-large.png" srcSet="/assets/footer/awtf_icon-small.png 60w,/assets/footer/awtf_icon-medium.png 100w, /assets/footer/awtf_icon-large.png 140w, /assets/footer/awtf_icon-3x.png 180w" data-test="awtfIcon"alt="Alexandra Wyley Tower Foundation Logo"/>
+                        <Icon move={1} left={true}src="/assets/footer/awtf_icon-large.png" srcSet="/assets/footer/awtf_icon-small.png 60w,/assets/footer/awtf_icon-medium.png 100w, /assets/footer/awtf_icon-large.png 140w, /assets/footer/awtf_icon-3x.png 180w" data-test="awtfIcon"alt="Alexandra Wyley Tower Foundation Logo"/>
                     </picture>
                     <Caption>
                         <FooterParagraph data-test="awtfCaption">Created with AWTF<br/><FooterLink rel="noopener" target="_blank" href="https://www.awtf.org">www.awtf.org</FooterLink></FooterParagraph>
