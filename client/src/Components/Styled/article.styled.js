@@ -175,11 +175,13 @@ const Benefit=styled.figcaption`
     @media(min-width:421px){
         width:110px;
         font-size:${props=>props.values?"40px":"19px"};
+        line-height:${props=>props.values?"40px":"19px"};
     }
     line-height:${props=>props.values?"40px":"20px"};  
     @media(min-width: 768px){
         width:120px;
         font-size:${props=>props.values?"40px":"24px"};
+        line-height:${props=>props.values?"40px":"24px"};
 
         font-weight:900;
     }
@@ -212,6 +214,11 @@ const BenefitText=styled.p`
 `
 const ImageLabel = styled.figure`
     position:relative;
+    display: ${props=>props.split?props.top?"none":"block":"block"};
+    @media(min-width:768px){
+        display: ${props=>props.split?props.top?"block":"none":"block"};
+
+    }
 `
 const ImageLabelText = styled.figcaption`
     position:absolute;
@@ -220,6 +227,12 @@ const ImageLabelText = styled.figcaption`
     
     right:${props=>props.right?"-10px":"auto"};
     left: ${props=>props.right?"auto":"-10px"};
+    @media(min-width:421px){
+        top:1rem;;
+        right:${props=>props.right?"5%":"auto"};
+        left: ${props=>props.right?"auto":"5%"};
+
+    }
     @media(min-width:481px){
         top:1rem;;
         right:${props=>props.right?"3%":"auto"};
@@ -229,13 +242,15 @@ const ImageLabelText = styled.figcaption`
     @media(min-width:768px){
         top:-30px;
         right:${props=>props.right?"-90px":"auto"};
+        transform:${props=>props.right?"-15px":"15px"};
         left: ${props=>props.right?"auto":"-90px"};
     }
     @media(min-width:1300px){
-        top:${props=>props.right?"-50px":"-40px"};
-        right:${props=>props.right?"-100px":"auto"};
-        left: ${props=>props.right?"auto":"-100px"};
+
+        right:${props=>props.right?"-75px":"auto"};
+        left: ${props=>props.right?"auto":"-75px"};
     }
+  
 `
 const ImageLabelArrow = styled.img`
     position:absolute;
@@ -245,7 +260,12 @@ const ImageLabelArrow = styled.img`
     height: 12px;
     transform:;
     right:${props=>props.right?"0":"auto"};
-    left: ${props=>props.right?"auto":"0"};    
+    left: ${props=>props.right?"auto":"0"}; 
+    @media(min-width:421px){
+        top:40px;
+        right:${props=>props.right?"6%":"auto"};
+        left: ${props=>props.right?"auto":"6%"};
+    }   
     @media(min-width:481px){
         top:50px;
         right:${props=>props.right?"3%":"auto"};
@@ -263,6 +283,8 @@ const ImageLabelArrow = styled.img`
     @media(min-width:1300px){
         height:32.5px;
         width:56px;
+        right:${props=>props.right?"-75px":"auto"};
+        left: ${props=>props.right?"auto":"-75px"};
     }
 `
 export {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Border,Benefit,ArticleList, BenefitList,BenefitText,BenefitWrapper,StickyNote,ImageLabel,ImageLabelText,ImageLabelArrow}

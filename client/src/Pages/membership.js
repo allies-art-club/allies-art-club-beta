@@ -153,7 +153,7 @@ const Membership = (props)=>{
                         }
                     </FormCheckboxWrapper>
                     
-                    <FormInputWrapper other={true}>
+                    <FormInputWrapper style={{"marginBottom":"0px"}}oneLine={true}other={true}>
                         <FormLabel invisible={"true"} htmlFor="opportunitiesOther">Opportunities Other:*</FormLabel>
                         <FormInput type="text" name="opportunitiesOther" id="opportunitiesOther" onChange={handleChange} onBlur={handleBlur} value={values.opportunitiesOther}></FormInput>
                         {
@@ -162,7 +162,6 @@ const Membership = (props)=>{
                         ): null
                         }
                     </FormInputWrapper>
-                    <br/>
                     <FormCheckboxWrapper longList={true}>
                         <FieldSet  role="group" aria-labelledBy="checkbox-group">
                             <Fragment>
@@ -207,7 +206,7 @@ const Membership = (props)=>{
                         }
                     </FormCheckboxWrapper>
                     
-                    <FormInputWrapper other={true}>
+                    <FormInputWrapper style={{"marginBottom":"20px"}}other={true}>
                         <FormLabel invisible={"true"} htmlFor="artOther">Art Other:*</FormLabel>
                         <FormInput type="text" name="artOther" id="artOther" onChange={handleChange} onBlur={handleBlur} value={values.artOther}></FormInput>
                         {
