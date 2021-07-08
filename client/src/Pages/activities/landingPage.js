@@ -1,5 +1,5 @@
 const activities = [{
-    src: "/assets/activities/projects/artCare/artCare.png",
+    src: "/assets/activities/projects/artCare/artCare",
     title: "Art Care",
     date: "1st July 2021",
     category: "Projects",

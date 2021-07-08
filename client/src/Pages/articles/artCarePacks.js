@@ -1,5 +1,5 @@
 import React from 'react';
-import {Article,Section,Paragraph,SubHeading,ListElement,Link,TextImage,Image} from '../../Components/Styled/styled.js';
+import {Article,Section,Paragraph,SubHeading,ListElement,Link,TextImage,TextImageTop,Image} from '../../Components/Styled/styled.js';
 import {ArticleList,BenefitList} from '../../Components/Styled/article.styled.js';
 import {MissionDesc, MissionWrapper} from '../../Components/Styled/about.styled.js';
 import StickyNoteWrap from '../../Components/stickyNote.js';
@@ -12,8 +12,18 @@ const ArtCarePacks=()=>{
                 centreSrc={"/assets/general/curvedLine.png"}
                 title={"Art Care Packs: Tools for Mental Wellbeing"}
             ></TitleBanner>
-            <TextImage alt={"Art Care Packs"} right={true} src={"/assets/activities/projects/artCare/artCarePacks.png"}/>
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCarePacks-small.png 1x, /assets/activities/projects/artCare/artCarePacks-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/activities/projects/artCare/artCarePacks-large.png"/>
+                    <TextImageTop right={true} src={'/assets/activities/projects/artCare/artCarePacks-large.png'} alt="Art Care Packs"/>
+                </picture>
             <Paragraph>As part of our Art Care project, Allie’s Art Club will be creating Art Care Packs to support people’s mental health and wellbeing.</Paragraph>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCarePacks-small.png 1x, /assets/activities/projects/artCare/artCarePacks-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/activities/projects/artCare/artCarePacks-large.png"/>
+                    <TextImageTop mobile={true} src={'/assets/activities/projects/artCare/artCarePacks-large.png'} alt="Art Care Packs"/>
+                </picture>
             <Paragraph>Filled with a range of art supplies such as pens, pencils, paper and notepads, as well as activity sheets and fact sheets on mental health, the Packs aim to provide tools for recipients to benefit their mental and emotional health and their overall sense of wellbeing.</Paragraph>
 
             </Section>
@@ -78,7 +88,12 @@ const ArtCarePacks=()=>{
             <Section>
                 <SubHeading>Art Care Pack Recipients</SubHeading>
                 <Paragraph>We believe everyone should be able to access the many benefits that art can provide, including those who are underprivileged or struggling financially.</Paragraph>
-                <TextImage alt={"Lyd and Nancy"} src={"/assets/articles/artCarePacks/artCarePacks1.png"}/>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/artCarePacks/artCarePacks1-small.png 1x, /assets/articles/artCarePacks/artCarePacks1-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/artCarePacks/artCarePacks1-large.png"/>
+                    <TextImage src={'/assets/articles/artCarePacks/artCarePacks1-large.png'} alt="Lyd and Nancy"/>
+                </picture>
                 <Paragraph>Unfortunately, roughly 14.4 million people are currently living in poverty in the UK. 
 While so many people are struggling to make ends meet, they are usually unable to afford the materials and equipment needed to engage in art. </Paragraph>
                 <Paragraph>Having conducted a questionnaire at <Link href="/discussions/project-updates/allies-food-bank">Allie’s food bank</Link> operating at the Ringcross Community Centre in Islington, we found that many families struggling to afford basic necessities were very keen on receiving arts and crafts supplies.</Paragraph>
@@ -88,7 +103,11 @@ While so many people are struggling to make ends meet, they are usually unable t
             </Section>
             <Section>
                 <SubHeading>Art Care Supporters</SubHeading>
-                <TextImage alt={"Crayons"} src={"/assets/articles/artCarePacks/artCarePacks2.png"} right={true}/>
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/artCarePacks/artCarePacks2-small.png 2x, /assets/articles/artCarePacks/artCarePacks2-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/artCarePacks/artCarePacks2-large.png"/>
+                    <TextImage right={true}src={'/assets/articles/artCarePacks/artCarePacks2-large.png'} alt="Crayons"/>
+                </picture>
                 <Paragraph>Allie’s Art Club is a community organisation developed with our charitable Foundation, <Link rel="noopener" target="_blank" href="https://www.awtf.org">AWTF</Link>.</Paragraph>
                 <Paragraph>For our Art Care Packs to be successfully delivered, we need funding and materials to be donated to us by generous individuals and organisations. 
 </Paragraph>

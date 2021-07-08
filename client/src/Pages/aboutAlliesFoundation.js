@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import SideNav from '../Components/sideNav/sideNav.js';
-import {Section,Paragraph,Image,Link,TextImage} from '../Components/Styled/styled.js';
+import {Section,Paragraph,Image,Link,TextImage,TextImageTop} from '../Components/Styled/styled.js';
 import {IFrame} from '../Components/Styled/about.styled.js';
 
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
@@ -18,13 +18,22 @@ const AboutAlliesFoundation = () =>{
                     title={"Allie's Foundation"}
                 ></TitleBanner>
             <Section id="alliesFoundation">
-                <TextImage right={true}src={'/assets/about/awtf_logo.png'} alt="allie's foundation logo"></TextImage>
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/about/awtf_logo-small.png 1x, /assets/about/awtf_logo-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/about/awtf_logo-large.png"/>
+                    <TextImageTop right={true}src={'/assets/about/awtf_logo.png'} alt="allie's foundation logo"/>
+                </picture>
                 <Paragraph>The Alexandra Wylie Foundation (AWTF) was founded in 2011 after the death of Alexandra Wylie.</Paragraph>
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/about/awtf_logo-small.png 1x, /assets/about/awtf_logo-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/about/awtf_logo-large.png"/>
+                    <TextImageTop mobile={true}src={'/assets/about/awtf_logo.png'} alt="allie's foundation logo"/>
+                </picture>
                 <Paragraph>Alexandra (known as Allie) was a curious and fun-loving individual who cared deeply about societal issues and believed every person should have the opportunities she had to lead a happy and fulfilling life.</Paragraph>
                 <Paragraph>Allie's family were inspired to set up a charitable foundation in her name because of her strong desire to help others. Like Allie, the foundation supports social equality and the rights that everyone has to lead a safe and healthy life, filled with opportunities for learning, creativity and fun.</Paragraph>
                 <ImageWrapper>
                     <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>
-                    <BannerTextImg aria-label="contains svg" alt="allie's story banner svg text" type="image/svg+xml" data={alliesFoundation}/>
+                    <BannerTextImg article={true}aria-label="contains svg" alt="allie's story banner svg text" type="image/svg+xml" data={alliesFoundation}/>
                 </ImageWrapper>
                 <Paragraph>AWTF aims to honour Allie's memory by supporting the health and wellbeing of underprivileged children, adults and families in London.</Paragraph>
                 <Paragraph>In addition to providing essentials such as food and clothing, Allie's Foundation also works to improve underprivileged people's access to education and extra-curricular activities.</Paragraph>
