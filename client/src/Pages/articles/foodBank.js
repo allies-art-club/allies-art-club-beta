@@ -14,7 +14,11 @@ const FoodBank=()=>{
         <ImageLabelText right={true}>Lexi</ImageLabelText>
         <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
     </ImageLabel>
-        <TextImageTop alt="Child holding food" right={true} src={"/assets/articles/foodBank/Lexi.png"}/>
+        <picture>
+                <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/Lexi-small.png 1x, /assets/articles/foodBank/Lexi-large.png 2x"/>
+                <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
+                <TextImageTop right={true} src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
+        </picture>
 
         <Paragraph>Food poverty is a critical issue in the UK.
         Families living in London are particularly
@@ -27,7 +31,11 @@ const FoodBank=()=>{
             <ImageLabelText right={true}>Lexi</ImageLabelText>
             <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
         </ImageLabel>
-        <TextImageTop alt="Child holding food" mobile={true} src={"/assets/articles/foodBank/Lexi.png"}/>
+        <picture>
+                <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/Lexi-small.png 1x, /assets/articles/foodBank/Lexi-2x.png 2x"/>
+                <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
+                <TextImageTop mobile={true} src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
+        </picture>
         <Paragraph>
         A survey conducted by the Mayor of
         London in 2019 showed that almost 2 million
@@ -40,13 +48,23 @@ const FoodBank=()=>{
     
     </Section>
     <Section>
-    <TextImageTop alt={"Food Bank"} right={false}src={"/assets/articles/foodBank/foodBank1.png"}/>
+
+        <picture>
+                <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/foodBank1-small.png 1x, /assets/articles/foodBank/foodBank1-2x.png 2x"/>
+                <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/foodBank1-large.png"/>
+                <TextImageTop right={false} src={'/assets/articles/foodBank/foodBank1-large.png'} alt="Food bank"/>
+        </picture>
 <Paragraph>Allie's food bank has been running since
 2017 to help provide basic necessities to
 families in need in North London.</Paragraph>
 
-<TextImageTop alt={"Food Bank"} mobile={true}src={"/assets/articles/foodBank/foodBank1.png"}/>
-<Paragraph>Open three days a week at the Ringcross
+
+        <picture>
+                <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/foodBank1-small.png 1x, /assets/articles/foodBank/foodBank1-2x.png 2x"/>
+                <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/foodBank1-large.png"/>
+                <TextImageTop mobile={true} src={'/assets/articles/foodBank/foodBank1-large.png'} alt="Food bank"/>
+        </picture>
+        <Paragraph>Open three days a week at the Ringcross
 Community Centre in Holloway, the food
 bank provides an array of fresh,
 packaged and tinned food, as well as
@@ -65,7 +83,12 @@ during the global crisis.</Paragraph>
     <ImageLabelText right={true}>Iva</ImageLabelText>
     <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
 </ImageLabel>
-<TextImage alt={"Iva"} right={true} src={"/assets/articles/foodBank/foodBank2.png"}/>
+
+<picture>
+                <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/foodBank2-small.png 1x, /assets/articles/foodBank/foodBank2-2x.png 2x"/>
+                <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/foodBank2-large.png"/>
+                <TextImage right={true} src={'/assets/articles/foodBank/foodBank2-large.png'} alt="Iva"/>
+        </picture>
 
 <Paragraph>Iva has been a regular visitor at Allie's
 food bank since the start of the
@@ -85,7 +108,12 @@ and interacting with the volunteers has improved her mental health.</Paragraph>
         <ImageLabelText >David</ImageLabelText>
         <ImageLabelArrow src={"/assets/articles/foodBank/black-arrow.png"}/>
     </ImageLabel>
-<TextImage alt={"David"} mobile={true} src={"/assets/articles/foodBank/foodBank3.png"}/>
+
+<picture>
+                <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/foodBank3-small.png 1x, /assets/articles/foodBank/foodBank3-2x.png 2x"/>
+                <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/foodBank3-large.png"/>
+                <TextImage src={'/assets/articles/foodBank/foodBank3-large.png'} alt="David"/>
+        </picture>
 <Paragraph>David is a volunteer at Allie's food
 bank, and helps set up stalls,
 organise donations and give out items

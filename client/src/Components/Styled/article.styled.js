@@ -82,7 +82,7 @@ const ArticleTitleWrap=styled.div`
 const ArticleSummary = styled.p`
     margin: 0;
     margin:auto;
-    line-height: ${props=>props.largeHeading?"0.8rem":"1rem"};
+    line-height: 1rem;
 `
 const Figure=styled.figure`
     position:relative;

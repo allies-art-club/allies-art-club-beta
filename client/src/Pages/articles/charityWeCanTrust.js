@@ -12,17 +12,35 @@ const CharityWeCanTrust=()=>{
                     title={"A W T F: A Charity We Can Trust"}
                 ></TitleBanner>
 
-                <TextImageTop alt={"awtf logo"}right={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6.png'}/>
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6-large.png"/>
+                    <TextImageTop right={true}src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6-large.png'} alt="allie's foundation logo"/>
+                </picture>
                 <Paragraph>The Alexandra Wylie Tower Foundation (AWTF) was founded in January 2011 by Lindsey and Rob Wylie.</Paragraph>
-                <TextImageTop alt={"awtf logo"}mobile={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6.png'}/>
+                
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6-large.png"/>
+                    <TextImageTop mobile={true}src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6-large.png'} alt="allie's foundation logo"/>
+                </picture>
 
                 <Paragraph>Lindsey and Rob created the charitable foundation after their daughter, Alexandra (known as Allie), passed away from a rare form of cancer at the age of 17.</Paragraph>
                 <Paragraph>The charity supports the health and wellbeing of underprivileged children, adults and families in London by providing essentials such as food and clothing, as well as creating opportunities for young people to engage in extra-curricular activities.</Paragraph>
             </Section>
             <Section>
-                <TextImageTop alt="Allie" right={false}src={"/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1.png"}/>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1-large.png"/>
+                    <TextImageTop src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1-large.png'} alt="Allie"/>
+                </picture>
                 <SubHeading>Alexandra Wylie</SubHeading>
-                <TextImageTop alt="Allie" mobile={true}src={"/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1.png"}/>
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1-large.png"/>
+                    <TextImageTop mobile={true}src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust1-large.png'} alt="Allie"/>
+                </picture>
 
                 <Paragraph>Allie was known for her dazzling smile and vibrant personality.</Paragraph>
                 <Paragraph>She was an incredibly talented and intelligent student, and loved to explore a huge range of hobbies.</Paragraph>
@@ -31,11 +49,20 @@ const CharityWeCanTrust=()=>{
                 <Paragraph>"Making it possible for underprivileged young people to achieve and cultivate their dreams through involvement in extra-curricular activities which can broaden their horizons and help them achieve their dreams. This reflects both Allie’s vehement disapproval of social exclusion and her sense of fun and adventure."</Paragraph>
             </Section>
             <Section>
-            <TextImageTop alt="Lindsey and Rob" right={true} src={"/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2.png"}/>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2-large.png"/>
+                    <TextImageTop right={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2-large.png'} alt="Lindsey and Rob"/>
+                </picture>
                 <SubHeading>The Founders Lindsey & Rob Wylie</SubHeading>
                 
 
-                <TextImageTop alt="Lindsey and Rob" mobile={true} src={"/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2.png"}/>
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2-large.png"/>
+                    <TextImageTop mobile={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust2-large.png'} alt="Lindsey and Rob"/>
+                </picture>
 
                 <Paragraph>Lindsey and Rob Wylie are Allie's beloved parents.</Paragraph>
                 <Paragraph>Allie's parents raised her in a safe, caring and nurturing home, providing all the opportunities she needed to flourish into the outstanding young woman many had grown to adore.</Paragraph>
@@ -44,10 +71,19 @@ const CharityWeCanTrust=()=>{
                 </Paragraph>
             </Section>
             <Section>
-                <TextImageTop alt="AWTF members" right={false} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3.png'} />
-                <SubHeading>A Trustworthy Charity</SubHeading>
-                <TextImageTop alt="AWTF members" mobile={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3.png'} />
 
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-large.png"/>
+                    <TextImageTop right={false} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-large.png'} alt="AWTF members"/>
+                </picture>
+                <SubHeading>A Trustworthy Charity</SubHeading>
+
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-large.png"/>
+                    <TextImageTop mobile={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-large.png'} alt="AWTF members"/>
+                </picture>
                 <Paragraph>Running for over 10 years, AWTF has delivered numerous projects and events that have brought people together and helped those in need.</Paragraph>
                 <Paragraph>
                 Working with young people, the charity has helped provide mentorship programmes, fun expeditions and
@@ -56,7 +92,12 @@ extra-curricular activities such as art classes, sports clubs and cooking lesson
                 <Paragraph>
                 To learn more about AWTF'S food bank, you can read our article <Link href="/discussions/project-updates/allies-food-bank">Allie's Food Bank</Link>.
                 </Paragraph>
-                <TextImage alt={"AWTF members"} right={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust4.png'}/>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust4-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust4-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust4-large.png"/>
+                    <TextImage right={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust4-large.png'} alt="AWTF members"/>
+                </picture>
                 <Paragraph>To raise funds that support young people and families in London, AWTF has delivered a number of fundraising fairs and events. Every year, AWTF
 has organised a "Pinknic" at Waterlow Park - a lively and colourful fair filled with fresh food and fun activities.</Paragraph>
 <Paragraph>In 2016, the charity broke the world record for the longest conga line on ice, with over 300 people skating together to raise funds for the charity's cause.</Paragraph>
@@ -68,11 +109,20 @@ about the way they work, why they exist and what their goals are.
 </Paragraph>
             </Section>
             <Section>
-                <TextImageTop alt={"Art @ AWTF"} right={false} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5.png'}/>
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5-large.png"/>
+                    <TextImageTop right={false} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5-large.png'} alt="Art @ AWTF"/>
+                </picture>
 
                 <SubHeading>A Reliable Foundation</SubHeading>
 
-                <TextImageTop alt={"Art @ AWTF"} mobile={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5.png'}/>
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5-large.png"/>
+                    <TextImageTop mobile={true} src={'/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust5-large.png'} alt="Art @ AWTF"/>
+                </picture>
                 <Paragraph>AWTF functions as the stronghold of Allie's Art Club, storing all funds and resources and working on the ground to deliver goods and services to those in need.</Paragraph>
                 <Paragraph>
                 The Club trusts the Foundation to support our needs and help us create a fair and inclusive environment that makes a difference to our community. In turn, we support the Foundation by raising awareness and funding, championing their values and actualizing their goals to broaden people's horizons and cultivate a "passion for life" through artistic pursuits and creative expression.
