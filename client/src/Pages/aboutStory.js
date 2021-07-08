@@ -21,17 +21,25 @@ const AboutAlliesStory=()=>{
             ></TitleBanner>
             <Section id="alliesStory">
                 <Paragraph>Alexandra Wylie (known as Allie) was born in January 1993 and was an extraordinarily unique, gifted and graceful individual.</Paragraph>
-                <TextImage right={"true"} alt="allie" src={"/assets/about/allie.png"} />
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/about/allie-small.png 1x, /assets/about/allie-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/about/allie-large.png"/>
+                    <TextImage right={"true"} alt="allie" src={"/assets/about/allie-large.png"} />
+                </picture>
                 <Paragraph>Allie was raised in a safe, loving and nurturing home with as many opportunities to learn, play and explore a young girl could dream of.</Paragraph>
                 <Paragraph>Her family blessed her with the most beautiful childhood they could, yet she was their most beautiful gift of all.</Paragraph>
                 <Paragraph>For 17 years, Alexandra shone with such a passion, strength and vibrancy, until her hard-fought battle with cancer claimed her life.</Paragraph>
                 
                 <ImageWrapper>
                     <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>
-                    <BannerTextImg aria-label="contains svg" alt={"allie story"} type="image/svg+xml" data={alliesStory}/>
+                    <BannerTextImg article={true}aria-label="contains svg" alt={"allie story"} type="image/svg+xml" data={alliesStory}/>
                 </ImageWrapper>
                 <Paragraph>Allie was known for her dazzling smile, vibrant personality and fantastic sense of humour.</Paragraph>
-                <TextImage alt="allie soup" src={'/assets/about/allieSoup.png'}/>
+                <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/about/allieSoup-small.png 1x, /assets/about/allieSoup-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/about/allieSoup-large.png"/>
+                    <TextImage alt="allie soup" src={'/assets/about/allieSoup-large.png'}/>
+                </picture>
                 <Paragraph>She loved to explore a huge range of creative pursuits, and was particularly talented at ice-skating, theatre, cello and singing. She was an incredibly hard-working and intelligent student, receiving 9A*s for her GCSEs.</Paragraph>
                 
                   

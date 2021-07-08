@@ -28,7 +28,7 @@ const AboutAac = () => {
                 
                 <ImageWrapper>
                     <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>
-                    <BannerTextImg aria-label="contains svg"alt="about banner svg text" type="image/svg+xml" data={aboutAccSvg}/>
+                    <BannerTextImg article={true} aria-label="contains svg"alt="about banner svg text" type="image/svg+xml" data={aboutAccSvg}/>
                 </ImageWrapper>
             </Section>
             <TitleBanner
@@ -81,8 +81,8 @@ const AboutAac = () => {
                 <Paragraph>The image below outlines the Club's nine core values. You can click on each value to read more about how they guide our mission and way of working.</Paragraph>
                 <ValuesWrap>
                     <picture>
-                        <source media="(max-width: 480px)" srcSet="/assets/about/Values-small.png"/>
-                        <source media="(min-width: 481px) and (max-width: 1024px)" srcSet="/assets/about/Values-medium.png"/>
+                        <source media="(max-width: 480px)" srcSet="/assets/about/Values-small.png 1x, /assets/about/Values-large.png 2x"/>
+                        <source media="(min-width: 481px) and (max-width: 1024px)" srcSet="/assets/about/Values-medium.png 1x, /assets/about/Values-large.png 2x"/>
                         <source media="(min-width: 1025px)" srcSet="/assets/about/Values-large.png"/>
                         <ValuesImage alt={"Values"} 
                                     src={"/assets/about/Values-small.png"}

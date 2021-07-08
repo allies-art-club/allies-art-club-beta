@@ -68,7 +68,7 @@ const BannerTextImg = styled.object`
     position: absolute;
     left: 3%;
     width:90%;
-    top: 15%;
+    top: ${props=>props.article?"11%":"15%"};
 `
 const BannerTextOverlay = styled.div`
 position: absolute;
