@@ -1,5 +1,5 @@
-import React,{Fragment} from 'react';
-import {Section,Paragraph} from '../Components/Styled/styled';
+import React from 'react';
+import {Section,Paragraph,Article} from '../Components/Styled/styled';
 import SideNav from '../Components/sideNav/sideNav.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {ImageWrapper} from '../Components/Styled/donate.styled';
@@ -12,7 +12,7 @@ import {BannerTextImg} from '../Components/Styled/donate.styled.js';
 import aboutAccSvg from '../Components/Styled/bannerSvg/aboutAac.svg';
 const AboutAac = () => {
     return (
-        <Fragment>
+        <Article>
             <SideNav mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}/>
 
             <TitleBanner
@@ -24,7 +24,7 @@ const AboutAac = () => {
             <Section id="alliesArtClub">
 
                 <Paragraph>Allie's Art Club is a community of change-makers and creatives. Formed by passionate volunteers during the Coronavirus pandemic, our Club is open to anyone who loves to create and wants to make a positive impact in their community.</Paragraph>
-                <Paragraph>We aim to create a safe and inclusive environment where participants feel empowered and connected, able to develop their skills and sense of wellbeing and make a difference in their community through artistic expression, collaboration and creative problem solving.</Paragraph>
+                <Paragraph>We aim to create a safe and inclusive environment where participants feel empowered and connected, able to develop their skills and sense of wellbeing and make a difference in their community through art and creativity.</Paragraph>
                 
                 <ImageWrapper>
                     <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>
@@ -107,7 +107,7 @@ const AboutAac = () => {
                     }
                 </ValuesWrap>
             </Section>
-        </Fragment>
+        </Article>
     )
 }
 
