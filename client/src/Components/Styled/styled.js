@@ -423,6 +423,13 @@ const TextImageTop=styled(TextImage)`
 `
 const Article = styled.article`
 
+#alliesMission {
+  margin-bottom:2rem;
+  @media(min-width:768px){
+    margin-bottom: 3rem;
+  }
+}
+
 `
 const Icon=styled.img`
     display: inline-block;
@@ -437,10 +444,7 @@ const InlineIcon = styled.img`
 const Quote=styled.p`
     font-color:${theme.pink};
     font-size:${props=>props.enlarge?"1.1rem":"1rem"};
-    text-align:${props=>props.enlarge?"center":"left"};
-    @media(min-width:767px){
-      text-align:${props=>props.enlarge&&props.right?"right":"left"};
-    }
+    text-align:center;
 `
 const ImageWrap = styled.div`
     width:50%;
