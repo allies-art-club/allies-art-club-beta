@@ -5,7 +5,7 @@ let _db;
 const dbConnect = (callback) => {
     //connect to mongo db, needs to be used as soon as possible in application (wrap the server.listen)
     MongoClient
-        .connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.vkke3.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`)
+        .connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.5ykkl.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,{ useUnifiedTopology: true })
         .then((client)=>{
 
             //store access to the data base in _db (could acess alternative database by e.g client.db(db_name))
