@@ -1,4 +1,4 @@
-const logActions=async(csrf,error,functionCall)=>{
+const logActions=async(csrf,error,functionInputs)=>{
     await fetch('/exempt/log',{
         method: "POST",
         headers:{
@@ -8,7 +8,7 @@ const logActions=async(csrf,error,functionCall)=>{
         credentials: "include",
         body:JSON.stringify({
             error: error,
-            callstack:functionCall
+            callstack:functionInputs
         })
     })
 }

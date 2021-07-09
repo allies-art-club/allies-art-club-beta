@@ -9,14 +9,11 @@ const path = require('path');
 
 const payment = async(req,res,next) => {
     const {email} = req.body;
-    console.log('YESSSSSSSSS', email)
     if(!email){
-        console.log('yes')
         res.status(500).json({'error':'Please enter your email address'})
         throw new Error('No email detected')
     }
     const idempotencyKey = uuid();
-    console.log(idempotencyKey);
     // add product to database + return id
 
     try{
@@ -29,7 +26,6 @@ const payment = async(req,res,next) => {
             //prevents double payments, additional layer of protection on front end (disable button + spinner until payment over)
             idempotencyKey: idempotencyKey
         });
-        console.log(paymentIntent);
         req.body.stripeId=paymentIntent.id;
         var donation = await postDonation(req,res,next);
         return res.status(200).json({
@@ -38,28 +34,21 @@ const payment = async(req,res,next) => {
         });
     }
     catch(e){
-        console.log(e);
         e.status=500;
         e.input=req.body;
         if(e.statusCode){
             //delete from database
             var statusCode=e.statusCode.toString();
             if(statusCode.match(/^4/)){
-                console.log('YESYSYESYESYESYSY',e)
-                console.log(e.statusCode);
-                console.log(e.message);
-                console.log('YAR');
                 res.status(e.statusCode).json({'error':'An error has occurred. Please return later while we fix the error.'});
                 next(e);
             }
             else if(statusCode.match(/^5/)){
-                console.log('SOMETHING UP WITH STRIPE');
                 res.status(e.statusCode).json({'error':'An error has occurred with our payment provider. Please try again later.'});
                 next(e);
             }
         }
         else {
-            console.log('ERRR')
             res.json({'error':e});
             next(e);
         }
@@ -83,12 +72,10 @@ const updatePayment = async(req,res,next)=>{
 
 const deletePayment = async(req,res,next)=>{
     try{
-        console.log('yerrrr');
         var result = await deleteDonation(req,res,next)
         return res.status(200).json({deleted:true})
     }
     catch(err){
-        console.log(err);
         err.status=500
         err.input=req.body;
         next(err)
@@ -123,7 +110,6 @@ const contactUs=async(req,res,next)=>{
         res.send({received:true})
     }
     catch(e){
-        console.log(e);
         const error = new Error('Email not sent',e);
         error.status=500;
         e.input=req.body;
@@ -132,12 +118,10 @@ const contactUs=async(req,res,next)=>{
 }
 const membershipPost = async(req,res,next)=>{
     try {
-        console.log(req.body)
         await postMember(req,res,next);
         res.send({success:true});
     }
     catch(e){
-        console.log(e);
         e.status=500;
         e.input=req.body;
         throw e;
@@ -145,12 +129,10 @@ const membershipPost = async(req,res,next)=>{
 }
 const supplies = async(req,res,next)=>{
     try {
-        console.log(req.body);
         const response = await postSupplies(req,res,next);
         res.send({success: true})
     }
     catch(e){
-        console.log('YERRR',e)
         e.status=500;
         e.input=req.body;
         next(e);
@@ -158,11 +140,7 @@ const supplies = async(req,res,next)=>{
 }
 const resourceHandler=(req,res,next)=>{
     try{
-        console.log(req.body)
         const article= req.url.split('/')[2]+'.pdf';
-        console.log('article',article)
-        console.log(typeof article)
-        console.log(path.join(__dirname,'..','resources',req.body.category,article).toString())
         // var file = fs.readFileSync(path.join(__dirname,'..','resources',req.body.category,article));
         res.download(path.join(__dirname,'..','resources',req.body.category,article),(err)=>{
             if(err){
@@ -172,7 +150,6 @@ const resourceHandler=(req,res,next)=>{
 
     }
     catch(e){
-        console.log(e);
         e.status=500;
         e.input=req.body;
         throw e;

@@ -3,9 +3,7 @@ import {Message,SpeechBubble,Tag} from '../Components/Styled/about.styled.js'
 const Value = (props)=> {
     const [showMessage,setMessage]=useState(false);
     const handleClick=(event)=>{
-        console.log(event.target.id)
         var id = "value"+props.id;
-        console.log(id)
         if(event.target.id !==id){
             setMessage(showMessage);
             window.removeEventListener('click',handleClick)

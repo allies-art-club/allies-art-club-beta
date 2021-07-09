@@ -6,7 +6,7 @@ const dbRouter = require('./router/dbrouter');
 const exemptRouter =require('./router/csrfExemptRouter')
 const session = require('express-session');
 const path = require('path');
-const sgMail = require('./router/mail/sgMail.js');
+const transport = require('./router/mail/sgMail.js');
 const cookieParser = require('cookie-parser');
 const csrf = require('csurf');
 const app = express();
@@ -22,7 +22,6 @@ app.use(bodyParser.json({verify: rawBodySaver}));
 if(process.env.NODE_ENV!=='test'){
   var MongoDBStore = require('connect-mongodb-session')(session);
 let store;
-  console.log('yep');
   store = new MongoDBStore({
     uri: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.5ykkl.mongodb.net/${process.env.DB_NAME}`,
     collection: 'sessions',
@@ -53,7 +52,6 @@ app.use(csrfProtection);
 if(process.env.NODE_ENV==='production'){
   app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 }
-console.log('yes');
 app.use('/api',apiRouter);
 app.use('/db',dbRouter);
 app.get('*', (req,res)=>{
@@ -73,8 +71,6 @@ app.use(function (err,req, res, next) {
 })
 app.use((err,req,res,next)=>{
   //LOGGING FUNCTION + EMAIL SEND TO ME
-  console.log(err)
-  console.log('STACK:',`${err.stack}`)
   if(!err.status){
     res.status(500).send({error:"Something peculiar has happend here"})
   }
@@ -88,18 +84,17 @@ app.use((err,req,res,next)=>{
   else {
     res.status(err.status).send({error:"An unknown error has occurred. We are working to fix this."})
   }
-  console.log('yo i erred');
+  const mailOptions = {
+    from: process.env.EMAIL, // sender
+    to: process.env.EMAIL, // receiver
+    subject: 'Error', // Subject
+    html: `<h1>New Error!</h1>
+    <p>ERROR - ${err}</p>
+    <p>STACK - ${err.stack}</p>
+    <p>INPUT BODY - ${err.input.toString()}</p>`// html body
+    }
   if(process.env.NODE_ENV!=='test'){
-    sgMail.send({
-      to:'harryyy27@gmail.com',
-      from: 'harryyy27@gmail.com',
-      subject: 'error',
-      text: 'YESe',
-      html: `<h1>New Error!</h1>
-             <p>ERROR - ${err}</p>
-             <p>STACK - ${err.stack}</p>
-             <p>INPUT BODY - ${err.input.toString()}</p>`
-    })
+    transport.sendMail(mailOptions)
     .then((res)=>console.log(res))
     .catch((err)=>console.log(err))
 
