@@ -24,7 +24,7 @@ if(process.env.NODE_ENV!=='test'){
 let store;
   console.log('yep');
   store = new MongoDBStore({
-    uri: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.vkke3.mongodb.net/${process.env.DB_NAME}`,
+    uri: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.5ykkl.mongodb.net/${process.env.DB_NAME}`,
     collection: 'sessions',
     expires: 1000*60*60*24
   }) 
