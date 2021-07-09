@@ -1,5 +1,5 @@
 1. audit
-2. create mongo,sgmail link to gmail
+2. create nodemailer
 3. delete all branches
 4. create email environment variable
 5. create https certificate
