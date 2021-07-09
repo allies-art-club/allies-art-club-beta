@@ -38,7 +38,6 @@ const appReducer = (state={
             state.subMenu[subMenu]=!state.subMenu[subMenu];
             break;
         case 'SET_TOKEN':
-            console.log('PAAAAAAAAAAAAAAAAYLOAD');
             state={
                 ...state,
                 token: action.payload

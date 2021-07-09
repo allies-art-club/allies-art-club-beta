@@ -12,7 +12,6 @@ const Carousel = (props) => {
     if(!props.imageIndices.length){
         for(var i = 0; i<props.carouselObj.length;i++){
             props.imageIndices.push(i-1);
-            console.log('YEHHH',props.imageIndices)
         }
 
     }

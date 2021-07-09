@@ -16,9 +16,6 @@ const DatePickerComponent = ({...props})=>{
             dropdownMode="select"
       
             onChange={val=>{
-                console.log(val);
-                console.log(field.name);
-                console.log(props)
                 setFieldValue(field.name,val)
             }
             } 

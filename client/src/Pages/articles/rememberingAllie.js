@@ -90,7 +90,7 @@ miss you Allie.</Paragraph>
 </Section>
 <Section>
     <SubHeading>
-    Anna, Allie's school friend
+    Emma, Allie's school friend
     </SubHeading>
     <Paragraph>We did a Channing choir tour to Venice in 2009, I have so many fond
 memories of us breaking into song on the public transport boats and at

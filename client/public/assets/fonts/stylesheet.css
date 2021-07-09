@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'big_stemregular';
-    src: url('/assets/fonts/bigstem-regular-webfont.woff2') format('woff2'),
-         url('/assets/fonts/bigstem-regular-webfont.woff') format('woff');
+    src: url('./bigstem-regular-webfont.woff2') format('woff2'),
+         url('./bigstem-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -16,8 +16,8 @@
 
 @font-face {
     font-family: 'big_stemregular';
-    src: url('/assets/bigstem-regular-webfont.woff2') format('woff2'),
-         url('/assets/bigstem-regular-webfont.woff') format('woff');
+    src: url('./bigstem-regular-webfont.woff2') format('woff2'),
+         url('./bigstem-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -28,8 +28,8 @@
 
 @font-face {
     font-family: 'big_stemregular';
-    src: url('/assets/bigstem-regular-webfont.woff2') format('woff2'),
-         url('/assets/bigstem-regular-webfont.woff') format('woff');
+    src: url('./bigstem-regular-webfont.woff2') format('woff2'),
+         url('./bigstem-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

@@ -2,13 +2,11 @@ import React from 'react';
 import {HeaderContainer, HeaderLogo, HeaderNav,BurgerMenu,BurgerLayers,HeaderNavListWrap,HeaderNavList, HeaderNavListElement,Cross,NavMainCategory,NavLinkLogo, Figure,Slogan} from '../Styled/header.styled.js';
 import SubMenu from '../subMenu.js'
 const Header = (props) => {
-    console.log(props.subMenu)
     return(
         <HeaderContainer id="header" data-test="header">
             <Slogan>Creating a culture of community</Slogan>
             <HeaderNav id="nav" data-test="nav">
                 <BurgerMenu onClick={(e)=>{
-                    console.log(props.open)
                         props.toggleMenu(e)
                     }} 
                     id="burgerMenu"
@@ -42,9 +40,8 @@ const Header = (props) => {
                             <NavMainCategory
                                 onClick={(e)=>{
                                     if(window.innerWidth<768){
-                                        e.preventDefault()
-                                        console.log('ye')
-                                        props.toggleSubMenu('about')
+                                        e.preventDefault();
+                                        props.toggleSubMenu('about');
                                     }
                                     
                                 }}
@@ -58,8 +55,8 @@ const Header = (props) => {
                             <NavMainCategory
                                 onClick={(e)=>{
                                     if(window.innerWidth<768){
-                                        e.preventDefault()
-                                        props.toggleSubMenu('discussions')
+                                        e.preventDefault();
+                                        props.toggleSubMenu('discussions');
                                     }
                                     
                                 }}

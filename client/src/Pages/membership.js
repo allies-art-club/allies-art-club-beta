@@ -48,7 +48,6 @@ const Membership = (props)=>{
                         formik.setSubmitting(true);
                         await props.toggleSpinner();
                         await props.handleSubmitMember(values,props.csrf);
-                        console.log('yo');
                         await props.toggleSpinner();
                         formik.setSubmitting(false);
                         await props.handleError('member',"");
@@ -56,7 +55,6 @@ const Membership = (props)=>{
                     }
                     catch(e){
                         formik.setSubmitting(false);
-                        console.log('yeee')
                         await props.toggleSpinner();
                         await props.handleError("member","Form submission failed. We are working to fix this. Please try again later!");
                         console.log(e);
@@ -75,8 +73,6 @@ const Membership = (props)=>{
             })=>(
                 
             <FormStyled onSubmit={(event)=>{
-                console.log(values);
-                console.log(errors)
                 event.preventDefault();
                 handleSubmit();
                 }}>
@@ -120,19 +116,14 @@ const Membership = (props)=>{
                                     <FieldSetWrap key={i}>
                                         <FormInputCheckboxWrapper>
                                             <FormInputCheckbox id={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')} type="checkbox" name={"opportunities"} onChange={(event)=>{
-                                                    console.log(
-                                                        errors
-                                                    )
+                                                
                                                     const checked = event.target.checked;
-                                                    console.log(checked);
                                                     const valueArray = [...values.opportunities]||[];
-                                                    console.log(valueArray);
                                                     if (checked) {
                                                         valueArray.push(event.target.value);
                                                     } else {
                                                         valueArray.splice(valueArray.indexOf(event.target.value), 1);
                                                     }
-                                                    console.log(handleChange.toString())
                                                     values.opportunities=[...valueArray]||[];
                                                     event.target.blur()
                                                 }} value={el}/>
@@ -173,11 +164,8 @@ const Membership = (props)=>{
                                     <FieldSetWrap longList={true}key={i}>
                                         <FormInputCheckboxWrapper>
                                             <FormInputCheckbox id={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}type="checkbox" name={"art"} onChange={(event)=>{
-                                                    console.log(errors);
                                                     const checked = event.target.checked;
-                                                    console.log(checked);
                                                     const valueArray = [...values.art]||[];
-                                                    console.log(valueArray);
                                                     if (checked) {
                                                         event.target.checked=true;
                                                         valueArray.push(event.target.value);
@@ -187,7 +175,6 @@ const Membership = (props)=>{
                                                     }
                                                     values.art=[...valueArray]||[];
                                                     event.target.blur();
-                                                    console.log(event.target.checked);
                                                 }} value={el}></FormInputCheckbox>
 
                                             <CheckboxLabel longList={"true"}htmlFor={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}>{el}</CheckboxLabel>

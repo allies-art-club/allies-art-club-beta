@@ -66,7 +66,7 @@ const AboutAac = () => {
                                 values={"true"}
                                 benefit={"CREATE"}
                             />
-                            <MissionDesc>Create opportunities for people to express themselves, develop skills and contribute to a more fun fair and democratic society through art and creativity.</MissionDesc>
+                            <MissionDesc>Create opportunities for people to express themselves, develop skills and contribute to a more fun, fair and democratic society through art and creativity.</MissionDesc>
                             <MissionBorder alt="border bottom" src={"/assets/general/border.png"}/>
                         </MissionWrapper>
             </Section>

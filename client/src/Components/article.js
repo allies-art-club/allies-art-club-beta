@@ -3,7 +3,6 @@ import {toggleSpinner} from '../Actions/appActions';
 import {connect} from 'react-redux';
 import {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from '../Components/Styled/article.styled.js';
 const Article=(props)=>{
-    console.log(props.title)
     return(
         <ArticleLink 
             exact to={`/${props.landingPage}/${props.category.toLowerCase().replace(/[']/g,'').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}/${props.title.toLowerCase().replace(/[']/g,'').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}`} 
