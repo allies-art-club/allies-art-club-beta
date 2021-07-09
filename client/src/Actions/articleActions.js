@@ -11,8 +11,6 @@ const downloadHandler=async(category,download,csrf)=>{
                 body: JSON.stringify({"category":category})
             }
         )
-        console.log(result);
-        console.log(result.body);
         const file= await result.blob();
         return file;
     }

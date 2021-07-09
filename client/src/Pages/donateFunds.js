@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import {Paragraph, FormStyled,FormSubmitWrapper,StarImg,SubmitInfo,FormInputWrapper,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FormSubmitImage,FormSubmitCaption,FormSubmitFigure,ErrorMessage,ErrorWrapper} from '../Components/Styled/styled';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import {SideImg} from '../Components/Styled/donate.styled';
+import {SideImg,Currency} from '../Components/Styled/donate.styled';
 
 import donateFundsSvg from '../Components/Styled/bannerSvg/donateFunds.svg';
 import {handleSubmit, handleCardElementChange,cardValidate} from '../Actions/donateActions';
@@ -58,13 +58,9 @@ const DonateFunds = (props) => {
                 onSubmit={async(values,formik,yes,s,ye,yeeees)=>{
                     formik.setSubmitting(true);
                     if(!props.cardValidate(props.donate.card)){
-                        console.log('yes')
                         return
                     }
-                    console.log(values,formik,yes,s,ye,yeeees);
-                        console.log(formik.validateForm)
-                        const validateeee = await formik.validateForm(values)
-                        console.log(validateeee)
+                        await formik.validateForm(values)
                         try{
                             if(stripe && elements){
                                 await props.toggleSpinner();
@@ -132,6 +128,7 @@ const DonateFunds = (props) => {
                 </FormInputWrapper>
                 <FormInputWrapper>
                     <FormLabel htmlFor="donationAmount">Amount to pay:*</FormLabel>
+                    <Currency >£</Currency>
                     <FormInput type="number" name="donationAmount" id="donationAmount" onChange={handleChange} onBlur={handleBlur} value={values.donationAmount}></FormInput>
                     {
                     errors.donationAmount && touched.donationAmount ?(
@@ -170,7 +167,7 @@ const DonateFunds = (props) => {
                 </FormInputWrapper>
                 <FormInputWrapper textarea={true}>
                     <FormLabel htmlFor="message">Message / note for Allie's Art Club:</FormLabel>
-                    <FormTextArea rows="5" name="message" id="messages" onChange={handleChange} onBlur={handleBlur} value={props.message}></FormTextArea>
+                    <FormTextArea rows="5" name="message" id="message" onChange={handleChange} onBlur={handleBlur} value={props.message}></FormTextArea>
                     {
                     errors.message && touched.message ?(
                     <FormInputValidation>{errors.message}</FormInputValidation>

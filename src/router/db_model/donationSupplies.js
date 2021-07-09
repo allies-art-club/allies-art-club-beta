@@ -17,7 +17,6 @@ class DonationSupplies {
         return db.collection('supplies')
         .insertOne(this)
         .then((res)=>{
-            console.log('created donation');
             return res;
         })
         .catch((e)=>{

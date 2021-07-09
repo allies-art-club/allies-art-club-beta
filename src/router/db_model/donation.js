@@ -17,14 +17,13 @@ class Donation {
         return db.collection('donation')
         .insertOne(this)
         .then((res)=>{
-            console.log('created donation');
             return res;
         })
         .catch((e)=>{
             console.log(e);
             e.status=500;
             e.input=this;
-            throw e;
+            next(e);
         })
     }
     static fetchAll(){
@@ -36,10 +35,8 @@ class Donation {
             return res;
         })
         .catch((e)=>{
-            console.log(e);
             e.status=500;
             e.input='Fetch All Requested - no input';
-            console.log(e);
             next(e);
         })
 
@@ -55,12 +52,10 @@ class Donation {
         .catch((err)=>{
             err.status=500;
             err.input=stripeId;
-            console.log(err);
             next(err);
         })
     }
     static updateDonationStatus(stripeId,donationStatus){
-        console.log('YESSSSS')
         const db= getDb()
         return db.collection('donation')
         .updateOne({
@@ -74,7 +69,6 @@ class Donation {
             return donation;
         })
         .catch((e)=>{
-            console.log(e);
             e.status=500;
             e.input={
                 stripeId:stripeId,
@@ -90,11 +84,9 @@ class Donation {
             stripeId:stripeId
         })
         .then((res)=>{
-            console.log('DELETED ENTRY',res)
             return res
         })
         .catch((err)=>{
-            console.log(err)
             err.status=500;
             err.input=stripeId;
             next(err);

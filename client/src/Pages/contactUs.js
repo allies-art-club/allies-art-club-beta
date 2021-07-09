@@ -79,7 +79,7 @@ const ContactUs =(props)=>{
                 </FormInputWrapper>
                 <FormInputWrapper textarea={true}>
                     <FormLabel htmlFor="message">Message / note for Allie's Art Club:</FormLabel>
-                    <FormTextArea rows="5" name="message" id="messages" onChange={handleChange} onBlur={handleBlur} value={props.message}></FormTextArea>
+                    <FormTextArea rows="5" name="message" id="message" onChange={handleChange} onBlur={handleBlur} value={props.message}></FormTextArea>
                     {
                     errors.message && touched.message ?(
                     <FormInputValidation>{errors.message}</FormInputValidation>
@@ -88,12 +88,12 @@ const ContactUs =(props)=>{
                 </FormInputWrapper>
                 <FormSubmitWrapper>
                     <SubmitInfo>
-                        <StarImg src={"/assets/general/starL.png"}></StarImg>
+                        <StarImg alt="star" src={"/assets/general/starL.png"}></StarImg>
                         <Paragraph>Please note: all of your information will be kept private and will not be shared with any other party.</Paragraph>
                     </SubmitInfo>
                     <FormSubmit type="submit" value="Submit" disabled={isSubmitting}>
                         <FormSubmitFigure>
-                            <FormSubmitImage src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
+                            <FormSubmitImage alt="submit" src={"/assets/donateBanner/Arrow.png"}></FormSubmitImage>
                             <FormSubmitCaption>Submit!</FormSubmitCaption>
                         </FormSubmitFigure>
                     </FormSubmit>

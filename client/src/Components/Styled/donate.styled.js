@@ -99,4 +99,21 @@ const SideImg=styled.img`
         display:${props=>props.donate?"none":"block"};
     }
 `
-export {ThankYouWrap,ImageWrapper,DonationWrapper,DonateLink,ExternalLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStar,SideImg}
+
+const Currency=styled.span`
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translate(170%,-60%);
+    @media(min-width:481px){
+        transform:translate(150%,-55%);
+
+    }
+    @media(min-width:768px){
+        transform:translate(100%,-55%);
+    }
+    @media(min-width:1300px){
+        transform:translate(60%,-55%);
+    }
+`
+export {ThankYouWrap,ImageWrapper,DonationWrapper,DonateLink,ExternalLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStar,SideImg,Currency}

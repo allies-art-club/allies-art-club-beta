@@ -34,7 +34,6 @@ const donateReducer = (state={
             }
             break;
         case 'ERROR_AMEND':
-            console.log('res');
             state={
                 ...state,
                 errorMessage: action.payload
@@ -42,7 +41,6 @@ const donateReducer = (state={
             break;
 
         case 'CARD_ERROR_AMEND':
-            console.log('res');
             state= {
                 ...state,
             }
