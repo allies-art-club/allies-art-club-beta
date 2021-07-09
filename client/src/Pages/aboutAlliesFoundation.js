@@ -37,11 +37,16 @@ const AboutAlliesFoundation = () =>{
                 </ImageWrapper>
                 <Paragraph>AWTF aims to honour Allie's memory by supporting the health and wellbeing of underprivileged children, adults and families in London.</Paragraph>
                 <Paragraph>In addition to providing essentials such as food and clothing, Allie's Foundation also works to improve underprivileged people's access to education and extra-curricular activities.</Paragraph>
-                <TextImage alt="allie's art foundation members" src={"/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3.png"} />
+
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-small.png 1x, /assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-large.png"/>
+                    <TextImage alt="allie's art foundation members" src={"/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust3-large.png"} /> 
+                </picture>
                 <Paragraph>Running for over 10 years, AWTF has delivered numerous projects that have helped those in need and brightened many people's lives</Paragraph>
                 <Paragraph>Working with young people, the charity has helped provide mentorship programmes, exciting expeditions and extra-curricular activities such as art classes, sports clubs and cooking lessons.</Paragraph>
                 <Paragraph>With awareness of high levels of food poverty in London, the charity has also provided food parcels to families in need during the Summer holidays and has been running a food bank with the Pilion Trust at a North London community centre since 2017.</Paragraph>
-                <Paragraph>To learn more about AWTFs food bank, you can read our article <Link href="/discussions/project-updates/allies-food-bank">Allie's Food Bank</Link>.</Paragraph>
+                <Paragraph>To learn more about AWTFs food bank, you can read our article <Link href="/discussions/project-news/allies-food-bank">Allie's Food Bank</Link>.</Paragraph>
                 <Paragraph>With rapidly rising hunger and poverty in London due to the impacts of the Coronavirus pandemic, the charity's focus has moved mainly towards providing food and other essentials to families in need.</Paragraph>
                 <Paragraph>The following video of AWTF was made in December 2020, showing the fantastic work the charity continues to do:</Paragraph>
                 <IFrame  src="https://www.youtube.com/embed/ogOJ-YFpac8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
