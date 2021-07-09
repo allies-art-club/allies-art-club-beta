@@ -78,10 +78,6 @@ height: calc(100vw * 0.7 * 0.6 * 0.33332769556);
 top: 10%;
 z-index:2;
 `
-const DonateBannerStars = styled.img`
-    width: 35%;
-    transform: translate(${props=>props.top?"55%,-50%":"110%,-45%"});
-`
 const DonateBannerStar=styled.img`
     width:30%;
     position:relative;
@@ -103,4 +99,4 @@ const SideImg=styled.img`
         display:${props=>props.donate?"none":"block"};
     }
 `
-export {ThankYouWrap,ImageWrapper,DonationWrapper,DonateLink,ExternalLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStars,DonateBannerStar,SideImg}
+export {ThankYouWrap,ImageWrapper,DonationWrapper,DonateLink,ExternalLink,DonateImage,DonateParagraph,DonateParagraphWrapper,BannerTextImg,BannerTextOverlay,DonateBannerStar,SideImg}
