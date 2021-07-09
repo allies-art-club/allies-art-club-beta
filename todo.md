@@ -1,14 +1,13 @@
-1. Fix backend for "other" options on forms xxxxxxxxxxxxxx
-2. Burger menu design
-3. Run audit push rank up xxxxxxxxxxxxxxxxxx
-4. Upload to heroku
-5. Shrink actual image sizes for mobile correctly for high res 
-6. Background foreground contrast between Quote "A charity we can trust" xxxxxxxxxxxx
-7. Manifest icon xxxxxxxxxxxxxxxxxx
-8. Go through remaining issues
-9. Remove render blocking of fonts xxxxxxxxxxxx
-10. Import correct menu font and employ xxxxxxxxxxx
-11. Figure out unused javascript for mobile
-12. Bottom border xxxxxxxxxxxxxxxxxxx
-13. Carousel centre xxxxxxxxxxxx
-14. Footer icon slightly to left
+1. audit
+2. create mongo,sgmail link to gmail
+3. delete all branches
+4. create email environment variable
+5. create https certificate
+6. set up stripe account for live
+7. set up test and live branch
+8. use email environment to link with sgmail
+9. investigate console warnings and font warning
+10. Icon
+11. Create html template for email
+12. Send email upon order being created.
+13. gzip
