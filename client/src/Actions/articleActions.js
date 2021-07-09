@@ -1,8 +1,5 @@
 const downloadHandler=async(category,download,csrf)=>{
     try{
-        console.log(csrf);
-        console.log(download);
-        console.log('category',category);
         const result = await fetch(`/api/resources/${download.split(' ').join('_')}`,{
                 method:"POST",
                 headers:{
