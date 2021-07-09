@@ -12,7 +12,7 @@ const FoodBank=()=>{
     <Section>
     <ImageLabel split={true} top={true}>
         <ImageLabelText right={true}>Lexi</ImageLabelText>
-        <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
+        <ImageLabelArrow alt={"black arrow pointing at photo"} right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
     </ImageLabel>
         <picture>
                 <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/Lexi-small.png 1x, /assets/articles/foodBank/Lexi-large.png 2x"/>
@@ -29,7 +29,7 @@ const FoodBank=()=>{
 
         <ImageLabel split={true}>
             <ImageLabelText right={true}>Lexi</ImageLabelText>
-            <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
+            <ImageLabelArrow alt={"black arrow pointing at photo"} right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
         </ImageLabel>
         <picture>
                 <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/Lexi-small.png 1x, /assets/articles/foodBank/Lexi-2x.png 2x"/>
@@ -81,7 +81,7 @@ during the global crisis.</Paragraph>
 <Quote enlarge={true} right={true}>"The food bank is extraordinarily helpful and supportive."</Quote>
 <ImageLabel>
     <ImageLabelText right={true}>Iva</ImageLabelText>
-    <ImageLabelArrow right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
+    <ImageLabelArrow alt={"black arrow pointing at photo"}right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
 </ImageLabel>
 
 <picture>
@@ -106,7 +106,7 @@ and interacting with the volunteers has improved her mental health.</Paragraph>
 
 <ImageLabel>
         <ImageLabelText >David</ImageLabelText>
-        <ImageLabelArrow src={"/assets/articles/foodBank/black-arrow.png"}/>
+        <ImageLabelArrow alt={"black arrow pointing at photo"}src={"/assets/articles/foodBank/black-arrow.png"}/>
     </ImageLabel>
 
 <picture>
