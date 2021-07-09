@@ -14,9 +14,7 @@ const Home = lazy(()=> import('./Pages/home.js'));
 const AboutAac = lazy(()=>import('./Pages/aboutaac.js'));
 const AboutAlliesStory = lazy(()=>import('./Pages/aboutStory.js'));
 const AboutAlliesFoundation = lazy(()=>import('./Pages/aboutAlliesFoundation.js'));
-const Thoughts = lazy(()=> import('./Pages/thoughts.js'));
 const Discussions= lazy(()=> import('./Pages/discussions.js'));
-const BeAnAllie = lazy(()=> import('./Pages/beAnAllie.js'));
 const Footer = lazy(()=> import('./Components/footer/footer.js'));
 const Donate = lazy(()=>import('./Pages/donate.js'));
 const ThankYou = lazy(()=>import('./Pages/thankyou.js'));
@@ -151,26 +149,6 @@ const App= (props) =>{
                           }
                       }
                       />
-                <Route path="/how-to-be-an-allie" exact strict render={
-                      ()=>{
-                          return(
-                            <Clipboard children={
-                              <BeAnAllie />
-                            } />
-                          )
-                      }
-                  }
-                  />
-                <Route path="/allies-thoughts" exact strict render={
-                      ()=>{
-                          return(
-                            <Clipboard children={
-                              <Thoughts />
-                            }/>
-                          )
-                      }
-                  }class
-                  />
                 <Route path="/allies-clubs-and-projects" exact strict render={
                       ()=>{
                           return(

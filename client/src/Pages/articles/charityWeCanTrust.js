@@ -90,7 +90,7 @@ const CharityWeCanTrust=()=>{
 extra-curricular activities such as art classes, sports clubs and cooking lessons. With awareness of high levels of food poverty in London, the charity has also provided food parcels to families in need during the Summer holidays, and has been running a food bank with the Pilion Trust at the Ringcross Community Centre in North London since 2017.
                 </Paragraph>
                 <Paragraph>
-                To learn more about AWTF'S food bank, you can read our article <Link href="/discussions/project-updates/allies-food-bank">Allie's Food Bank</Link>.
+                To learn more about AWTF'S food bank, you can read our article <Link href="/discussions/project-news/allies-food-bank">Allie's Food Bank</Link>.
                 </Paragraph>
 
             <picture>

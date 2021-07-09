@@ -186,10 +186,10 @@ const DonateSupplies=(props)=>{
                                 <FormSubmitCaption>Submit!</FormSubmitCaption>
                             </FormSubmitFigure>
                         </FormSubmit>
+                    </FormSubmitWrapper>
                     {
                         props.donate.supplyError?<ErrorWrapper><ErrorMessage>{props.donate.supplyError}</ErrorMessage></ErrorWrapper>:null
                     }
-                    </FormSubmitWrapper>
                 </FormStyled>
                 )}
             </Formik>
