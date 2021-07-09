@@ -159,7 +159,7 @@ const DonateSupplies=(props)=>{
                     </FormCheckboxWrapper>
                         <FormInputWrapper textarea={true}>
                         <FormLabel htmlFor="message">Message / note for Allie's Art Club:</FormLabel>
-                        <FormTextArea rows="5" name="message" id="messages" onChange={handleChange} onBlur={handleBlur} value={props.message}></FormTextArea>
+                        <FormTextArea rows="5" name="message" id="message" onChange={handleChange} onBlur={handleBlur} value={props.message}></FormTextArea>
                         {
                         errors.message && touched.message ?(
                         <FormInputValidation>{errors.message}</FormInputValidation>

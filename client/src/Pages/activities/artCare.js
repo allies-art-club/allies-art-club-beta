@@ -69,7 +69,7 @@ In addition to running Art Care Events that are open to all, we will be running 
             <Paragraph>To find details of our upcoming Art Care Events, please head to our <Link href={"/activities/events"}>Events page</Link>.</Paragraph>
             <br/>
             <Paragraph>For Allie’s Art Care project to be successful, we need support from generous individuals and organisations!</Paragraph>
-            <Paragraph>If you're interested in donating any arts and crafts supplies or making a financial donation, please head to our <Link href="/be-an-allie/donate">donations page</Link> or donate via our <Link target="_blank"href="https://crowdfunder.co.uk/art-care">Crowdfunder</Link> campaign.</Paragraph>
+            <Paragraph>If you're interested in donating any arts and crafts supplies or making a financial donation, please head to our <Link href="/be-an-allie/donate">donations page</Link> or donate via our <Link rel="noopener" target="_blank"href="https://crowdfunder.co.uk/art-care">Crowdfunder</Link> campaign.</Paragraph>
             <Paragraph>Raising awareness of our project is also a big help, and we welcome any supporters to share information about Allie's Art Club and our Art Care project online by word of mouth.</Paragraph>
             <Paragraph>For any general enquiries, collaborations or fundraising ideas, please email us at <Link href="mailto:alliesartclub@gmail.com">alliesartclub@gmail.com</Link></Paragraph>
         </Section>
