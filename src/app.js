@@ -57,7 +57,6 @@ console.log('yes');
 app.use('/api',apiRouter);
 app.use('/db',dbRouter);
 app.get('*', (req,res)=>{
-    console.log('YEYEYEYEYEYE')
     res.sendFile(path.join(__dirname, '..','client','build','index.html'),)
 })
 //if this error is csrf has been detected (need response for this - email / error log)
