@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import {Paragraph, FormStyled,FormSubmitWrapper,StarImg,SubmitInfo,FormInputWrapper,FormLabel,FormInput,FormInputValidation,FormTextArea,FormSubmit,FormSubmitImage,FormSubmitCaption,FormSubmitFigure,ErrorMessage,ErrorWrapper} from '../Components/Styled/styled';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import {SideImg} from '../Components/Styled/donate.styled';
+import {SideImg,Currency} from '../Components/Styled/donate.styled';
 
 import donateFundsSvg from '../Components/Styled/bannerSvg/donateFunds.svg';
 import {handleSubmit, handleCardElementChange,cardValidate} from '../Actions/donateActions';
@@ -128,6 +128,7 @@ const DonateFunds = (props) => {
                 </FormInputWrapper>
                 <FormInputWrapper>
                     <FormLabel htmlFor="donationAmount">Amount to pay:*</FormLabel>
+                    <Currency >£</Currency>
                     <FormInput type="number" name="donationAmount" id="donationAmount" onChange={handleChange} onBlur={handleBlur} value={values.donationAmount}></FormInput>
                     {
                     errors.donationAmount && touched.donationAmount ?(
