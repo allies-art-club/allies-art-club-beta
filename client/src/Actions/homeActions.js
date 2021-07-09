@@ -3,7 +3,6 @@ export function carouselClick(direction,dispatch) {
         type:'DIRECTION',
         payload:direction
     })
-    console.log('working')
     if(direction==='left'){
         dispatch({
             type: 'LEFT-BUTTON',

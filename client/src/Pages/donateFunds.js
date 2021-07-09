@@ -58,13 +58,9 @@ const DonateFunds = (props) => {
                 onSubmit={async(values,formik,yes,s,ye,yeeees)=>{
                     formik.setSubmitting(true);
                     if(!props.cardValidate(props.donate.card)){
-                        console.log('yes')
                         return
                     }
-                    console.log(values,formik,yes,s,ye,yeeees);
-                        console.log(formik.validateForm)
-                        const validateeee = await formik.validateForm(values)
-                        console.log(validateeee)
+                        await formik.validateForm(values)
                         try{
                             if(stripe && elements){
                                 await props.toggleSpinner();

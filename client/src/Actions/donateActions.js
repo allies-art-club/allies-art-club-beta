@@ -1,7 +1,5 @@
 
 const handleCardElementChange =(event,dispatch)=>{
-    console.log(event)
-    console.log(Object.keys(event).length)
     if(event.error){
         dispatch({
             type: "CARD_ERROR_AMEND",
@@ -32,8 +30,6 @@ const handleSubmitSupplies=async(values,csrf,dispatch)=>{
             credentials: "include",
             body: JSON.stringify(values)
         })
-        console.log('HI!')
-        console.log(res)
         if(res.status!==200){
             dispatch({
                 type:"ERROR_AMEND_SUPPLIES",
@@ -41,7 +37,6 @@ const handleSubmitSupplies=async(values,csrf,dispatch)=>{
             })
         }
         else {
-            console.log(res)
             return true
         }
 
@@ -55,11 +50,9 @@ const handleSubmitSupplies=async(values,csrf,dispatch)=>{
     }
 }
 const cardValidate=(card,dispatch)=>{
-    console.log('CARD',card)
     const fields = Object.keys(card);
     var valid = true;
     for(var i=0;i<fields.length;i++){
-        console.log(card[fields[i]])
         if(card[fields[i]].valid===false){
             if(!card[fields[i]].errorMessage){
                 dispatch({
@@ -76,7 +69,6 @@ const cardValidate=(card,dispatch)=>{
     return valid;
 }
 const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
-    console.log(csrf)
     //add validation
     const res = await fetch('/api/payment',{
         method: 'POST',
@@ -106,16 +98,14 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
             }
         }
     })
-    console.log('HEYAAA',result);
 
     if(result.error){
         //show error to customer
-        console.log('RESULT ERROR',result.error);
         dispatch({
             type: "ERROR_AMEND",
             payload: result.error.message
         })
-        const res = await fetch('/api/deletePayment',{
+        await fetch('/api/deletePayment',{
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
@@ -125,7 +115,6 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
             body: JSON.stringify({stripeId:stripeId}),
             mode: 'cors'
         })
-        console.log(res);
         throw new Error('Payment failed')
     }
     else {
@@ -134,7 +123,6 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
             payload: ''
         })
         //Show success message to customer
-        console.log(result);
         if(result.paymentIntent.status==='succeeded'){
             await fetch('/api/updatePayment',{
                 method: 'PUT',
@@ -145,7 +133,6 @@ const handleSubmit=async(donation,cardElement,stripe,csrf,dispatch)=>{
                 credentials: "include",
                 body: JSON.stringify({stripeId:stripeId})
             })
-            console.log('Money up!!')
             return true;
         }
     }

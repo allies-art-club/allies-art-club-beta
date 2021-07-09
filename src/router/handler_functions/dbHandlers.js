@@ -33,7 +33,6 @@ const postDonation = (req,res,next)=>{
         return res;
     })
     .catch((err)=>{
-        console.log(err);
         err.status=500;
         err.input=req.body;
         next(err);
@@ -47,7 +46,6 @@ const putDonation = (req,res,next,status)=>{
         return res
     })
     .catch((err)=>{
-        console.log(err);
         err.status(500);
         err.input=req.body;
         next(err);
@@ -59,11 +57,9 @@ const deleteDonation = (req,res,next)=>{
     return Donation
     .deleteDonation(req.body.stripeId)
     .then((res)=>{
-        console.log('delete donation res',res)
         return res
     })
     .catch((err)=>{
-        console.log('delete donation err',err)
         err.status(500);
         err.input=req.body;
         next(err);
@@ -82,17 +78,14 @@ const postSupplies=(req,res,next)=>{
         var donation = new DonationSupplies(date,name,email,organisation,supplies,otherSupplies,message);
     }
     catch(e){
-        console.log(e)
         next(e)
     }
     return donation
     .save()
     .then((res)=>{
-        console.log('post supplies res',res)
         return res
     })
     .catch((e)=>{
-        console.log('delete donation err',e)
         e.status=500;
         e.input=req.body;
         next(err)
@@ -114,7 +107,6 @@ const postMember=(req,res,next)=>{
         var member = new Member(date,name,email,dob,opportunities,otherOpportunities,art,otherArt);
     }
     catch(e){
-        console.log('post member error',e)
         e.status=500
         e.input=req.body;
         throw e;
@@ -125,7 +117,6 @@ const postMember=(req,res,next)=>{
         return res
     })
     .catch((e)=>{
-        console.log('Submission error',)
         e.status=500;
         e.input=req.body;
         next(e);

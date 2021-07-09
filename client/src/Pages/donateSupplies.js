@@ -51,10 +51,7 @@ const DonateSupplies=(props)=>{
                 }}
                 validationSchema={DonateFundsSchema}
                 onSubmit={async(values,formik)=>{
-                    console.log('yes')
                         try{    
-                                console.log(values);
-                                console.log(props.csrf)
                                 formik.setSubmitting(true);
                                 await props.toggleSpinner();
                                 const response = await props.handleSubmitSupplies(values,props.csrf);
@@ -124,19 +121,14 @@ const DonateSupplies=(props)=>{
                                     <FieldSetWrap longList={true} key={i}>
                                         <FormInputCheckboxWrapper>
                                             <FormInputCheckbox id={el.match('Other')?el.split(' ').join('')+i:el.split(' ').join('')}type="checkbox" name="supplies" onChange={(event)=>{
-                                                    console.log(
-                                                        errors
-                                                    )
+                                                  
                                                     const checked = event.target.checked;
-                                                    console.log(checked);
                                                     const valueArray = [...values.supplies]||[];
-                                                    console.log(valueArray);
                                                     if (checked) {
                                                         valueArray.push(event.target.value);
                                                     } else {
                                                         valueArray.splice(valueArray.indexOf(event.target.value), 1);
                                                     }
-                                                    console.log(handleChange.toString())
                                                     values.supplies=[...valueArray]||[];
                                                     event.target.blur()
                                                 }} value={el}/>

@@ -13,7 +13,6 @@ class Member {
         this.otherArt=otherArt
     }
     save(req,res,next){
-        try{
         let db = getDb();
             return db.collection('members')
             .insertOne(this)
@@ -21,16 +20,8 @@ class Member {
                 console.log(res);
             })
             .catch((err)=>{
-                console.log('err');
                 next(err);
             })
-
-        }
-        catch(e){
-            console.log(e);
-            throw e;
-        }
-
     }
 }
 

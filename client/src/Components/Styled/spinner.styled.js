@@ -9,7 +9,7 @@ const rotate = keyframes`
     }
 `
 const SpinnerWrapper = styled.div`
-    position:relative;
+    position:fixed;
     top:0px;
     right:0px;
     display:${props=>props.visible?"flex":"none"};
