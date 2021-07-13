@@ -1,9 +1,9 @@
-const express = require('express');
-const {postDonation,putDonation,deleteDonation} = require('./handler_functions/dbHandlers')
-const router = express.Router();
+import express from 'express';
+import {postDonation,putDonation,deleteDonation} from './handler_functions/dbHandlers.js';
+const dbRouter = express.Router();
 
-router.post('/createDonation',postDonation);
-router.put('/updateDonation',putDonation);
-router.delete('/deleteDonation',deleteDonation);
+dbRouter.post('/createDonation',postDonation);
+dbRouter.put('/updateDonation',putDonation);
+dbRouter.delete('/deleteDonation',deleteDonation);
 // router.get('/ping', ping.get)
-module.exports = router;
+export default dbRouter;

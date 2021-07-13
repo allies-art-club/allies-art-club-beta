@@ -1,15 +1,23 @@
-require('dotenv').config();
-const express = require('express');
-const bodyParser = require('body-parser');
-const apiRouter = require('./router/apiRouter');
-const dbRouter = require('./router/dbrouter');
-const exemptRouter =require('./router/csrfExemptRouter')
-const session = require('express-session');
-const path = require('path');
-const transport = require('./router/mail/sgMail.js');
-const cookieParser = require('cookie-parser');
-const csrf = require('csurf');
+import dotenv from 'dotenv';
+dotenv.config();
+import express from 'express';
+import bodyParser from 'body-parser';
+import apiRouter from './router/apiRouter.js';
+import dbRouter from './router/dbrouter.js';
+import exemptRouter from './router/csrfExemptRouter.js';
+import session from 'express-session';
+import path from 'path';
+import generateTransport from './router/mail/sgMail.js';
+import cookieParser from 'cookie-parser';
+import csrf from 'csurf';
+import MongoDBStore from 'connect-mongodb-session';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import sslRedirect from 'heroku-ssl-redirect';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
+app.use(sslRedirect.default());
 
 var rawBodySaver = function (req, res, buf, encoding) {
   if (buf && buf.length) {
@@ -20,9 +28,9 @@ app.use(bodyParser.urlencoded({verify: rawBodySaver, extended: true }));
 app.use(bodyParser.json({verify: rawBodySaver}));
 //do not run the following during tests
 if(process.env.NODE_ENV!=='test'){
-  var MongoDBStore = require('connect-mongodb-session')(session);
+   var MongoConnect= MongoDBStore(session);
 let store;
-  store = new MongoDBStore({
+  store = new MongoConnect({
     uri: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.5ykkl.mongodb.net/${process.env.DB_NAME}`,
     collection: 'sessions',
     expires: 1000*60*60*24
@@ -69,8 +77,9 @@ app.use(function (err,req, res, next) {
   err.status=403;
   next(err);
 })
-app.use((err,req,res,next)=>{
+app.use(async (err,req,res,next)=>{
   //LOGGING FUNCTION + EMAIL SEND TO ME
+  console.log(err);
   if(!err.status){
     res.status(500).send({error:"Something peculiar has happend here"})
   }
@@ -85,8 +94,8 @@ app.use((err,req,res,next)=>{
     res.status(err.status).send({error:"An unknown error has occurred. We are working to fix this."})
   }
   const mailOptions = {
-    from: process.env.EMAIL, // sender
-    to: process.env.EMAIL, // receiver
+    from: process.env.DEV_EMAIL, // sender
+    to: process.env.DEV_EMAIL, // receiver
     subject: 'Error', // Subject
     html: `<h1>New Error!</h1>
     <p>ERROR - ${err}</p>
@@ -94,6 +103,7 @@ app.use((err,req,res,next)=>{
     <p>INPUT BODY - ${err.input.toString()}</p>`// html body
     }
   if(process.env.NODE_ENV!=='test'){
+    const transport = await generateTransport()
     transport.sendMail(mailOptions)
     .then((res)=>console.log(res))
     .catch((err)=>console.log(err))
@@ -102,4 +112,4 @@ app.use((err,req,res,next)=>{
 })
 
 
-module.exports = app;
+export default app;

@@ -1,5 +1,4 @@
-const mongo = require('mongodb');
-const {getDb} = require('../database/connection.js');
+import {getDb} from '../database/connection.js';
 
 class Member {
     constructor(date,name,email,dob,opportunities,otherOpportunities,art,otherArt){
@@ -25,4 +24,4 @@ class Member {
     }
 }
 
-module.exports = Member;
+export default Member;
