@@ -11,6 +11,10 @@ import transport from './router/mail/sgMail.js';
 import cookieParser from 'cookie-parser';
 import csrf from 'csurf';
 import MongoDBStore from 'connect-mongodb-session';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 

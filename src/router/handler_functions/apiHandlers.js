@@ -7,7 +7,10 @@ import {postDonation,putDonation,deleteDonation,postSupplies,postMember} from '.
 import transport from '../mail/sgMail.js';
 import path from 'path';
 import {donateEmail,newMember} from '../email_templates/emails.js';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const payment = async(req,res,next) => {
     const {email} = req.body;
     if(!email){
@@ -158,7 +161,6 @@ const supplies = async(req,res,next)=>{
 const resourceHandler=(req,res,next)=>{
     try{
         const article= req.url.split('/')[2]+'.pdf';
-        // var file = fs.readFileSync(path.join(__dirname,'..','resources',req.body.category,article));
         res.download(path.join(__dirname,'..','resources',req.body.category,article),(err)=>{
             if(err){
                 next(err)
