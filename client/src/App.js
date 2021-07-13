@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: inherit;({cookie:true});
   }
-  p, figcaption,span,label,legend,li,input {
+  p, figcaption,span,label,legend,li,input,textarea {
     font-size: 1rem;
     font-family: "Architects Daughter";
   }
