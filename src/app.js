@@ -7,16 +7,17 @@ import dbRouter from './router/dbrouter.js';
 import exemptRouter from './router/csrfExemptRouter.js';
 import session from 'express-session';
 import path from 'path';
-import transport from './router/mail/sgMail.js';
+import generateTransport from './router/mail/sgMail.js';
 import cookieParser from 'cookie-parser';
 import csrf from 'csurf';
 import MongoDBStore from 'connect-mongodb-session';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import sslRedirect from 'heroku-ssl-redirect';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-
+app.use(sslRedirect.default());
 
 var rawBodySaver = function (req, res, buf, encoding) {
   if (buf && buf.length) {
@@ -76,7 +77,7 @@ app.use(function (err,req, res, next) {
   err.status=403;
   next(err);
 })
-app.use((err,req,res,next)=>{
+app.use(async (err,req,res,next)=>{
   //LOGGING FUNCTION + EMAIL SEND TO ME
   console.log(err);
   if(!err.status){
@@ -102,6 +103,7 @@ app.use((err,req,res,next)=>{
     <p>INPUT BODY - ${err.input.toString()}</p>`// html body
     }
   if(process.env.NODE_ENV!=='test'){
+    const transport = await generateTransport()
     transport.sendMail(mailOptions)
     .then((res)=>console.log(res))
     .catch((err)=>console.log(err))

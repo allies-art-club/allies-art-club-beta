@@ -4,7 +4,7 @@ stripe(process.env.STRIPE_SECRET_KEY,{
 });
 import uuid from 'uuid/v4.js';
 import {postDonation,putDonation,deleteDonation,postSupplies,postMember} from './dbHandlers.js';
-import transport from '../mail/sgMail.js';
+import generateTransport from '../mail/sgMail.js';
 import path from 'path';
 import {donateEmail,newMember} from '../email_templates/emails.js';
 import { dirname } from 'path';
@@ -103,6 +103,7 @@ const contactUs=async(req,res,next)=>{
         var email = req.body.email;
         var name = req.body.name;
         var message = req.body.message
+        const transport = await generateTransport()
         await transport.sendMail({
           to:process.env.EMAIL,
           from: process.env.EMAIL,
@@ -123,6 +124,7 @@ const contactUs=async(req,res,next)=>{
 const membershipPost = async(req,res,next)=>{
     try {
         await postMember(req,res,next);
+        const transport = await generateTransport()
         await transport.sendMail({
             to:req.body.email,
             from: process.env.EMAIL,
@@ -142,13 +144,13 @@ const supplies = async(req,res,next)=>{
         
         const response = await postSupplies(req,res,next);
         console.log(response);
-        const err =await transport.sendMail({
+        const transport = await generateTransport();
+        await transport.sendMail({
             to:req.body.email,
             from: process.env.EMAIL,
             subject: `Thank you`,
             html: donateEmail(req.body.name)
           })
-          console.log('ehehe',err)
         res.send({success: true})
     }
     catch(e){
