@@ -1,9 +1,10 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY,{
+import stripe from 'stripe';
+stripe(process.env.STRIPE_SECRET_KEY,{
     maxNetworkRetries: 3
 });
-const {putDonation}=require('./dbHandlers');
+import {putDonation} from './dbHandlers.js';
 const webhookSecret = "whsec_g0ox62SlHmIwTkhTaTJV95CRMWUcMHGY";
-const transport = require('../mail/sgMail.js');
+import generateTransport from '../mail/sgMail.js';
 const stripeWebhook = async(req,res,next)=>{
     let event;
     const sig = req.headers['stripe-signature'];
@@ -46,6 +47,7 @@ const stripeWebhook = async(req,res,next)=>{
             let chargeSucceeded = event.data.object;
             req.body.stripeId = chargeSucceeded.payment_intent;
             var result = await putDonation(req,res,next,'DONATION_SUCCESSFUL');
+            const transport = await generateTransport();
             await transport.sendMail({
               to:req.body.email,
               from: process.env.EMAIL,
@@ -74,4 +76,4 @@ const stripeWebhook = async(req,res,next)=>{
 
 }
 
-module.exports = {stripeWebhook}
+export {stripeWebhook};

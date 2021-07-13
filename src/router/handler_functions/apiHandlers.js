@@ -1,12 +1,16 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY,{
+import stripe from 'stripe';
+stripe(process.env.STRIPE_SECRET_KEY,{
     maxNetworkRetries: 3
 });
-const uuid = require('uuid/v4');
-const {postDonation,putDonation,deleteDonation,postSupplies,postMember} = require('./dbHandlers.js');
-const transport =require('../mail/sgMail.js');
-const fs = require('fs');
-const path = require('path');
+import uuid from 'uuid/v4.js';
+import {postDonation,putDonation,deleteDonation,postSupplies,postMember} from './dbHandlers.js';
+import generateTransport from '../mail/sgMail.js';
+import path from 'path';
+import {donateEmail,newMember} from '../email_templates/emails.js';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const payment = async(req,res,next) => {
     const {email} = req.body;
     if(!email){
@@ -99,6 +103,7 @@ const contactUs=async(req,res,next)=>{
         var email = req.body.email;
         var name = req.body.name;
         var message = req.body.message
+        const transport = await generateTransport()
         await transport.sendMail({
           to:process.env.EMAIL,
           from: process.env.EMAIL,
@@ -119,13 +124,12 @@ const contactUs=async(req,res,next)=>{
 const membershipPost = async(req,res,next)=>{
     try {
         await postMember(req,res,next);
-
+        const transport = await generateTransport()
         await transport.sendMail({
             to:req.body.email,
             from: process.env.EMAIL,
-            subject: `Thank you for joining Allie's Art Club`,
-            html: `<p>Thanks</p>,
-                  <p>Reply to this message at ${email}`
+            subject: `Welcome to Allie's Art Club!`,
+            html: newMember(req.body.name)
           })
         res.send({success:true});
     }
@@ -137,18 +141,20 @@ const membershipPost = async(req,res,next)=>{
 }
 const supplies = async(req,res,next)=>{
     try {
+        
         const response = await postSupplies(req,res,next);
-
+        console.log(response);
+        const transport = await generateTransport();
         await transport.sendMail({
             to:req.body.email,
             from: process.env.EMAIL,
             subject: `Thank you`,
-            html: `<p>Thanks</p>,
-                  <p>Reply to this message at ${email}`
+            html: donateEmail(req.body.name)
           })
         res.send({success: true})
     }
     catch(e){
+        console.log('ahaa',e)
         e.status=500;
         e.input=req.body;
         next(e);
@@ -157,7 +163,6 @@ const supplies = async(req,res,next)=>{
 const resourceHandler=(req,res,next)=>{
     try{
         const article= req.url.split('/')[2]+'.pdf';
-        // var file = fs.readFileSync(path.join(__dirname,'..','resources',req.body.category,article));
         res.download(path.join(__dirname,'..','resources',req.body.category,article),(err)=>{
             if(err){
                 next(err)
@@ -178,4 +183,4 @@ const route_404 = (req,res,next) => {
     throw error;
 }
 
-module.exports = {payment,supplies,updatePayment,deletePayment,membershipPost,contactUs,csrfToken,resourceHandler,route_404};
+export {payment,supplies,updatePayment,deletePayment,membershipPost,contactUs,csrfToken,resourceHandler,route_404};

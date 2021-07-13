@@ -1,5 +1,5 @@
-const express = require('express');
-const {stripeWebhook} = require('./handler_functions/csrfExemptHandlers.js');
-const router = express.Router();
-router.post('/webhook', stripeWebhook);
-module.exports = router;
+import express from 'express';
+import {stripeWebhook} from './handler_functions/csrfExemptHandlers.js';
+const exemptRouter = express.Router();
+exemptRouter.post('/webhook', stripeWebhook);
+export default exemptRouter;

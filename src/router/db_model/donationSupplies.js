@@ -1,5 +1,4 @@
-const mongodb = require('mongodb');
-const {getDb}= require('../database/connection');
+import {getDb} from '../database/connection.js';
 
 class DonationSupplies {
     constructor(date, name,email,organisation,supplies,otherSupplies,message){
@@ -29,4 +28,4 @@ class DonationSupplies {
     
 
 }
-module.exports = DonationSupplies;
+export default DonationSupplies;
