@@ -106,7 +106,7 @@ const contactUs=async(req,res,next)=>{
         const transport = await generateTransport()
         await transport.sendMail({
           to:process.env.EMAIL,
-          from: process.env.EMAIL,
+          from: `"Allie's Art Club - Contact Us" <${process.env.EMAIL}>`,
           subject: `Message from ${name}`,
           html: `<p>MESSAGE: ${message}</p>,
                 <p>Reply to this message at ${email}`
@@ -127,7 +127,7 @@ const membershipPost = async(req,res,next)=>{
         const transport = await generateTransport()
         await transport.sendMail({
             to:req.body.email,
-            from: process.env.EMAIL,
+            from: `"Allie's Art Club" <${process.env.EMAIL}>`,
             subject: `Welcome to Allie's Art Club!`,
             html: newMember(req.body.name)
           })
@@ -147,7 +147,7 @@ const supplies = async(req,res,next)=>{
         const transport = await generateTransport();
         await transport.sendMail({
             to:req.body.email,
-            from: process.env.EMAIL,
+            from: `"Allie's Art Club" <${process.env.EMAIL}>`,
             subject: `Thank you`,
             html: donateEmail(req.body.name)
           })
