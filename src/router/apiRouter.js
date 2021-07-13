@@ -1,15 +1,15 @@
-const express = require('express');
-const {payment,supplies,updatePayment,deletePayment,membershipPost,contactUs,csrfToken,resourceHandler,route_404} = require('./handler_functions/apiHandlers');
-const router = express.Router();
+import express from 'express';
+import {payment,supplies,updatePayment,deletePayment,membershipPost,contactUs,csrfToken,resourceHandler,route_404} from './handler_functions/apiHandlers.js';
+const apiRouter = express.Router();
 
-router.post('/payment',payment);
-router.post('/supplies',supplies);
-router.put('/updatePayment',updatePayment);
-router.delete('/deletePayment',deletePayment);
-router.post('/postMember',membershipPost);
-router.post('/contactUs',contactUs);
-router.get('/csrfToken',csrfToken);
-router.post('/resources/*',resourceHandler);
-router.get('*',route_404);
-// router.get('/ping', ping.get)
-module.exports = router;
+apiRouter.post('/payment',payment);
+apiRouter.post('/supplies',supplies);
+apiRouter.put('/updatePayment',updatePayment);
+apiRouter.delete('/deletePayment',deletePayment);
+apiRouter.post('/postMember',membershipPost);
+apiRouter.post('/contactUs',contactUs);
+apiRouter.get('/csrfToken',csrfToken);
+apiRouter.post('/resources/*',resourceHandler);
+apiRouter.get('*',route_404);
+// apiRouter.get('/ping', ping.get)
+export default apiRouter;

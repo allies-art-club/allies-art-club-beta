@@ -1,4 +1,4 @@
-const mongodb = require('mongodb');
+import mongodb from 'mongodb';
 const MongoClient = mongodb.MongoClient;
 //create closure containing instance of db, only functions in this file have direct access to db
 let _db;
@@ -26,4 +26,4 @@ const getDb=()=>{
     }
     throw new Error('Database not found')
 }
-module.exports = {getDb,dbConnect};
+export {getDb,dbConnect};

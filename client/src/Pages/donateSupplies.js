@@ -44,7 +44,6 @@ const DonateSupplies=(props)=>{
                     name:"",
                     email:"",
                     organisation: "",
-                    donationAmount: "",
                     message: "",
                     supplies: [],
                     suppliesOther: ''

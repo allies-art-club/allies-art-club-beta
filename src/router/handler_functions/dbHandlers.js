@@ -1,6 +1,6 @@
-const Donation = require('../db_model/donation');
-const DonationSupplies = require('../db_model/donationSupplies');
-const Member = require('../db_model/member.js')
+import Donation from '../db_model/donation.js';
+import DonationSupplies from '../db_model/donationSupplies.js';
+import Member from '../db_model/member.js';
 
 const createDate =()=>{
 
@@ -124,4 +124,4 @@ const postMember=(req,res,next)=>{
 
 }
 
-module.exports = {postDonation,putDonation,deleteDonation,postSupplies,postMember};
+export {postDonation,putDonation,deleteDonation,postSupplies,postMember};
