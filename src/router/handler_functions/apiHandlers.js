@@ -6,6 +6,7 @@ const {postDonation,putDonation,deleteDonation,postSupplies,postMember} = requir
 const transport =require('../mail/sgMail.js');
 const fs = require('fs');
 const path = require('path');
+const {donateEmail,newMember}=require('../email_templates/emails.js')
 
 const payment = async(req,res,next) => {
     const {email} = req.body;
@@ -123,9 +124,8 @@ const membershipPost = async(req,res,next)=>{
         await transport.sendMail({
             to:req.body.email,
             from: process.env.EMAIL,
-            subject: `Thank you for joining Allie's Art Club`,
-            html: `<p>Thanks</p>,
-                  <p>Reply to this message at ${email}`
+            subject: `Welcome to Allie's Art Club!`,
+            html: newMember(req.body.name)
           })
         res.send({success:true});
     }
@@ -143,8 +143,7 @@ const supplies = async(req,res,next)=>{
             to:req.body.email,
             from: process.env.EMAIL,
             subject: `Thank you`,
-            html: `<p>Thanks</p>,
-                  <p>Reply to this message at ${email}`
+            html: donateEmail(req.body.name)
           })
         res.send({success: true})
     }
