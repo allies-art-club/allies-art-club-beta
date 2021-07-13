@@ -6,8 +6,8 @@ import Header from './Components/header/header.js';
 import {createGlobalStyle} from 'styled-components';
 import {Container} from './Components/Styled/styled.js';
 import Clipboard from './Components/clipboard/clipboard.js';
-import {Elements} from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
+// import {Elements} from '@stripe/react-stripe-js';
+// import { loadStripe } from '@stripe/stripe-js';
 import Spinner from './Components/spinner.js';
 import ErrorBoundary from './Pages/errorBoundary.js';
 const Home = lazy(()=> import('./Pages/home.js'));
@@ -18,7 +18,7 @@ const Discussions= lazy(()=> import('./Pages/discussions.js'));
 const Footer = lazy(()=> import('./Components/footer/footer.js'));
 const Donate = lazy(()=>import('./Pages/donate.js'));
 const ThankYou = lazy(()=>import('./Pages/thankyou.js'));
-const DonateFunds = lazy(()=>import('./Pages/donateFunds.js'));
+// const DonateFunds = lazy(()=>import('./Pages/donateFunds.js'));
 const DonateSupplies = lazy(()=>import('./Pages/donateSupplies.js'));
 const Membership=lazy(()=>import('./Pages/membership.js'));
 const Volunteer=lazy(()=>import('./Pages/volunteer.js'));
@@ -82,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
+// const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 const App= (props) =>{
     var setCsrf = props.setCsrfToken;
 
@@ -171,7 +171,7 @@ const App= (props) =>{
                   }
                   />
 
-                <Route path="/be-an-allie/donateFunds" exact strict render={
+                {/* <Route path="/be-an-allie/donateFunds" exact strict render={
                       ()=>{
                           return(
                             <Elements stripe={stripePromise}>
@@ -183,7 +183,7 @@ const App= (props) =>{
                       }
                   }
                   />
-        
+         */}
                 <Route path="/be-an-allie/donateSupplies" exact strict render={
                       ()=>{
                           return(

@@ -3,7 +3,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY,{
 });
 const uuid = require('uuid/v4');
 const {postDonation,putDonation,deleteDonation,postSupplies,postMember} = require('./dbHandlers.js');
-const sgMail=require('../mail/sgMail.js');
+const transport =require('../mail/sgMail.js');
 const fs = require('fs');
 const path = require('path');
 
@@ -96,15 +96,15 @@ const csrfToken = (req,res,next) => {
 }
 const contactUs=async(req,res,next)=>{
     try {
-        var from = req.body.email;
+        var email = req.body.email;
         var name = req.body.name;
         var message = req.body.message
-        var response = await sgMail.send({
-          to:'harryyy27@gmail.com',
-          from: `${from}`,
+        await transport.sendMail({
+          to:process.env.EMAIL,
+          from: process.env.EMAIL,
           subject: `Message from ${name}`,
-          text: `${message}`,
-          html: `<p>${message}</p>`
+          html: `<p>MESSAGE: ${message}</p>,
+                <p>Reply to this message at ${email}`
         })
 
         res.send({received:true})
@@ -119,6 +119,14 @@ const contactUs=async(req,res,next)=>{
 const membershipPost = async(req,res,next)=>{
     try {
         await postMember(req,res,next);
+
+        await transport.sendMail({
+            to:req.body.email,
+            from: process.env.EMAIL,
+            subject: `Thank you for joining Allie's Art Club`,
+            html: `<p>Thanks</p>,
+                  <p>Reply to this message at ${email}`
+          })
         res.send({success:true});
     }
     catch(e){
@@ -130,6 +138,14 @@ const membershipPost = async(req,res,next)=>{
 const supplies = async(req,res,next)=>{
     try {
         const response = await postSupplies(req,res,next);
+
+        await transport.sendMail({
+            to:req.body.email,
+            from: process.env.EMAIL,
+            subject: `Thank you`,
+            html: `<p>Thanks</p>,
+                  <p>Reply to this message at ${email}`
+          })
         res.send({success: true})
     }
     catch(e){
