@@ -8,7 +8,8 @@
     "client": "npm start --prefix client",
     "build": "npm run build --prefix client",
     "start": "cross-env NODE_ENV=production node ./src/server.js ",
-    "dev": "concurrently taskkill /IM node.exe \"npm run client\" \"nodemon ./src/server.js\"",
+    "startDev": "cross-env NODE_ENV=localprod node ./src/server.js",
+    "dev": "cross-env NODE_ENV=dev concurrently taskkill /IM node.exe \"npm run client\" \"nodemon ./src/server.js\"",
     "test": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
     "coverage": "cross-env NODE_ENV=test nyc npm run test",
     "heroku-postbuild": "npm install && npm install --prefix client && npm run build"
