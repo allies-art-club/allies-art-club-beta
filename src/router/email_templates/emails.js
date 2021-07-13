@@ -34,4 +34,4 @@ const newMember = (name) => {
     `
 }
 
-module.exports = {donateEmail,newMember}
+export {donateEmail,newMember}

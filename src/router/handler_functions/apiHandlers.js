@@ -1,12 +1,12 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY,{
+import stripe from 'stripe';
+stripe(process.env.STRIPE_SECRET_KEY,{
     maxNetworkRetries: 3
 });
-const uuid = require('uuid/v4');
-const {postDonation,putDonation,deleteDonation,postSupplies,postMember} = require('./dbHandlers.js');
-const transport =require('../mail/sgMail.js');
-const fs = require('fs');
-const path = require('path');
-const {donateEmail,newMember}=require('../email_templates/emails.js')
+import uuid from 'uuid/v4.js';
+import {postDonation,putDonation,deleteDonation,postSupplies,postMember} from './dbHandlers.js';
+import transport from '../mail/sgMail.js';
+import path from 'path';
+import {donateEmail,newMember} from '../email_templates/emails.js';
 
 const payment = async(req,res,next) => {
     const {email} = req.body;
@@ -120,7 +120,6 @@ const contactUs=async(req,res,next)=>{
 const membershipPost = async(req,res,next)=>{
     try {
         await postMember(req,res,next);
-
         await transport.sendMail({
             to:req.body.email,
             from: process.env.EMAIL,
@@ -137,17 +136,20 @@ const membershipPost = async(req,res,next)=>{
 }
 const supplies = async(req,res,next)=>{
     try {
+        
         const response = await postSupplies(req,res,next);
-
-        await transport.sendMail({
+        console.log(response);
+        const err =await transport.sendMail({
             to:req.body.email,
             from: process.env.EMAIL,
             subject: `Thank you`,
             html: donateEmail(req.body.name)
           })
+          console.log('ehehe',err)
         res.send({success: true})
     }
     catch(e){
+        console.log('ahaa',e)
         e.status=500;
         e.input=req.body;
         next(e);
@@ -177,4 +179,4 @@ const route_404 = (req,res,next) => {
     throw error;
 }
 
-module.exports = {payment,supplies,updatePayment,deletePayment,membershipPost,contactUs,csrfToken,resourceHandler,route_404};
+export {payment,supplies,updatePayment,deletePayment,membershipPost,contactUs,csrfToken,resourceHandler,route_404};
