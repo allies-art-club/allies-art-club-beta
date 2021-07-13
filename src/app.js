@@ -10,12 +10,14 @@ const transport = require('./router/mail/sgMail.js');
 const cookieParser = require('cookie-parser');
 const csrf = require('csurf');
 const app = express();
+import sslRedirect from 'heroku-ssl-redirect';
 
 var rawBodySaver = function (req, res, buf, encoding) {
   if (buf && buf.length) {
     req.rawBody = buf.toString(encoding || 'utf8');
   }
 }
+app.use(sslRedirect());
 app.use(bodyParser.urlencoded({verify: rawBodySaver, extended: true }));
 app.use(bodyParser.json({verify: rawBodySaver}));
 //do not run the following during tests
@@ -85,8 +87,8 @@ app.use((err,req,res,next)=>{
     res.status(err.status).send({error:"An unknown error has occurred. We are working to fix this."})
   }
   const mailOptions = {
-    from: process.env.EMAIL, // sender
-    to: process.env.EMAIL, // receiver
+    from: process.env.DEV_EMAIL, // sender
+    to: process.env.DEV_EMAIL, // receiver
     subject: 'Error', // Subject
     html: `<h1>New Error!</h1>
     <p>ERROR - ${err}</p>
