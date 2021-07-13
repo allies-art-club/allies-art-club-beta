@@ -7,7 +7,7 @@ import dbRouter from './router/dbrouter.js';
 import exemptRouter from './router/csrfExemptRouter.js';
 import session from 'express-session';
 import path from 'path';
-import generateTransport from './router/mail/sgMail.js';
+import devGenerateTransport from './router/mail/devsgMail.js';
 import cookieParser from 'cookie-parser';
 import csrf from 'csurf';
 import MongoDBStore from 'connect-mongodb-session';
@@ -17,7 +17,9 @@ import sslRedirect from 'heroku-ssl-redirect';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-app.use(sslRedirect.default());
+if(process.env.NODE_ENV==='production'){
+  app.use(sslRedirect.default());
+}
 
 var rawBodySaver = function (req, res, buf, encoding) {
   if (buf && buf.length) {
@@ -57,7 +59,7 @@ app.use(csrfProtection);
 
 
 //serve from build folder in prod
-if(process.env.NODE_ENV==='production'){
+if(process.env.NODE_ENV==='production'||'localprod'){
   app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 }
 app.use('/api',apiRouter);
@@ -103,7 +105,7 @@ app.use(async (err,req,res,next)=>{
     <p>INPUT BODY - ${err.input.toString()}</p>`// html body
     }
   if(process.env.NODE_ENV!=='test'){
-    const transport = await generateTransport()
+    const transport = await devGenerateTransport()
     transport.sendMail(mailOptions)
     .then((res)=>console.log(res))
     .catch((err)=>console.log(err))
