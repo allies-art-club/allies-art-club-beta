@@ -46,6 +46,12 @@ const stripeWebhook = async(req,res,next)=>{
             let chargeSucceeded = event.data.object;
             req.body.stripeId = chargeSucceeded.payment_intent;
             var result = await putDonation(req,res,next,'DONATION_SUCCESSFUL');
+            await transport.sendMail({
+              to:req.body.email,
+              from: process.env.EMAIL,
+              subject: `Thank you for your contributuion`,
+              html: `<p>Thanks</p>`
+            })
             break;
 
           default:
