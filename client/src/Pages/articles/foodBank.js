@@ -130,9 +130,7 @@ decided to help out; "I love it! We all get on, we all get down to work.".</Para
 <Paragraph>Allie's food bank is open every Monday, Wednesday and Friday from
 12pm - 4pm for anyone who needs support.</Paragraph>
 <Paragraph>Donations to Allie’s food bank are greatly appreciated, and you can find out how to donate on <Link rel="noopener"target="_blank"href="https://www.awtf.org/food-appeal">AWTF’s website</Link>.</Paragraph>
-<Paragraph>New volunteers are more than welcome, and can arrive at the
-Ringcross Community Centre any time from 9am on the days the food
-bank is open.</Paragraph>
+<Paragraph>New volunteers are more than welcome and can send us an email at <Link href="/be-an-allie/contact-us">alliesartclub@gmail.com</Link> if they would like to get involved.</Paragraph>
 <Image alt="hearts" right={true} src={"/assets/general/heartsR.png"}/>
 </Section>
 
