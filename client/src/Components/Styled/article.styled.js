@@ -83,6 +83,9 @@ const ArticleSummary = styled.p`
     margin: 0;
     margin:auto;
     line-height: 1rem;
+    @media(min-width:768px){
+        line-height:1.2rem;
+    }
 `
 const Figure=styled.figure`
     position:relative;

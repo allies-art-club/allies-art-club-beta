@@ -20,7 +20,7 @@ const SideNavWrapper = styled.div`
         left:${props=>props.menu?'50%':'-19%'};
         transform:${props=>props.menu?'translateX(-50%)':'auto'};
 
-        top:${props=>props.menu?'55px':'0'};
+        top:${props=>props.menu?'45px':'0'};
 
         ${HeaderNavListElement}:hover & {
             display: block;
@@ -32,6 +32,8 @@ const SideNavWrapper = styled.div`
     }
     @media(min-width:1300px){
         width:${props=>props.menu?"250px":"15%"};
+        top:${props=>props.menu?'55px':'0'};
+
 
     }
     z-index: ${props=>props.sidenav?"20":"30"};

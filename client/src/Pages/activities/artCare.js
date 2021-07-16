@@ -12,7 +12,7 @@ const Access2Art=()=>{
                 title={"Art Care"} />
                 <Paragraph>Whether it’s painting, writing, singing or dancing, art and creativity bring a wealth of joy and fulfilment to so many people’s lives.</Paragraph>
             <Paragraph>In fact, studies have shown that engaging in artistic activities has tremendous benefits for people's mental health, sense of wellbeing and overall quality of life.</Paragraph>
-            <Paragraph>Unfortunately, studies have shown that mental health issues such as anxiety and depression are at an all-time high in the UK and abroad as many people struggle with the impacts of the Coronavirus pandemic. </Paragraph>
+            <Paragraph>Unfortunately, studies have also shown that mental health issues such as anxiety and depression are at an all-time high in the UK and abroad as many people struggle with the impacts of the Coronavirus pandemic. </Paragraph>
 
             <picture>
                     <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCare-small.png 1x, /assets/activities/projects/artCare/artCare-large.png 2x"/>
