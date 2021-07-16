@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import {boxGlow} from './theme/theme.js';
-import {ListElement,Link} from './styled.js';
+import {ListElement,Link,SubHeading} from './styled.js';
 const ArticleWrapper=styled.div`
     display:flex;
     flex-direction:${props=>props.right?"row-reverse":"row"};
@@ -83,6 +83,9 @@ const ArticleSummary = styled.p`
     margin: 0;
     margin:auto;
     line-height: 1rem;
+    @media(min-width:768px){
+        line-height:1.2rem;
+    }
 `
 const Figure=styled.figure`
     position:relative;
@@ -287,4 +290,9 @@ const ImageLabelArrow = styled.img`
         left: ${props=>props.right?"auto":"-75px"};
     }
 `
-export {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Border,Benefit,ArticleList, BenefitList,BenefitText,BenefitWrapper,StickyNote,ImageLabel,ImageLabelText,ImageLabelArrow}
+const SubHeadingCall=styled(SubHeading)`
+    text-align:center;
+    transform:translateY(-2rem);
+    margin-bottom:0;
+`
+export {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Border,Benefit,ArticleList, BenefitList,BenefitText,BenefitWrapper,StickyNote,ImageLabel,ImageLabelText,ImageLabelArrow,SubHeadingCall}

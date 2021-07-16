@@ -3,7 +3,7 @@
 
     <style type="text/css">
 
-        @import url('/assets/fonts/stylesheet.css');
+        @import url('/assets/fonts/bigstem/stylesheet.css');
         .text-style {
             font-size:55px;
             font-weight:500;

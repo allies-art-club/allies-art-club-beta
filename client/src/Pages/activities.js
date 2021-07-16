@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph} from '../Components/Styled/styled.js'
+import {Paragraph,PageDescription} from '../Components/Styled/styled.js'
 import activities from './activities/landingPage.js';
 const Activities=()=>{
     return(
@@ -16,7 +16,7 @@ const Activities=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Activities"}
             ></TitleBanner>
-            <Paragraph>Information on Allie's projects and events and how you can get involved or support us.</Paragraph>
+            <PageDescription>Information on Allie's projects and events and how you can get involved or support us.</PageDescription>
             {
                 activities.map((el,i)=>{
                     return(

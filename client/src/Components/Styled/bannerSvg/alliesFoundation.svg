@@ -23,7 +23,7 @@
     </defs>
     <text x="10" y="-30" class="text-style" >
         <textPath href="#MyPath" startOffset="50%" text-anchor="middle">
-            <tspan >AWTF aims to support underprivileged children adults</tspan><br/>
+            <tspan >AWTF aims to support underprivileged children, adults</tspan><br/>
         </textPath>
     </text>
     <text class="text-style">
