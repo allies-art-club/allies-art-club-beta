@@ -12,10 +12,7 @@ const Access2Art=()=>{
                 title={"Art Care"} />
                 <Paragraph>Whether it’s painting, writing, singing or dancing, art and creativity bring a wealth of joy and fulfilment to so many people’s lives.</Paragraph>
             <Paragraph>In fact, studies have shown that engaging in artistic activities has tremendous benefits for people's mental health, sense of wellbeing and overall quality of life.</Paragraph>
-            <Paragraph>
-                Approximately 14.4 million people are currently living in poverty in the UK. As the impacts of the Coronavirus pandemic continue, the number of people living in poverty is predicted to rise drastically. With many families struggling to make ends meet, they are usually unable to afford the materials and equipment needed to engage in art.
-            </Paragraph>
-            <Paragraph>Unfortunately, studies have also shown that mental health issues such as anxiety and depression are at an all-time high in the UK and abroad as many people struggle with the impacts of the Coronavirus pandemic. </Paragraph>
+            <Paragraph>Unfortunately, studies have shown that mental health issues such as anxiety and depression are at an all-time high in the UK and abroad as many people struggle with the impacts of the Coronavirus pandemic. </Paragraph>
 
             <picture>
                     <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCare-small.png 1x, /assets/activities/projects/artCare/artCare-large.png 2x"/>
@@ -43,7 +40,7 @@ const Access2Art=()=>{
                     <TextImageTop mobile={true} src={'/assets/activities/projects/artCare/artCarePacks-large.png'} alt="Art Care Packs"/>
                 </picture>    
             <Paragraph>We believe everyone should be able to access the many benefits that art can provide, including those who are underprivileged or struggling financially.</Paragraph>
-            <Paragraph>Approximately 14.4 million people are currently living in poverty in the UK, with numbers predicted to rise drastically as the economic impacts of the Coronavirus continue.</Paragraph>
+            <Paragraph>Approximately 14.4 million people are currently living in poverty in the UK, with numbers predicted to rise drastically as the economic impacts of the Coronavirus pandemic continue.</Paragraph>
             <Paragraph>With so many families struggling to make ends meet, they are usually unable to afford the materials and equipment needed to engage in art.</Paragraph>
             <Paragraph>Financial hardship can also put huge strains on people’s mental wellbeing, making accessible mental health support all the more important.</Paragraph>
             <Paragraph>To support the mental health of those struggling financially, we will be donating Art Care Packs to a number of food banks across London, where they can reach communities most affected. The Packs will include mental health information sheets and a range of art supplies such as notebooks, pens and pencils.</Paragraph>
