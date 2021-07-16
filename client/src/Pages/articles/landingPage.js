@@ -27,7 +27,7 @@ const articles =[
     {
         src: "/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6",
         title: "AWTF: A Charity We Can Trust",
-        date:"3nd May 2021",
+        date:"2nd May 2021",
         category:"Club articles",
         subcategory: "3 minute read",
         description: "About the Club's Foundation, AWTF, and why we trust this charity to support us."

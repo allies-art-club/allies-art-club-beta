@@ -1,28 +1,36 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,TextImageTop,Article,Section,Image,SubHeading,ImageWrap} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImageTop,Article,Section,Image,SubHeading,ImageWrap} from '../../Components/Styled/styled.js';
+import {SubHeadingCall} from '../../Components/Styled/article.styled.js';
+
 const LessonsInCalligraphy=()=>{
     return(
-        <Article>
+        <Article >
             <TitleBanner
                 
                 centreSrc={"/assets/general/curvedLine.png"}
                 title={"Lessons in Calligraphy"}
             ></TitleBanner>
-            <SubHeading>A personal story by Lydia Rose</SubHeading>
+            <SubHeadingCall>A personal story by Lydia Rose</SubHeadingCall>
 
-            <Section>
+            <Section >
 
             <picture>
                     <source media="(max-width: 1024px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-small.png 1x, /assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-2x.png 2x"/>
                     <source media="(min-width: 1025px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-large.png"/>
-                    <TextImage right={true} src={'/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-large.png'} alt="pen"/>
+                    <TextImageTop right={true} src={'/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-large.png'} alt="pen"/>
                 </picture>
             <Paragraph>As a writer, I have always been drawn
 to calligraphy as a beautiful way to display the contents of my mind.</Paragraph>
-<Paragraph>In my teens, I was gifted a neat calligraphy set, which was at first my most prized piece of stationary. After a few months of errors, frustration and ink-stained fingertips, I quit altogether. Calligraphy was too hard, too laborious, and I did not have the patience to pursue it.</Paragraph>
+
+<picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-small.png 1x, /assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-large.png"/>
+                    <TextImageTop mobile={true} src={'/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1-large.png'} alt="pen"/>
+                </picture>
+<Paragraph>In my teens, I was gifted a neat calligraphy set, which was at first my most prized piece of stationary. But after a few months of errors, frustration and ink-stained fingertips, I quit altogether. Calligraphy was too hard, too laborious, and I did not have the patience to pursue it.</Paragraph>
 <Paragraph>In my mid-twenties I was once again captivated by this elegant art form, and decided to treat myself to a new set that was too
-gorgeous to resist. Holding my new silver nib to the page, I was at first determined to get it right and become a skillful master of calligraphy. But my motivation soon dried up as pages of messy scribbles and in blots revealed my inadequacies.</Paragraph>
+gorgeous to resist. Holding my new silver nib to the page, I was at first determined to get it right and become a skillful master of calligraphy. But my motivation soon dried up as pages of messy scribbles and ink blots revealed my inadequacies.</Paragraph>
 <Paragraph>A few months later, when the pandemic had hit the UK and the whole country was placed under lock and key, my calligraphy pen called me into practice once again. Sitting at my desk with an abundance of free time on my hands, I met the page with a completely new attitude; I was not there to be perfect, I was there to learn.</Paragraph>
 <Paragraph>With a fresh outlook, the pressure to perform was replaced by a desire to explore this timeless craft without any expectations. And there, between ink pot and paper, I discovered many lessons that were more valuable to my life than I could have ever predicted.</Paragraph>
 </Section>
@@ -72,8 +80,8 @@ enthusiasm, it is not enough to inspire me to consistently exert
 myself in the arduous process of producing mediocre work far
 from my aspirations. In re-evaluating my commitments, I realised it
 was the process itself that I was committed to - a process that is
-far more valuable to my development than any envisioned outcome.
-Being committed means having agency and working towards a goal.
+far more valuable to my development than any envisioned outcome.</Paragraph>
+<Paragraph>Being committed means having agency and working towards a goal.
 Oftentimes achieving a goal can seem too difficult or distant to
 spur us into action, so committing to the path there might just be
 the best (and only) way to achieve progress.</Paragraph>
