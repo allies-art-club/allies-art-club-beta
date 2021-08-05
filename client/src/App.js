@@ -10,6 +10,7 @@ import Clipboard from './Components/clipboard/clipboard.js';
 // import { loadStripe } from '@stripe/stripe-js';
 import Spinner from './Components/spinner.js';
 import ErrorBoundary from './Pages/errorBoundary.js';
+const LaunchParty =lazy(()=>import('./Pages/activities/launchParty.js'));
 const Home = lazy(()=> import('./Pages/home.js'));
 const AboutAac = lazy(()=>import('./Pages/aboutaac.js'));
 const AboutAlliesStory = lazy(()=>import('./Pages/aboutStory.js'));
@@ -260,6 +261,16 @@ const App= (props) =>{
                           }
                       }
                       />
+                      <Route path="/activities/events/arts-fair-and-open-mic-launch-party" exact strict render={
+                        ()=>{
+                            return(
+                              <Clipboard children={
+                                <LaunchParty/>
+                              }/>
+                            )
+                        }
+                    }
+                    />
                       <Route path="/discussions/artist-conversations" exact strict render={
                             ()=>{
                                 return(

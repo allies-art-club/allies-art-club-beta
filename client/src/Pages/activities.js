@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import SideNav from '../Components/sideNav/sideNav.js';
 import Article from '../Components/article.js';
-import {Paragraph,PageDescription} from '../Components/Styled/styled.js'
+import {PageDescription} from '../Components/Styled/styled.js'
 import activities from './activities/landingPage.js';
 const Activities=()=>{
     return(

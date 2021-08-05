@@ -5,7 +5,7 @@ import {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,Artic
 const Article=(props)=>{
     return(
         <ArticleLink 
-            exact to={`/${props.landingPage}/${props.category.toLowerCase().replace(/[']/g,'').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}/${props.title.toLowerCase().replace(/[']/g,'').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}`} 
+            exact to={`/${props.landingPage}/${props.category.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}/${props.title.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}`} 
             onClick={props.downloadHandler?async(e)=>{
                 e.preventDefault();
                 await toggleSpinner;
