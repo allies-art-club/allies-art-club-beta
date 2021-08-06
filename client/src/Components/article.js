@@ -3,11 +3,12 @@ import {toggleSpinner} from '../Actions/appActions';
 import {connect} from 'react-redux';
 import {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from '../Components/Styled/article.styled.js';
 const Article=(props)=>{
+    var title = '';
     if(props.title2){
-        var title= props.title+ ' ' + props.title2;
+        title= props.title+ ' ' + props.title2;
     }
     else {
-        var title = props.title;
+        title = props.title;
     }
     return(
         <ArticleLink 
