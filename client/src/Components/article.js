@@ -3,9 +3,15 @@ import {toggleSpinner} from '../Actions/appActions';
 import {connect} from 'react-redux';
 import {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from '../Components/Styled/article.styled.js';
 const Article=(props)=>{
+    if(props.title2){
+        var title= props.title+ ' ' + props.title2;
+    }
+    else {
+        var title = props.title;
+    }
     return(
         <ArticleLink 
-            exact to={`/${props.landingPage}/${props.category.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}/${props.title.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}`} 
+            exact to={`/${props.landingPage}/${props.category.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}/${title.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}`} 
             onClick={props.downloadHandler?async(e)=>{
                 e.preventDefault();
                 await toggleSpinner;
