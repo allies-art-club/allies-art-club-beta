@@ -3,9 +3,16 @@ import {toggleSpinner} from '../Actions/appActions';
 import {connect} from 'react-redux';
 import {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from '../Components/Styled/article.styled.js';
 const Article=(props)=>{
+    var title = '';
+    if(props.title2){
+        title= props.title+ ' ' + props.title2;
+    }
+    else {
+        title = props.title;
+    }
     return(
         <ArticleLink 
-            exact to={`/${props.landingPage}/${props.category.toLowerCase().replace(/[']/g,'').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}/${props.title.toLowerCase().replace(/[']/g,'').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}`} 
+            exact to={`/${props.landingPage}/${props.category.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}/${title.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}`} 
             onClick={props.downloadHandler?async(e)=>{
                 e.preventDefault();
                 await toggleSpinner;
@@ -45,6 +52,15 @@ const Article=(props)=>{
                                     {props.title.split(': ')[1]}
                                 </ArticleTitle>:
                                 null
+                            }
+                            {
+                                props.title2?
+
+                                <ArticleTitle largeHeading={props.largeHeading}>
+                                    {props.title2}
+                                </ArticleTitle>:
+                                null
+
                             }
                         </ArticleTitleWrap>
                         <ArticleSummary largeHeading={props.largeHeading}>{props.children}</ArticleSummary>

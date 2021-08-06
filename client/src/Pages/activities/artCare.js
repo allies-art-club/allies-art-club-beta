@@ -1,5 +1,7 @@
 import React,{Fragment} from 'react';
 import {Paragraph,Link,Section,TextImage,TextImageTop,SubHeading} from '../../Components/Styled/styled.js';
+import {SquareImage} from '../../Components/Styled/article.styled.js';
+
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
 const Access2Art=()=>{
     return (
@@ -23,6 +25,11 @@ const Access2Art=()=>{
             <Paragraph>Artistic activities such as drawing and creative writing are fantastic ways for people to express themselves and process their emotions, as well as relax, have fun, socialise and improve their overall mood.</Paragraph>
             <Paragraph>Through providing resources and events that allow people to engage in art, we hope to address the mental health crisis facing our nation and brighten people’s lives with the magic of creativity.</Paragraph>
 
+            <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/activities/projects/artCare/artCarePacksImage-small.png 1x, /assets/activities/projects/artCare/artCarePacksImage-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/activities/projects/artCare/artCarePacksImage-large.png"/>
+                    <SquareImage right={true} src={'/assets/activities/projects/artCare/artCarePacksImage-large.png'} alt="Art Care Packs Image"/>
+                </picture>  
         </Section>
         <Section>
 

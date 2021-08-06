@@ -27,6 +27,7 @@ const ArtistConversations=()=>{
                         <Article key={i} 
                         src={el.src}
                         title={el.title}
+                        title2={el.title2}
                         right={i%2===0} 
                         date={el.date}
                         category={el.category}

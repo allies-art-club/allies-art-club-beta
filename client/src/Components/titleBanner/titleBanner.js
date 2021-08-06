@@ -32,6 +32,11 @@ const TitleBanner = (props) => {
                    :
                    <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title}</ImageTitle>
             }
+            {
+                props.title2?
+                <ImageTitle sideSrc1={props.sideSrc1} sideSrc2={props.sideSrc2} centreSrc={props.centreSrc}>{props.title2}</ImageTitle>
+                :null
+            }   
                     </CentreImageWrapper>
                     
             {
