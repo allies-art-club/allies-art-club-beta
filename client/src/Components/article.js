@@ -46,6 +46,15 @@ const Article=(props)=>{
                                 </ArticleTitle>:
                                 null
                             }
+                            {
+                                props.title2?
+
+                                <ArticleTitle largeHeading={props.largeHeading}>
+                                    {props.title2}
+                                </ArticleTitle>:
+                                null
+
+                            }
                         </ArticleTitleWrap>
                         <ArticleSummary largeHeading={props.largeHeading}>{props.children}</ArticleSummary>
                         <Border alt="border bottom" src={"/assets/general/border.png"}/>
