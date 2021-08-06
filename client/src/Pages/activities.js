@@ -25,6 +25,7 @@ const Activities=()=>{
                 key={i}
                 src={el.src}
                 title={el.title}
+                title2={el.title2}
                 right={i%2===1} 
                 date={el.date}
                 landingPage={"activities"}
