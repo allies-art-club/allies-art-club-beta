@@ -48,14 +48,14 @@ const ImageTitle=styled.h1`
     position:${props=>props.centreSrc?"relative":"static"};
     font-weight:100;
     width:100%;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-family: nickainley;
     @media(min-width:320px){
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     @media(min-width:481px){
-        font-size: 2.3rem;
+        font-size: 1.9rem;
     }
     @media(min-width: 1025px){
         font-size: 2.5rem;
