@@ -9,7 +9,8 @@ const LaunchParty=()=>{
                 sideSrc1={"/assets/general/starsL.png"}
                 sideSrc2={"/assets/general/starsR.png"}
                 centreSrc={"/assets/general/curvedLine.png"}
-                title={"Arts Fair & Open Mic Launch Party"}/>
+                title={"Arts Fair & Open Mic"}
+                title2={"Launch Party"}/>
                 
             <picture>
                     <source media="(max-width: 1024px)" srcSet="/assets/activities/events/launchParty/launchParty2-small.png 1x, /assets/activities/events/launchParty/launchParty2-large.png 2x"/>
@@ -24,7 +25,7 @@ const LaunchParty=()=>{
                     <TextImageSquareTop mobile={true} src={'/assets/activities/events/launchParty/launchParty2-large.png'} alt="Art Care"/>
                 </picture>  
             <SubHeading>Arts Fair</SubHeading>
-            <Paragraph>Running from 3 – 6pm, our free arts fair will include an art market run by Citizens Art Market showcasing a range of talented artists.</Paragraph>
+            <Paragraph>Running from 3 – 6pm, our free arts fair will include an art market showcasing a range of talented artists.</Paragraph>
             <Paragraph>We will also have stalls selling delicious hot food, live DJ sets and space to socialise and enjoy a creative community atmosphere.</Paragraph>
             <SubHeading>Arts Show</SubHeading>
             <Paragraph>Hosted by our Club’s pioneer, poet and activist Lydia Rose, our arts show will include a fantastic range of live poetry, spoken word and music performances. We will also have open mic slots available with a reduced ticket price for those who would like to perform their art on stage.</Paragraph>
