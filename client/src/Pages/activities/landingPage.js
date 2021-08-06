@@ -5,7 +5,7 @@ const activities = [
         title2: "Launch Party",
         date: "4th September 2021",
         category: "Events",
-        subcategory: "Ongoing",
+        subcategory: "Upcoming",
         description: "Our first arts event, including an art market and an arts show with live poetry and music."
     },
     {
@@ -14,6 +14,6 @@ const activities = [
         date: "1st July 2021",
         category: "Projects",
         subcategory: "Ongoing",
-        description: "An overview of our project that aims to support people’s mental health and wellbeing through providing opportunities for them to make and enjoy art."
+        description: "Our project to support people’s mental health through providing opportunities for them to make and enjoy art."
 }]
 export default activities;
