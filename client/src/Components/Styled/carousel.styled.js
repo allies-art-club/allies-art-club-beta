@@ -136,7 +136,7 @@ const NavClick = styled(NavLink)`
         }%;
     }
     @media(min-width:1024px){
-        height: 360px;
+        height: ${props=>props.square?"360px":"400px"};
     }
 
     top: 50%;
