@@ -302,4 +302,34 @@ const SquareImage = styled.img`
     width: 80%;
     clear:both;
 `
-export {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,RememberAllieHeading,ArticleDetailsWrapper,ArticleItem,Border,Benefit,ArticleList, BenefitList,BenefitText,BenefitWrapper,StickyNote,ImageLabel,ImageLabelText,ImageLabelArrow,SubHeadingCall,SquareImage}
+const CarouselCaption = styled.p`
+
+`
+export {
+    ArticleWrapper,
+    ArticleTitleWrap,
+    ArticleLink,
+    TextContainer,
+    TextWrap,
+    ArticleTitle,
+    ArticleSummary,
+    Figure,
+    ArticleImage,
+    PublishingDate,
+    RememberAllieHeading,
+    ArticleDetailsWrapper,
+    ArticleItem,
+    Border,
+    Benefit,
+    ArticleList, 
+    BenefitList,
+    BenefitText,
+    BenefitWrapper,
+    StickyNote,
+    ImageLabel,
+    ImageLabelText,
+    ImageLabelArrow,
+    SubHeadingCall,
+    SquareImage,
+    CarouselCaption
+}

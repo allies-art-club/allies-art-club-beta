@@ -9,42 +9,42 @@ const FoodBank=()=>{
                 centreSrc={"/assets/general/curvedLine.png"}
                 title={"Allie's Food Bank"}
             ></TitleBanner>
-    <Section>
-    <ImageLabel split={true} top={true}>
-        <ImageLabelText right={true}>Lexi</ImageLabelText>
-        <ImageLabelArrow alt={"black arrow pointing at photo"} right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
-    </ImageLabel>
-        <picture>
-                <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/Lexi-small.png 1x, /assets/articles/foodBank/Lexi-large.png 2x"/>
-                <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
-                <TextImageTop right={true} src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
-        </picture>
+            <Section>
+                <ImageLabel split={true} top={true}>
+                    <ImageLabelText right={true}>Lexi</ImageLabelText>
+                    <ImageLabelArrow alt={"black arrow pointing at photo"} right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
+                </ImageLabel>
+                <picture>
+                        <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/Lexi-small.png 1x, /assets/articles/foodBank/Lexi-large.png 2x"/>
+                        <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
+                        <TextImageTop right={true} src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
+                </picture>
 
-        <Paragraph>Food poverty is a critical issue in the UK.
-        Families living in London are particularly
-        vulnerable to hunger and malnutrition, as
-        the nation's capital has the highest
-        number of people living below the
-        poverty line.</Paragraph>
+                <Paragraph>Food poverty is a critical issue in the UK.
+                Families living in London are particularly
+                vulnerable to hunger and malnutrition, as
+                the nation's capital has the highest
+                number of people living below the
+                poverty line.</Paragraph>
 
-        <ImageLabel split={true}>
-            <ImageLabelText right={true}>Lexi</ImageLabelText>
-            <ImageLabelArrow alt={"black arrow pointing at photo"} right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
-        </ImageLabel>
-        <picture>
-                <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/Lexi-small.png 1x, /assets/articles/foodBank/Lexi-2x.png 2x"/>
-                <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
-                <TextImageTop mobile={true} src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
-        </picture>
-        <Paragraph>
-        A survey conducted by the Mayor of
-        London in 2019 showed that almost 2 million
-        people - including 400,000 children - struggle
-        to afford or access a sufficient diet.
-        With rising unemployment and poverty since the start of the
-        Coronavirus pandemic, the number of people struggling to feed
-        themselves and their families has increased dramatically.
-        </Paragraph>
+                <ImageLabel split={true}>
+                    <ImageLabelText right={true}>Lexi</ImageLabelText>
+                    <ImageLabelArrow alt={"black arrow pointing at photo"} right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
+                </ImageLabel>
+                <picture>
+                        <source media="(max-width: 1024px)" srcSet="/assets/articles/foodBank/Lexi-small.png 1x, /assets/articles/foodBank/Lexi-2x.png 2x"/>
+                        <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
+                        <TextImageTop mobile={true} src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
+                </picture>
+                <Paragraph>
+                A survey conducted by the Mayor of
+                London in 2019 showed that almost 2 million
+                people - including 400,000 children - struggle
+                to afford or access a sufficient diet.
+                With rising unemployment and poverty since the start of the
+                Coronavirus pandemic, the number of people struggling to feed
+                themselves and their families has increased dramatically.
+                </Paragraph>
     
     </Section>
     <Section>
