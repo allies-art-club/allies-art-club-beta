@@ -35,8 +35,8 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
                 </ImageLabel>
 
                 <picture>
-                    <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17.png 1x, /assets/articles/foodBank/Lexi-large.png 2x"/>
-                    <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-large.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-2x.png 2x"/>
                     <TextImage src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
                 </picture>
                 <Paragraph>Amber Perrier is an artist from East London who displayed and sold her artwork at Allie’s Arts Fair. Her pictures of London’s city skylines were very popular and she enjoyed meeting new people and watching the performing artists in our evening show. </Paragraph>
@@ -53,9 +53,9 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
                 </ImageLabel>
      
                 <picture>
-                        <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17.png 1x, /assets/articles/foodBank/Lexi-large.png 2x"/>
-                        <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
-                        <TextImage  right={true}src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
+                        <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png 2x"/>
+                        <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-2x.png 2x"/>
+                        <TextImage  right={true}src={'/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png'} alt="Ray Chadwick"/>
                 </picture>
 
                 <Paragraph>Ray Chadwick (also known as RDBC) is an artist from North London who also took part in our Arts Fair and kindly volunteered to help set up the event. </Paragraph>
@@ -71,9 +71,9 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
                 </ImageLabel>
      
                 <picture>
-                     <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17.png 1x, /assets/articles/foodBank/Lexi-large.png 2x"/>
-                     <source media="(min-width: 1025px)" srcSet="/assets/articles/foodBank/Lexi-large.png"/>
-                     <TextImage  src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
+                     <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-large.png 2x"/>
+                     <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-2x.png 2x"/>
+                     <TextImage  src={'/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png'} alt="Nomadic Libaax"/>
                 </picture>
                 <Paragraph>Nomadic Libaax is a rhythmic assisted poet from West London, who performed his work as a featured artist at Allie’s Arts Show.</Paragraph>
              

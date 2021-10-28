@@ -11,7 +11,7 @@ const FoodBank=()=>{
             ></TitleBanner>
             <Section>
                 <ImageLabel split={true} top={true}>
-                    <ImageLabelText right={true}>Lexi</ImageLabelText>
+                    <ImageLabelText singleName={true}right={true}>Lexi</ImageLabelText>
                     <ImageLabelArrow alt={"black arrow pointing at photo"} right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
                 </ImageLabel>
                 <picture>
@@ -28,7 +28,7 @@ const FoodBank=()=>{
                 poverty line.</Paragraph>
 
                 <ImageLabel split={true}>
-                    <ImageLabelText right={true}>Lexi</ImageLabelText>
+                    <ImageLabelText singleName={true}right={true}>Lexi</ImageLabelText>
                     <ImageLabelArrow alt={"black arrow pointing at photo"} right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
                 </ImageLabel>
                 <picture>
@@ -80,7 +80,7 @@ during the global crisis.</Paragraph>
 <Section>
 <Quote enlarge={true} right={true}>"The food bank is extraordinarily helpful and supportive."</Quote>
 <ImageLabel>
-    <ImageLabelText right={true}>Iva</ImageLabelText>
+    <ImageLabelText singleName={true}right={true}>Iva</ImageLabelText>
     <ImageLabelArrow alt={"black arrow pointing at photo"}right={true} src={"/assets/articles/foodBank/black-arrow.png"}/>
 </ImageLabel>
 
@@ -105,7 +105,7 @@ and interacting with the volunteers has improved her mental health.</Paragraph>
 <Quote enlarge={true}>"It's good to know you're helping out."</Quote>
 
 <ImageLabel>
-        <ImageLabelText >David</ImageLabelText>
+        <ImageLabelText singleName={true}>David</ImageLabelText>
         <ImageLabelArrow alt={"black arrow pointing at photo"}src={"/assets/articles/foodBank/black-arrow.png"}/>
     </ImageLabel>
 

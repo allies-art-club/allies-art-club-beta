@@ -89,20 +89,7 @@ const carouselImage = [
         caption: "",
         fileType:'jpg'
 
-    },
-    {
-        src: '/assets/articles/alliesFirstCommunityArtsEvent/carousel/alliesFirstCommunityArtsEvent14',
-        url: '',
-        caption: "",
-        fileType:'jpg'
-
-    },
-    {
-        src: '/assets/articles/alliesFirstCommunityArtsEvent/carousel/alliesFirstCommunityArtsEvent15',
-        url: '',
-        caption: "",
-        fileType:'jpg'
-    },
+    }
 ]
 
 export default carouselImage;
