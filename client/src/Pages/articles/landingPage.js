@@ -1,7 +1,7 @@
 const articles =[
 
     {
-        src: "/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16",
+        src: "/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent14",
         title: "Allie's First Community Arts Event",
         date:"25th September 2021",
         category:"Project news",
