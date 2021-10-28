@@ -232,14 +232,14 @@ const ImageLabelText = styled.figcaption`
     left: ${props=>props.right?"auto":"-10px"};
     @media(min-width:421px){
         top:1rem;;
-        right:${props=>props.right?"5%":"auto"};
-        left: ${props=>props.right?"auto":"5%"};
+        right:${props=>props.right?props.singleName?"5%":"-55px":"auto"};
+        left: ${props=>props.right?"auto":props.singleName?"5%":"-55px"};
 
     }
     @media(min-width:481px){
         top:1rem;;
-        right:${props=>props.right?"3%":"auto"};
-        left: ${props=>props.right?"auto":"3%"};
+        right:${props=>props.right?props.singleName?"3%":"-35px":"auto"};
+        left: ${props=>props.right?"auto":props.singleName?"3%":"-35px"};
 
     }
     @media(min-width:768px){
