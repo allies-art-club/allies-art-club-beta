@@ -303,6 +303,7 @@ const SquareImage = styled.img`
     clear:both;
 `
 const CarouselCaption = styled.p`
+text-align:center;
 
 `
 export {
