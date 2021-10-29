@@ -29,7 +29,14 @@ const carouselImage = [
         url: '/activities/projects/art-care',
         caption: "Art Care",
         fileType:'png'
-    }
+    },
+    {
+        src: '/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent14',
+        url: '/discussions/project-news/allies-first-community-arts-event',
+        caption: "Allie's First Community Arts Event",
+        fileType:'png'
+    },
+
 ]
 
 export default carouselImage;

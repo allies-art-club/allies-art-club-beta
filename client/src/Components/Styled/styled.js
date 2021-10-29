@@ -450,6 +450,7 @@ const Quote=styled.p`
     color:${theme.pink};
     font-size:${props=>props.enlarge?"1.2rem":"1rem"};
     text-align:center;
+    padding-bottom:1rem;
 `
 const ImageWrap = styled.div`
     width:50%;
