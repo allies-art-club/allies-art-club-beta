@@ -36,7 +36,7 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
                 <TextImageFigure>
                 <picture>
                     <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-large.png 2x"/>
-                    <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-x2.png 2x"/>
                     <TextImageImage src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
                 </picture>
                     <TextImageCaption>@amber_perrier</TextImageCaption>
@@ -57,7 +57,7 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
                     
                 <picture>
                         <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png 2x"/>
-                        <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-2x.png 2x"/>
+                        <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-x2.png 2x"/>
                         <TextImageImage  src={'/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png'} alt="Ray Chadwick"/>
                 </picture>
                 <TextImageCaption>@R.D.B.C</TextImageCaption>
@@ -78,7 +78,7 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
 
                 <picture>
                      <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-large.png 2x"/>
-                     <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-2x.png 2x"/>
+                     <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-x2.png 2x"/>
                      <TextImageImage  src={'/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png'} alt="Nomadic Libaax"/>
                      <TextImageCaption>@nomadic_libaax</TextImageCaption>
                 </picture>
