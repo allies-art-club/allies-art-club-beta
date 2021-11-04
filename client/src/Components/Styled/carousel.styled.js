@@ -30,7 +30,7 @@ const Slide = styled.div`
 const CarouselImage = styled.img`
     position:relative;
     object-fit:${props=>props.square?"cover":"auto"};
-    max-height:${props=>props.square?"100%":"auto"};
+    height:${props=>props.square?"100%":"auto"};
     width:${props=>props.square?"auto":"100%"};
     border-radius:${props=>props.square?"0%":"50%"};
     margin:auto;
