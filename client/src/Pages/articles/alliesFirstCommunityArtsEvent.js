@@ -2,7 +2,7 @@ import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
 import {connect} from 'react-redux';
 import {carouselClick} from '../../Actions/homeActions';
-import {Paragraph,TextImage, Section,Article,Quote} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImageFigure,TextImageCaption,TextImageImage, Section,Article,Quote} from '../../Components/Styled/styled.js';
 import {ImageLabel,ImageLabelArrow,ImageLabelText,CarouselCaption} from '../../Components/Styled/article.styled.js'
 
 import Carousel from '../../Components/carousel.js';
@@ -33,12 +33,14 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
                     <ImageLabelText >Amber Perrier</ImageLabelText>
                     <ImageLabelArrow alt={"black arrow pointing at photo"}src={"/assets/articles/foodBank/black-arrow.png"}/>
                 </ImageLabel>
-
+                <TextImageFigure>
                 <picture>
                     <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-large.png 2x"/>
                     <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent15-2x.png 2x"/>
-                    <TextImage src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
+                    <TextImageImage src={'/assets/articles/foodBank/Lexi-large.png'} alt="Child holding food"/>
                 </picture>
+                    <TextImageCaption>@amber_perrier</TextImageCaption>
+                </TextImageFigure>
                 <Paragraph>Amber Perrier is an artist from East London who displayed and sold her artwork at Allie’s Arts Fair. Her pictures of London’s city skylines were very popular and she enjoyed meeting new people and watching the performing artists in our evening show. </Paragraph>
 
                 <Paragraph>“I had the opportunity to connect with many artists, poets, performers, photographers and musicians.”, she told us, “I felt so included and it was a privilege to be part of a creative atmosphere! To top it off, the evening entertainment was powerful and very engaging.”</Paragraph>
@@ -51,12 +53,15 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
                     <ImageLabelText right={true}>Ray Chadwick</ImageLabelText>
                     <ImageLabelArrow right={true}alt={"black arrow pointing at photo"}src={"/assets/articles/foodBank/black-arrow.png"}/>
                 </ImageLabel>
-     
+                <TextImageFigure right={true}>
+                    
                 <picture>
                         <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png 2x"/>
                         <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-2x.png 2x"/>
-                        <TextImage  right={true}src={'/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png'} alt="Ray Chadwick"/>
+                        <TextImageImage  src={'/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png'} alt="Ray Chadwick"/>
                 </picture>
+                <TextImageCaption>@R.D.B.C</TextImageCaption>
+                </TextImageFigure>
 
                 <Paragraph>Ray Chadwick (also known as RDBC) is an artist from North London who also took part in our Arts Fair and kindly volunteered to help set up the event. </Paragraph>
       
@@ -69,12 +74,15 @@ const AlliesFirstCommunityArtsEvent=(props)=>{
                     <ImageLabelText >Nomadic Libaax</ImageLabelText>
                     <ImageLabelArrow alt={"black arrow pointing at photo"}src={"/assets/articles/foodBank/black-arrow.png"}/>
                 </ImageLabel>
-     
+                <TextImageFigure>
+
                 <picture>
                      <source media="(max-width: 1024px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-small.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-large.png 2x"/>
                      <source media="(min-width: 1025px)" srcSet="/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-large.png 1x, /assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent17-2x.png 2x"/>
-                     <TextImage  src={'/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png'} alt="Nomadic Libaax"/>
+                     <TextImageImage  src={'/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent16-large.png'} alt="Nomadic Libaax"/>
+                     <TextImageCaption>@nomadic_libaax</TextImageCaption>
                 </picture>
+                </TextImageFigure>
                 <Paragraph>Nomadic Libaax is a rhythmic assisted poet from West London, who performed his work as a featured artist at Allie’s Arts Show.</Paragraph>
              
 
