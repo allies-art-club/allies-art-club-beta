@@ -1,15 +1,15 @@
 import React,{Fragment} from 'react';
 import {connect} from 'react-redux';
-import Carousel from '../Components/carousel.js'
+import Carousel from '../Components/carousel.js';
 import {carouselClick} from '../Actions/homeActions';
-import carouselHome from './carouselHome/carouselHome.js'
+import carouselHome from './carouselConfig/carouselHome.js'
 
 
 
 const Home = (props) => {
     return (
         <Fragment>
-            <Carousel photoLoc={'../../assets/carouselHome/'} carouselObj={carouselHome} carouselClick={props.carouselClick} imageIndices={props.home.imageIndices} direction={props.home.direction}/>
+            <Carousel home={"yes"} photoLoc={'../../assets/carouselHome/'} carouselObj={carouselHome} carouselClick={props.carouselClick} imageIndices={props.home.imageIndices} direction={props.home.direction}/>
         </Fragment>
     )
 }

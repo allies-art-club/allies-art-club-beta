@@ -416,6 +416,40 @@ const TextImage = styled.img`
         width:40%;
     }
 `
+const TextImageFigure=styled.figure`
+position:relative;
+border-radius:50%;
+width:80%;
+display:block;
+margin:auto;
+shape-outside: ellipse() padding-box;
+padding:0.5rem;
+padding-right:1rem;
+padding-bottom:2rem;
+@media(min-width:421px){
+  width:60%;
+}
+@media(min-width:768px){
+    margin-right:${props=>props.right?'-1.5rem':'1rem'};
+    margin-left:${props=>props.right?'1rem':'-1.5rem'};
+    margin-top:-0.1rem;
+    float:${props=>props.right?'right':'left'};
+    width:45%;
+}
+
+`
+
+const TextImageImage=styled.img`
+  width:100%;
+  border-radius:50%;
+  shape-outside:circle();
+`
+const TextImageCaption=styled.figcaption`
+  position:absolute;
+  text-align:center;
+  left:50%;
+  transform:translateX(-50%);
+`
 const TextImageTop=styled(TextImage)`
     display: ${props=>props.mobile?"block":"none"};
     @media(min-width:768px){
@@ -450,6 +484,7 @@ const Quote=styled.p`
     color:${theme.pink};
     font-size:${props=>props.enlarge?"1.2rem":"1rem"};
     text-align:center;
+    padding-bottom:1rem;
 `
 const ImageWrap = styled.div`
     width:50%;
@@ -458,4 +493,4 @@ const ImageWrap = styled.div`
     flex-wrap:nowrap;
 `
 
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,PageDescription,DatePickWrap, FormStyled,FormCheckboxWrapper,FormInputWrapper,RadioWrap,RadioInputWrap,FormRadio,RadioLabel,CheckboxLabel,FormLabel,FormInput,FormInputCheckbox,FormInputCheckboxWrapper,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,ImageWrapper,Floater,Link,List,ListElement,TextImage,TextImageTop,TextImageSquareTop, Article,Icon,InlineIcon,Quote,SubTitle,ImageWrap};
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,PageDescription,DatePickWrap, FormStyled,FormCheckboxWrapper,FormInputWrapper,RadioWrap,RadioInputWrap,FormRadio,RadioLabel,CheckboxLabel,FormLabel,FormInput,FormInputCheckbox,FormInputCheckboxWrapper,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,ImageWrapper,Floater,Link,List,ListElement,TextImage,TextImageTop,TextImageSquareTop, TextImageFigure,TextImageImage,TextImageCaption,Article,Icon,InlineIcon,Quote,SubTitle,ImageWrap};
