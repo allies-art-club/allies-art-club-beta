@@ -422,19 +422,19 @@ border-radius:50%;
 width:80%;
 display:block;
 margin:auto;
-shape-outside: circle();
+shape-outside: ellipse() padding-box;
+padding:0.5rem;
+padding-right:1rem;
+padding-bottom:2rem;
 @media(min-width:421px){
   width:60%;
 }
 @media(min-width:768px){
-    margin:1rem;
     margin-right:${props=>props.right?'-1.5rem':'1rem'};
     margin-left:${props=>props.right?'1rem':'-1.5rem'};
     margin-top:-0.1rem;
     float:${props=>props.right?'right':'left'};
     width:45%;
-    padding:0.5rem;
-    padding-bottom:1rem;
 }
 
 `
