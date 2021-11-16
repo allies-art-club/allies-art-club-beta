@@ -460,6 +460,13 @@ const TextImageSquareTop = styled(TextImageTop)`
     border-radius:0;
     shape-outside:none;
 `
+const TextImageSquareCentre = styled(TextImageTop)`
+border-radius:0;
+shape-outside:none;
+margin:auto;
+float:none;
+display:block;
+`
 const Article = styled.article`
 
 #alliesMission {
@@ -493,4 +500,4 @@ const ImageWrap = styled.div`
     flex-wrap:nowrap;
 `
 
-export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,PageDescription,DatePickWrap, FormStyled,FormCheckboxWrapper,FormInputWrapper,RadioWrap,RadioInputWrap,FormRadio,RadioLabel,CheckboxLabel,FormLabel,FormInput,FormInputCheckbox,FormInputCheckboxWrapper,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,ImageWrapper,Floater,Link,List,ListElement,TextImage,TextImageTop,TextImageSquareTop, TextImageFigure,TextImageImage,TextImageCaption,Article,Icon,InlineIcon,Quote,SubTitle,ImageWrap};
+export {Container,HeadingMain,SubHeading,PageNavWrap,PageNavList,PageNavItem,Section,SubSection,Paragraph,PageDescription,DatePickWrap, FormStyled,FormCheckboxWrapper,FormInputWrapper,RadioWrap,RadioInputWrap,FormRadio,RadioLabel,CheckboxLabel,FormLabel,FormInput,FormInputCheckbox,FormInputCheckboxWrapper,FormInputValidation,FormTextArea,FormSubmit,FieldSet,FieldSetWrap,FormSelect,FormSelectOption,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,ErrorMessage,ErrorWrapper,FormSubmitWrapper,StarImg,SubmitInfo,Image,ImageWrapper,Floater,Link,List,ListElement,TextImage,TextImageTop,TextImageSquareTop, TextImageSquareCentre,TextImageFigure,TextImageImage,TextImageCaption,Article,Icon,InlineIcon,Quote,SubTitle,ImageWrap};

@@ -41,6 +41,7 @@ const RememberingAllie = lazy(()=>import('./Pages/articles/rememberingAllie.js')
 const CharityWeCanTrust = lazy(()=>import('./Pages/articles/charityWeCanTrust.js'));
 const LessonsInCalligraphy= lazy(()=>import('./Pages/articles/lessonsInCalligraphy.js'));
 const ArtAndWellbeing = lazy(()=>import('./Pages/articles/artAndWellbeing.js'));
+const HealingThroughPoetry = lazy(()=>import('./Pages/articles/healingThroughPoetry.js'));
 const Activities = lazy(()=>import('./Pages/activities.js'));
 const Events = lazy(()=>import('./Pages/events.js'));
 const Projects = lazy(()=>import('./Pages/projects.js'));
@@ -438,6 +439,15 @@ const App= (props) =>{
                                             }
                                         }
                                         />
+                                      <Route path="/discussions/personal-stories/healing-through-poetry" exact strict render={
+                                        ()=>{
+                                          return(
+                                            <Clipboard children={
+                                              <HealingThroughPoetry />
+                                            }/>
+                                          )
+                                        }
+                                      }/>
                                         <Route path="/discussions/club-articles/awtf-a-charity-we-can-trust" exact strict render={
                                               ()=>{
                                                   return(
