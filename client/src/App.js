@@ -439,7 +439,7 @@ const App= (props) =>{
                                             }
                                         }
                                         />
-                                      <Route path="/discussions/personal-stories/healing-through-poetry" exact strict render={
+                                      <Route path="/discussions/artist-conversations/healing-through-poetry" exact strict render={
                                         ()=>{
                                           return(
                                             <Clipboard children={
