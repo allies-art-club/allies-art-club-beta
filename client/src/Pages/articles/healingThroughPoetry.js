@@ -1,17 +1,17 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,TextImageSquareCentre,Article,Section,Image,SubHeading,ImageWrap,Link} from '../../Components/Styled/styled.js';
-import {SubHeadingCall} from '../../Components/Styled/article.styled.js';
+import {Paragraph,TextImage,TextImageSquareCentre,Article,Section,Link} from '../../Components/Styled/styled.js';
 
 const HealingThroughPoetry=()=>{
     return(
         <Article>
-        <TitleBanner
-            
-            centreSrc={"/assets/general/curvedLine.png"}
-            title={"Healing Through Poetry"}
-        ></TitleBanner>
-        <SubHeadingCall>In Conversation with Andreena Leeanne</SubHeadingCall>
+
+<TitleBanner
+                sideSrc1={"/assets/general/starsL.png"}
+                sideSrc2={"/assets/general/starsR.png"}
+                centreSrc={"/assets/general/curvedLine.png"}
+                title={"Healing Through Poetry"}
+                title2={"In Conversation with Andreena Leeanne"}/>
         <Section id="interview" >
         <Paragraph>Psychological trauma comes in all shapes and sizes, and affects people in a multitude of ways. When someone is subjected to an extremely difficult or dangerous circumstance, the painful memories of their experience can have lasting impacts on their mental and emotional states. Whether they are a survivor of a near-death accident, war crimes, street violence, domestic abuse or sexual assault, the traumatic imprints of these events can drastically alter the way they relate to themselves and others. </Paragraph>
         <Paragraph>
@@ -23,7 +23,7 @@ const HealingThroughPoetry=()=>{
         </i>
         </Paragraph>
         <Paragraph>
-        Although the imprisonment of Andreena’s Stepfather meant he could no longer abuse her, she was left to deal with the impacts of his cruelty on her own. With a dismissive and unsupportive Mother and internalized pressured to keep quiet about the abuse she’d endured, Andreena moved forward in life with many painful and unresolved emotions.  
+        Although the imprisonment of Andreena’s Stepfather meant he could no longer abuse her, she was left to deal with the impacts of his cruelty on her own. With a dismissive and unsupportive Mother and internalized pressure to keep quiet about the abuse she’d endured, Andreena moved forward in life with many painful and unresolved emotions.  
         </Paragraph>
         <Paragraph>
             <i>
