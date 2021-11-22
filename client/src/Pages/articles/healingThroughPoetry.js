@@ -19,7 +19,7 @@ const HealingThroughPoetry=()=>{
         </Paragraph>
         <Paragraph>
         <i>
-        “My Mum’s had a history of abusive partners.”, Andreena tells me, “It was my Mum that caught him abusing me when I was ten years old. She was the one who called the police and she got him arrested. But then she accepted gifts from him, she saw him in prison.”.
+        “My Mum’s had a history of abusive partners.”</i>, Andreena tells me, <i>“It was my Mum that caught him abusing me when I was ten years old. She was the one who called the police and she got him arrested. But then she accepted gifts from him, she saw him in prison.”.
         </i>
         </Paragraph>
         <Paragraph>
@@ -27,7 +27,7 @@ const HealingThroughPoetry=()=>{
         </Paragraph>
         <Paragraph>
             <i>
-            “Keeping silent for thirty years was quite difficult.”, she says, “All the issues that I’d experienced came out in my behaviour. I wasn’t a nice person. I wasn’t nice to myself and I was quite self-destructive.”. 
+            “Keeping silent for thirty years was quite difficult.”</i>, she says, <i>“All the issues that I’d experienced came out in my behaviour. I wasn’t a nice person. I wasn’t nice to myself and I was quite self-destructive.”. 
             </i>
         </Paragraph>
         <Paragraph>
@@ -64,7 +64,7 @@ const HealingThroughPoetry=()=>{
                 </picture>
         <Paragraph>But Andreena’s work to speak her truth and support others who have survived trauma does not end with her book; she has also led a number of writing workshops, including a weekly online workshop called “Speak & Write Your Truth”, and she is the organiser of “Poetry LGBT”, an online space for people from the LGBTQ+ community to share and listen to each other’s poems.</Paragraph>
         <Paragraph>
-            <i>“I create spaces where people can be their authentic selves and feel free to express themselves.”, Andreena says, “It’s really helped them to not feel alone.”.
+            <i>“I create spaces where people can be their authentic selves and feel free to express themselves.”</i>, Andreena says, <i>“It’s really helped them to not feel alone.”.
 </i>
         </Paragraph>
         <Paragraph>
