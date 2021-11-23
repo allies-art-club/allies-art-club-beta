@@ -60,20 +60,12 @@ app.use(csrfProtection);
 
 //serve from build folder in prod
 if(process.env.NODE_ENV==='production'||'localprod'){
-  app.use(express.static(path.join(__dirname, '..', 'client', 'build'),{
-    "setHeaders":function(res,path){
-      res.setHeader("Content-Encoding","gzip")
-    }
-  }));
+  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 }
 app.use('/api',apiRouter);
 app.use('/db',dbRouter);
 app.get('*', (req,res)=>{
-    res.sendFile(path.join(__dirname, '..','client','build','index.html'),{
-      "setHeaders":function(res,path){
-        res.setHeader("Content-Encoding","gzip")
-      }
-    })
+    res.sendFile(path.join(__dirname, '..','client','build','index.html'),)
 })
 //if this error is csrf has been detected (need response for this - email / error log)
 app.use(function (err,req, res, next) {
@@ -91,7 +83,7 @@ app.use(async (err,req,res,next)=>{
   //LOGGING FUNCTION + EMAIL SEND TO ME
   console.log(err);
   if(!err.status){
-    res.status(500).send({error:"Something peculiar has happened here"})
+    res.status(500).send({error:"Something peculiar has happend here"})
   }
   else if(err.status===404){
     console.log('404')
