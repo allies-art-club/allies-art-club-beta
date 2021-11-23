@@ -1,5 +1,13 @@
 const articles =[
+    {
+        src: "/assets/articles/healingThroughPoetry/healingThroughPoetry2",
+        title: "Healing Through Poetry",
+        date:"9th November 2021",
+        category:"Artist conversations",
+        subcategory: "3 minute read",
+        description: "An interview with poet and inspirational speaker, Andreena Leeanne, on how poetry helped her heal childhood trauma."
 
+    },
     {
         src: "/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent14",
         title: "Allie's First Community Arts Event",
