@@ -14,7 +14,7 @@ const articles =[
         date:"25th September 2021",
         category:"Project news",
         subcategory: "3 minute read",
-        description: "A collection of memories by friends and family of Allie, the star behind our art club."
+        description: "A look back at our Arts Fair & Open Mic Launch Party"
     },
     {
         src: "/assets/activities/projects/artCare/artCarePacks",
