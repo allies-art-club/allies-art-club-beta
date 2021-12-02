@@ -1,17 +1,16 @@
 import React from 'react';
 import TitleBanner from '../../Components/titleBanner/titleBanner.js';
-import {Paragraph,TextImage,TextImageSquareCentre,Article,Section,Link} from '../../Components/Styled/styled.js';
+import {Paragraph,TextImageTop,TextImageSquareCentre,Article,Section,Link,ImageWrap,SubHeading,Image} from '../../Components/Styled/styled.js';
+import {SubHeadingCall} from '../../Components/Styled/article.styled.js';
 
 const HealingThroughPoetry=()=>{
     return(
         <Article>
-
-<TitleBanner
-                sideSrc1={"/assets/general/starsL.png"}
-                sideSrc2={"/assets/general/starsR.png"}
+            <TitleBanner    
                 centreSrc={"/assets/general/curvedLine.png"}
                 title={"Healing Through Poetry"}
-                title2={"In Conversation with Andreena Leeanne"}/>
+            />
+            <SubHeadingCall>In Conversation with Andreena Leeanne</SubHeadingCall>
         <Section id="interview" >
         <Paragraph>Psychological trauma comes in all shapes and sizes, and affects people in a multitude of ways. When someone is subjected to an extremely difficult or dangerous circumstance, the painful memories of their experience can have lasting impacts on their mental and emotional states. Whether they are a survivor of a near-death accident, war crimes, street violence, domestic abuse or sexual assault, the traumatic imprints of these events can drastically alter the way they relate to themselves and others. </Paragraph>
         <Paragraph>
@@ -76,11 +75,26 @@ const HealingThroughPoetry=()=>{
             
             </Section>
             <Section>
-            <picture>
-                    <source media="(max-width: 1024px)" srcSet="/assets/articles/healingThroughPoetry/healingThroughPoetry2-small.png 1x, /assets/articles/healingThroughPoetry/healingThroughPoetry2-large.png 2x"/>
-                    <source media="(min-width: 1025px)" srcSet="/assets/articles/healingThroughPoetry/healingThroughPoetry2-large.png 1x, /assets/articles/healingThroughPoetry/healingThroughPoetry2-2x.png 2x"/>
-                    <TextImage right={true} src={"/assets/articles/healingThroughPoetry/healingThroughPoetry2-large.png"} alt="Andreena Leeane bookshop"/>
-                </picture>
+                
+<picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/healingThroughPoetry/healingThroughPoetry2-small.png 1x, /assets/articles/healingThroughPoetry/healingThroughPoetry2-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/healingThroughPoetry/healingThroughPoetry2-large.png"/>
+                    <TextImageTop src={'/assets/articles/healingThroughPoetry/healingThroughPoetry2-large.png'} alt="Andreena Leanne"/>
+                </picture>    
+
+    <ImageWrap>
+    <SubHeading image={true}>Andreena Leanne</SubHeading>
+    <Image  alt={"star"} flex={true} src={"/assets/general/starR.png"}/>
+    </ImageWrap>
+    
+    
+
+
+    <picture>
+                    <source media="(max-width: 1024px)" srcSet="/assets/articles/healingThroughPoetry/healingThroughPoetry2-small.png 1x, /assets/articles/healingThroughPoetry/healingThroughPoetry2-2x.png 2x"/>
+                    <source media="(min-width: 1025px)" srcSet="/assets/articles/healingThroughPoetry/healingThroughPoetry2-large.png"/>
+                    <TextImageTop mobile={true}src={'/assets/articles/healingThroughPoetry/healingThroughPoetry2-large.png'} alt="Andreena Leanne"/>
+                </picture>   
 
         <Paragraph>
 Andreena Leeanne is a poet, writing workshop facilitator, lived experience speaker and Trustee of Action Breaks Silence, a charity which raises awareness of violence against women and girls. 
@@ -92,9 +106,7 @@ Andreena Leeanne is a poet, writing workshop facilitator, lived experience speak
         You can follow Andreena on Instagram <Link rel="noopener" target="_blank" href="https://www.instagram.com/survivor.andreena.leeanne">@survivor.andreena.leeanne</Link> or see her website <Link rel="noopener" target="_blank" href="https://www.andreena.co.uk">www.andreena.co.uk</Link>. 
         </Paragraph>
 
-            </Section>
-            <Section style={{"clear":"both"}}>
-
+        <Image alt="stars" src={"/assets/general/starsR.png"}/>
             </Section>
         </Article>
     )
