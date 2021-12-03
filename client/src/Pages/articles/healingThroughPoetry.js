@@ -83,7 +83,7 @@ const HealingThroughPoetry=()=>{
                 </picture>    
 
     <ImageWrap>
-    <SubHeading image={true}>Andreena Leanne</SubHeading>
+    <SubHeading image={true}>Andreena Leeanne</SubHeading>
     <Image  alt={"star"} flex={true} src={"/assets/general/starR.png"}/>
     </ImageWrap>
     
