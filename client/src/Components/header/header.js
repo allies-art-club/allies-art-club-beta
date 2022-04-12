@@ -49,7 +49,7 @@ const Header = (props) => {
                                 nav={'nav'?1:0}
                                 data-test="aboutLink"
                                 >About</NavMainCategory>
-                            <SubMenu subMenu={'about'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu}visible={props.subMenu.about}mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}></SubMenu>
+                            <SubMenu subMenu={'about'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu}visible={props.subMenu.about}mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Mission","Allie's Values","Allie's Story"]}></SubMenu>
                         </HeaderNavListElement>
                         <HeaderNavListElement>
                             <NavMainCategory
