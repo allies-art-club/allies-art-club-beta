@@ -152,11 +152,12 @@ const NavMainCategory = styled(NavLink).attrs({activeClassName})`
     }
 `
 const NavLinkLogo = styled(NavLink)`
-&:-webkit-any-link {
-    
     text-decoration:none;
+    &:-webkit-any-link {
+        
+        text-decoration:none;
 
-}
+    }
 `
 
 const Figure = styled.div`
