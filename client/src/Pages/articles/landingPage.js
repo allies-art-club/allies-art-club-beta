@@ -1,20 +1,20 @@
 const articles =[
     {
-        src: "/assets/articles/weveDonated100ArtCarePacks/weveDonated100ArtCarePacks2",
-        title: "We've Donated 100 Art Care Packs!",
-        date:"11th October 2021",
-        category:"Project news",
-        subcategory: "2 minute read",
-        description: "A proud update on our project to support people’s mental health"
-
-    },
-    {
         src: "/assets/articles/healingThroughPoetry/healingThroughPoetry2",
         title: "Healing Through Poetry",
         date:"9th November 2021",
         category:"Artist conversations",
         subcategory: "3 minute read",
         description: "An interview with poet and inspirational speaker, Andreena Leeanne, on how poetry helped her heal childhood trauma."
+
+    },
+    {
+        src: "/assets/articles/weveDonated100ArtCarePacks/weveDonated100ArtCarePacks2",
+        title: "We've Donated 100 Art Care Packs!",
+        date:"11th October 2021",
+        category:"Project news",
+        subcategory: "2 minute read",
+        description: "A proud update on our project to support people’s mental health"
 
     },
     {
