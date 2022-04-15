@@ -20,7 +20,6 @@ const FooterContainer = styled.footer`
   justify-content: space-around;
   align-items: center;
   overflow:hidden;
-
   ${FooterElementWrapper}:nth-child(2){
     display: none;
     height: 140px;
@@ -41,6 +40,7 @@ const Caption = styled.figcaption`
   @media(min-width:768px){
     padding: 0px 10px;
     font-size: 1rem;
+    display:none;
   }
   color: white;
   span {
@@ -69,6 +69,10 @@ const Figure =styled.div`
   padding:auto;
   display:flex;
   justify-content:flex-start;
+  @media(min-width:768px){
+    justify-content:space-around;
+
+  }
   align-items:center;
   ${Icon}{
     margin-left: 0.5rem;
@@ -107,10 +111,8 @@ const FooterParagraph=styled.p`
   font-size: 0.5rem;
   margin: 5px 0;
   transform:${props=>props.right?"translateY(-5px)":"none"};
-
   @media(min-width:421px){
     transform:${props=>props.right?"translateY(-10px)":"none"};
-
   }
   @media(max-width:767px){
     word-break: break-word;

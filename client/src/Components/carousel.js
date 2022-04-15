@@ -26,9 +26,9 @@ const Carousel = (props) => {
                                 <NavClick square={props.square} length={props.imageIndices.length-2}direction={props.direction} index={props.imageIndices[i]} exact to={photo.url}key={i-1}>
                                     <Figure square={props.square}>
                                         <picture style={{margin:"auto"}}>
-                                            <source media="(max-width:480px)" srcSet={`${photo.src}-small.${photo.fileType} 1x, ${photo.src+"-x2."+photo.fileType+" 2x"}`} />
-                                            <source media="(min-width:481px) and (max-width:767px)" srcSet={`${photo.src}-medium.${photo.fileType} 1x, ${photo.src+'-x2.'+photo.fileType+' 2x'}`}/>
-                                            <source media="(min-width:768px)" srcSet={`${photo.src}-large.${photo.fileType} 1x, ${photo.src}-x2.${photo.fileType} 2x`}/>
+                                            <source media="(max-width:480px)" srcSet={`${photo.src}-small.${photo.fileType} 1x, ${photo.src+"-2x."+photo.fileType+" 2x"}`} />
+                                            <source media="(min-width:481px) and (max-width:767px)" srcSet={`${photo.src}-medium.${photo.fileType} 1x, ${photo.src+'-2x.'+photo.fileType+' 2x'}`}/>
+                                            <source media="(min-width:768px)" srcSet={`${photo.src}-large.${photo.fileType} 1x, ${photo.src}-2x.${photo.fileType} 2x`}/>
                                             <CarouselImage  square={props.square} src={photo.src+"-large."+photo.fileType} srcSet={`${photo.src+"-small."+photo.fileType} 180w,${photo.src+"-medium."+photo.fileType} 260w, ${photo.src+"-large."+photo.fileType} 400w`}alt={'photo'+i}/>
                                         </picture>
                                         <FigCaption square={props.square}><CaptionContent>{photo.caption}</CaptionContent></FigCaption>

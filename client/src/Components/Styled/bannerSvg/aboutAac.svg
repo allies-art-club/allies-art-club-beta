@@ -21,19 +21,23 @@
             d="M 60 420 C 600 290, 1200 290, 1740 420" />
 
     </defs>
+      
+ 
     <text x="10" y="-30" class="text-style" >
         <textPath href="#MyPath" startOffset="50%" text-anchor="middle">
-            <tspan >We believe in the power of human imagination, creative</tspan><br/>
+                    
+            <tspan >Our club is a safe and inclusive space for anyone </tspan><br/>
         </textPath>
     </text>
     <text class="text-style">
         <textPath href="#MyPath2" startOffset="50%" text-anchor="middle">
-            <tspan>collaboration and artistic expression in creating positive</tspan>
+                   
+            <tspan>who loves to create or engage in the arts and </tspan>
             </textPath>
     </text>
     <text class="text-style">
         <textPath href="#MyPath3" startOffset="50%" text-anchor="middle">
-            <tspan>changes for ourselves and our society.</tspan>
+            <tspan>be part of a supportive community.</tspan>
             </textPath>
     </text>
 </svg>
