@@ -1,12 +1,5 @@
 const carouselImage = [
     {
-        src: '/assets/carouselHome/awtf_girls',
-        url: '/about/allies-foundation',
-        caption: "Allie's Foundation",
-        fileType:'png'
-
-    },
-    {
         src: '/assets/carouselHome/allie',
         url: '/about/allies-story',
         caption: "Allie's Story",
@@ -14,8 +7,8 @@ const carouselImage = [
     },
     {
         src: '/assets/carouselHome/Values',
-        url: '/about/allies-art-club',
-        caption: "About Allie's Art Club",
+        url: '/about/allies-values',
+        caption: "Our Values",
         fileType:'png'
     },
     {
@@ -35,6 +28,18 @@ const carouselImage = [
         url: '/discussions/project-news/allies-first-community-arts-event',
         caption: "Allie's First Community Arts Event",
         fileType:'png'
+    },
+    {
+        src: '/assets/articles/weveDonated100ArtCarePacks/weveDonated100ArtCarePacks2',
+        url: '/discussions/project-news/weve-donated-100-art-care-packs',
+        caption: "We've Donated 100 Art Care Packs!",
+        fileType:'png'
+    },
+    {
+        src: '/assets/carouselHome/jerry_and_coffee_lady',
+        url: '/about/allies-art-club',
+        caption: "About Allie's Art Club",
+        fileType:'jpg'
     },
 
 ]

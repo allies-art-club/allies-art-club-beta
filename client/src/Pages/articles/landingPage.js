@@ -9,6 +9,15 @@ const articles =[
 
     },
     {
+        src: "/assets/articles/weveDonated100ArtCarePacks/weveDonated100ArtCarePacks2",
+        title: "We've Donated 100 Art Care Packs!",
+        date:"11th October 2021",
+        category:"Project news",
+        subcategory: "2 minute read",
+        description: "A proud update on our project to support people’s mental health"
+
+    },
+    {
         src: "/assets/articles/alliesFirstCommunityArtsEvent/alliesFirstCommunityArtsEvent14",
         title: "Allie's First Community Arts Event",
         date:"25th September 2021",

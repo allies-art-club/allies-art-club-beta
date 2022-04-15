@@ -11,7 +11,7 @@ import alliesStory from '../Components/Styled/bannerSvg/alliesStory.svg';
 const AboutAlliesStory=()=>{
     return(
         <Fragment>
-            <SideNav mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}/>
+            <SideNav mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Mission","Allie's Values","Allie's Story"]}/>
 
             <TitleBanner
                 sideSrc1={'/assets/general/heartsL.png'}

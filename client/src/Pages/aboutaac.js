@@ -1,19 +1,19 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {Section,Paragraph,Article} from '../Components/Styled/styled';
 import SideNav from '../Components/sideNav/sideNav.js';
 import TitleBanner from '../Components/titleBanner/titleBanner.js';
 import {ImageWrapper} from '../Components/Styled/donate.styled';
-import Value from '../Components/value.js';
-import {MissionWrapper,MissionDesc,MissionBorder,ValuesWrap,ValuesImage} from '../Components/Styled/about.styled';
-import {RibbonImage} from '../Components/Styled/titleBanner.styled'
-import tagMessageArray from './about/tagMessageArray.js';
-import StickyNote from '../Components/stickyNote.js';
+import Carousel from '../Components/carousel.js';
+import {carouselClick} from '../Actions/homeActions';
+import carouselConfig from './carouselConfig/carouselAboutAac.js';
+import {RibbonImage} from '../Components/Styled/titleBanner.styled';
 import {BannerTextImg} from '../Components/Styled/donate.styled.js';
 import aboutAccSvg from '../Components/Styled/bannerSvg/aboutAac.svg';
-const AboutAac = () => {
+const AboutAac = (props) => {
     return (
         <Article>
-            <SideNav mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Story","Allie's Foundation"]}/>
+            <SideNav mainCategory={'about'} navLinks={["Allie's Art Club","Allie's Mission","Allie's Values","Allie's Story"]}/>
 
             <TitleBanner
                     sideSrc1={'/assets/general/heartsL.png'}
@@ -23,92 +23,33 @@ const AboutAac = () => {
                 ></TitleBanner>
             <Section id="alliesArtClub">
 
-                <Paragraph>Allie's Art Club is a community of change-makers and creatives. Formed by passionate volunteers during the Coronavirus pandemic, our Club is open to anyone who loves to create and wants to make a positive impact in their community.</Paragraph>
-                <Paragraph>We aim to create a safe and inclusive environment where participants feel empowered and connected, able to develop their skills and sense of wellbeing and make a difference in their community through art and creativity.</Paragraph>
+                <Paragraph>Allie's Art Club is a community of creatives who believe in the power of art to generate positive changes for ourselves and others.</Paragraph>
                 
                 <ImageWrapper>
                     <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>
                     <BannerTextImg article={true} aria-label="contains svg"alt="about banner svg text" type="image/svg+xml" data={aboutAccSvg}/>
                 </ImageWrapper>
+                <Paragraph>Formed by volunteers in 2021, our mission is to create opportunities for people to have fun, express themselves, improve their sense of wellbeing and develop strong social connections through the arts.</Paragraph>
+                <Paragraph>We value art as a peaceful yet powerful form of self-expression that can contribute to building a more happy, healthy and honest world.</Paragraph>
             </Section>
-            <TitleBanner
-                sideSrc1={'/assets/general/starsL.png'}
-                sideSrc2={'/assets/general/starsR.png'}
-                centreSrc={'/assets/general/curvedLine.png'}
-                title={"Allie's Mission"}
-            ></TitleBanner>
-            <Section id="alliesMission">
-                    <Paragraph>Allie's Art Club is on a mission to empower communities and bring art to the forefront of social progress.</Paragraph>
-                    <Paragraph>We view art as a peaceful yet powerful way to express ourselves and communicate ideas which can lead to cultural, social and political change. Engaging in art and creative activities is also a healthy and effective way of improving personal wellbeing, connecting with others and building relationships.</Paragraph>
-                    <Paragraph>Our mission is to:</Paragraph>
-                    <MissionWrapper>
-                        
-                        <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
-                            <StickyNote
-                                values={"true"}
-                                benefit={"EMPOWER"}
-                            />
-                            <MissionDesc>Empower individuals and communities by providing a platform and tools for them to take action in creating positive changes for themselves and others.</MissionDesc>
-                        </MissionWrapper>
-                        <MissionWrapper>
-                            <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
-
-                            <StickyNote
-                                values={"true"}
-                                benefit={"CONNECT"}
-                            />
-                            <MissionDesc>Connect people through common passions and interests and provide a space for them to build relationships and collaborate on creative projects.</MissionDesc>
-                        </MissionWrapper>
-                        <MissionWrapper>
-                            <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
-
-                            <StickyNote
-                                values={"true"}
-                                benefit={"CREATE"}
-                            />
-                            <MissionDesc>Create opportunities for people to express themselves, develop skills and contribute to a more fun, fair and democratic society through art and creativity.</MissionDesc>
-                            <MissionBorder alt="border bottom" src={"/assets/general/border.png"}/>
-                        </MissionWrapper>
-            </Section>
-            <TitleBanner
-                sideSrc1={'/assets/general/starL.png'}
-                sideSrc2={'/assets/general/starR.png'}
-                centreSrc={'/assets/general/curvedLine.png'}
-                title={"Allie's Values"}
-            ></TitleBanner>
-            <Section id="alliesValues">
-                <Paragraph>Allie's Art Club is built on a strong base of core values. These values are central to the work we do, directing both the way we work and the outcomes we aim to create.</Paragraph>
-                <Paragraph>The image below outlines the Club's nine core values. You can click on each value to read more about how they guide our mission and way of working.</Paragraph>
-                <ValuesWrap>
-                    <picture>
-                        <source media="(max-width: 480px)" srcSet="/assets/about/Values-small.png 1x, /assets/about/Values-large.png 2x"/>
-                        <source media="(min-width: 481px) and (max-width: 1024px)" srcSet="/assets/about/Values-medium.png 1x, /assets/about/Values-large.png 2x"/>
-                        <source media="(min-width: 1025px)" srcSet="/assets/about/Values-large.png"/>
-                        <ValuesImage alt={"Values"} 
-                                    src={"/assets/about/Values-small.png"}
-                        />
-                    </picture>
-                    {
-                        tagMessageArray.map((el,i)=>{
-                            return <Value key={i}
-                                        id={i+1}
-                                        tagWidth={el.tagWidth}
-                                        tagHorizontal={el.tagHorizontal}
-                                        tagVertical={el.tagVertical}
-                                        tagHeight={el.tagHeight}
-                                        messageWidth={el.messageWidth}
-                                        messageLeft={el.messageLeft}
-                                        messageHorizontal={el.messageHorizontal}
-                                        messageVertical={el.messageVertical}>
-                                            {el.messageContent}
-                                    </Value>
-
-                        })
-                    }
-                </ValuesWrap>
+            
+            <Section id="carousel">
+                <Carousel square={"yes"} photoLoc={'../../assets/articles/about/aac_carousel'} carouselObj={carouselConfig} carouselClick={props.carouselClick} imageIndices={props.home.imageIndices} direction={props.home.direction} />
             </Section>
         </Article>
     )
 }
 
-export default AboutAac;
+const mapStateToProps=(state)=>{
+    return {
+        home: state.home
+        
+    }
+    
+  }
+  const mapDispatchToProps=(dispatch)=>{
+    return {
+        carouselClick: (direction)=>carouselClick(direction,dispatch)
+    }
+  }
+export default connect(mapStateToProps,mapDispatchToProps)(AboutAac);

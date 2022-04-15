@@ -15,7 +15,8 @@ const LaunchParty =lazy(()=>import('./Pages/activities/launchParty.js'));
 const Home = lazy(()=> import('./Pages/home.js'));
 const AboutAac = lazy(()=>import('./Pages/aboutaac.js'));
 const AboutAlliesStory = lazy(()=>import('./Pages/aboutStory.js'));
-const AboutAlliesFoundation = lazy(()=>import('./Pages/aboutAlliesFoundation.js'));
+const AboutMission = lazy(()=>import("./Pages/aboutMission.js"));
+const AboutValues = lazy(()=>import("./Pages/aboutValues.js"));
 const Discussions= lazy(()=> import('./Pages/discussions.js'));
 const Footer = lazy(()=> import('./Components/footer/footer.js'));
 const Donate = lazy(()=>import('./Pages/donate.js'));
@@ -42,6 +43,8 @@ const CharityWeCanTrust = lazy(()=>import('./Pages/articles/charityWeCanTrust.js
 const LessonsInCalligraphy= lazy(()=>import('./Pages/articles/lessonsInCalligraphy.js'));
 const ArtAndWellbeing = lazy(()=>import('./Pages/articles/artAndWellbeing.js'));
 const HealingThroughPoetry = lazy(()=>import('./Pages/articles/healingThroughPoetry.js'));
+const FirstDonations = lazy(()=>import('./Pages/articles/firstDonations.js'));
+
 const Activities = lazy(()=>import('./Pages/activities.js'));
 const Events = lazy(()=>import('./Pages/events.js'));
 const Projects = lazy(()=>import('./Pages/projects.js'));
@@ -131,7 +134,26 @@ const App= (props) =>{
                           )
                       }
                   }
-                  />
+                  /><Route path="/about/allies-mission" exact strict render={
+                    ()=>{
+                        return(
+                          <Clipboard children={
+                            <AboutMission />
+                          } />
+                        )
+                    }
+                }
+                />
+                <Route path="/about/allies-values" exact strict render={
+                  ()=>{
+                      return(
+                        <Clipboard children={
+                          <AboutValues />
+                        } />
+                      )
+                  }
+              }
+              />
                   <Route path="/about/allies-story" exact strict render={
                         ()=>{
                             return(
@@ -142,16 +164,6 @@ const App= (props) =>{
                         }
                     }
                     />
-                    <Route path="/about/allies-foundation" exact strict render={
-                          ()=>{
-                              return(
-                                <Clipboard children={
-                                  <AboutAlliesFoundation />
-                                } />
-                              )
-                          }
-                      }
-                      />
                 <Route path="/allies-clubs-and-projects" exact strict render={
                       ()=>{
                           return(
@@ -406,6 +418,17 @@ const App= (props) =>{
                                       }
                                   }
                                   />
+                                  <Route path="/discussions/project-news/weve-donated-100-art-care-packs" exact strict render={
+                                        ()=>{
+                                            return(
+        
+                                  <Clipboard children={
+                                                <FirstDonations></FirstDonations>
+                                  }/>
+                                            )
+                                        }
+                                    }
+                                    />
                                   <Route path="/discussions/personal-stories/lessons-in-calligraphy" exact strict render={
                                         ()=>{
                                             return(
