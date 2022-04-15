@@ -26,7 +26,6 @@ const AboutMission = () => {
                                 benefit={"CREATE"}
                             />
                             <MissionDesc>Create opportunities for people to have fun, express themselves and improve their sense of wellbeing through art and creativity.</MissionDesc>
-                            <MissionBorder alt="border bottom" src={"/assets/general/border.png"}/>
                         </MissionWrapper>
                         <MissionWrapper>
                             <MissionBorder alt="border top" top={true} src={"/assets/general/border.png"}/>
@@ -45,6 +44,8 @@ const AboutMission = () => {
                                 benefit={"EMPOWER"}
                             />
                             <MissionDesc>Empower individuals and communities to contribute to a more happy, healthy and honest world through the arts.</MissionDesc>
+                            <MissionBorder alt="border bottom" src={"/assets/general/border.png"}/>
+
                         </MissionWrapper>
             </Section>
         </Article>
