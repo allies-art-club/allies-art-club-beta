@@ -12,6 +12,7 @@ import Spinner from './Components/spinner.js';
 import ErrorBoundary from './Pages/errorBoundary.js';
 const AlliesFirstCommunityArtsEvent =lazy(()=>import('./Pages/articles/alliesFirstCommunityArtsEvent.js'));
 const LaunchParty =lazy(()=>import('./Pages/activities/launchParty.js'));
+const CrazyParty =lazy(()=>import('./Pages/activities/crazyEvent.js'));
 const Home = lazy(()=> import('./Pages/home.js'));
 const AboutAac = lazy(()=>import('./Pages/aboutaac.js'));
 const AboutAlliesStory = lazy(()=>import('./Pages/aboutStory.js'));
@@ -285,6 +286,16 @@ const App= (props) =>{
                         }
                     }
                     />
+                    <Route path="/activities/events/crazy-a-mental-health-arts-event" exact strict render={
+                      ()=>{
+                          return(
+                            <Clipboard children={
+                              <CrazyParty/>
+                            }/>
+                          )
+                      }
+                  }
+                  />
                       <Route path="/discussions/artist-conversations" exact strict render={
                             ()=>{
                                 return(
