@@ -8,7 +8,7 @@ const carouselImage = [
     {
         src: '/assets/carouselHome/Values',
         url: '/about/allies-values',
-        caption: "Our Values",
+        caption: "Allie's Values",
         fileType:'png'
     },
     {
