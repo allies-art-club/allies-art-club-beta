@@ -31,7 +31,8 @@ const FactSheet=()=>{
                 landingPage={"resources"}
                 category={el.category}
                 subcategory={el.subcategory}
-                downloadHandler={downloadHandler}>
+                downloadHandler={downloadHandler}
+                file_type={el.file_type}>
                 {el.description}</Article>
                     )
                 })

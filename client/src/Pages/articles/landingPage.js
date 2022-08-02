@@ -1,11 +1,32 @@
 const articles =[
     {
+        src: "/assets/articles/theCrazyZine/theCrazyZine4",
+        title: "The CRAZY zine",
+        date:"18th May 2022",
+        category:"Project News",
+        subcategory: "1 minute read",
+        description: "About our mental health art and poetry zine",
+        file_type: "png"
+
+    },
+    {
+        src: "/assets/articles/ourCrazyEvent/ourCrazyEvent",
+        title: "Our CRAZY Event!",
+        date:"9th May 2022",
+        category:"Project News",
+        subcategory: "3 minute read",
+        description: "A look back at our mental health arts event",
+        file_type: "png"
+
+    },
+    {
         src: "/assets/articles/healingThroughPoetry/healingThroughPoetry2",
         title: "Healing Through Poetry",
         date:"9th November 2021",
         category:"Artist conversations",
         subcategory: "3 minute read",
-        description: "An interview with poet and inspirational speaker, Andreena Leeanne, on how poetry helped her heal childhood trauma."
+        description: "An interview with poet and inspirational speaker, Andreena Leeanne, on how poetry helped her heal childhood trauma.",
+        file_type: "png"
 
     },
     {
@@ -14,7 +35,8 @@ const articles =[
         date:"11th October 2021",
         category:"Project news",
         subcategory: "2 minute read",
-        description: "A proud update on our project to support people’s mental health"
+        description: "A proud update on our project to support people’s mental health",
+        file_type: "png"
 
     },
     {
@@ -23,7 +45,8 @@ const articles =[
         date:"25th September 2021",
         category:"Project news",
         subcategory: "3 minute read",
-        description: "A look back at our Arts Fair & Open Mic Launch Party"
+        description: "A look back at our Arts Fair & Open Mic Launch Party",
+        file_type: "png"
     },
     {
         src: "/assets/activities/projects/artCare/artCarePacks",
@@ -32,7 +55,8 @@ const articles =[
         category:"Project news",
         subcategory: "3 minute read",
         description: "Details about our project to support the mental health of underprivileged communities through art.",
-        largeHeading: true
+        largeHeading: true,
+        file_type: "png"
     },
     {
         src: "/assets/articles/foodBank/Lexi",
@@ -40,7 +64,8 @@ const articles =[
         date: "17th June 2021",
         category: "Project news",
         subcategory: "2 minute read",
-        description: "The incredible work being done to address local food poverty by AWTF and the Pilion Trust."
+        description: "The incredible work being done to address local food poverty by AWTF and the Pilion Trust.",
+        file_type: "png"
     },
     {
         src: "/assets/articles/artAndWellbeing/artAndWellbeing1",
@@ -48,7 +73,8 @@ const articles =[
         date: "25th May 2021",
         category: "Club articles",
         subcategory: "2 minute read",
-        description: "How engaging in art and creative activities can improve personal health and wellbeing."
+        description: "How engaging in art and creative activities can improve personal health and wellbeing.",
+        file_type: "png"
     },
     {
         src: "/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6",
@@ -56,7 +82,8 @@ const articles =[
         date:"2nd May 2021",
         category:"Club articles",
         subcategory: "3 minute read",
-        description: "About the Club's Foundation, AWTF, and why we trust this charity to support us."
+        description: "About the Club's Foundation, AWTF, and why we trust this charity to support us.",
+        file_type: "png"
     },
     {
         src: "/assets/articles/lessonsInCalligraphy/lessonsInCalligraphy1",
@@ -64,7 +91,8 @@ const articles =[
         date:"14th April 2021",
         category:"Personal stories",
         subcategory: "4 minute read",
-        description: "A personal story by artist Lydia Rose on how practicing calligraphy improved her mindset."
+        description: "A personal story by artist Lydia Rose on how practicing calligraphy improved her mindset.",
+        file_type: "png"
     },
     {
         src: "/assets/articles/whatIsArt/whatIsArt1",
@@ -72,7 +100,8 @@ const articles =[
         date:"30th March 2021",
         category:"Club articles",
         subcategory: "3 minute read",
-        description: "A discussion on the meaning of art, its uses and its impacts on people in the modern world."
+        description: "A discussion on the meaning of art, its uses and its impacts on people in the modern world.",
+        file_type: "png"
     },
     {
         src: "/assets/articles/rememberingAllie/rememberingAllie",
@@ -80,7 +109,8 @@ const articles =[
         date:"3rd March 2021",
         category:"Club articles",
         subcategory: "3 minute read",
-        description: "A collection of memories by friends and family of Allie, the star behind our art club."
+        description: "A collection of memories by friends and family of Allie, the star behind our art club.",
+        file_type: "png"
     },
 ]
 
