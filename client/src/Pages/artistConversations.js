@@ -32,7 +32,8 @@ const ArtistConversations=()=>{
                         date={el.date}
                         category={el.category}
                         landingPage={"discussions"}
-                        subcategory={el.subcategory}>
+                        subcategory={el.subcategory}
+                        file_type={el.file_type}>
                         {el.description}</Article>
                                 )
                             })

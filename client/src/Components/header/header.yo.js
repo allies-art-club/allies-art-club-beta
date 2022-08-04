@@ -1,7 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import Header from './header.js';
-import {findByAttribute} from '../../../Utils/index.js';
+// import React from 'react';
+// import { shallow } from 'enzyme';
+// import Header from './header.js';
+// import {findByAttribute} from '../../../Utils/index.js';
 
 //SET UP DATATEST ATTRIBUTE
 const loadComponent = (props={}) =>{
@@ -10,7 +10,7 @@ const loadComponent = (props={}) =>{
 }
 
 //Check all significant header components render
-describe("Header component",()=>{
+// describe("Header component",()=>{
   // let component;
   // beforeEach(()=>{
   //   component=loadComponent()
@@ -35,5 +35,5 @@ describe("Header component",()=>{
   //     }
   //   })
   
-})
+// })
 

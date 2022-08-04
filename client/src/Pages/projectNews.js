@@ -29,7 +29,8 @@ const ProjectNews=()=>{
             date={el.date}
             landingPage={"discussions"}
             category={el.category}
-            subcategory={el.subcategory}>
+            subcategory={el.subcategory}
+            file_type={el.file_type}>
             {el.description}</Article>
                     )
                 })

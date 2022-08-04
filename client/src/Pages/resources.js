@@ -31,6 +31,7 @@ const Resources=()=>{
                 landingPage={"resources"}
                 category={el.category}
                 subcategory={el.subcategory}
+                file_type={el.file_type}
                 downloadHandler={downloadHandler}>
                 {el.description}</Article>
                     )
