@@ -31,7 +31,8 @@ const Events=()=>{
                         date={el.date}
                         landingPage={"activities"}
                         category={el.category}
-                        subcategory={el.subcategory}>
+                        subcategory={el.subcategory}
+                        file_type={el.file_type}>
                         {el.description}</Article>
                     )
                 }):

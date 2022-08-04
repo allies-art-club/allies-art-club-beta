@@ -10,47 +10,11 @@ import Clipboard from './Components/clipboard/clipboard.js';
 // import { loadStripe } from '@stripe/stripe-js';
 import Spinner from './Components/spinner.js';
 import ErrorBoundary from './Pages/errorBoundary.js';
-const AlliesFirstCommunityArtsEvent =lazy(()=>import('./Pages/articles/alliesFirstCommunityArtsEvent.js'));
-const LaunchParty =lazy(()=>import('./Pages/activities/launchParty.js'));
-const CrazyParty =lazy(()=>import('./Pages/activities/crazyEvent.js'));
+import components from './router.js';
 const Home = lazy(()=> import('./Pages/home.js'));
-const AboutAac = lazy(()=>import('./Pages/aboutaac.js'));
-const AboutAlliesStory = lazy(()=>import('./Pages/aboutStory.js'));
-const AboutMission = lazy(()=>import("./Pages/aboutMission.js"));
-const AboutValues = lazy(()=>import("./Pages/aboutValues.js"));
-const Discussions= lazy(()=> import('./Pages/discussions.js'));
 const Footer = lazy(()=> import('./Components/footer/footer.js'));
-const Donate = lazy(()=>import('./Pages/donate.js'));
 const ThankYou = lazy(()=>import('./Pages/thankyou.js'));
-// const DonateFunds = lazy(()=>import('./Pages/donateFunds.js'));
-const DonateSupplies = lazy(()=>import('./Pages/donateSupplies.js'));
-const Membership=lazy(()=>import('./Pages/membership.js'));
-const Volunteer=lazy(()=>import('./Pages/volunteer.js'));
-const ContactUs=lazy(()=>import('./Pages/contactUs'));
-const ArtCare = lazy(()=>import('./Pages/activities/artCare.js'));
 const NotFound = lazy(()=>import('./Pages/notFound.js'));
-const ArtistConversations = lazy(()=>import('./Pages/artistConversations.js'));
-const Resources= lazy(()=>import('./Pages/resources.js'));
-const ClubArticles = lazy(()=>import('./Pages/clubArticles.js'));
-const PersonalStories = lazy(()=>import('./Pages/personalStories.js'));
-const ProjectNews = lazy(()=>import('./Pages/projectNews'));
-//articles
-const WhatIsArt = lazy(()=>import('./Pages/articles/whatIsArt.js'));
-const FoodBank = lazy(()=>import('./Pages/articles/foodBank.js'));
-const ArtCarePacks = lazy(()=>import('./Pages/articles/artCarePacks.js'));
-
-const RememberingAllie = lazy(()=>import('./Pages/articles/rememberingAllie.js'));
-const CharityWeCanTrust = lazy(()=>import('./Pages/articles/charityWeCanTrust.js'));
-const LessonsInCalligraphy= lazy(()=>import('./Pages/articles/lessonsInCalligraphy.js'));
-const ArtAndWellbeing = lazy(()=>import('./Pages/articles/artAndWellbeing.js'));
-const HealingThroughPoetry = lazy(()=>import('./Pages/articles/healingThroughPoetry.js'));
-const FirstDonations = lazy(()=>import('./Pages/articles/firstDonations.js'));
-
-const Activities = lazy(()=>import('./Pages/activities.js'));
-const Events = lazy(()=>import('./Pages/events.js'));
-const Projects = lazy(()=>import('./Pages/projects.js'));
-const FactSheets = lazy(()=>import('./Pages/factSheets.js'));
-const WorkSheets = lazy(()=>import('./Pages/workSheets.js'));
 const GlobalStyle = createGlobalStyle`
   html,body {
     box-sizing: border-box;
@@ -90,6 +54,30 @@ const GlobalStyle = createGlobalStyle`
 `
 
 // const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
+const Routes = () => {
+  return(
+    <>
+    {
+      components.map((component)=>{
+          let Page=lazy(()=>import('./Pages'+component.path))
+          return(
+              <Route key={component.name} path={component.url} exact strict render={
+                  ()=>{
+                      return(
+                          <Clipboard children={
+                              <Page />
+                          }/>
+                      )
+                  }
+              }/>
+          )
+      })
+  
+  }
+  </>
+
+  )
+}
 const App= (props) =>{
     var setCsrf = props.setCsrfToken;
 
@@ -126,67 +114,7 @@ const App= (props) =>{
                         }
                     }
                     />
-                <Route path="/about/allies-art-club" exact strict render={
-                      ()=>{
-                          return(
-                            <Clipboard children={
-                              <AboutAac />
-                            } />
-                          )
-                      }
-                  }
-                  /><Route path="/about/allies-mission" exact strict render={
-                    ()=>{
-                        return(
-                          <Clipboard children={
-                            <AboutMission />
-                          } />
-                        )
-                    }
-                }
-                />
-                <Route path="/about/allies-values" exact strict render={
-                  ()=>{
-                      return(
-                        <Clipboard children={
-                          <AboutValues />
-                        } />
-                      )
-                  }
-              }
-              />
-                  <Route path="/about/allies-story" exact strict render={
-                        ()=>{
-                            return(
-                              <Clipboard children={
-                                <AboutAlliesStory />
-                              } />
-                            )
-                        }
-                    }
-                    />
-                <Route path="/allies-clubs-and-projects" exact strict render={
-                      ()=>{
-                          return(
-                            <Clipboard children={
-                              <Discussions />
-                            }/>
-                          )
-                      }
-                  }
-                  />
-
-                <Route path="/be-an-allie/donate" exact strict render={
-                      ()=>{
-                          return(
-                              <Clipboard children={
-                                <Donate />
-                              }/>
-                          )
-                      }
-                  }
-                  />
-
+                <Routes/>
                 {/* <Route path="/be-an-allie/donateFunds" exact strict render={
                       ()=>{
                           return(
@@ -200,56 +128,8 @@ const App= (props) =>{
                   }
                   />
          */}
-                <Route path="/be-an-allie/donateSupplies" exact strict render={
-                      ()=>{
-                          return(
-                              <Clipboard children={
-                                <DonateSupplies />
-                              }/>
-                          )
-                      }
-                  }
-                  />
-                  <Route path="/be-an-allie/contact-us" exact strict render={
-                        ()=>{
-                            return(
-                                <Clipboard children={
-                                  <ContactUs />
-                                }/>
-                            )
-                        }
-                    }
-                    />
-                  <Route path="/be-an-allie/membership" exact strict render={
-                        ()=>{
-                            return(
-                                <Clipboard children={
-                                  <Membership />
-                                }/>
-                            )
-                        }
-                    }
-                    />
-                    <Route path="/be-an-allie/volunteer" exact strict render={
-                          ()=>{
-                              return(
-                                  <Clipboard children={
-                                    <Volunteer/>
-                                  }/>
-                              )
-                          }
-                      }
-                      />
-                      <Route path="/be-an-allie/contact" exact strict render={
-                            ()=>{
-                                return(
-                                    <Clipboard children={
-                                      <Volunteer/>
-                                    }/>
-                                )
-                            }
-                        }
-                        />
+                
+            
                   <Route path="/thank-you" exact strict render={
                         ()=>{
                             return(
@@ -266,260 +146,7 @@ const App= (props) =>{
                           }
                       }
                       />
-                    <Route path="/activities/projects/art-care" exact strict render={
-                          ()=>{
-                              return(
-                                <Clipboard children={
-                                  <ArtCare></ArtCare>
-                                }/>
-                              )
-                          }
-                      }
-                      />
-                      <Route path="/activities/events/arts-fair-and-open-mic-launch-party" exact strict render={
-                        ()=>{
-                            return(
-                              <Clipboard children={
-                                <LaunchParty/>
-                              }/>
-                            )
-                        }
-                    }
-                    />
-                    <Route path="/activities/events/crazy-a-mental-health-arts-event" exact strict render={
-                      ()=>{
-                          return(
-                            <Clipboard children={
-                              <CrazyParty/>
-                            }/>
-                          )
-                      }
-                  }
-                  />
-                      <Route path="/discussions/artist-conversations" exact strict render={
-                            ()=>{
-                                return(
-                                  
-                            <Clipboard children={
-                                    <ArtistConversations></ArtistConversations>
-                            }/>
-                                )
-                            }
-                        }
-                        />
-                        <Route path="/discussions/personal-stories" exact strict render={
-                              ()=>{
-                                  return(
-
-                            <Clipboard children={
-                                      <PersonalStories></PersonalStories>
-                            }/>
-                                  )
-                              }
-                          }
-                          />
-                          <Route path="/discussions/project-news" exact strict render={
-                                ()=>{
-                                    return(
-
-                            <Clipboard children={
-                                        <ProjectNews></ProjectNews>
-                            }/>
-                                    )
-                                }
-                            }
-                            />
-                            <Route path="/discussions/project-news/art-care-packs-tools-for-mental-wellbeing" exact strict render={
-                                  ()=>{
-                                      return(
-  
-                              <Clipboard children={
-                                          <ArtCarePacks></ArtCarePacks>
-                              }/>
-                                      )
-                                  }
-                              }
-                              />
-                              <Route path="/discussions/project-news/allies-first-community-arts-event" exact strict render={
-                                    ()=>{
-                                        return(
-    
-                                <Clipboard children={
-                                            <AlliesFirstCommunityArtsEvent></AlliesFirstCommunityArtsEvent>
-                                }/>
-                                        )
-                                    }
-                                }
-                                />
-                            <Route path="/discussions/club-articles" exact strict render={
-                                  ()=>{
-                                      return(
-
-                            <Clipboard children={
-                                          <ClubArticles></ClubArticles>
-                            }/>
-                                      )
-                                  }
-                              }
-                              />
-                              <Route path="/discussions" exact strict render={
-                                    ()=>{
-                                        return(
-  
-                              <Clipboard children={
-                                            <Discussions/>
-                              }/>
-                                        )
-                                    }
-                                }
-                                />
-
-                              <Route path="/activities" exact strict render={
-                                    ()=>{
-                                        return(
-  
-                              <Clipboard children={
-                                            <Activities/>
-                              }/>
-                                        )
-                                    }
-                                }
-                                />
-                                <Route path="/activities/projects" exact strict render={
-                                      ()=>{
-                                          return(
-    
-                                <Clipboard children={
-                                              <Projects/>
-                                }/>
-                                          )
-                                      }
-                                  }
-                                  />
-                                  <Route path="/activities/events" exact strict render={
-                                        ()=>{
-                                            return(
-      
-                                  <Clipboard children={
-                                                <Events/>
-                                  }/>
-                                            )
-                                        }
-                                    }
-                                    />
-                              <Route path="/discussions/club-articles/what-is-art" exact strict render={
-                                    ()=>{
-                                        return(
-    
-                              <Clipboard children={
-                                            <WhatIsArt></WhatIsArt>
-                              }/>
-                                        )
-                                    }
-                                }
-                                />
-                                <Route path="/discussions/project-news/allies-food-bank" exact strict render={
-                                      ()=>{
-                                          return(
-      
-                                <Clipboard children={
-                                              <FoodBank></FoodBank>
-                                }/>
-                                          )
-                                      }
-                                  }
-                                  />
-                                  <Route path="/discussions/project-news/weve-donated-100-art-care-packs" exact strict render={
-                                        ()=>{
-                                            return(
-        
-                                  <Clipboard children={
-                                                <FirstDonations></FirstDonations>
-                                  }/>
-                                            )
-                                        }
-                                    }
-                                    />
-                                  <Route path="/discussions/personal-stories/lessons-in-calligraphy" exact strict render={
-                                        ()=>{
-                                            return(
-        
-                                  <Clipboard children={
-                                                <LessonsInCalligraphy></LessonsInCalligraphy>
-                                  }/>
-                                            )
-                                        }
-                                    }
-                                    />
-                                    <Route path="/discussions/club-articles/remembering-allie" exact strict render={
-                                          ()=>{
-                                              return(
-          
-                                    <Clipboard children={
-                                                  <RememberingAllie></RememberingAllie>
-                                    }/>
-                                              )
-                                          }
-                                      }
-                                      />
-                                      <Route path="/discussions/club-articles/art-and-wellbeing" exact strict render={
-                                            ()=>{
-                                                return(
-            
-                                      <Clipboard children={
-                                                    <ArtAndWellbeing></ArtAndWellbeing>
-                                      }/>
-                                                )
-                                            }
-                                        }
-                                        />
-                                      <Route path="/discussions/artist-conversations/healing-through-poetry" exact strict render={
-                                        ()=>{
-                                          return(
-                                            <Clipboard children={
-                                              <HealingThroughPoetry />
-                                            }/>
-                                          )
-                                        }
-                                      }/>
-                                        <Route path="/discussions/club-articles/awtf-a-charity-we-can-trust" exact strict render={
-                                              ()=>{
-                                                  return(
-              
-                                        <Clipboard children={
-                                                      <CharityWeCanTrust></CharityWeCanTrust>
-                                        }/>
-                                                  )
-                                              }
-                                          }
-                                          />
-                                        <Route path="/resources" exact strict render={
-                                          ()=>{
-                                            return(
-                                              <Clipboard children={
-                                                <Resources />
-                                              }/>
-                                            )
-                                          }
-                                        }/>
-                                        <Route path="/resources/fact-sheets" exact strict render={
-                                          ()=>{
-                                            return(
-                                              <Clipboard children={
-                                                <FactSheets />
-                                              }/>
-                                            )
-                                          }
-                                        }/>
-                                        <Route path="/resources/work-sheets" exact strict render={
-                                          ()=>{
-                                            return(
-                                              <Clipboard children={
-                                                <WorkSheets />
-                                              }/>
-                                            )
-                                          }
-                                        }/>
+                    
                                 <Route render={
                                   ()=>{
                                     return(

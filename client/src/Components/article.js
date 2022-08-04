@@ -33,9 +33,9 @@ const Article=(props)=>{
                     <Figure >
 
             <picture>
-                    <source media="(max-width: 1024px)" srcSet={`${props.src}-small.png 1x, ${props.src}-2x.png 2x`}/>
-                    <source media="(min-width: 1025px)" srcSet={`${props.src}-large.png`}/>
-                    <ArticleImage alt={props.title} src={`${props.src}-large.png`}/>
+                    <source media="(max-width: 1024px)" srcSet={`${props.src}-small.${props.file_type} 1x, ${props.src}-2x.${props.file_type} 2x`}/>
+                    <source media="(min-width: 1025px)" srcSet={`${props.src}-large.${props.file_type}`}/>
+                    <ArticleImage alt={props.title} src={`${props.src}-large.${props.file_type}`}/>
                 </picture>
                         <PublishingDate>{props.date}</PublishingDate>
                     </Figure>
