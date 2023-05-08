@@ -12,12 +12,6 @@ const carouselImage = [
         fileType:'png'
     },
     {
-        src: '/assets/carouselHome/Lexi',
-        url: '/discussions/project-news/allies-food-bank',
-        caption: "Allie's Food Bank",
-        fileType:'png'
-    },
-    {
         src: '/assets/carouselHome/artCare',
         url: '/activities/projects/art-care',
         caption: "Art Care",

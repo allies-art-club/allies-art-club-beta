@@ -1,9 +1,18 @@
 const articles =[
     {
+        src: "/assets/activities/events/alliesCreativeHangouts/alliesCreativeHangouts1",
+        title: "Allie’s Creative Hangouts",
+        date: "11th April 2023",
+        category: "Club articles",
+        subcategory: "1 minute read",
+        description: "Our monthly meet-ups to have fun, socialise and be creative",
+        file_type: "png"
+    },
+    {
         src: "/assets/articles/theCrazyZine/theCrazyZine4",
         title: "The CRAZY zine",
         date:"18th May 2022",
-        category:"Project News",
+        category:"Project news",
         subcategory: "1 minute read",
         description: "About our mental health art and poetry zine",
         file_type: "png"
@@ -13,7 +22,7 @@ const articles =[
         src: "/assets/articles/ourCrazyEvent/ourCrazyEvent",
         title: "Our CRAZY Event!",
         date:"9th May 2022",
-        category:"Project News",
+        category:"Project news",
         subcategory: "3 minute read",
         description: "A look back at our mental health arts event",
         file_type: "png"
@@ -59,30 +68,12 @@ const articles =[
         file_type: "png"
     },
     {
-        src: "/assets/articles/foodBank/Lexi",
-        title: "Allie's Food Bank",
-        date: "17th June 2021",
-        category: "Project news",
-        subcategory: "2 minute read",
-        description: "The incredible work being done to address local food poverty by AWTF and the Pilion Trust.",
-        file_type: "png"
-    },
-    {
         src: "/assets/articles/artAndWellbeing/artAndWellbeing1",
         title: "Art and Wellbeing",
         date: "25th May 2021",
         category: "Club articles",
         subcategory: "2 minute read",
         description: "How engaging in art and creative activities can improve personal health and wellbeing.",
-        file_type: "png"
-    },
-    {
-        src: "/assets/articles/aCharityWeCanTrust/aCharityWeCanTrust6",
-        title: "AWTF: A Charity We Can Trust",
-        date:"2nd May 2021",
-        category:"Club articles",
-        subcategory: "3 minute read",
-        description: "About the Club's Foundation, AWTF, and why we trust this charity to support us.",
         file_type: "png"
     },
     {
