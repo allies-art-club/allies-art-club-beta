@@ -1,5 +1,15 @@
 const activities = [
     {
+        src: "/assets/activities/events/alliesCreativeHangouts/alliesCreativeHangouts1",
+        title: "Allie’s Creative Hangouts",
+        title2: "",
+        date: "11th April 2023",
+        category: "Events",
+        subcategory: "Present",
+        description: "Our monthly meet-ups to have fun, socialise and be creative",
+        file_type: "png"
+    },
+    {
         src: "/assets/activities/events/crazyAMentalHealthArtsEvent/crazyAMentalHealthArtsEvent1",
         title: "CRAZY",
         title2: "A Mental Health Arts Event",
