@@ -177,6 +177,16 @@ const routes= [
         name:"TheCrazyZine",
         path:'/articles/theCrazyZine.js',
         url: "/discussions/project-news/the-crazy-zine"
+    },
+    {
+        name:"AlliesCreativeHangouts",
+        path:'/activities/alliesCreativeHangouts.js',
+        url: "/activities/events/allies-creative-hangouts"
+    },
+    {
+        name:"AlliesCreativeHangouts",
+        path:'/activities/alliesCreativeHangouts.js',
+        url: "/discussions/club-articles/allies-creative-hangouts"
     }
 ]
 
