@@ -36,6 +36,13 @@ const carouselImage = [
         fileType:'jpg'
     },
 
+    {
+        src: '/assets/activities/events/alliesCreativeHangouts/alliesCreativeHangouts1',
+        url: '/discussions/club-articles/allies-creative-hangouts',
+        caption: "Creative Hangouts",
+        fileType:'png'
+    },
+
 ]
 
 export default carouselImage;
