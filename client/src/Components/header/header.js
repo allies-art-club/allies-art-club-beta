@@ -109,7 +109,7 @@ const Header = (props) => {
                                 nav={'nav'?1:0}
                                 data-test="beAnAllieLink"
                                 
-                                >Be an Allie</NavMainCategory>
+                                >Contact us</NavMainCategory>
                                 <SubMenu subMenu={'be-an-allie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu["be-an-allie"]} mainCategory={'be-an-allie'} navLinks={["Membership","Donate","Volunteer","Contact Us"]}></SubMenu>
                         </HeaderNavListElement>
                     </HeaderNavList>

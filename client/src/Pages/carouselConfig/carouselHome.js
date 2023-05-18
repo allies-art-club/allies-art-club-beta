@@ -12,12 +12,6 @@ const carouselImage = [
         fileType:'png'
     },
     {
-        src: '/assets/carouselHome/Lexi',
-        url: '/discussions/project-news/allies-food-bank',
-        caption: "Allie's Food Bank",
-        fileType:'png'
-    },
-    {
         src: '/assets/carouselHome/artCare',
         url: '/activities/projects/art-care',
         caption: "Art Care",
@@ -40,6 +34,13 @@ const carouselImage = [
         url: '/about/allies-art-club',
         caption: "About Allie's Art Club",
         fileType:'jpg'
+    },
+
+    {
+        src: '/assets/activities/events/alliesCreativeHangouts/alliesCreativeHangouts1',
+        url: '/discussions/club-articles/allies-creative-hangouts',
+        caption: "Creative Hangouts",
+        fileType:'png'
     },
 
 ]
