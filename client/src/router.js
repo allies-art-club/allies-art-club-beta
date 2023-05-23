@@ -53,11 +53,11 @@ const routes= [
         path:'/donateSupplies.js',
         url:"/be-an-allie/donateSupplies"
     },
-    {
-        name:"Membership",
-        path:'/membership.js',
-        url:"/be-an-allie/membership"
-    },
+    // {
+    //     name:"Membership",
+    //     path:'/membership.js',
+    //     url:"/be-an-allie/membership"
+    // },
     {
         name:"Volunteer",
         path:'/volunteer.js',

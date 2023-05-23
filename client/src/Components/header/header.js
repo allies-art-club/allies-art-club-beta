@@ -110,7 +110,7 @@ const Header = (props) => {
                                 data-test="beAnAllieLink"
                                 
                                 >Contact us</NavMainCategory>
-                                <SubMenu subMenu={'be-an-allie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu["be-an-allie"]} mainCategory={'be-an-allie'} navLinks={["Membership","Donate","Volunteer","Contact Us"]}></SubMenu>
+                                <SubMenu subMenu={'be-an-allie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu["be-an-allie"]} mainCategory={'be-an-allie'} navLinks={["Contact Us"]}></SubMenu>
                         </HeaderNavListElement>
                     </HeaderNavList>
                 </HeaderNavListWrap>
