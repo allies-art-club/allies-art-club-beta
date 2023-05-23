@@ -187,6 +187,11 @@ const routes= [
         name:"AlliesCreativeHangouts",
         path:'/activities/alliesCreativeHangouts.js',
         url: "/discussions/club-articles/allies-creative-hangouts"
+    },
+    {
+        name:"ThankYou",
+        path:"/thankyou",
+        url:"/thank-you"
     }
 ]
 
