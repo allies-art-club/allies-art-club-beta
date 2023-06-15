@@ -96,7 +96,7 @@ const Header = (props) => {
                                 >Resources</NavMainCategory>
                                 <SubMenu subMenu={'resources'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu.resources} mainCategory={'resources'} navLinks={["All Resources","Fact Sheets","Work Sheets"]}></SubMenu>
                         </HeaderNavListElement>
-                        <HeaderNavListElement>
+                        {/* <HeaderNavListElement>
                             <NavMainCategory
                                 onClick={(e)=>{
                                     if(window.innerWidth<768){
@@ -111,7 +111,7 @@ const Header = (props) => {
                                 
                                 >Contact us</NavMainCategory>
                                 <SubMenu subMenu={'be-an-allie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu["be-an-allie"]} mainCategory={'be-an-allie'} navLinks={["Contact Us"]}></SubMenu>
-                        </HeaderNavListElement>
+                        </HeaderNavListElement> */}
                     </HeaderNavList>
                 </HeaderNavListWrap>
                 
