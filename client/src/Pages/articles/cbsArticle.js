@@ -23,16 +23,16 @@ const CbsArticle = () => {
         <picture>
           <source
             media="(max-width: 1024px)"
-            srcSet="/assets/activities/events/communityBenefitSociety/communityBenefitSociety1-small.png 1x, /assets/articles/communityBenefitSociety1/communityBenefitSociety1-large.png 2x"
+            srcSet="/assets/articles/communityBenefitSociety/communityBenefitSociety1-small.png 1x, /assets/articles/communityBenefitSociety1/communityBenefitSociety1-large.png 2x"
           />
           <source
             media="(min-width: 1025px)"
-            srcSet="/assets/activities/events/communityBenefitSociety/communityBenefitSociety1-2x.png"
+            srcSet="/assets/articles/communityBenefitSociety/communityBenefitSociety1-2x.png"
           />
           <TextImageTop
             right={true}
             src={
-              "/assets/activities/events/communityBenefitSociety/communityBenefitSociety1-large.png"
+              "/assets/articles/communityBenefitSociety/communityBenefitSociety1-large.png"
             }
             alt="Poster picture"
           />
@@ -102,7 +102,7 @@ const CbsArticle = () => {
           </Paragraph>
         </Paragraph>
       </Section>
-      <img src="/assets/activities/events/communityBenefitSociety/communityBenefitSociety2-small.png" alt="React Image" />
+      <img src="/assets/articles/communityBenefitSociety/communityBenefitSociety2-small.png" alt="React Image" />
     </Fragment>
   );
 };

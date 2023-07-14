@@ -196,7 +196,7 @@ const routes= [
     {
         name:"ArtistUnite",
         path:'/activities/artistUnite.js',
-        url: "/discussions/activities/events/artists-unite"
+        url: "/activities/events/artists-unite"
     },
     {
         name:"ThankYou",
