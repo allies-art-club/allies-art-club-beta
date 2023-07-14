@@ -6,9 +6,7 @@ import {
   TextImageTop,
   ListElement,
 } from "../../Components/Styled/styled.js";
-import {
-  ArticleList,
-} from "../../Components/Styled/article.styled.js";
+import { ArticleList } from "../../Components/Styled/article.styled.js";
 
 import TitleBanner from "../../Components/titleBanner/titleBanner.js";
 
@@ -61,10 +59,8 @@ const Access2Art = () => {
             mobile="true"
           />
         </picture>
-          </Section>
-          <Section>
-
-          
+      </Section>
+      <Section>
         <Paragraph>
           These are relaxed social gatherings for visitors to have fun, make
           friends and be creative in a warm and friendly space, with plenty of
@@ -103,15 +99,15 @@ const Access2Art = () => {
             mobile="true"
           />
         </picture>
-        </Section>
-        <Section>
+      </Section>
+      <Section>
         <Paragraph>
           We will have a variety of arts and crafts supplies for you to choose
           from, but you&#39;re also welcome to bring your own and any ideas or
           projects you&#39;d like to make with us - or just come for a cuppa and
           a chat!{" "}
         </Paragraph>
-        
+
         <Paragraph>
           All abilities and identities are welcome to join us – you don’t need
           to be a professional artist, although these events are for adults over

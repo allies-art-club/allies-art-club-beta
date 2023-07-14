@@ -189,6 +189,16 @@ const routes= [
         url: "/discussions/club-articles/allies-creative-hangouts"
     },
     {
+        name:"CommunityBenefitSociety",
+        path:'/articles/cbsArticle.js',
+        url: "/discussions/club-articles/were-a-community-benefit-society"
+    },
+    {
+        name:"ArtistUnite",
+        path:'/activities/artistUnite.js',
+        url: "/discussions/activities/events/artists-unite"
+    },
+    {
         name:"ThankYou",
         path:"/thankyou",
         url:"/thank-you"
