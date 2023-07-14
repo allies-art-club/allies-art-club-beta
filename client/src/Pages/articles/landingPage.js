@@ -1,6 +1,6 @@
 const articles = [
     {
-    src: "/assets/activities/events/communityBenefitSociety/communityBenefitSociety1", //picture
+    src: "/assets/articles/communityBenefitSociety/communityBenefitSociety1", //picture
     title: "We’re a Community Benefit Society!",
     date: "6th June 2023",
     category: "Club articles",
