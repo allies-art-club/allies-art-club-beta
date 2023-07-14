@@ -30,6 +30,9 @@ const FooterContainer = styled.footer`
   ${FooterElementWrapper}:nth-child(3){
       border:none;
   }
+  ${FooterElementWrapper}:nth-child(4){
+    border:none;
+}
 `
 const Caption = styled.figcaption`
   display:inline-block;
@@ -87,7 +90,7 @@ const CenterParagraph= styled.p`
     position:absolute;
     width:26%;
     top:50%;
-    right:0px;
+    right:400px;
     left:0px;
     color: white;
     font-size: 20px;
@@ -100,6 +103,31 @@ const CenterParagraph= styled.p`
       font-size:1rem;
     }
 `
+
+const RightParagraph= styled.p`
+    position:absolute;
+    width:26%;
+    top:50%;
+    right:-250px;
+    left:0px;
+    color: white;
+    font-size: 5px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    transform: translateY(-45%);
+    font-size:0.8rem;
+    @media(min-width:1025px){
+      font-size:1rem;
+    }
+    @media(max-width:767px){
+      word-break: break-word;
+    }
+    @media(min-width:360px){
+      font-size:0.5rem;
+    }
+`
+
 const IconWrapper=styled.div`
   display:flex;
   justify-content:space-evenly;
@@ -132,4 +160,4 @@ const FooterLink = styled.a`
   color:white;
 `
 
-export {FooterContainer,AwtfLogo,FooterElementWrapper,Figure,Caption,CenterParagraph,IconWrapper,Icon,FooterParagraph,FooterLink};
+export {FooterContainer,AwtfLogo,FooterElementWrapper, RightParagraph, Figure,Caption,CenterParagraph,IconWrapper,Icon,FooterParagraph,FooterLink};
