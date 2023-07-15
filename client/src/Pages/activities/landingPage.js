@@ -1,5 +1,15 @@
 const activities = [
     {
+        src: "/assets/activities/events/artistUnite/artistUnite1", //picture
+        title: "Artists Unite!",
+        date: "13th July 2023",
+        category: "Events",
+        subcategory: "1 minute read",
+        description:
+          "Join Allie’s Art Club to see how we can unite as artists to support ourselves and our communities",
+        file_type: "png",
+      },
+      {
         src: "/assets/activities/events/alliesCreativeHangouts/alliesCreativeHangouts1",
         title: "Allie’s Creative Hangouts",
         title2: "",
