@@ -34,7 +34,7 @@ const CbsArticle = () => {
             src={
               "/assets/articles/communityBenefitSociety/communityBenefitSociety1-large.png"
             }
-            alt="Poster picture"
+            alt="Poster"
           />
         </picture>
         <Paragraph>
@@ -102,7 +102,7 @@ const CbsArticle = () => {
           </Paragraph>
         </Paragraph>
       </Section>
-      <img src="/assets/articles/communityBenefitSociety/communityBenefitSociety2-small.png" alt="React Image" />
+      <img src="/assets/articles/communityBenefitSociety/communityBenefitSociety2-small.png" alt="qr code" />
     </Fragment>
   );
 };
