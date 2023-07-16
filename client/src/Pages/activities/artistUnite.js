@@ -109,7 +109,7 @@ const ArtUnite = () => {
           <Link
             rel="noopener"
             target="_blank"
-            href="https://allies-creative-hangouts.eventbrite.co.uk"
+            href="https://artists-unite.eventbrite.co.uk"
           >
             here
           </Link>
