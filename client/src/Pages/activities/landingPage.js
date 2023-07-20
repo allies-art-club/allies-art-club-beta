@@ -2,7 +2,7 @@ const activities = [
     {
         src: "/assets/activities/events/artistUnite/artistUnite1", //picture
         title: "Artists Unite!",
-        date: "13th July 2023",
+        date: "18th August 2023",
         category: "Events",
         subcategory: "1 minute read",
         description:
