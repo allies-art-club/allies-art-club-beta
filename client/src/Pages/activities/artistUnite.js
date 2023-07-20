@@ -66,7 +66,9 @@ const ArtUnite = () => {
           <br />
           Meet Allie's Art Club and other local artists and enjoy complementary
           nibbles.
-          <br />
+          <br /> {" "}
+          </Paragraph> 
+          <Paragraph>
           <b>Learn + Discuss</b>
           <br />
           7 - 8pm: Presentation + Discussion <br />
