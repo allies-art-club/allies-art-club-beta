@@ -1,10 +1,20 @@
 const activities = [
+  {
+    src: "/assets/activities/events/alliesCommunityArtsFair/alliesCommunityArtsFair1", //picture
+    title: "Allie’s Community Arts Fair",
+    date: "23rd September 2023",
+    category: "Events",
+    subcategory: "23rd September 2023",
+    description:
+      "Join our creative community event including an art market, arts and crafts",
+    file_type: "png",
+  },
     {
         src: "/assets/activities/events/artistUnite/artistUnite1", //picture
         title: "Artists Unite!",
         date: "18th August 2023",
         category: "Events",
-        subcategory: "1 minute read",
+        subcategory: "Past",
         description:
           "Join Allie’s Art Club to see how we can unite as artists to support ourselves and our communities",
         file_type: "png",
