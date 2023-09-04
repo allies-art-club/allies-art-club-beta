@@ -4,7 +4,7 @@ const activities = [
     title: "Allie’s Community Arts Fair",
     date: "23rd September 2023",
     category: "Events",
-    subcategory: "23rd September 2023",
+    subcategory: "Upcoming",
     description:
       "Join our creative community event including an art market, arts and crafts",
     file_type: "png",
