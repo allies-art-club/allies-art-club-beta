@@ -1,4 +1,14 @@
 const activities = [
+  {
+    src: "/assets/activities/events/wildAtArt/wildAtArt1", //picture
+    title: "Wild At Art",
+    date: "16th March 2024",
+    category: "Events",
+    subcategory: "1 minute read",
+    description:
+      "A creative community event exploring and celebrating our connection to the natural world",
+    file_type: "png",
+  },
     {
         src: "/assets/activities/events/artistUnite/artistUnite1", //picture
         title: "Artists Unite!",
