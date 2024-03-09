@@ -207,6 +207,11 @@ const routes= [
         name:"ThankYou",
         path:"/thankyou",
         url:"/thank-you"
+    },
+    {
+        name:"ArtistUnite",
+        path:'/activities/wildAtArt.js',
+        url: "/activities/events/wild-at-art"
     }
 ]
 
