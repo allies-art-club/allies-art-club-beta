@@ -32,9 +32,15 @@ const WildArt = () => {
           <TextImageTop
             right={true}
             src={"/assets/activities/events/wildAtArt/wildAtArt1-large.png"}
-            alt="Artist unite logo"
+            alt="Wild Art logo"
           />
         </picture>
+      </Section>
+      <Section>
+        <Paragraph>
+          Join Allie’s Art Club for our first ever nature-inspired community
+          arts fair!
+        </Paragraph>
       </Section>
       <Section>
         <Paragraph>
