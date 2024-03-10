@@ -1,5 +1,6 @@
 const activities = [
   {
+<<<<<<< HEAD
     src: "/assets/activities/events/wildAtArt/wildAtArt1", //picture
     title: "Wild At Art",
     date: "16th March 2024",
@@ -7,6 +8,15 @@ const activities = [
     subcategory: "1 minute read",
     description:
       "A creative community event exploring and celebrating our connection to the natural world",
+=======
+    src: "/assets/activities/events/alliesCommunityArtsFair/alliesCommunityArtsFair1", //picture
+    title: "Allie’s Community Arts Fair",
+    date: "23rd September 2023",
+    category: "Events",
+    subcategory: "Upcoming",
+    description:
+      "Join our creative community event including an art market, arts and crafts",
+>>>>>>> 5004232c81267c827b6edf4f0a12cafe14fe61d8
     file_type: "png",
   },
     {
@@ -14,7 +24,7 @@ const activities = [
         title: "Artists Unite!",
         date: "18th August 2023",
         category: "Events",
-        subcategory: "1 minute read",
+        subcategory: "Past",
         description:
           "Join Allie’s Art Club to see how we can unite as artists to support ourselves and our communities",
         file_type: "png",

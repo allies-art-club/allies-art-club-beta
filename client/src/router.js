@@ -194,6 +194,11 @@ const routes= [
         url: "/discussions/club-articles/were-a-community-benefit-society"
     },
     {
+        name:"AlliesCommunityArtsFair",
+        path:'/activities/alliesCommunityArtsFair.js',
+        url: "/activities/events/allies-community-arts-fair"
+    },
+    {
         name:"ArtistUnite",
         path:'/activities/artistUnite.js',
         url: "/activities/events/artists-unite"
