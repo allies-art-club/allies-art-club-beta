@@ -7,6 +7,16 @@ const activities = [
     subcategory: "1 minute read",
     description:
       "A creative community event exploring and celebrating our connection to the natural world",
+      file_type: "png",
+  },
+  {
+    src: "/assets/activities/events/alliesCommunityArtsFair/alliesCommunityArtsFair1", //picture
+    title: "Allie’s Community Arts Fair",
+    date: "23rd September 2023",
+    category: "Events",
+    subcategory: "Upcoming",
+    description:
+      "Join our creative community event including an art market, arts and crafts",
     file_type: "png",
   },
     {
