@@ -1,0 +1,22 @@
+<svg width="100%" viewBox="0 0 300 100" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+
+    <style type="text/css">
+
+        @import url('/assets/fonts/bigstem/stylesheet.css');
+        .text-style {
+            font-size:70px;
+            font-weight:500;
+            font-family:"big_stemregular";
+            text-align:center;
+        }
+      </style>
+                     
+        <path id="MyPath" fill="none" stroke="red"
+            d="M 10 70 C 100 45, 200 45, 290 70" />
+    </defs>
+    <text class="text-style" >
+        <textPath href="#MyPath" startOffset="50%" text-anchor="middle">
+            THANK YOU</textPath>
+    </text>
+</svg>
