@@ -1,61 +1,38 @@
 {
   "name": "allies-art-club",
-  "version": "1.0.0",
-  "description": "Functions as a virtual group (club) where people can follow/like our social media pages, donate funds or keep up to date with what we're doing through our website or post donations to our storage space.",
-  "main": "index.js",
-  "type": "module",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "client": "npm start --prefix client",
-    "build": "npm run build --prefix client",
-    "render_build": "npm install && npm install --prefix client && npm run build", 
-    "start": "cross-env NODE_ENV=production node ./src/server.js ",
-    "startDev": "cross-env NODE_ENV=localprod node ./src/server.js",
-    "dev": "cross-env NODE_ENV=dev concurrently taskkill /IM node.exe \"npm run client\" \"nodemon ./src/server.js\"",
-    "test": "cross-env NODE_ENV=test tape ./test/*.test.js | tap-spec",
-    "coverage": "cross-env NODE_ENV=test nyc npm run test",
-    "heroku-postbuild": "npm install && npm install --prefix client && npm run build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/harryyy27/allies-art-club.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/harryyy27/allies-art-club/issues"
-  },
-  "engines": {
-    "node": "19.6.0",
-    "npm": "9.4.0"
-  },
-  "homepage": "https://github.com/harryyy27/allies-art-club#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "connect-mongodb-session": "^3.1.1",
-    "cookie-parser": "^1.4.5",
-    "cross-env": "^7.0.3",
-    "csurf": "^1.11.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "googleapis": "^81.0.0",
-    "heroku-ssl-redirect": "^0.1.1",
-    "mongodb": "^3.6.4",
-    "nodemailer": "^6.6.2",
-    "stripe": "^8.148.0",
-    "uuid": "^3.4.0"
+    "@reduxjs/toolkit": "^2.2.7",
+    "dotenv": "^16.4.5",
+    "formik": "^2.4.6",
+    "googleapis": "^140.0.1",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
+    "next": "14.2.5",
+    "next-auth": "^4.24.7",
+    "nodemailer": "^6.9.14",
+    "react": "^18",
+    "react-datepicker": "^7.3.0",
+    "react-dom": "^18",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^6.2.0",
+    "redux-thunk": "^3.1.0",
+    "stripe": "^16.5.0",
+    "styled-components": "^6.1.12",
+    "uuid": "^10.0.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
-    "chai": "^2.3.0",
-    "concurrently": "^5.2.0",
-    "mocha": "^10.2.0",
-    "mockery": "^2.1.0",
-    "nock": "^12.0.3",
-    "nodemon": "^2.0.4",
-    "nyc": "^15.0.1",
-    "sinon": "^11.1.0",
-    "supertest": "^4.0.2",
-    "tap-spec": "^2.2.2",
-    "tape": "^5.0.1"
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5"
   }
 }
