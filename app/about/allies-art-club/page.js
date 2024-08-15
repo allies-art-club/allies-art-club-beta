@@ -25,7 +25,7 @@ const AboutAac = (props) => {
                 ></TitleBanner>
             <Section id="alliesArtClub">
 
-                <Paragraph>Allie's Art Club is a community of creatives who believe in the power of art to generate positive changes for ourselves and others.</Paragraph>
+                <Paragraph>Allie&apos;s Art Club is a community of creatives who believe in the power of art to generate positive changes for ourselves and others.</Paragraph>
                 
                 <ImageWrapper>
                     <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}></RibbonImage>

@@ -1,7 +1,7 @@
 
 import connect from '../../../utils/connection'
 import {Donation} from '../../../utils/schema'
-import {uuid} from 'uuid'
+import {v4 as uuid} from 'uuid'
 export async function POST(req){
     try{
         const  body = JSON.parse(req.body);

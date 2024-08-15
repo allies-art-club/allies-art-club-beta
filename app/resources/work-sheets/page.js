@@ -1,10 +1,10 @@
 import React,{Fragment} from 'react';
-import TitleBanner from '../Components/titleBanner/titleBanner.js';
-import SideNav from '../Components/sideNav/sideNav.js';
-import Article from '../Components/article.js';
-import {PageDescription} from '../Components/Styled/styled.js'
-import resources from '../utils/landingPages/resources.js/index.js';
-import { downloadHandler } from '../Actions/articleActions.js';
+import TitleBanner from '../../../components/titleBanner/titleBanner.js';
+import SideNav from '../../../components/sideNav/sideNav.js';
+import Article from '../../../components/article.js';
+import {PageDescription} from '../../../components/Styled/styled.js'
+import resources from '../../../utils/landingPages/resources.js';
+import { downloadHandler } from '../../../utils/Actions/articleActions.js';
 const WorkSheets=()=>{
     return(
         <Fragment>

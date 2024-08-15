@@ -1,7 +1,7 @@
 import connect from '../../../utils/connection'
 import {Member}from '../../../utils/schema'
 import {getCsrfToken} from 'next-auth/react'
-import {generateTransport} from '../../../utils/nodemailer'
+import generateTransport from '../../../utils/nodemailer'
 import newMember from '../../../utils/emailTemplates/newMemberEmail'
 export default async function POST(req){
     try {
