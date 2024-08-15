@@ -1,6 +1,6 @@
 import React,{Fragment} from 'react';
 import TitleBanner from '../../../components/titleBanner/titleBanner.js';
-import SideNav from '../.../../components/sideNav/sideNav.js';
+import SideNav from '../../../components/sideNav/sideNav.js';
 import Article from '../../../components/article.js';
 import {PageDescription} from '../../../components/Styled/styled.js'
 import articles from '../../../utils/landingPages/discussions.js';
