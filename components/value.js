@@ -1,6 +1,6 @@
 "use client"
 import React, {Fragment,useState} from 'react';
-import {Message,SpeechBubble,Tag} from '../Components/Styled/about.styled.js'
+import {Message,SpeechBubble,Tag} from './Styled/about.styled.js'
 const Value = (props)=> {
     const [showMessage,setMessage]=useState(false);
     const handleClick=(event)=>{

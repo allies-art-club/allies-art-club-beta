@@ -1,5 +1,6 @@
+'use client'
 import React,{Fragment} from 'react';
-import {useHistory} from 'react-router-dom';
+import {useRouter} from 'next/router'
 import TitleBanner from '../../../components/titleBanner/titleBanner.js';
 import {Paragraph, FormStyled,FormCheckboxWrapper,FormInputWrapper,FormInputValidation, FieldSet,FieldSetWrap, FormInputCheckboxWrapper, FormInputCheckbox,CheckboxLabel,FormLabel,FormInput,FormTextArea,FormSubmitFigure,FormSubmitCaption,FormSubmitImage,FormSubmitWrapper, SubmitInfo,StarImg, FormSubmit,ErrorMessage,ErrorWrapper} from '../../../components/Styled/styled';
 import {SideImg} from "../../../components/Styled/donate.styled.js";
@@ -13,7 +14,7 @@ import {toggleSpinner} from '../../../utils/Actions/appActions';
 
 const DonateSupplies=(props)=>{
     
-    let history = useHistory();
+    let router = useRouter();
     const options = ["Books","Colouring-in books","Notepads / drawing pads","Craft / speciality paper", "Pencils / crayons", "Pens / felt tips", "Paint / paintbrushes", "Pastels / chalk", "Rulers / rubbers / sharpeners", "Other (please describe)", "Glue / glitter glue", "Stickers / kid's crafts"]
     const DonateFundsSchema = yup.object().shape({
         name: yup.string().max(70,'Please enter a name of 50 or less characters').required('Required'),
@@ -57,7 +58,7 @@ const DonateSupplies=(props)=>{
                                 await props.toggleSpinner();
                                 formik.setSubmitting(false);
                                 if(response===true){
-                                    history.push('/thank-you');
+                                    router.push('/thank-you');
                                 }
 
                         }

@@ -6,7 +6,7 @@ import {Paragraph,TextImageFigure,TextImageCaption,TextImageImage, Section,Artic
 import {ImageLabel,ImageLabelArrow,ImageLabelText,CarouselCaption} from '../../../../components/Styled/article.styled.js'
 
 import Carousel from '../../../../components/carousel.js';
-import carouselConfig from '../../../utils/carouselConfig/carouselAlliesFirstCommunityArtsEvent.js';
+import carouselConfig from '../../../../utils/carouselConfig/carouselAlliesFirstCommunityArtsEvent.js';
 
 const AlliesFirstCommunityArtsEvent=(props)=>{
     return(

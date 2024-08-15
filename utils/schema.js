@@ -45,17 +45,7 @@ const Member = function(){
     return models.Member || model("Member", MemberSchema)
 }
 
-class Donation {
-    constructor(stripeId,date, name,email,organisation,donationAmount,message){
-        this.stripeId=stripeId,
-        this.date = date,
-        this.name=name,
-        this.email=email,
-        this.organisation=organisation,
-        this.donationAmount=donationAmount,
-        this.message =message,
-        this.status='PAYMENT_PROCESSING'
-    }}
+
 const DonationSchema = new Schema({
         date: {
             type: Date,

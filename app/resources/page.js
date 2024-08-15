@@ -3,7 +3,7 @@ import TitleBanner from '../../components/titleBanner/titleBanner.js';
 import SideNav from '../../components/sideNav/sideNav.js';
 import Article from '../../components/article.js';
 import {PageDescription} from '../../components/Styled/styled.js'
-import resources from '../../utils/landingPages/resources.js/index.js';
+import resources from '../../utils/landingPages/resources.js';
 import { downloadHandler } from '../../utils/Actions/articleActions.js';
 const Resources=()=>{
     return(

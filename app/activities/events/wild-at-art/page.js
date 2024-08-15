@@ -6,7 +6,6 @@ import {
   TextImageTop,
   ListElement,
 } from "../../../../components/Styled/styled.js";
-import { ArticleList } from "../../Components/Styled/article.styled.js";
 
 import TitleBanner from "../../../../components/titleBanner/titleBanner.js";
 

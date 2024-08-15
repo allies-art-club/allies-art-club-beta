@@ -1,6 +1,6 @@
 import generateTransport from '../../../utils/nodemailer'
 import donateEmail from '../../../utils/emailTemplates/donateEmail'
-import {DonateSupplies} from '../../../utils/schema'
+import {DonationSupplies} from '../../../utils/schema'
 import connect from '../../../utils/connection'
 export async function POST(req){
     try {
@@ -8,7 +8,7 @@ export async function POST(req){
         const body = JSON.parse(req.body)
         const date = Date.now()
         body.date=date;
-        const response = await DonateSupplies(body);
+        const response = await DonationSupplies(body);
         console.log(response);
         const transport = await generateTransport();
         await transport.sendMail({

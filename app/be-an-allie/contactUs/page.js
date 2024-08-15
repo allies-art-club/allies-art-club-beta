@@ -1,14 +1,16 @@
+'use client'
 import React,{Fragment} from 'react';
 import TitleBanner from '../../../components/titleBanner/titleBanner.js';
-import {useHistory} from 'react-router-dom';
 import {Paragraph, Link,FormInput,FormInputWrapper,FormLabel,FormTextArea,FormStyled,FormInputValidation,FormSubmitWrapper,SubmitInfo,StarImg,FormSubmit,FormSubmitCaption,FormSubmitFigure,FormSubmitImage,ErrorWrapper,ErrorMessage} from '../../../components/Styled/styled.js';
 import * as yup from 'yup';
+
 import {Formik} from 'formik';
 import {toggleSpinner} from '../../../utils/Actions/appActions';
 import {handleSubmitContactUs} from '../../../utils/Actions/beAnAllieActions.js';
 import {connect} from 'react-redux';
 const ContactUs =(props)=>{
-    const history = useHistory();
+
+    const router  = useRouter();
     const ContactUsSchema = yup.object().shape({
         name: yup.string().max(70,'Please enter a name of 50 or less characters').required('Required'),
         email: yup.string().email('Invalid email').required('Required'),
@@ -39,7 +41,7 @@ const ContactUs =(props)=>{
                         await props.handleSubmitContactUs(values,props.csrf)
                         await props.toggleSpinner();
                         formik.setSubmitting(false);
-                        history.push('/thank-you');
+                        router.push('/thank-you');
                     }
                     catch(e){
                         formik.setSubmitting(false);
