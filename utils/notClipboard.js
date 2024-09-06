@@ -1,3 +1,3 @@
-const notClipboard = ['/thank-you','/']
+const notClipboard = ['/thank-you']
 
 export default notClipboard

@@ -1,3 +1,4 @@
+"use client"
 import React,{Fragment} from 'react';
 import { Paragraph,Section,TextImage,InlineIcon,Link} from '../../../components/Styled/styled.js';
 import SideNav from '../../../components/sideNav/sideNav.js';

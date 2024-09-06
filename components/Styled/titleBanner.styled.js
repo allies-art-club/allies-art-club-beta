@@ -45,11 +45,11 @@ const CentreImageWrapper=styled.div`
 `
 
 const ImageTitle=styled.h1`
-    position:${props=>props.$centreSrc?"relative":"static"};
-    font-weight:100;
+    position:${props=>props.$centreSrc?"relative":"static"}
     width:100%;
     font-size: 1.1rem;
-    font-family: var(--font-nick-ainley);
+    font-family:  "--font-arial-nova-cond-bold";
+    font-weight: 800;
     @media(min-width:320px){
         font-size: 1.3rem;
     }
@@ -63,6 +63,5 @@ const ImageTitle=styled.h1`
     margin:0;
     text-align:center;
 `
-
 
 export {TitleWrapper,SideImage,SideImageWrapper,CentreImage,RibbonImage,CentreImageWrapper,ImageTitle};
