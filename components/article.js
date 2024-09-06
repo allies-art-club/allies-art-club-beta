@@ -2,6 +2,7 @@
 import React from 'react';
 import {toggleSpinner} from '../utils/Actions/appActions';
 import {connect} from 'react-redux';
+import {downloadHandler} from '../utils/Actions/articleActions.js';
 import {ArticleWrapper,ArticleTitleWrap,ArticleLink,TextContainer,TextWrap,ArticleTitle,ArticleSummary,Figure,ArticleImage,PublishingDate,ArticleDetailsWrapper,ArticleItem,Border} from './Styled/article.styled.js';
 const Article=(props)=>{
     var title = '';
@@ -14,10 +15,10 @@ const Article=(props)=>{
     return(
         <ArticleLink 
             href={`/${props.landingPage}/${props.category.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}/${title.toLowerCase().replace(/[']/g,'').replace(/[&]/g,'and').replace(/[^\w\s]/g,'').replace(/\s/g,'-')}`} 
-            onClick={props.downloadHandler?async(e)=>{
+            onClick={props.resources?async(e)=>{
                 e.preventDefault();
                 await toggleSpinner;
-                var blob = await props.downloadHandler(props.category,props.title,props.csrf);
+                var blob = await downloadHandler(props.category,props.title,props.csrf);
                 await toggleSpinner;
                 var downloadLink = document.createElement('a');
                 downloadLink.target = '_blank';

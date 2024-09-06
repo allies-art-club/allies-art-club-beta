@@ -25,15 +25,15 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   body {
-    background-image: url(/assets/white-bricks.jpg);
+    background-image: url(/assets/pink-wall.jpg);
   }
 
   *, *::before, *::after {
     box-sizing: inherit;({cookie:true});
   }
   p, figcaption,span,label,legend,li,input,textarea {
-    font-size: 1rem;
-    font-family: var(--font-architects-daughter);
+    font-size: 2rem;
+    font-family: var(--font-arial-nova-cond);  //global font
   }
   p, figcaption {
     text-align: justify;

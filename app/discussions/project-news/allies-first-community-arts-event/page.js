@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import TitleBanner from '../../../../components/titleBanner/titleBanner.js';
 import {connect} from 'react-redux';

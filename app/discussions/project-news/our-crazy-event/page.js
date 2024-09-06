@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import TitleBanner from '../../../../components/titleBanner/titleBanner.js';
 import {Paragraph,Link,Article,Section} from '../../../../components/Styled/styled.js';

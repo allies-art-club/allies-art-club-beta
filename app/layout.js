@@ -8,7 +8,7 @@ import {toggleMenu,toggleSubMenu} from '../utils/Actions/appActions.js';
 import GlobalStyle from '../components/Styled/global.styled.js'
 import Container from '../components/clipboard/template.js'
 import {StyledComponentsRegistry} from '../utils/serverstylesheet.js'
-import { bigStem, architectsDaughter,nickAinley } from './fonts.js';
+import { bigStem, arialNovaCond,arialNovaCondBold,nickAinley } from './fonts.js';
 {/* <head>
 <meta charset="utf-8" />
 <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -45,7 +45,7 @@ function RootLayout({ children }) {
     <StyledComponentsRegistry
       
     >
-    <html lang="en" className={`${bigStem.variable} ${architectsDaughter.variable} ${nickAinley.variable}`}>
+    <html lang="en" className={`${bigStem.variable} ${arialNovaCond.variable} ${arialNovaCondBold.variable} ${nickAinley.variable}`}>
      
       <body>
         
