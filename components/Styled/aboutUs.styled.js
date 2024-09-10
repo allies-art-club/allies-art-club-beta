@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 export const GridWrap = styled.div`
+  display: flex;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
   gap: 20px; /* Adjust the gap between the grid items */
@@ -22,6 +22,7 @@ export const GridColumn = styled.div`
 export const GridText = styled.div`
   text-align: center; /* Optional: center-align text inside each section */
   align-items: center; /* Centers content horizontally */
+  margin-top: -1rem;
 `;
 
 export const OurVision = styled.div`
@@ -44,4 +45,11 @@ export const OurValuesHeartsR = styled.div`
   max-width: 15rem;
   margin-left: 75rem;
   margin-bottom: -7rem;
+`;
+
+export const HeadingGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+  justify-content: center;
 `;

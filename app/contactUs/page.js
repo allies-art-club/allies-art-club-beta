@@ -15,11 +15,12 @@ import {
   StarImg,
   FormSubmit,
   FormSubmitCaption,
-  FormSubmitFigure,
   FormSubmitImage,
   ErrorWrapper,
   ErrorMessage,
 } from "../../components/Styled/styled.js";
+
+import { Button } from "../../components/Styled/contact.styled.js";
 import * as yup from "yup";
 
 import { Formik } from "formik";
@@ -46,16 +47,10 @@ const ContactUs = (props) => {
         shootingStar={true}
         sideSrc1={"/assets/general/starL.png"}
         sideSrc2={"/assets/general/starR.png"}
-        centreSrc={"/assets/general/curvedLine.png"}
         title={"Contact Us"}
       ></TitleBanner>
       <Paragraph>
-        If you'd like to get in touch with any questions, ideas, feedback or
-        suggestions, you can email us at:{" "}
-        <Link href="mailto:alliesartclub@gmail.com">
-          alliesartclub@gmail.com
-        </Link>{" "}
-        or you can fill out the contact form below.
+      If you'd like to get in touch with any questions, ideas, feedback or suggestions, please fill out the contact form below.
       </Paragraph>
       <Formik
         initialValues={{
@@ -134,22 +129,10 @@ const ContactUs = (props) => {
                 <FormInputValidation>{errors.message}</FormInputValidation>
               ) : null}
             </FormInputWrapper>
+
             <FormSubmitWrapper>
-              <SubmitInfo>
-                <StarImg alt="star" src={"/assets/general/starL.png"}></StarImg>
-                <Paragraph>
-                  Please note: all of your information will be kept private and
-                  will not be shared with any other party.
-                </Paragraph>
-              </SubmitInfo>
               <FormSubmit type="submit" value="Submit" disabled={isSubmitting}>
-                <FormSubmitFigure>
-                  <FormSubmitImage
-                    alt="submit"
-                    src={"/assets/donateBanner/Arrow.png"}
-                  ></FormSubmitImage>
-                  <FormSubmitCaption>Submit!</FormSubmitCaption>
-                </FormSubmitFigure>
+                <Button type="submit">Submit</Button>
               </FormSubmit>
               {props.beAnAllie.errorMessage.contactUs ? (
                 <ErrorWrapper>
@@ -157,7 +140,13 @@ const ContactUs = (props) => {
                     {props.beAnAllie.errorMessage.contactUs}
                   </ErrorMessage>
                 </ErrorWrapper>
-              ) : null}
+              ) : null}{" "}
+              <SubmitInfo>
+                <Paragraph>
+                  Please note: all of your information will be kept private and
+                  will not be shared with any other party.
+                </Paragraph>
+              </SubmitInfo>
             </FormSubmitWrapper>
           </FormStyled>
         )}

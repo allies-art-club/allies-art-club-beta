@@ -24,6 +24,7 @@ import {
   OurVision,
   OurVisionStarL,
   OurValues,
+  HeadingGrid,
   OurValuesHeartsR,
 } from "../../../components/Styled/aboutUs.styled.js";
 
@@ -109,9 +110,11 @@ const AboutAac = (props) => {
         <GridWrap id="gridWrap">
           <GridColumn id="gridColumn">
             <GridText id="gridText">
-              <Creative>
-                CREATIVE <br /> EXPRESSION
-              </Creative>{" "}
+              <HeadingGrid>
+                <Creative>
+                  CREATIVE <br /> EXPRESSION
+                </Creative>
+              </HeadingGrid>
               <Paragraph>
                 Create inclusive opportunities for people to express their
                 ideas, knowledge and experiences through a range of artistic
@@ -120,27 +123,36 @@ const AboutAac = (props) => {
             </GridText>
           </GridColumn>
           <GridColumn>
-            <Collective>
+            <GridText id="gridText">
               {" "}
-              COLLECTIVE <br />
-              CARE
-            </Collective>
-            <Paragraph>
-              Provide fun, safe and accessible spaces for people to connect,
-              build supportive relationships and improve their health and
-              wellbeing.
-            </Paragraph>
+              <HeadingGrid>
+                <Collective>
+                  {" "}
+                  COLLECTIVE <br />
+                  CARE
+                </Collective>{" "}
+              </HeadingGrid>
+              <Paragraph>
+                Provide fun, safe and accessible spaces for people to connect,
+                build supportive relationships and improve their health and
+                wellbeing.
+              </Paragraph>{" "}
+            </GridText>
           </GridColumn>
           <GridColumn>
-            <Cultural>
-              {" "}
-              CULTURAL
-              <br /> EMPOWERMENT
-            </Cultural>
-            <Paragraph>
-              Develop people's creative skills, knowledge and involvement in
-              generating positive social change through art and culture.
-            </Paragraph>
+            <GridText id="gridText">
+              <HeadingGrid>
+                <Cultural>
+                  {" "}
+                  CULTURAL
+                  <br /> EMPOWERMENT
+                </Cultural>{" "}
+              </HeadingGrid>
+              <Paragraph>
+                Develop people's creative skills, knowledge and involvement in
+                generating positive social change through art and culture.
+              </Paragraph>{" "}
+            </GridText>
           </GridColumn>
         </GridWrap>
       </Section>
