@@ -149,13 +149,14 @@ f
 `;
 const FormInputWrapper = styled.div`
   position:relative;
+  top: 3rem;
   height:${(props) => (props.$textarea ? "auto" : "50px")};
   transform:translateY(${(props) =>
     props.$oneLine && props.$other ? "-20px" : "0"});
-  margin-top:${(props) => (props.$other ? "0px" : "50px")};
+  margin-top:${(props) => (props.$other ? "0px" : "90px")};
 
-  margin-bottom:${(props) => (props.$textarea ? "30px" : "auto")};
-  border: 4px solid ${(props) => (props.$error ? "red" : "black")};
+  margin-bottom:${(props) => (props.$textarea ? "50px" : "auto")};
+  border: 2px solid ${(props) => (props.$error ? "red" : "black")};
   padding: 0px 20px;
   @media(min-width: 768px){
     width: ${(props) => (props.$textarea ? "100%" : "50%")};
@@ -165,7 +166,7 @@ const FormInputWrapper = styled.div`
 const FormLabel = styled.label`
   position: absolute;
   color: ${(props) => (props.$invisible ? "rgba(0,0,0,0)" : "auto")};
-  top: -32px;
+  top: -2.5rem;
   left: 10px;
   @media (max-width: 420px) {
     left: 10px;
@@ -334,9 +335,7 @@ const FormSubmit = styled.button`
   right: 0;
   width: 50%;
 `;
-const FormSubmitFigure = styled.figure`
-  margin: 0;
-`;
+
 const FormSubmitImage = styled.img`
   width: 100%;
 `;
@@ -366,6 +365,7 @@ const FormSubmitCaption = styled.figcaption`
 `;
 const FormSubmitWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -417,15 +417,13 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
-
 const LinkGrid = styled(Link)`
- color: Black;
+  color: Black;
   &:hover {
-    color:${theme.pink};
+    color: ${theme.pink};
   }
   text-decoration: none;
 `;
-
 
 const List = styled.ul``;
 const ListElement = styled.li``;
@@ -562,7 +560,6 @@ export {
   FieldSetWrap,
   FormSelect,
   FormSelectOption,
-  FormSubmitFigure,
   FormSubmitCaption,
   FormSubmitImage,
   ErrorMessage,

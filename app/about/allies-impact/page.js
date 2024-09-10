@@ -107,8 +107,8 @@ const AlliesImpact = () => {
             <IconWrapper $left={true}>
               <ArtIcon>
                 <Image
-                  src="/assets/newIcons/Icon11.png"
-                  alt="Icon 11"
+                  src="/assets/newIcons/Icon12.png"
+                  alt="Icon 12"
                   width={500}
                   height={500}
                   layout="responsive"
@@ -130,11 +130,11 @@ const AlliesImpact = () => {
                 abilities, backgrounds, and incomes.
               </Paragraph>
             </TextCont>
-            <IconWrapper $left={true}>
+            <IconWrapper $right={true}>
               <ArtIcon>
                 <Image
-                  src="/assets/newIcons/Icon1.png"
-                  alt="Icon 1"
+                  src="/assets/newIcons/Icon7.png"
+                  alt="Icon 7"
                   width={500}
                   height={500}
                   layout="responsive"
@@ -160,8 +160,8 @@ const AlliesImpact = () => {
             <IconWrapper $left={true}>
               <ArtIcon>
                 <Image
-                  src="/assets/newIcons/Icon2.png"
-                  alt="Icon 2"
+                  src="/assets/newIcons/Icon9.png"
+                  alt="Icon 9"
                   width={500}
                   height={500}
                   layout="responsive"
@@ -185,11 +185,11 @@ const AlliesImpact = () => {
                 and co-operatives.
               </Paragraph>
             </TextCont>
-            <IconWrapper $left={true}>
+            <IconWrapper $right={true}>
               <ArtIcon>
                 <Image
-                  src="/assets/newIcons/Icon10.png"
-                  alt="Icon 10"
+                  src="/assets/newIcons/Icon5.png"
+                  alt="Icon 5"
                   width={500}
                   height={500}
                   layout="responsive"
@@ -214,8 +214,8 @@ const AlliesImpact = () => {
             <IconWrapper $left={true}>
               <ArtIcon>
                 <Image
-                  src="/assets/newIcons/Icon3.png"
-                  alt="Icon 3"
+                  src="/assets/newIcons/Icon10.png"
+                  alt="Icon 10"
                   width={500}
                   height={500}
                   layout="responsive"
@@ -236,11 +236,11 @@ const AlliesImpact = () => {
                 family businesses, art organisations and co-operatives.
               </Paragraph>
             </TextCont>
-            <IconWrapper $left={true}>
+            <IconWrapper $right={true}>
               <ArtIcon>
                 <Image
-                  src="/assets/newIcons/Icon10.png"
-                  alt="Icon 10"
+                  src="/assets/newIcons/Icon5.png"
+                  alt="Icon 5"
                   width={500}
                   height={500}
                   layout="responsive"

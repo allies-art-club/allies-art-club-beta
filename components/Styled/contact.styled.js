@@ -37,6 +37,8 @@ const Textarea = styled.textarea`
 `;
 
 const Button = styled.button`
+  margin: 2rem;
+  width: 100%;
   padding: 0.75rem;
   background: #ff25ab;
   color: #fff;
@@ -51,4 +53,4 @@ const Button = styled.button`
   }
 `;
 
-export {Button, Textarea, Input, Form }
+export { Button, Textarea, Input, Form };

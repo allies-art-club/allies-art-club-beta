@@ -10,13 +10,13 @@ export const BorderWrap = styled.div`
   width: 100%; /* Ensure full width of the container */
   font-family: var(--font-arial-nova-cond);
   margin-bottom: 2rem;
-  padding: 2rem;
 `;
 
 // Section text and icon
 export const SectionText = styled.div`
   display: block;
   align-items: center;
+  padding: 1rem;
 
   @media (min-width: 1025px) {
     display: flex;
@@ -110,7 +110,9 @@ export const ArtLink = styled.a`
   }
 `;
 
-export const TextCont = styled.div``;
+export const TextCont = styled.div`
+  padding: 3rem;
+`;
 
 // Icon
 export const ArtIcon = styled.div`
@@ -118,7 +120,7 @@ export const ArtIcon = styled.div`
   height: 100%;
   object-fit: cover;
   margin-right: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 
   @media (min-width: 320px) {
     width: 13rem;

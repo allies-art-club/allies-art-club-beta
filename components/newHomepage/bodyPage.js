@@ -1,10 +1,21 @@
 import React, { Fragment } from "react";
+import Image from "next/image";
 import {
   Paragraph,
   TextImageTop,
   Section,
   HomepageSubtitles,
+  Link,
 } from "../Styled/styled.js";
+
+import {
+  StarSection,
+  StarWrap,
+  TextWrap,
+  HeartsTextWrap,
+  HeartsSection,
+  HeartsWrap,
+} from "../Styled/homepage.styled.js";
 import "../../app/fonts/arial-nova-cond-bold/stylesheet.css";
 import "../../app/fonts/arial-nova-cond/stylesheet.css";
 
@@ -37,7 +48,6 @@ const BodyPage = () => {
           ourselves and our communities, and we’re committed to working in
           collaborative, equitable and empowering ways.
         </Paragraph>
-        <Paragraph>Read more about our club here.</Paragraph>
         <picture>
           <source
             media="(max-width: 1024px)"
@@ -54,6 +64,29 @@ const BodyPage = () => {
           />
         </picture>
       </Section>
+
+      <Section>
+        <StarSection>
+          {" "}
+          <StarWrap>
+            <Image
+              src="/assets/general/starL.png"
+              alt="Stars L"
+              width={200}
+              height={162}
+              layout="responsive"
+            />
+          </StarWrap>
+          <TextWrap>
+            {" "}
+            <Paragraph>
+              Read more about our club{" "}
+              <Link href="/about/about-us">here.</Link>{" "}
+            </Paragraph>
+          </TextWrap>
+        </StarSection>
+      </Section>
+
       <Section>
         <picture>
           <source
@@ -96,6 +129,29 @@ const BodyPage = () => {
           />
         </picture>
       </Section>
+
+      <Section id="section">
+        <HeartsSection>
+          {" "}
+          <HeartsTextWrap id="heartsSection">
+            {" "}
+            <Paragraph>
+              Read more about our projects{" "}
+              <Link href="/activities/projects">here.</Link>{" "}
+            </Paragraph>
+          </HeartsTextWrap>{" "}
+          <HeartsWrap>
+            <Image
+              src="/assets/general/heartsR.png"
+              alt="Stars L"
+              width={200}
+              height={162}
+              layout="responsive"
+            />
+          </HeartsWrap>
+        </HeartsSection>
+      </Section>
+
       <Section>
         <picture>
           <source
@@ -121,7 +177,12 @@ const BodyPage = () => {
           stand together boldly as allies to generate cultural movements that
           are led by the people, for the people.
         </Paragraph>
-        <Paragraph>Read more about Allie’s journey here.</Paragraph>
+        <br />
+        <br />
+        <Paragraph>
+          Read more about Allie’s journey{" "}
+          <Link href="/about/allies-story">here.</Link>{" "}
+        </Paragraph>
         <picture>
           <source
             media="(max-width: 1024px)"

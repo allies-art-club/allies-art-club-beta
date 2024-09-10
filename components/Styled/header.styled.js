@@ -18,7 +18,6 @@ const HeaderNavListWrap = styled.div`
     height: 100vh;
     overflow: hidden;
     z-index: 20;
-  
   }
 `;
 const Cross = styled.button`
@@ -59,7 +58,7 @@ const Cross = styled.button`
 
 const HeaderNavList = styled.ul`
   list-style: none;
-  margin: 0;
+  margin-bottom: -15rem;
   @media (max-width: 767px) {
     position: absolute;
     padding: 25px;
@@ -80,7 +79,8 @@ const HeaderNavListElement = styled.li`
   text-decoration: none;
   position: relative;
   display: flex;
-  align-items: center;
+
+  margin-top: 5rem; // targets elements of the nav bar besides logo
 `;
 const BurgerMenu = styled.button`
   position: absolute;
@@ -175,36 +175,21 @@ const NavLinkLogo = styled(Link)`
 const Figure = styled.div`
   width: 100%;
   text-align: center;
-  margin: 5px 0px 10px;
 `;
-const HeaderLogo = styled.h1`
-  margin-right: 100px;
-   margin-bottom: 10px;
-  font-weight: 100;
-  display: block;
-  text-decoration: none;
-  font-family: var(--font-nick-ainley);
-  color: white;
-  font-size: 58.8px;
-  line-height: 49px;
-  width: 200px;
-  text-shadow: 0px 0px 0.1rem ${theme.pink}, 0px 0px 1.5rem ${theme.pink},
-    0px 0px 2.5rem ${theme.pink}, 0px 0px 0.2rem ${theme.pink};
-
+const HeaderLogo = styled.div`
+  width: 100%;
+  max-width: 30rem;
+  margin-right: -12rem;
   @media (min-width: 421px) {
-    font-size: 4.2rem;
-    line-height: 3.5rem;
-    width: 200px;
-    text-shadow: 0px 0px 0.1rem ${theme.pink}, 0px 0px 1.5rem ${theme.pink},
-      0px 0px 2.5rem ${theme.pink}, 0px 0px 0.2rem ${theme.pink};
   }
   @media (min-width: 768px) {
-    width: 364px;
-    font-size: 107px;
-    text-shadow: 0px 0px 0.1rem ${theme.pink}, 0px 0px 2rem ${theme.pink},
-      0px 0px 5rem ${theme.pink}, 0px 0px 0.2rem ${theme.pink};
-    line-height: 84px;
   }
+`;
+
+const Logo = styled.div`
+  width: 100%;
+  max-width: 23rem;
+  margin-left: -2rem;
 `;
 export {
   HeaderContainer,
@@ -219,5 +204,6 @@ export {
   NavMainCategory,
   NavLinkLogo,
   HeaderLogo,
+  Logo,
   Figure,
 };
