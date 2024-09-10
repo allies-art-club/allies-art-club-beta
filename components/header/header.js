@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import {
   HeaderContainer,
   HeaderLogo,
@@ -11,9 +12,11 @@ import {
   HeaderNavListElement,
   Cross,
   NavMainCategory,
+  Logo,
   Figure,
   NavLinkLogo,
 } from "../Styled/header.styled.js";
+import { Section } from "../Styled/styled.js";
 import SubMenu from "../subMenu.js";
 import { toggleMenu, toggleSubMenu } from "../../utils/Actions/appActions.js";
 import "../../app/fonts/Balloon_Extra_Bold/stylesheet.css";
@@ -53,18 +56,20 @@ const Header = (props) => {
             data-test="navList"
             $open={props.open}
           >
+            <HeaderLogo>
+              {" "}
+              <Logo>
+                <Image
+                  src="/assets/aacLogo.png"
+                  alt="Logo"
+                  width={200}
+                  height={162}
+                  layout="responsive"
+                />
+              </Logo>
+            </HeaderLogo>
+
             <HeaderNavListElement>
-              <Figure>
-                <NavLinkLogo href="/">
-                  <HeaderLogo
-                    id="aacLogo"
-                    data-test="aacLogo"
-                    aria-label="Allie 's Art Club Logo"
-                  >
-                    Allie's Art Club
-                  </HeaderLogo>
-                </NavLinkLogo>
-              </Figure>
               <NavMainCategory
                 onClick={(e) => {
                   if (window.innerWidth < 768) {
@@ -141,7 +146,13 @@ const Header = (props) => {
                 toggleMenu={props.toggleMenu}
                 visible={props.app.subMenu.activities}
                 mainCategory={"activities"}
-                navLinks={["All Activities", "Projects", "Events","Services","Membership"]}
+                navLinks={[
+                  "All Activities",
+                  "Projects",
+                  "Events",
+                  "Services",
+                  "Membership",
+                ]}
               ></SubMenu>
             </HeaderNavListElement>
             <HeaderNavListElement id="contact">
@@ -158,7 +169,6 @@ const Header = (props) => {
               >
                 Contact
               </NavMainCategory>
-
             </HeaderNavListElement>
             <HeaderNavListElement>
               <NavMainCategory
