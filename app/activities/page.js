@@ -16,7 +16,7 @@ const Activities=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Activities"}
             ></TitleBanner>
-            <PageDescription>Information on Allie's projects and events and how you can get involved or support us.</PageDescription>
+            <PageDescription>Information on Allie&apos;s projects and events and how you can get involved or support us.</PageDescription>
             {
                 activities.map((el,i)=>{
                     return(

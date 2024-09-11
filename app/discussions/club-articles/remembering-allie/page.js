@@ -27,10 +27,10 @@ const RememberingAllie=()=>{
 <Paragraph>Throughout her life, Allie shone with so much passion, strength and
 vibrancy, until she passed away from a rare form of cancer at the
 age of 17.</Paragraph>
-<Paragraph>Allie's short yet brilliant life has inspired so many people - many who knew her while she lived and many who have heard of her legacy since. This article is a gathering of memories of a few people who knew Allie well and wanted to share a glimpse into her joy, her beauty and her humanity.</Paragraph>
+<Paragraph>Allie&apos;s short yet brilliant life has inspired so many people - many who knew her while she lived and many who have heard of her legacy since. This article is a gathering of memories of a few people who knew Allie well and wanted to share a glimpse into her joy, her beauty and her humanity.</Paragraph>
 </Section>
 <Section>
-    <SubHeading>Elin, Allie's singing teacher & neighbour</SubHeading>
+    <SubHeading>Elin, Allie&apos;s singing teacher & neighbour</SubHeading>
     <Paragraph>Alexandra</Paragraph>
     <Paragraph>The girl next door.</Paragraph>
     <Paragraph>Kind and modest.</Paragraph>
@@ -41,7 +41,7 @@ age of 17.</Paragraph>
     <Paragraph>Because I would never sing at her wedding.</Paragraph>
 </Section>
 <Section>
-    <SubHeading>Courtney, Allie's school friend</SubHeading>
+    <SubHeading>Courtney, Allie&apos;s school friend</SubHeading>
     <Paragraph>Allie was one of my best friends and having been lucky enough to
 spend all my years at Channing with her, I have so many happy
 memories that I will always cherish. Out of our close group of friends
@@ -61,7 +61,7 @@ awful lot of laugher, and I miss her every day.</Paragraph>
 
 </Section>
 <Section>
-    <SubHeading>Kitty, Allie's school friend</SubHeading>
+    <SubHeading>Kitty, Allie&apos;s school friend</SubHeading>
     <Paragraph>As Allie was a ‘W’ and I am a ‘U’, Allie and I spent almost our whole
 secondary school life in classes together. You could always hear her
 giggle before she entered a room. Both of us also had a passion for
@@ -78,7 +78,7 @@ forget her laugh, her beaming smile, her infectious energy and her
 passion for life. She’ll always be my backstage pal.</Paragraph>
 </Section>
 <Section>
-    <SubHeading>Bonnie, Allie's school friend</SubHeading>
+    <SubHeading>Bonnie, Allie&apos;s school friend</SubHeading>
     <Paragraph>Allie was, and is, one of my best friends. We met in Year 7 and I was
 struck by how outgoing and smiley and friendly she was. Allie was neverfar from a laugh and she was my adventure partner. No ride in Thorpe
 Park was too big for her. She was also an incredibly intelligent person
@@ -90,7 +90,7 @@ miss you Allie.</Paragraph>
 </Section>
 <Section>
     <SubHeading>
-    Emma, Allie's school friend
+    Emma, Allie&apos;s school friend
     </SubHeading>
     <Paragraph>We did a Channing choir tour to Venice in 2009, I have so many fond
 memories of us breaking into song on the public transport boats and at
@@ -101,7 +101,7 @@ pals gives you, I would definitely not do that now! Allie had a beautiful
 voice, there was a really special quality to it that meant you could
 always hear her over everyone else in the choir, I have no idea what
 the technical term is for that but you could always hear her. That trip
-was hilarious all round, to touch on Allie's artistic prowess even more,was hilarious all round, to touch on Allie's artistic prowess even more,
+was hilarious all round, to touch on Allie`&apos;s artistic prowess even more,was hilarious all round, to touch on Allie&apos;s artistic prowess even more,
 one night us year 12 girls stayed in the hotel and Allie decided she was
 going to do some makeovers. She got out this very bright eyeshadow
 palette she had and gave me a very snazzy orange and green smokey
@@ -111,11 +111,11 @@ The photos, videos and memories from that trip I will cherish forever.</Paragrap
 </Section>
 <Section>
     <SubHeading>
-    Lydia, Allie's next-door neighbour
+    Lydia, Allie&apos;s next-door neighbour
     </SubHeading>
     <Paragraph>Growing up next door to Allie with a close family bond, I spent much of
 my childhood learning, playing and creating beside her. Though we often
-fought like sisters - particularly over who got to hold her Mum's left
+fought like sisters - particularly over who got to hold her Mum&apos;s left
 hand on the walk to school - we also had a wealth of joyful moments
 together. There was no better pastime in my younger years than to
 climb over our garden fence and jump for hours with Allie on her

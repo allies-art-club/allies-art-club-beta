@@ -49,12 +49,12 @@ const AboutAlliesStory=()=>{
                 
                     
                 <Paragraph>In a message after her death, Wings of Hope described Allie as:</Paragraph>
-                <Quote>"an extraordinary woman who truly encompassed the spirit of Wings of Hope, working with compassion, innovation and dedication to help those in need."</Quote>
+                <Quote>&apos;an extraordinary woman who truly encompassed the spirit of Wings of Hope, working with compassion, innovation and dedication to help those in need.&apos;</Quote>
                 <Paragraph>Allie loved ice-skating and spent a lot of time at Alexandra Palace skating rink in North London. The video below was created by friends at ‘Ally Pally’ to commemorate Allie’s life.</Paragraph>
-                <SubTitle>Allie's Memorial at Alexandra Palace:</SubTitle>
+                <SubTitle>Allie&apos;s Memorial at Alexandra Palace:</SubTitle>
                 <IFrame  src="https://www.youtube.com/embed/55DNcB5R4hY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
-                <Paragraph>If you would like to know more about Allie's short yet brilliant life, you can read our article <Link href="/discussions/club-articles/remembering-allie">Remembering Allie</Link>, a collection of memories by her friends and family.</Paragraph>
-                <Paragraph>Allie's Art Club is proud to be named after such an inspiring young woman. We believe everyone deserves the opportunities that Allie had to flourish into the talented young woman so many had grown to love. We hope to honour Allie's memory in all of the work we do, continuing her lived principles of learning, kindness and fun.</Paragraph>
+                <Paragraph>If you would like to know more about Allie&apos;s short yet brilliant life, you can read our article <Link href="/discussions/club-articles/remembering-allie">Remembering Allie</Link>, a collection of memories by her friends and family.</Paragraph>
+                <Paragraph>Allie&apos;s Art Club is proud to be named after such an inspiring young woman. We believe everyone deserves the opportunities that Allie had to flourish into the talented young woman so many had grown to love. We hope to honour Allie&apos;s memory in all of the work we do, continuing her lived principles of learning, kindness and fun.</Paragraph>
                 <Paragraph>Thank you Allie for all that you have inspired us to do <InlineIcon alt={"Heart"} src={"/assets/general/blackHeart.png"}/>.</Paragraph>
             </Section>
         </Fragment>

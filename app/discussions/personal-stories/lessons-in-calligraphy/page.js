@@ -52,7 +52,7 @@ of life with more refinement and skill.</Paragraph>
     <SubHeading>Be Patient</SubHeading>
     <Paragraph>In our digital age of instant entertainment and connectivity, delayed
 gratification may seem like a thing of the past. Living in the sprawling
-city of London, I've grown used to getting what I want when I want it
+city of London, I&apos;ve grown used to getting what I want when I want it
 - no matter what hour, season, scope or distance.</Paragraph>
 <Paragraph>But Rome was most certainly not built in a day, and neither is a
 master calligrapher. Calligraphy not only requires dutiful patience for
@@ -61,7 +61,7 @@ swerve and symbol. Rushing ahead to move onto the next letter is a
 big mistake in carving a sumptuous word, and can quickly ruin all the
 prior dedication of your work. Patience must be practiced at every
 step of the way, guiding each mark with a calm and steady hand.</Paragraph>
-<Paragraph>There's a reason patience is such a revered quality in so many
+<Paragraph>There&apos;s a reason patience is such a revered quality in so many
 different cultures and religions. Patience is not the resignation of
 effort, but the willingness to continue with grace and humility.
 Patience is the antidote to apathy and frustration, providing a
@@ -69,7 +69,7 @@ foundation on which intentions have space to blossom.</Paragraph>
 </Section>
 <Section>
     <SubHeading>Be Committed </SubHeading>
-    <Paragraph>Commitment is the follow-through of motivation. When I'm fully
+    <Paragraph>Commitment is the follow-through of motivation. When I&apos;m fully
 committed to a cause, my passion and persistence fuel me towards
 achievement. If my energy and dedication begin to falter, I often ask
 myself: what am I committed to?</Paragraph>
@@ -88,7 +88,7 @@ the best (and only) way to achieve progress.</Paragraph>
 </Section>
 <Section>
     <SubHeading>Learn from Mistakes</SubHeading>
-    <Paragraph>Mistakes are an inevitable part of life. Big and small, I've made many
+    <Paragraph>Mistakes are an inevitable part of life. Big and small, I&apos;ve made many
 mistakes in my 27 years here on Earth, and found that my biggest
 spurts of growth have always occurred after I take ownership of
 my blunders and do my best to resolve them.</Paragraph>
@@ -163,9 +163,9 @@ to many more lessons in calligraphy.</Paragraph>
     <Paragraph>Lydia Rose is an artist and activist
 from London. Her main artistic focus
 is creative writing, poetry and spoken
-word. Lydia is the pioneer of Allie's
+word. Lydia is the pioneer of Allie&apos;s
 Art Club and volunteers regularly with
-the Club's Foundation, AWTF.</Paragraph>
+the Club&apos;s Foundation, AWTF.</Paragraph>
 <Paragraph>You can follow her on Instagram on
 @lydiarose_artist</Paragraph>
 <Image alt="stars" src={"/assets/general/starsR.png"}/>

@@ -24,7 +24,7 @@ const RememberingAllie=()=>{
                     <TextImageTop $mobile={true} src={'/assets/articles/theCrazyZine/theCrazyZine1-large.png'} alt="Child with paint on her hands"/>
                 </picture>
                 <Paragraph>
-                "Crazy" is a common word that is very much embedded in the English language without much awareness of how its use reflects and reinforces prevailing views of mental health. In this zine, we use the word crazy as a starting point to discuss mental health and the stigma that surrounds it through the mediums of art and poetry.  </Paragraph>
+                &apos;Crazy&apos; is a common word that is very much embedded in the English language without much awareness of how its use reflects and reinforces prevailing views of mental health. In this zine, we use the word crazy as a starting point to discuss mental health and the stigma that surrounds it through the mediums of art and poetry.  </Paragraph>
                 <Paragraph>
                 Showcasing a range of drawings, paintings, photography, digital art and poems, as well as discussions and definitions of important mental health terms, this zine highlights the views and experiences of 10 talented London-based artists on topics ranging from mental health stigma, mental ill-health, the public mental health system, self-care and supportive relationships.</Paragraph>
                 
@@ -44,7 +44,7 @@ const RememberingAllie=()=>{
                 <Paragraph>
                 Thank you so much to all the artists who contributed to the zine, including A Rose, Amber Perrier, Andy Harrod, Ashleigh Jeffrey-Taylor, Claire, Lydia Rose, Mark C Bolton, Mona Moon, Nomadic Libaax and RDBC.</Paragraph>
                 <Paragraph>
-                All profits from zine sales go towards our <Link href="/activities/projects/art-care"></Link>Art Care project to support people's mental health through the arts.</Paragraph>
+                All profits from zine sales go towards our <Link href="/activities/projects/art-care"></Link>Art Care project to support people&apos;s mental health through the arts.</Paragraph>
                 <Paragraph style={{clear:"both"}}></Paragraph>
             </Section>
         </Article>

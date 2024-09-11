@@ -6,6 +6,7 @@ import TitleBanner from "../../../components/titleBanner/titleBanner.js";
 import SideNav from "../../../components/sideNav/sideNav.js";
 import Article from "../../../components/article.js";
 
+import CarouselProjects from "../../../components/carouselProjects.js";
 import Carousel from "../../../components/carousel.js";
 import { carouselClick } from "../../../utils/Actions/homeActions";
 import carouselConfig from "../../../utils/carouselConfig/carouselAboutAac.js";
@@ -33,6 +34,7 @@ import {
   HighlightsHeartsR,
 } from "../../../components/Styled/projects.styled.js";
 import activities from "../../../utils/landingPages/activities";
+// import CarouselProjects from "@/components/carouselProjects.js";
 const Projects = (props) => {
   return (
     <Fragment>
@@ -59,14 +61,14 @@ const Projects = (props) => {
             alt="Homepage pic 1"
           />
         </picture>
-        <br />  
-        <br />  
-        <br />  
+        <br />
+        <br />
+        <br />
         <HomepageSubtitles>
           Creative explorations and practices for a life-affirming world
         </HomepageSubtitles>
-        <br />  
-        <br />  
+        <br />
+        <br />
         <Paragraph>
           As an organisation and a community, we practice and explore ways of
           creating and sustaining a life-affirming world in which all living
@@ -184,14 +186,8 @@ const Projects = (props) => {
             and arts activities, and a final exhibition to showcase their art
             pieces.
           </Paragraph>
-          <Carousel
-            square={"yes"}
-            photoLoc={"../../assets/articles/about/aac_carousel"}
-            carouselObj={carouselConfig}
-            carouselClick={props.carouselClick}
-            imageIndices={props.home.imageIndices}
-            direction={props.home.direction}
-          />{" "}
+
+          <CarouselProjects />
           <Paragraph>
             Thank you to our funders the Greater London Authority and Foundation
             for Future London, and to Space4 and Cubitt for providing the
@@ -199,18 +195,10 @@ const Projects = (props) => {
           </Paragraph>
         </BorderWrap>
       </Section>
+    
     </Fragment>
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    home: state.home,
-  };
-};
-const mapDispatchToProps = (dispatch) => {
-  return {
-    carouselClick: (direction) => carouselClick(direction, dispatch),
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(Projects);
+
+export default Projects;

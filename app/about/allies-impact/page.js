@@ -149,7 +149,7 @@ const AlliesImpact = () => {
           <SectionText>
             <TextCont>
               <BorderSubtitles>
-                Supporting people's health and wellbeing
+                Supporting people&apos;s health and wellbeing
               </BorderSubtitles>
               <Paragraph>
                 Our Art Care umbrella project has supported the mental health
@@ -176,10 +176,10 @@ const AlliesImpact = () => {
           <SectionText>
             <TextCont>
               <BorderSubtitles>
-                Developing people's skills and knowledge
+                Developing people&apos;s skills and knowledge
               </BorderSubtitles>
               <Paragraph>
-                Our projects, events and workshops have developed local people's
+                Our projects, events and workshops have developed local people&apos;s
                 artistic skills and their knowledge of a range of topics, such
                 as mental health, social activism, creative entrepreneurship,
                 and co-operatives.
@@ -205,7 +205,7 @@ const AlliesImpact = () => {
             <TextCont>
               <BorderSubtitles>Promoting diverse artists</BorderSubtitles>
               <Paragraph>
-                We've worked with over 80 artists, musicians, DJs, and
+                We&apos;ve worked with over 80 artists, musicians, DJs, and
                 photographers from diverse backgrounds, who have sold, showcased
                 and increased the visibility of their work through our projects
                 and events.
@@ -231,7 +231,7 @@ const AlliesImpact = () => {
             <TextCont>
               <BorderSubtitles>Nurturing local partnerships</BorderSubtitles>
               <Paragraph>
-                We've collaborated and developed partnerships with a range of
+                We&apos;ve collaborated and developed partnerships with a range of
                 organisations including local charities, social enterprise,
                 family businesses, art organisations and co-operatives.
               </Paragraph>
@@ -253,7 +253,7 @@ const AlliesImpact = () => {
       <Section>
         <BorderSubtitles>Impact reports</BorderSubtitles>{" "}
         <Paragraph>
-          If you'd like to read about our club's impact in more detail, you can
+          If you&apos;d like to read about our club&apos;s impact in more detail, you can
           download our impact report below:
           <Paragraph>
             <ArtLink

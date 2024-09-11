@@ -17,7 +17,7 @@ const Events=()=>{
                 centreSrc={'/assets/general/curvedLine.png'}
                 title={"Events"}
             ></TitleBanner>
-            <PageDescription>Information on Allie's upcoming, ongoing and completed events, classes and workshops.</PageDescription>
+            <PageDescription>Information on Allie&apos;s upcoming, ongoing and completed events, classes and workshops.</PageDescription>
             {
                 eventsArr&&eventsArr.length?
                 eventsArr.map((el,i)=>{
@@ -39,7 +39,7 @@ const Events=()=>{
                 <Fragment>
                 <br/>
                 <br/>
-                <Paragraph>We're sorry to say that we have no planned events to list at the moment. Please check back on our site at a later date or follow us on social media to hear when we have upcoming events.</Paragraph>
+                <Paragraph>We&apos;re sorry to say that we have no planned events to list at the moment. Please check back on our site at a later date or follow us on social media to hear when we have upcoming events.</Paragraph>
                 </Fragment>
             }
            

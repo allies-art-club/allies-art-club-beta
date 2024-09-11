@@ -61,8 +61,8 @@ const WhatIsArt = () => {
 
       <Paragraph>
         The expresion and interpretation of art is a deeply personal experience,
-        drawing on an individual's tastes, background and cultural setting. A
-        person's unique history and environment can determine whether they love
+        drawing on an individual&apos;s tastes, background and cultural setting. A
+        person&apos;s unique history and environment can determine whether they love
         pop, rock, rap, jazz or classical music, prefer sketching natural
         landscapes or spray-painting urban territories, attend an open mic
         spoken word event or an Avant-garde photo gallery, and if their
@@ -95,7 +95,7 @@ const WhatIsArt = () => {
 
       <Paragraph>
         Art comes in many different forms, and can have a variety of impacts on
-        our thoughts and emotions depending on who we are and what we've been
+        our thoughts and emotions depending on who we are and what we&apos;ve been
         through. A poem about young love can make us laugh if we are happily
         married or cry if we are recently bereaved, and a beautiful portrait can
         make us look with admiration or jealousy depenging on how we feel
@@ -156,7 +156,7 @@ const WhatIsArt = () => {
       <Paragraph>
         Communicating through art can also help others see our point of view and
         understand our experiences. Sometimes art can do this subtly, like a
-        beautiful piece of embroidery which expresses the maker's feelings of
+        beautiful piece of embroidery which expresses the maker&apos;s feelings of
         joy and belonging. Other times art can make bold statements, like
         placards at political demonstrations, depictions of violent war zones or
         meaningfully illustrated quotes.

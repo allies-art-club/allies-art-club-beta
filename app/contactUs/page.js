@@ -50,7 +50,7 @@ const ContactUs = (props) => {
         title={"Contact Us"}
       ></TitleBanner>
       <Paragraph>
-      If you'd like to get in touch with any questions, ideas, feedback or suggestions, please fill out the contact form below.
+      If you&apos;d like to get in touch with any questions, ideas, feedback or suggestions, please fill out the contact form below.
       </Paragraph>
       <Formik
         initialValues={{
@@ -115,7 +115,7 @@ const ContactUs = (props) => {
             </FormInputWrapper>
             <FormInputWrapper $textarea={true}>
               <FormLabel htmlFor="message">
-                Message / note for Allie's Art Club:
+                Message / note for Allie&apos;s Art Club:
               </FormLabel>
               <FormTextArea
                 rows="5"

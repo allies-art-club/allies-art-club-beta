@@ -26,7 +26,7 @@ const Donate = () => {
         title={"Donations"}
       />
       <Paragraph>
-        Thank you for considering donating to Allie's Art Club. We are a
+        Thank you for considering donating to Allie&apos;s Art Club. We are a
         charitable organisation led by volunteers and 100% of funds and
         donations we receive go towards supporting local communities in London
         and our Club members through art and creative activities.

@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Image from "next/image";
 import {
   Paragraph,
   Link,
@@ -48,10 +49,9 @@ const CbsArticle = () => {
       </Section>
       <Section>
         <Paragraph>
-          <b>What is a CBS?</b> <br/>
-          A Community Benefit Society (CBS) is a co-operative
-          organisation which exists to benefit the community. They are
-          not-for-profit and are owned and led by the community they serve.
+          <b>What is a CBS?</b> <br />A Community Benefit Society (CBS) is a
+          co-operative organisation which exists to benefit the community. They
+          are not-for-profit and are owned and led by the community they serve.
         </Paragraph>
       </Section>
       <Section>
@@ -82,7 +82,10 @@ const CbsArticle = () => {
         </Paragraph>
       </Section>
       <Section>
-        <Paragraph><b>Want to become a member?</b><br/></Paragraph>
+        <Paragraph>
+          <b>Want to become a member?</b>
+          <br />
+        </Paragraph>
         <Paragraph>
           Allie’s Art Club is at a very early stage of our co-operative journey,
           so at the moment we’re developing a membership offer that will suit
@@ -90,19 +93,24 @@ const CbsArticle = () => {
           <Paragraph>
             Are you an artist or someone who loves the arts? Want to show your
             interest in joining our co-op or have your say on what our co-op
-            provides?{" "}
-            Please fill out the quick survey below by scanning the QR code or clicking on the{" "}
+            provides? Please fill out the quick survey below by scanning the QR
+            code or clicking on the{" "}
             <Link
-            rel="noopener"
-            target="_blank"
-            href="https://www.surveymonkey.co.uk/r/9G6ZC39"
-          >
-            link!
-          </Link>
+              rel="noopener"
+              target="_blank"
+              href="https://www.surveymonkey.co.uk/r/9G6ZC39"
+            >
+              link!
+            </Link>
           </Paragraph>
         </Paragraph>
       </Section>
-      <img src="/assets/articles/communityBenefitSociety/communityBenefitSociety2-small.png" alt="qr code" />
+      <Image
+        src="/assets/articles/communityBenefitSociety/communityBenefitSociety2-small.png"
+        alt="qr code"
+        width={500} // Replace with your image width
+        height={500} // Replace with your image height
+      />
     </Fragment>
   );
 };

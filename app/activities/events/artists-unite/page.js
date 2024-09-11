@@ -64,7 +64,7 @@ const ArtUnite = () => {
           <br />
           6.30 - 7pm: Nibbles + Networking
           <br />
-          Meet Allie's Art Club and other local artists and enjoy complementary
+          Meet Allie&apos;s Art Club and other local artists and enjoy complementary
           nibbles.
           <br /> {" "}
           </Paragraph> 
@@ -72,7 +72,7 @@ const ArtUnite = () => {
           <b>Learn + Discuss</b>
           <br />
           7 - 8pm: Presentation + Discussion <br />
-          During this 1 hour workshop, we'll examine, discuss and learn about
+          During this 1 hour workshop, we&apos;ll examine, discuss and learn about
           the following: <br />
           <ArticleList>
             <ListElement>The pros and cons of working as an artist</ListElement>
