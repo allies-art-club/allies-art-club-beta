@@ -14,7 +14,7 @@ const ArtAndWellbeing=()=>{
                     <source media="(min-width: 1025px)" srcSet="/assets/articles/artAndWellbeing/artAndWellbeing1-large.png"/>
                     <TextImageTop $right={true} src={'/assets/articles/artAndWellbeing/artAndWellbeing1-large.png'} alt="Child with paint on her hands"/>
                 </picture>
-                <Paragraph>It's no secret that engaging in art is good for our health and wellbeing.</Paragraph>
+                <Paragraph>It&apos;s no secret that engaging in art is good for our health and wellbeing.</Paragraph>
                 
                 <picture>
                     <source media="(max-width: 1024px)" srcSet="/assets/articles/artAndWellbeing/artAndWellbeing1-small.png 1x, /assets/articles/artAndWellbeing/artAndWellbeing1-2x.png 2x"/>
@@ -72,7 +72,7 @@ const ArtAndWellbeing=()=>{
                 </picture>
                 <SubHeading>3. Heals trauma</SubHeading>
                 <Paragraph>Psychological trauma can have serious,
-                long-term impacts on people's health
+                long-term impacts on people&apos;s health
                 and wellbeing.</Paragraph>
 
                 <picture>
@@ -104,9 +104,9 @@ const ArtAndWellbeing=()=>{
                     <TextImageTop $mobile={true} src={'/assets/articles/artAndWellbeing/artAndWellbeing5-large.png'} alt="Art utensils"/>
                 </picture>                
                 <Paragraph>During our childhood years, our cognitive development is at its peak. Studies show that engaging in artistic and creative activities is important for
-children's cognitive growth, immensely improving their ability to think creatively and problem-solve throughout their lives. Participating in these activities during childhood can therefore have long-lasting benefits for people's wellbeing through developing their ability to overcome obstacles and excel in a range of careers.</Paragraph>
+children&apos;s cognitive growth, immensely improving their ability to think creatively and problem-solve throughout their lives. Participating in these activities during childhood can therefore have long-lasting benefits for people&apos;s wellbeing through developing their ability to overcome obstacles and excel in a range of careers.</Paragraph>
 <Paragraph>
-Art projects with people dealing with dementia and Alzheimer's disease have also proven the benefits of art for cognitive functioning later in life, showing a significant improvement in participants' memory recall and mental capacities.
+Art projects with people dealing with dementia and Alzheimer&apos;s disease have also proven the benefits of art for cognitive functioning later in life, showing a significant improvement in participants&apos; memory recall and mental capacities.
 </Paragraph>
             </Section>
             <Section>
@@ -147,7 +147,7 @@ Art projects with people dealing with dementia and Alzheimer's disease have also
             </Section>
             <br />
             <Section id="conclusion">
-                <Paragraph>So there we have it! Art and creative activities bring a huge range of benefits to people's health and wellbeing, whether through helping us heal and express our feelings, improve our mental states and fitness levels, or develop our social support networks and local communities. We hope you enjoyed this article and have more inspiration than ever to pursue your creative interests and take care of your wellbeing.</Paragraph>
+                <Paragraph>So there we have it! Art and creative activities bring a huge range of benefits to people&apos;s health and wellbeing, whether through helping us heal and express our feelings, improve our mental states and fitness levels, or develop our social support networks and local communities. We hope you enjoyed this article and have more inspiration than ever to pursue your creative interests and take care of your wellbeing.</Paragraph>
                 <ImageWrapper>
                     <Floater $right={true}/>
                     <Image alt="hearts right" src={'/assets/general/heartsR.png'}/>

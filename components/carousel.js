@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+
 import {
   CarouselImage,
   CarouselContainer,
@@ -23,7 +25,7 @@ const Carousel = (props) => {
       props.carouselClick("right");
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [props]);
 
   // Reset image indices if they are not set correctly
   if (
@@ -116,13 +118,12 @@ const Carousel = (props) => {
       {zoomedIndex !== null && (
         <ZoomOverlay onClick={handleCloseZoom}>
           <ZoomedImage>
-            <img
-              src={
-                props.carouselObj[zoomedIndex].src +
-                "-large." +
-                props.carouselObj[zoomedIndex].fileType
-              }
+            <Image
+              src={`${props.carouselObj[zoomedIndex].src}-large.${props.carouselObj[zoomedIndex].fileType}`}
               alt={`zoomed-${zoomedIndex}`}
+              layout="intrinsic" // Use "intrinsic" for a responsive image
+              width={800} // Adjust width according to your image size
+              height={600} // Adjust height according to your image size
             />
           </ZoomedImage>
         </ZoomOverlay>

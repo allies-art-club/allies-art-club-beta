@@ -29,6 +29,7 @@ const ClipboardContainer = styled.div`
 `;
 const ClipboardWrapper = styled.div`
   width: 100%;
+  margin-bottom: 10rem;
   background-color: white;
   padding: 20px 10px;
   @media (min-width: 768px) {
