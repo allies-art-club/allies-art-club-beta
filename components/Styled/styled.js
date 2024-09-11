@@ -14,7 +14,6 @@ const Container = styled.main`
     min-height: calc(100vh - 494.83px);
   }
 `;
-
 //Headings
 const HeadingMain = styled.h1`
   font-family: var(--font-nick-ainley);
@@ -336,6 +335,10 @@ const FormSubmit = styled.button`
   width: 50%;
 `;
 
+const FormSubmitFigure = styled.figure`
+  margin: 0;
+`;
+
 const FormSubmitImage = styled.img`
   width: 100%;
 `;
@@ -554,6 +557,7 @@ export {
   FormInputCheckbox,
   FormInputCheckboxWrapper,
   FormInputValidation,
+  FormSubmitFigure,
   FormTextArea,
   FormSubmit,
   FieldSet,
