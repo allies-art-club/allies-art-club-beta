@@ -41,7 +41,7 @@ const ArtistConversations=()=>{
                 <Fragment>
                 <br/>
                 <br/>
-                <Paragraph>We're sorry to say that we do not have any artist conversations on our site for you to read. Please check back on our site at a later date or follow us on social media to read our upcoming artist conversations.</Paragraph>
+                <Paragraph>We&apos;re sorry to say that we do not have any artist conversations on our site for you to read. Please check back on our site at a later date or follow us on social media to read our upcoming artist conversations.</Paragraph>
                 </Fragment>
             }
            

@@ -97,7 +97,7 @@ const CommunityArt = () => {
           <br />
           Want your say on what our club provides?
           <br /> <br />
-          Join us for an in-person discussion about co-ops, what you'd like from
+          Join us for an in-person discussion about co-ops, what you&apos;d like from
           our club and how you can be part of a creative community that empowers
           local people!
         </Paragraph>

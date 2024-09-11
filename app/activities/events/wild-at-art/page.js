@@ -57,9 +57,9 @@ const WildArt = () => {
           gardening queries you might have.{" "}
         </Paragraph>
         <Paragraph>
-          Wild At Art is the first event we're launching under our new umbrella
-          project 'Creative Ecologies', which aims to explore how we can live
-          well together on our shared planet. If you'd like to get involved in
+          Wild At Art is the first event we&apos;re launching under our new umbrella
+          project &apos;Creative Ecologies&apos;, which aims to explore how we can live
+          well together on our shared planet. If you&apos;d like to get involved in
           this project, please talk to our team at the fair who will be
           collecting names, ideas and suggestions.{" "}
         </Paragraph>

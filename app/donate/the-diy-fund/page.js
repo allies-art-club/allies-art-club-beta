@@ -77,12 +77,12 @@ const DonateSupplies = (props) => {
       />
       <Paragraph>
         Please read the information below and fill out the form to send art
-        supplies, books or other resources to Allie's Art Club.
+        supplies, books or other resources to Allie&apos;s Art Club.
       </Paragraph>
       <Paragraph>
         All donations must be delivered to the following address:
       </Paragraph>
-      <Paragraph>Allie's Art Club</Paragraph>
+      <Paragraph>Allie&apos;s Art Club</Paragraph>
       <Paragraph>Ringcross Community Center</Paragraph>
       <Paragraph>60 Lough Road</Paragraph>
       <Paragraph>London N7 8RH</Paragraph>
@@ -184,7 +184,7 @@ const DonateSupplies = (props) => {
             </FormInputWrapper>
             <FormCheckboxWrapper $longList={true}>
               <legend>Supplies to donate (check all that apply):*</legend>
-              <FieldSet role="group" aria-labelledBy="checkbox-group">
+              <FieldSet role="group" aria-labelledBy="checkbox-group">  
                 <Fragment>
                   {options && options.length
                     ? options.map((el, i) => (
@@ -254,7 +254,7 @@ const DonateSupplies = (props) => {
             </FormCheckboxWrapper>
             <FormInputWrapper $textarea={true}>
               <FormLabel htmlFor="message">
-                Message / note for Allie's Art Club:
+                Message / note for Allie&apos;s Art Club:
               </FormLabel>
               <FormTextArea
                 rows="5"

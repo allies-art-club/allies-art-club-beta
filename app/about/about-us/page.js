@@ -149,7 +149,7 @@ const AboutAac = (props) => {
                 </Cultural>{" "}
               </HeadingGrid>
               <Paragraph>
-                Develop people's creative skills, knowledge and involvement in
+                Develop people&apos;s creative skills, knowledge and involvement in
                 generating positive social change through art and culture.
               </Paragraph>{" "}
             </GridText>

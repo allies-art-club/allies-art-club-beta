@@ -4,7 +4,7 @@ import styled from "styled-components";
 //Co-Creative Communities: A Collaborative Design project
 export const BorderWrap = styled.div`
   display: flex;
-  border: 0.5rem dashed #ccc;
+  border: 0.3rem dotted black;
   flex-direction: column;
   align-items: center;
   padding: 20px;

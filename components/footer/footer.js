@@ -18,9 +18,9 @@ const Footer = () => {
   return (
     <>
       <FooterContainer id="footer" data-test="footer">
-        <FooterElementWrapper size={30}>
+        <FooterElementWrapper size={33}>
           <Figure>
-            <ImageContainer> 
+            <ImageContainer id="imageContainer"> 
               <picture>
                 <source
                   media="(max-width:480px)"
@@ -70,14 +70,14 @@ const Footer = () => {
             <Caption>
               <FooterParagraph>Registration number: 9073 </FooterParagraph>
               <FooterParagraph $bottom={"true"}>
-                (c) 2023 Allie's Art Club Limited{" "}
+                (c) 2023 Allie&apos;s Art Club Limited{" "}
               </FooterParagraph>
             </Caption>
           </Figure>
         </FooterElementWrapper>
 
-        <FooterElementWrapper $size={40}>
-          <TextContainer>
+        <FooterElementWrapper $size={34}>
+          <TextContainer id="textContainer">
             <CenterParagraph data-test="charityNumberCaption">
               Contact us: <br />{" "}
               <FooterLink href="mailto:alliesartclub@gmail.com">
@@ -86,14 +86,14 @@ const Footer = () => {
             </CenterParagraph>
             <br />
             <CenterParagraph>
-              Allie's Art Club is a registered Community Benefit Society <br />{" "}
-              Registration number: 9073 <br /> &copy; 2023 Allie's Art Club Limited{" "}
+              Allie&apos;s Art Club is a registered Community Benefit Society <br />{" "}
+              Registration number: 9073 <br /> &copy; 2023 Allie&apos;s Art Club Limited{" "}
               <br />{" "}
             </CenterParagraph>
           </TextContainer>
         </FooterElementWrapper>
 
-        <FooterElementWrapper $size={30}>
+        <FooterElementWrapper $size={33}>
           <Caption>
             <FooterParagraph $mobile={"true"}>
               Contact us: <br />{" "}
@@ -105,7 +105,7 @@ const Footer = () => {
           <FooterParagraph $right={"true"} data-test="aacCaption">
             Follow us on social media
           </FooterParagraph>
-          <IconWrapper>
+          <IconWrapper id="iconWrapper">
             <Link
               rel="noopener"
               target="_blank"
