@@ -24,7 +24,7 @@ const Homepage = () => {
           />
         </HomepageStarL>
         <TextWrap>
-          <HomepageSubtitles>Supported by</HomepageSubtitles>
+          <HomepageSubtitles>dedeavg Supported by</HomepageSubtitles>
           <br /><br />
           <Paragraph>
             We are grateful for the funding and support from the organization
