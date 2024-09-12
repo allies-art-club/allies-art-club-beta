@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import thankYou from '../../components/Styled/bannerSvg/thankYou.svg';
 
