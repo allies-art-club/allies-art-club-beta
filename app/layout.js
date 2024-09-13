@@ -51,7 +51,6 @@ function RootLayout({ children }) {
         
         <GlobalStyle/>
         <Header />
-      <p>FUCK YEAHHHH</p>
           <Container>
             {children}   
           </Container>
