@@ -173,7 +173,7 @@ const Header = (props) => {
                 Contact
               </NavMainCategory>
             </HeaderNavListElement>
-            <HeaderNavListElement>
+            {/* <HeaderNavListElement>
               <NavMainCategory
                 onClick={(e) => {
                   if (window.innerWidth < 768) {
@@ -196,7 +196,7 @@ const Header = (props) => {
                 mainCategory={"donate"}
                 navLinks={["Donations", "The DIY fund"]}
               ></SubMenu>
-            </HeaderNavListElement>
+            </HeaderNavListElement> */}
             {/* <HeaderNavListElement>
                             <NavMainCategory
                                 onClick={(e)=>{
