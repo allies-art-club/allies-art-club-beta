@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   HeaderContainer,
   HeaderLogo,
@@ -59,13 +60,15 @@ const Header = (props) => {
             <HeaderLogo>
               {" "}
               <Logo>
-                <Image
-                  src="/assets/aacLogo.png"
-                  alt="Logo"
-                  width={200}
-                  height={162}
-                  layout="responsive"
-                />
+                <a href="/">
+                  <Image
+                    src="/assets/aacLogo.png"
+                    alt="Logo"
+                    width={200}
+                    height={162}
+                    layout="responsive"
+                  />
+                </a>
               </Logo>
             </HeaderLogo>
 

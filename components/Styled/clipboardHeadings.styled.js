@@ -7,8 +7,16 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   padding: 30px;
-  gap: 5em;
+
   margin-bottom: 20px;
+
+  @media (min-width: 375px) {
+    gap: 1rem;
+  }
+
+  @media (min-width: 1300px) {
+    gap: 5rem;
+  }
 `;
 
 const Heading = styled.p`
@@ -16,31 +24,52 @@ const Heading = styled.p`
   color: #ffffff;
   display: flex;
   width: 100%;
-  max-width: 25rem;
-  height: 7rem;
-  line-height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-family: "Balloon Extra Bold", sans-serif;
   font-weight: bold;
-  font-size: 1erm;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for text pop */
 
-  @media (max-width: 768px) {
-    font-size: 22px;
+  @media (min-width: 375px) {
+    font-size: 0.7rem;
+    max-width: 8rem;
+    height: 5rem;
+    line-height: 1.5rem;
+    padding: 3rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    max-width: 10rem;
+    height: 5rem;
+    line-height: 2rem;
   }
 
-  @media (max-width: 480px) {
-    font-size: 20px;
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+    line-height: 2rem;
+    height: 6rem;
+    max-width: 20rem;
   }
 
-  @media (min-width: 1300px) {
+  @media (min-width: 1280px) {
     font-size: 2rem;
+    line-height: 2.5rem;
+    height: 7rem;
+    padding: 1rem;
+    max-width: 20rem;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 2rem;
+    line-height: 3rem;
+    height: 8rem;
+    padding: 1rem;
+    max-width: 25rem;
   }
 `;
 

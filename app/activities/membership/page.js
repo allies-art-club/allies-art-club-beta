@@ -22,8 +22,8 @@ const Membership = () => {
         <HomepageSubtitles>Under construction!</HomepageSubtitles>
         <IconWrapper>
           <Image
-            src="/assets/newIcons/Icon7.png" // Path to your image
-            alt="Art"
+            src="/assets/newIcons/Icon6.png" // Path to your image
+            alt="Icon 6"
             width={500} // Desired width
             height={500} // Desired height
             layout="responsive" // Optional: automatically adjust layout

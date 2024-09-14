@@ -4,39 +4,38 @@ export const Container = styled.div`
   display: flex;
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Centers the content vertically */
-  margin-top: -6rem;
-  margin-left: 35%;
   width: 100%;
-  max-width: 50rem;
 
-  @media (min-width: 480px) {
-    margin-left: 35%;
-    margin-top: -6rem;
-  }
   @media (min-width: 768px) {
-    margin-left: 25%;
-    margin-top: -6rem;
-    max-width: 30rem;
+    margin-left: 36%;
+    margin-top: 6rem;
+    max-width: 27rem;
   }
   @media (min-width: 1024px) {
-    margin-left: 30%;
-    margin-top: -6rem;
+    margin-left: 35%;
+    margin-top: 3rem;
     width: 100%;
-    max-width: 40rem;
+    max-width: 36rem;
   }
-  @media (min-width: 1450px) {
-    margin-left: 25%;
-    margin-top: -8rem;
+  @media (min-width: 1280px) {
+    margin-left: 34%;
+    margin-top: 2rem;
     margin-bottom: -3rem;
     width: 100%;
-    max-width: 45rem;
+    max-width: 47rem;
+  }
+
+  @media (min-width: 1880px) {
+    margin-left: 35%;
+    margin-top: -18rem;
+   max-width: 50rem;
   }
   @media (min-width: 2500px) {
-    margin-left: 35%;
-    margin-top: -8rem;
+    margin-left: 33%;
+    margin-top: -20rem;
     margin-bottom: -2rem;
     width: 100%;
-    max-width: 60rem;
+    max-width: 65rem;
   }
 `;
 
@@ -51,18 +50,11 @@ export const BackgroundContainer = styled.div`
   justify-content: center; /* Centers text horizontally */
   align-items: center; /* Centers text vertically */
 
-  @media (max-width: 1200px) {
-    padding: 15px 30px; /* Adjust padding for medium-sized screens */
-  }
-
   @media (max-width: 768px) {
     padding: 10px 20px; /* Further adjust padding for tablets */
-    background-size: cover; /* Ensures the background image covers the container */
   }
-
-  @media (max-width: 480px) {
-    padding: 5px 10px; /* Further adjust padding for small screens */
-    background-size: cover; /* Ensures the background image covers the container */
+  @media (max-width: 1200px) {
+    padding: 15px 30px; /* Adjust padding for medium-sized screens */
   }
 `;
 
@@ -76,20 +68,19 @@ export const Culture = styled.p`
   z-index: 1; /* Ensure text is above the background */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the text for emphasis */
 
-  @media (min-width: 480px) {
-    font-size: 2rem; /* Adjust font size for small screens */
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3); /* Adjust shadow size */
-  }
-
   @media (min-width: 768px) {
-    font-size: 3rem; /* Further adjust font size for tablets */
+    font-size: 2rem; /* Further adjust font size for tablets */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Adjust shadow size */
   }
-  @media (min-width: 1200px) {
-    font-size: 4rem; /* Adjust font size for medium screens */
+  @media (min-width: 1024px) {
+    font-size: 3rem; /* Adjust font size for medium screens */
     text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.3); /* Adjust shadow size */
   }
 
+  @media (min-width: 1280px) {
+    font-size: 4rem; /* Adjust font size for small screens */
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3); /* Adjust shadow size */
+  }
   @media (min-width: 1300px) {
     font-size: 5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow size */
