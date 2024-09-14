@@ -15,7 +15,8 @@ const Home = (props) => {
     <Fragment>
       <ClipboardHeadings />
       <BodyPage id="bodyPage" />
-      <JoinUs id="joinUs" /> <Homepage />
+      <JoinUs id="joinUs" /> 
+      <Homepage />
       <CarouselLogo />
     </Fragment>
   );
