@@ -42,7 +42,7 @@
     "eslint-config-next": "14.2.5"
   },
   "engines": {
-    "npm": "9.8.0",
-    "node": "20.5.1"
+    "npm": "~9.8.0",
+    "node": "~20.5.1"
   }
 }
