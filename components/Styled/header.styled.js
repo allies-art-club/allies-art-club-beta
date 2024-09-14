@@ -59,6 +59,7 @@ const Cross = styled.button`
 const HeaderNavList = styled.ul`
   list-style: none;
   margin-bottom: -15rem;
+
   @media (max-width: 767px) {
     position: absolute;
     padding: 25px;
@@ -161,7 +162,19 @@ const NavMainCategory = styled(Link).attrs(
     }
     @media(min-width:768px){
         top: ${(props) => (props.$nav ? "auto" : "35%")};
-        font-size: 2rem;
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+
+        @media(min-width:1024px){
+        top: ${(props) => (props.$nav ? "auto" : "35%")};
+        font-size: 1.3rem;
+        padding-bottom: 5px;
+    }
+
+            @media(min-width:1280px){
+        top: ${(props) => (props.$nav ? "auto" : "35%")};
+        font-size: 1.5rem;
         padding-bottom: 5px;
     }
 `;
@@ -178,18 +191,30 @@ const Figure = styled.div`
 `;
 const HeaderLogo = styled.div`
   width: 100%;
-  max-width: 30rem;
-  margin-right: -12rem;
-  @media (min-width: 421px) {
-  }
+  margin-left: -2rem;
   @media (min-width: 768px) {
+    max-width: 15rem;
+    margin-right: -2rem;
+  }
+  @media (min-width: 1024px) {
+    max-width: 18rem;
+  }
+
+  @media (min-width: 1300px) {
+    max-width: 23rem;
+  }
+  @media (min-width: 1880px) {
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 35rem;
+    margin-right: -12rem;
   }
 `;
 
 const Logo = styled.div`
   width: 100%;
-  max-width: 23rem;
-  margin-left: -2rem;
+  max-width: 27rem;
 `;
 export {
   HeaderContainer,

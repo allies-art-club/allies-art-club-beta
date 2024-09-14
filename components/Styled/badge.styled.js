@@ -8,43 +8,45 @@ export const Container = styled.div`
   margin-top: -6rem;
   margin-left: 35%;
   width: 100%;
-  max-width: 50rem;
+  margin-bottom: -1rem;
 
-  @media (min-width: 480px) {
-    margin-left: 35%;
-    margin-top: -6rem;
-  }
   @media (min-width: 768px) {
-    margin-left: 25%;
-    margin-top: -6rem;
-    max-width: 30rem;
+    margin-left: 20%;
+    margin-top: -5rem;
+    margin-bottom: 0.5rem;
+    max-width: 5rem;
   }
   @media (min-width: 1024px) {
-    margin-top: -10rem;
-    margin-bottom: 2rem;
-    margin-left: -1rem;
+    margin-top: -8rem;
+    margin-bottom: 1rem;
+    margin-left: 10rem;
     width: 100%;
-    max-width: 30rem;
+    max-width: 8rem;
   }
-  @media (min-width: 1450px) {
-    margin-top: 1rem;
-    margin-bottom: -7rem;
-    margin-left: -7rem;
+  @media (min-width: 1280px) {
+    margin-top: -11rem;
+    margin-left: 11rem;
+    margin-bottom: 1rem;
     width: 100%;
-    max-width: 40rem;
+    max-width: 10rem;
   }
 
+  @media (min-width: 1800px) {
+    margin-top: -11rem;
+    margin-left: 12rem;
+    margin-bottom: 1rem;
+    max-width: 30rem;
+  }
   @media (min-width: 2500px) {
-    margin-top: -15rem;
+    margin-top: -10rem;
     margin-bottom: 0rem;
-    margin-left: 22rem;
+    margin-left: 15rem;
     width: 100%;
-    max-width: 40rem;
+    max-width: 35rem;
   }
 `;
 
 export const BadgeBackground = styled.div`
-  background-image: url("/assets/donate-hexagon.png");
   background-repeat: no-repeat;
   background-size: contain; /* ensure that the entire background image is visible within the container, without any part of it being clipped */
   padding: 20px 40px; /* Adds padding to ensure the text isn't too close to the edges */
@@ -69,5 +71,4 @@ export const BadgeBackground = styled.div`
     width: 100%;
     max-width: 50rem;
   }
-
 `;

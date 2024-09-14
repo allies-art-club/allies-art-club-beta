@@ -29,13 +29,13 @@ const JoinUs = () => {
               community.
             </Paragraph>
             <Paragraph>
-              See our upcoming events <ArtLink href="#">here</ArtLink>
+              See our upcoming events <ArtLink href="/activities/events">here</ArtLink>
             </Paragraph>
           </TextCont>
           <IconWrapper $right={true}>
             <ArtIcon>
               <Image
-                src="/assets/joinUs/Icon1.png"
+                src="/assets/newIcons/Icon1.png"
                 alt="Icon 1"
                 width={500}
                 height={500}
@@ -55,13 +55,13 @@ const JoinUs = () => {
               those who’d like to be more involved in shaping our organisation.
             </Paragraph>
             <Paragraph>
-              Read about our membership offer <ArtLink href="#">here</ArtLink>
+              Read about our membership offer <ArtLink href="/activities/membership">here</ArtLink>
             </Paragraph>
           </TextCont>
           <IconWrapper $left={true}>
             <ArtIcon>
               <Image
-                src="/assets/joinUs/Icon2.png"
+                src="/assets/newIcons/Icon2.png"
                 alt="Icon 2"
                 width={500}
                 height={500}
@@ -82,13 +82,13 @@ const JoinUs = () => {
               wellbeing.
             </Paragraph>
             <Paragraph>
-              Read about and book our services <ArtLink href="#">here</ArtLink>
+              Read about and book our services <ArtLink href="/activities/services">here</ArtLink>
             </Paragraph>
           </TextCont>
           <IconWrapper $right={true}>
             <ArtIcon>
               <Image
-                src="/assets/joinUs/Icon3.png"
+                src="/assets/newIcons/Icon3.png"
                 alt="Icon 3"
                 width={500}
                 height={500}
@@ -108,13 +108,13 @@ const JoinUs = () => {
               which helps us maintain financial sustainability and autonomy.
             </Paragraph>
             <Paragraph>
-              See our upcoming events <ArtLink href="#">here</ArtLink>
+              See our upcoming events <ArtLink href="/donate/the-diy-fund">here</ArtLink>
             </Paragraph>
           </TextCont>
           <IconWrapper $left={true}>
             <ArtIcon>
               <Image
-                src="/assets/joinUs/Icon4.png"
+                src="/assets/newIcons/Icon4.png"
                 alt="Icon 4"
                 width={500}
                 height={500}
@@ -135,13 +135,13 @@ const JoinUs = () => {
             </Paragraph>
             <Paragraph>
               Get in touch with us about your idea{" "}
-              <ArtLink href="#">here</ArtLink>
+              <ArtLink href="/contactUs">here</ArtLink>
             </Paragraph>
           </TextCont>
           <IconWrapper $right={true}>
             <ArtIcon>
               <Image
-                src="/assets/joinUs/Icon5.png"
+                src="/assets/newIcons/Icon5.png"
                 alt="Icon 1"
                 width={500}
                 height={500}

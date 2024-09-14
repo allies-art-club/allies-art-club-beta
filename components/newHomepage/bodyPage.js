@@ -111,8 +111,6 @@ const BodyPage = () => {
           creating and sustaining a life-affirming world in which all living
           beings can thrive.
         </Paragraph>
-        <Paragraph>Read more about our projects here.</Paragraph>
-
         <picture>
           <source
             media="(max-width: 1024px)"
