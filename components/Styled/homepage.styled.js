@@ -28,8 +28,29 @@ const HeartsSection = styled.div`
   justify-content: flex-end; /* Aligns child to the right */
   width: 100%; /* Ensure the section takes full width */
   padding: 1rem;
-  margin-bottom: -4rem;
-  margin-top: -4rem;
+
+  @media (min-width: 375px) {
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 3rem;
+    margin-bottom: -4rem;
+  }
+
+  @media (min-width: 1300px) {
+    margin-bottom: -4rem;
+    margin-top: -4rem;
+  }
+
+    @media (min-width: 1880px) {
+     margin-bottom: -4rem;
+    margin-top: 4rem;
+  }
 `;
 const HeartsTextWrap = styled.div`
   width: 100%;

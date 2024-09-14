@@ -69,13 +69,20 @@ const Partners = () => {
             />
           </ImageWrapStarL>
           <ImageWrap id="imageWrap">
-            <Image
-              src="/assets/partnersLogo/partnersLogo2.png"
-              alt="Partner Logo 2"
-              width={500}
-              height={600}
-              layout="responsive"
-            />{" "}
+            {" "}
+            <a
+              href="https://www.london.gov.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/assets/partnersLogo/partnersLogo2.png"
+                alt="Partner Logo 2"
+                width={500}
+                height={600}
+                layout="responsive"
+              />{" "}
+            </a>
           </ImageWrap>
           <ImageWrap id="imageWrap">
             {" "}
@@ -208,18 +215,19 @@ const Partners = () => {
             </a>
           </ImageWrap>
           <ImageWrap id="imageWrap">
-          <a
+            <a
               href="https://plunkett.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
             >
-            <Image
-              src="/assets/partnersLogo/partnersLogo11.png"
-              alt="Partner Logo 11"
-              width={500}
-              height={600}
-              layout="responsive"
-            /> </a>
+              <Image
+                src="/assets/partnersLogo/partnersLogo11.png"
+                alt="Partner Logo 11"
+                width={500}
+                height={600}
+                layout="responsive"
+              />{" "}
+            </a>
           </ImageWrap>
           <ImageWrap id="imageWrap">
             <a
@@ -246,46 +254,49 @@ const Partners = () => {
             />
           </ImageWrapStarsR>{" "}
           <ImageWrap id="imageWrap">
-          <a
+            <a
               href="https://piliontrust.info/"
               target="_blank"
               rel="noopener noreferrer"
             >
-            <Image
-              src="/assets/partnersLogo/partnersLogo13.png"
-              alt="Partner Logo 13"
-              width={500}
-              height={600}
-              layout="responsive"
-            />  </a>
+              <Image
+                src="/assets/partnersLogo/partnersLogo13.png"
+                alt="Partner Logo 13"
+                width={500}
+                height={600}
+                layout="responsive"
+              />{" "}
+            </a>
           </ImageWrap>
           <ImageWrap id="imageWrap">
-          <a
+            <a
               href="https://space4.tech/"
               target="_blank"
               rel="noopener noreferrer"
             >
-            <Image
-              src="/assets/partnersLogo/partnersLogo14.png"
-              alt="Partner Logo 14"
-              width={500}
-              height={600}
-              layout="responsive"
-            />  </a>
+              <Image
+                src="/assets/partnersLogo/partnersLogo14.png"
+                alt="Partner Logo 14"
+                width={500}
+                height={600}
+                layout="responsive"
+              />{" "}
+            </a>
           </ImageWrap>
           <ImageWrap id="imageWrap">
-          <a
+            <a
               href="https://boundlesstheatre.org.uk/"
               target="_blank"
               rel="noopener noreferrer"
             >
-            <Image
-              src="/assets/partnersLogo/partnersLogo15.png"
-              alt="Partner Logo 15"
-              width={500}
-              height={600}
-              layout="responsive"
-            />  </a>
+              <Image
+                src="/assets/partnersLogo/partnersLogo15.png"
+                alt="Partner Logo 15"
+                width={500}
+                height={600}
+                layout="responsive"
+              />{" "}
+            </a>
           </ImageWrap>
         </ImagesContainer>
       </Section>
