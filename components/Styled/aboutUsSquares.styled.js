@@ -9,9 +9,14 @@ export const ContainerSquares = styled.div`
   @media (min-width: 375px) {
     gap: 1rem;
   }
-
+  @media (min-width: 580px) {
+    gap: 6rem;
+  }
+  @media (min-width: 768px) {
+    gap: 3rem;
+  }
   @media (min-width: 1024px) {
-    gap: 2rem;
+    gap: 7rem;
   }
 
   @media (min-width: 1280px) {
@@ -19,7 +24,7 @@ export const ContainerSquares = styled.div`
   }
 
   @media (min-width: 1300px) {
-    gap: 1rem;
+    gap: 7rem;
   }
   @media (min-width: 1920px) {
     gap: 17rem;
@@ -45,8 +50,8 @@ export const Connect = styled.div`
   width: ${squareWidth};
   height: ${squareHeight};
 
-   @media (min-width: 375px) {
-     width: 8rem;
+  @media (min-width: 375px) {
+    width: 8rem;
     height: 8rem;
   }
 
@@ -81,8 +86,7 @@ export const Care = styled.div`
   width: ${squareWidth};
   height: ${squareHeight};
 
-
-   @media (min-width: 375px) {
+  @media (min-width: 375px) {
     width: 8rem;
     height: 8rem;
   }
@@ -116,7 +120,7 @@ export const Create = styled.div`
   height: ${squareHeight};
 
   @media (min-width: 375px) {
-     width: 8rem;
+    width: 8rem;
     height: 8rem;
   }
 
@@ -154,7 +158,7 @@ export const SquareTitle = styled.h2`
   letter-spacing: 1.5px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for text pop */
 
-    @media (min-width: 375px) {
+  @media (min-width: 375px) {
     font-size: 1rem;
   }
 
@@ -185,11 +189,10 @@ export const Paragraph = styled.div`
   color: white;
   font-family: var(--font-arial-nova-cond);
 
-    @media (min-width: 375px) {
+  @media (min-width: 375px) {
     font-size: 0.6rem;
     margin-top: -1rem;
   }
-
 
   @media (min-width: 768px) {
     margin-top: -1rem;
@@ -205,7 +208,7 @@ export const Paragraph = styled.div`
   }
   @media (min-width: 1300px) {
     font-size: 1.5rem;
-     padding: 1rem;
+    padding: 1rem;
   }
   @media (min-width: 1880px) {
     font-size: 1.5rem;

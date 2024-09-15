@@ -22,7 +22,8 @@ import {
 import {
   GridWrap,
   GridColumn,
-} from "../../../components/Styled/aboutUs.styled.js";
+  ImageGrid,
+} from "../../../components/Styled/gridParagraph.styled.js";
 import {
   HighlightsWrap,
   HeadingContainer,
@@ -30,6 +31,7 @@ import {
   IconWrapper,
   IconWrap,
   Highlights,
+  HeadingContainer3,
   ProjectsIcon,
   HighlightsHeartsR,
 } from "../../../components/Styled/projects.styled.js";
@@ -91,6 +93,7 @@ const Projects = (props) => {
           />
         </picture>
       </Section>
+
       <Section>
         <Paragraph>
           Within our projects, we focus on three areas that we believe are vital
@@ -101,51 +104,60 @@ const Projects = (props) => {
         <GridWrap id="gridWrap">
           <GridColumn id="gridColumn">
             <GridSubtitles>Art Care</GridSubtitles>
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics1.png"
-              alt="aboutUsRoundPics1"
-              width={500}
-              height={500}
-            />
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic1.png"
+                alt="aboutUsRoundPics1"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
-              <LinkGrid href="#">
+              <LinkGrid href="/activities/projects/art-care">
                 <i>How can the arts support our health and wellbeing?</i>
               </LinkGrid>
             </Paragraph>
           </GridColumn>
-          <GridColumn>
-            <GridSubtitles>Creative Ecologies </GridSubtitles>
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics2.png"
-              alt="aboutUsRoundPics2"
-              width={500}
-              height={500}
-            />
+
+          <GridColumn id="gridColumn">
+            <GridSubtitles>Creative Ecologies</GridSubtitles>
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic2.png"
+                alt="aboutUsRoundPics1"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
               <LinkGrid href="#">
-                <i> How can our labour practices be life-affirming?</i>
+                <i>How can we live well together on our shared planet?</i>
               </LinkGrid>
             </Paragraph>
           </GridColumn>
-          <GridColumn>
+          <GridColumn id="gridColumn">
             <GridSubtitles>Reimagining Work</GridSubtitles>
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics3.png"
-              alt="aboutUsRoundPics3"
-              width={500}
-              height={500}
-            />
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic3.png"
+                alt="aboutUsRoundPics3"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
               <LinkGrid href="#">
-                <i> How can we live well together on our shared planet?</i>{" "}
+                <i>How can our labour practices be life-affirming?</i>
               </LinkGrid>
             </Paragraph>
           </GridColumn>
         </GridWrap>
       </Section>
+
       <Section>
         <HighlightsWrap id="highlights">
-          <HighlightsHeartsR id="OurVisionStarL">
+          <HomepageSubtitles> Project highlights</HomepageSubtitles>
+          <HighlightsHeartsR id="highlightsHeartsR">
             <Image
               src="/assets/general/heartsR.png"
               alt="Stars L"
@@ -153,7 +165,6 @@ const Projects = (props) => {
               height={262}
             />
           </HighlightsHeartsR>{" "}
-          <HomepageSubtitles> Project highlights</HomepageSubtitles>
         </HighlightsWrap>
       </Section>
 
@@ -167,8 +178,8 @@ const Projects = (props) => {
             <ProjectsIcon id="projectIcon">
               <IconWrap id="Wrap">
                 <Image
-                  src="/assets/aboutUsRoundPics/aboutUsRoundPics3.png"
-                  alt="about Us Round Pics 3"
+                  src="/assets/gridParagraphPics/gridParagraphPic2.png"
+                  alt="gridParagraphPics 2"
                   width={500}
                   height={500}
                   layout="responsive"
@@ -195,10 +206,81 @@ const Projects = (props) => {
           </Paragraph>
         </BorderWrap>
       </Section>
-    
+
+      <Section id="borderWrap">
+        <BorderWrap>
+          <HeadingContainer id="headingContainer">
+            <HomepageSubtitles>
+              Wild At Art: A Community Arts
+              <br /> Fair Inspired by Nature
+            </HomepageSubtitles>{" "}
+            <ProjectsIcon id="projectIcon">
+              <IconWrap id="Wrap">
+                <Image
+                  src="/assets/gridParagraphPics/gridParagraphPic3.png"
+                  alt="gridParagraphPics 3"
+                  width={500}
+                  height={500}
+                  layout="responsive"
+                />
+              </IconWrap>
+            </ProjectsIcon>{" "}
+          </HeadingContainer>
+          <Paragraph>
+            Wild At Art was a creative and eco-conscious event to celebrate our
+            connection to the natural world and enjoy being part of a creative
+            and collaborative community. The fair included an art market with a
+            range of nature-inspired art, free arts and crafts activities and a
+            community ‘Poetree’, live DJ sets, food and a welcoming and wildly
+            decorated space. We also ran this event in collaboration with Mother
+            Roots, a local eco-friendly gardening company.
+          </Paragraph>
+
+          <CarouselProjects />
+          <Paragraph>
+            Thank you to our funder Islington Giving, to our event collaborator
+            Mother Roots, and to the Vibast Community Centre for providing the
+            space!
+          </Paragraph>
+        </BorderWrap>
+      </Section>
+
+      <Section id="borderWrap">
+        <BorderWrap>
+          <HeadingContainer3 id="headingContainer">
+            <HomepageSubtitles>Creative Hangouts</HomepageSubtitles>{" "}
+            <ProjectsIcon id="projectIcon">
+              <IconWrap id="Wrap">
+                <Image
+                  src="/assets/gridParagraphPics/gridParagraphPic1.png"
+                  alt="gridParagraphPics 1"
+                  width={500}
+                  height={500}
+                  layout="responsive"
+                />
+              </IconWrap>
+            </ProjectsIcon>{" "}
+          </HeadingContainer3>
+          <Paragraph>
+            Since 2023, we’ve run free monthly art socials at the Vibast
+            Community Centre for local people to connect, have fun and engage in
+            arts activities in a fun, creative and social space. Our Creative
+            Hangouts have provided an inclusive and accessible space for people
+            from a range of backgrounds to support their sense of wellbeing and
+            social connection through fun and relaxing arts activities and great
+            conversations!
+          </Paragraph>
+
+          <CarouselProjects />
+          <Paragraph>
+            Thank you to our funders Islington Council and Cripplegate
+            Foundation, who supported us through the Islington Council Community
+            Chest!
+          </Paragraph>
+        </BorderWrap>
+      </Section>
     </Fragment>
   );
 };
-
 
 export default Projects;

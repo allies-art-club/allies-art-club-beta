@@ -183,6 +183,13 @@ const NavMainCategory = styled(Link).attrs(
         font-size: 1rem;
         padding-bottom: 5px;
     }
+
+    
+                @media(min-width:1880px){
+        top: ${(props) => (props.$nav ? "auto" : "35%")};
+        font-size: 2rem;
+        padding-bottom: 5px;
+    }
 `;
 const NavLinkLogo = styled(Link)`
   text-decoration: none;

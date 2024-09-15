@@ -8,6 +8,7 @@ import {
   Article,
   TextImageTop,
   HomepageSubtitles,
+  LinkGrid,
   GridSubtitles,
   Section,
   Link,
@@ -18,9 +19,6 @@ import {
   Cultural,
 } from "../../../components/Styled/clipboardHeadings.styled.js";
 import {
-  GridColumn,
-  GridIcon,
-  GridWrap,
   GridText,
   OurVision,
   OurVisionStarL,
@@ -29,12 +27,19 @@ import {
   OurValuesHeartsR,
 } from "../../../components/Styled/aboutUs.styled.js";
 
+import {
+  GridWrap,
+  GridColumn,
+  ImageGrid,
+} from "../../../components/Styled/gridParagraph.styled";
+
 import SideNav from "../../../components/sideNav/sideNav.js";
 import TitleBanner from "../../../components/titleBanner/titleBanner.js";
 import AboutUsSquares from "../../../components/aboutUsSquares.js";
 import Carousel from "../../../components/carousel.js";
 import { carouselClick } from "../../../utils/Actions/homeActions";
 import carouselConfig from "../../../utils/carouselConfig/carouselAboutAac.js";
+import CarouselAboutUs from "../../../components/carouselAboutUs.js";
 
 import "../../fonts/arial-nova-cond-bold/stylesheet.css";
 
@@ -106,8 +111,6 @@ const AboutAac = (props) => {
         </Paragraph>
       </Section>
 
-
-
       <Section>
         {" "}
         <GridWrap id="gridWrap">
@@ -162,10 +165,6 @@ const AboutAac = (props) => {
         </GridWrap>
       </Section>
 
-
-
-
-
       <Section>
         <OurVision id="ourVision">
           <OurVisionStarL id="OurVisionStarL">
@@ -185,10 +184,6 @@ const AboutAac = (props) => {
           </Paragraph>
         </OurVision>
       </Section>
-
-
-
-
 
       <Section>
         <picture>
@@ -230,10 +225,6 @@ const AboutAac = (props) => {
           />
         </picture>{" "}
       </Section>
-
-
-
-
       <Section>
         <Paragraph>
           We focus on three areas that we believe are vital for this radical
@@ -244,57 +235,61 @@ const AboutAac = (props) => {
         <GridWrap id="gridWrap">
           <GridColumn id="gridColumn">
             <GridSubtitles>Art Care</GridSubtitles>
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics1.png"
-              alt="aboutUsRoundPics1"
-              width={500}
-              height={500}
-              layout="responsive"
-            />
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic1.png"
+                alt="aboutUsRoundPics1"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
-              <i>How can the arts support our health and wellbeing?</i>
+              <LinkGrid href="/activities/projects/art-care">
+                <i>How can the arts support our health and wellbeing?</i>
+              </LinkGrid>
             </Paragraph>
           </GridColumn>
-          <GridColumn>
-            <GridSubtitles>Creative Ecologies </GridSubtitles>
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics2.png"
-              alt="aboutUsRoundPics2"
-              width={500}
-              height={500}
-              layout="responsive"
-            />
+
+          <GridColumn id="gridColumn">
+            <GridSubtitles>Creative Ecologies</GridSubtitles>
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic2.png"
+                alt="aboutUsRoundPics1"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
-              <i> How can our labour practices be life-affirming?</i>
+              <LinkGrid href="#">
+                <i>How can we live well together on our shared planet?</i>
+              </LinkGrid>
             </Paragraph>
           </GridColumn>
           <GridColumn id="gridColumn">
             <GridSubtitles>Reimagining Work</GridSubtitles>
-            <GridIcon id="gridIcon">
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics3.png"
-              alt="aboutUsRoundPics3"
-              width={500}
-              height={500}
-              layout="responsive"
-            /></GridIcon>
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic3.png"
+                alt="aboutUsRoundPics3"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
-              <i> How can we live well together on our shared planet?</i>
+              <LinkGrid href="#">
+                <i>How can our labour practices be life-affirming?</i>
+              </LinkGrid>
             </Paragraph>
           </GridColumn>
         </GridWrap>
       </Section>
-
-
-
 
       <Section>
         <Paragraph>
           See our upcoming events <Link href="/activities/events">here.</Link>
         </Paragraph>
       </Section>
-
-
 
       <Section>
         <OurValues id="ourVision">
@@ -315,14 +310,9 @@ const AboutAac = (props) => {
         </OurValues>
       </Section>
 
-
-
-
       <Section>
         <AboutUsSquares />
       </Section>
-
-
 
       <Section>
         <HomepageSubtitles>Our journey</HomepageSubtitles>
@@ -390,16 +380,8 @@ const AboutAac = (props) => {
           Below are some of the projects and events we’ve run since 2021
         </GridSubtitles>
       </Section>
-      <Section id="carousel">
-        <Carousel
-          square={"yes"}
-          photoLoc={"../../assets/articles/about/aac_carousel"}
-          carouselObj={carouselConfig}
-          carouselClick={props.carouselClick}
-          imageIndices={props.home.imageIndices}
-          direction={props.home.direction}
-        />
-      </Section>
+
+      <CarouselAboutUs />
     </Article>
   );
 };
