@@ -177,6 +177,12 @@ const NavMainCategory = styled(Link).attrs(
         font-size: 1.5rem;
         padding-bottom: 5px;
     }
+
+                @media(min-width:1300px){
+        top: ${(props) => (props.$nav ? "auto" : "35%")};
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
 `;
 const NavLinkLogo = styled(Link)`
   text-decoration: none;
@@ -200,8 +206,12 @@ const HeaderLogo = styled.div`
     max-width: 18rem;
   }
 
-  @media (min-width: 1300px) {
+  @media (min-width: 1280px) {
     max-width: 23rem;
+  }
+
+  @media (min-width: 1300px) {
+    max-width: 18rem;
   }
   @media (min-width: 1880px) {
   }

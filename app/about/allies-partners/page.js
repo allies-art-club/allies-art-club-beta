@@ -36,7 +36,7 @@ const Partners = () => {
       ></TitleBanner>
       <Section id="alliesPartners">
         <Paragraph>
-          As a collaborative organization, we love working with other great
+          As a collaborative organisation, we love working with other great
           organisations and are grateful for all the connections, support and
           resources that help us and our community to flourish! We want to
           celebrate and say thank you to all the organisations we’ve partnered

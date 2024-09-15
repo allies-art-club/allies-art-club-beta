@@ -19,16 +19,20 @@ export const Container = styled.div`
   }
   @media (min-width: 1280px) {
     margin-left: 34%;
-    margin-top: 2rem;
-    margin-bottom: -3rem;
+    margin-top: -18rem;
+    margin-bottom: -5rem;
     width: 100%;
     max-width: 47rem;
   }
 
+  @media (min-width: 1300px) {
+    max-width: 35rem;
+    margin-left: 35%;
+  }
   @media (min-width: 1880px) {
     margin-left: 35%;
-    margin-top: -18rem;
-   max-width: 50rem;
+    margin-top: -10rem;
+    max-width: 50rem;
   }
   @media (min-width: 2500px) {
     margin-left: 33%;
@@ -81,7 +85,12 @@ export const Culture = styled.p`
     font-size: 4rem; /* Adjust font size for small screens */
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3); /* Adjust shadow size */
   }
+
   @media (min-width: 1300px) {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow size */
+  }
+  @media (min-width: 1880px) {
     font-size: 5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow size */
   }

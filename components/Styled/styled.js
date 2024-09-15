@@ -325,14 +325,16 @@ const RadioLabel = styled.label`
 const FormSelect = styled.select``;
 const FormSelectOption = styled.option``;
 const FormSubmit = styled.button`
-  height: auto;
-  background: none;
+  height: 3rem;
+  background: #ff25ab;
   padding: 0;
-  border: none;
+  margin: 3rem;
+  color: white;
   cursor: pointer;
+  font-size: 1rem;
   position: relative;
   right: 0;
-  width: 50%;
+  width: 100%;
 `;
 
 const FormSubmitFigure = styled.figure`

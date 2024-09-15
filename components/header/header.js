@@ -166,7 +166,7 @@ const Header = (props) => {
                     props.toggleSubMenu("contactUs");
                   }
                 }}
-                href={"/contact"}
+                href={"/contactUs"}
                 $nav={"nav" ? 1 : 0}
                 data-test="contactLink"
               >
