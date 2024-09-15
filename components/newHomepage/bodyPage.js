@@ -128,6 +128,9 @@ const BodyPage = () => {
         </picture>
       </Section>
 
+
+
+
       <Section id="section">
         <HeartsSection>
           {" "}
@@ -149,6 +152,9 @@ const BodyPage = () => {
           </HeartsWrap>
         </HeartsSection>
       </Section>
+
+
+
 
       <Section>
         <picture>

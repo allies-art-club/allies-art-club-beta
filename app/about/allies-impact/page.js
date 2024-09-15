@@ -72,6 +72,7 @@ const AlliesImpact = () => {
         <br />
         <br />
         <br />
+        <br />
         <Paragraph>
           Our club was born in 2021 at food bank in North London and has
           benefited people from range of background in a number of ways.

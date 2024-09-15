@@ -26,6 +26,8 @@ const AboutUsSquares = () => {
           </SquareText>
         </Connect>{" "}
       </SquareBox>
+
+
       <SquareBox>
         <Care>
           <SquareTitle>care</SquareTitle>
@@ -38,6 +40,8 @@ const AboutUsSquares = () => {
           </SquareText>
         </Care>{" "}
       </SquareBox>
+
+      
       <SquareBox>
         <Create>
           <SquareTitle>create</SquareTitle>
