@@ -184,7 +184,7 @@ const DonateSupplies = (props) => {
             </FormInputWrapper>
             <FormCheckboxWrapper $longList={true}>
               <legend>Supplies to donate (check all that apply):*</legend>
-              <FieldSet role="group" aria-labelledBy="checkbox-group">  
+              <FieldSet role="group" aria-labelledby="checkbox-group">  
                 <Fragment>
                   {options && options.length
                     ? options.map((el, i) => (
