@@ -14,6 +14,8 @@ import {
   Cross,
   NavMainCategory,
   Logo,
+  SpacingBlock,
+  BannerWrap,
   Figure,
   NavLinkLogo,
 } from "../Styled/header.styled.js";
@@ -37,8 +39,28 @@ const Header = (props) => {
           tabIndex={0}
           data-test="burgerMenu"
         >
-          <BurgerLayers $open={props.open} />
+          <BurgerLayers $open={props.app.menuOpen} />
         </BurgerMenu>
+        <SpacingBlock />
+        <HeaderLogo $mobile={"true"}>
+              {" "}
+              <Logo>
+                <a href="/">
+                  <Image
+                    src="/assets/aacLogo.png"
+                    alt="Logo"
+                    width={200}
+                    height={162}
+                    layout="responsive"
+                  />
+                </a>
+              </Logo>
+            </HeaderLogo>
+
+
+          <Badge 
+            $mobile={"true"}
+          />
         <HeaderNavListWrap
           id="pageNavWrap"
           onClick={(e) => {
@@ -49,14 +71,15 @@ const Header = (props) => {
               props.toggleMenu(e);
             }
           }}
-          $open={props.open}
+          $open={props.app.menuOpen}
         >
           <Cross id="closeNav" />
           <HeaderNavList
             id="pageNavList"
             data-test="navList"
-            $open={props.open}
+            $open={props.app.menuOpen}
           >
+
             <HeaderLogo>
               {" "}
               <Logo>
@@ -214,10 +237,17 @@ const Header = (props) => {
                                 <SubMenu subMenu={'be-an-allie'}toggleSubMenu={props.toggleSubMenu}toggleMenu={props.toggleMenu} visible={props.subMenu["be-an-allie"]} mainCategory={'be-an-allie'} navLinks={["Contact Us"]}></SubMenu>
                         </HeaderNavListElement> */}
           </HeaderNavList>
-          <FrontPageTitle />
-          <Badge />
+          <BannerWrap >
+            <Badge />
+            <FrontPageTitle />
+
+          </BannerWrap>
         </HeaderNavListWrap>
       </HeaderNav>
+
+      <FrontPageTitle  
+              $mobile={"true"}
+            />
     </HeaderContainer>
   );
 };
