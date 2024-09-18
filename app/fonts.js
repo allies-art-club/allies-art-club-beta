@@ -16,6 +16,7 @@ export const arialNovaCondBold = localFont({
   src: "./fonts/arial-nova-cond/arial-nova-cond-webfont.woff2",
   variable: "--font-arial-nova-cond-bold",
 });
+
 // export const architectsDaughter = Architects_Daughter({
 //   variable:'--font-architects-daughter',
 //   subsets:["latin"],

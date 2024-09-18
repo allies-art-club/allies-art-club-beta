@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background-image: url(/assets/pink-wall.jpg);
+    background-size: contain;
   }
 
   *, *::before, *::after {
