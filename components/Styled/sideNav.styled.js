@@ -67,14 +67,14 @@ const NavLinkSide = styled(Link).attrs(({className})=>className===activeClassNam
     }
     color:white;
     
-    font-family: var(--font-big-stem);
+    font-family: "Balloon Extra Bold", sans-serif;;
     text-transform: uppercase;
     position: static;
     font-size: ${props=>props.$sidenav?"1rem":"1.2rem"};
     line-height: ${props=>props.$sidenav?"1rem":"1.2rem"};
     text-decoration:none;
     @media(min-width:1025px){
-        font-size:${props=>props.$sidenav?"1.5rem":"1.8rem"};
+        font-size:${props=>props.$sidenav?"1.5rem":"1rem"};
         line-height: 1.5rem;
     }
     font-stretch:condensed;

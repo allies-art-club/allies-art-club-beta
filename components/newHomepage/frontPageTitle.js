@@ -7,15 +7,13 @@ import {
   Container,
 } from "../Styled/frontPageTitle.styled.js";
 
-const FrontPageTitle = () => {
+const FrontPageTitle = (props) => {
   return (
-    <Container id="ContainerTextImg">
+    <Container $mobile={props.$mobile}id="ContainerTextImg">
       {" "}
       <BackgroundContainer id="backgroundContainer">
         {" "}
-        <Culture>
-          Creating a Culture <br /> of Community
-        </Culture>
+        <Culture src="/assets/slogan.png" width="1780" height="478"/>
       </BackgroundContainer>{" "}
     </Container>
   );

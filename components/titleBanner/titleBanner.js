@@ -9,6 +9,7 @@ import {
   CentreImageWrapper,
   ImageTitle,
 } from "../Styled/titleBanner.styled.js";
+import "../../app/fonts/arial-nova-cond-bold/stylesheet.css";
 
 const TitleBanner = (props) => {
   return (

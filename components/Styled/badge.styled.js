@@ -1,57 +1,54 @@
 import styled from "styled-components";
-
+import Link from 'next/link'
+import Image from 'next/image'
 export const Container = styled.div`
-  display: flex;
-  transform: rotate(+5deg);
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Centers the content vertically */
-  margin-top: -6rem;
-  margin-left: 35%;
+
+@media(max-width:767px){
+  display:${(props)=>props.$mobile?"flex":"none"};
+  align-items:center;
+  justify-content:flex-end;
+}
+@media(min-width:768px){
+  display:${(props)=>props.$mobile?"none":"flex"};
   width: 100%;
-  margin-bottom: -1rem;
-
-  @media (min-width: 768px) {
-    margin-left: 20%;
-    margin-top: -5rem;
-    margin-bottom: 0.5rem;
-    max-width: 5rem;
-  }
-  @media (min-width: 1024px) {
-    margin-top: -8rem;
-    margin-bottom: 1rem;
-    margin-left: 10rem;
-    width: 100%;
-    max-width: 8rem;
-  }
-  @media (min-width: 1280px) {
-    margin-top: -11rem;
-    margin-left: 11rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    max-width: 10rem;
-  }
-
-  @media (min-width: 1800px) {
-    margin-top: -11rem;
-    margin-left: 12rem;
-    margin-bottom: 1rem;
-    max-width: 30rem;
-  }
-  @media (min-width: 2500px) {
-    margin-top: -10rem;
-    margin-bottom: 0rem;
-    margin-left: 15rem;
-    width: 100%;
-    max-width: 35rem;
-  }
+  flex:1 0 0;
+  z-index:20000;
+}
 `;
-
+export const BadgeLink = styled(Link)`
+display:block;
+margin:auto auto;
+width:5rem;
+height:5rem;
+@media(min-width:768px){
+  position:relative;
+  display:block;
+  width:7.5rem;
+  height:7.5rem;
+  right:-2rem;
+}
+@media(min-width:1025px){
+  right:-4rem;
+}
+`
+export const BadgeImage = styled(Image)`
+    width:5rem;
+    height:5rem;
+    aspect-ratio:1 / 1;
+  @media(min-width:768px){
+    width:7.5rem;
+    height:7.5rem;
+    aspect-ratio:1 / 1
+  }
+`
 export const BadgeBackground = styled.div`
   background-repeat: no-repeat;
   background-size: contain; /* ensure that the entire background image is visible within the container, without any part of it being clipped */
-  padding: 20px 40px; /* Adds padding to ensure the text isn't too close to the edges */
   display: flex;
-  width: 100%;
+  width:5rem;
+  position:relative;
+  left:2.5rem;
+  transform: rotate(+5deg);
 
   @media (min-width: 480px) {
     padding: 5px 10px; /* Further adjust padding for small screens */
@@ -68,7 +65,5 @@ export const BadgeBackground = styled.div`
     margin-top: -16rem;
     margin-bottom: 8rem;
     margin-left: 12rem;
-    width: 100%;
-    max-width: 50rem;
   }
 `;

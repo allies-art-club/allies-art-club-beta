@@ -50,7 +50,8 @@ const ContactUs = (props) => {
         title={"Contact Us"}
       ></TitleBanner>
       <Paragraph>
-      If you&apos;d like to get in touch with any questions, ideas, feedback or suggestions, please fill out the contact form below.
+        If you&apos;d like to get in touch with any questions, ideas, feedback
+        or suggestions, please fill out the contact form below.
       </Paragraph>
       <Formik
         initialValues={{
@@ -61,6 +62,9 @@ const ContactUs = (props) => {
         validationSchema={ContactUsSchema}
         onSubmit={async (values, formik) => {
           try {
+            console.log("Form values:", values); // Log form values
+            console.log("CSRF token:", props.csrf); // Log CSRF token
+
             formik.setSubmitting(true);
             await props.toggleSpinner();
             await props.handleSubmitContactUs(values, props.csrf);
@@ -69,7 +73,7 @@ const ContactUs = (props) => {
             router.push("/thank-you");
           } catch (e) {
             formik.setSubmitting(false);
-            console.log(e);
+            console.log("Error occurred during form submission:", e);
           }
         }}
       >
@@ -131,8 +135,8 @@ const ContactUs = (props) => {
             </FormInputWrapper>
 
             <FormSubmitWrapper>
-              <FormSubmit type="submit" value="Submit" disabled={isSubmitting}>
-                <Button type="submit">Submit</Button>
+              <FormSubmit type="submit" value="Submit" disabled={isSubmitting}>Submit
+              
               </FormSubmit>
               {props.beAnAllie.errorMessage.contactUs ? (
                 <ErrorWrapper>
@@ -154,6 +158,8 @@ const ContactUs = (props) => {
     </Fragment>
   );
 };
+
+
 const mapStateToProps = (state) => {
   return {
     beAnAllie: state.beAnAllie,

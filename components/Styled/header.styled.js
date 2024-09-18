@@ -3,9 +3,40 @@ import styled from "styled-components";
 import Link from "next/link";
 import { theme } from "./theme/theme.js";
 //Header
-const HeaderContainer = styled.header``;
+const HeaderContainer = styled.header`
+  height:17rem;
+  @media(min-width:481px){
+    height:19.5rem;
+  }
+  @media(min-width:1200px){
+    height:23rem;
+  }
+  @media(min-width:1300){
+    height:19.5rem;
+  }
+  @media(min-width:1500px){
+    height:21rem;
+  }
+  @media(min-width:1800px){
+    height:24rem;
+  }
+  
+`;
+const SpacingBlock = styled.div`
+  display:none;
+  @media(max-width:767px){
+    display:block;
+    width:5rem;
+  }
+`
 const HeaderNav = styled.nav`
+  @media(max-width:767px){
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+  }
   position: relative;
+  
 `;
 const HeaderNavListWrap = styled.div`
   @media (max-width: 767px) {
@@ -19,16 +50,23 @@ const HeaderNavListWrap = styled.div`
     overflow: hidden;
     z-index: 20;
   }
+
 `;
 const Cross = styled.button`
   height: 2.2rem;
   width: 2.2rem;
   position: absolute;
-  top: 115px;
-  left: 200px;
+  top: 2.5rem;
+  left:23rem;
   padding: 0px;
   background: none;
   border: none;
+  @media(min-width: 481px){
+    left: 25rem;
+  }
+  @media(min-width: 600px){
+    left:27rem;
+  }
   @media (min-width: 768px) {
     display: none;
   }
@@ -64,28 +102,34 @@ const HeaderNavList = styled.ul`
     position: absolute;
     padding: 25px;
     background-color: white;
-    top: 100px;
+    top: 1.5rem;
     display: ${(props) => (props.$open ? "flex" : "none")};
     flex-direction: column;
     box-shadow: 7px 0 7px ${theme.pink};
     max-height: calc(100vh - 100px);
     overflow-y: scroll;
+    overflow-x:hidden;
+    width:17rem;
+    left:17%;
   }
   @media (min-width: 768px) {
+      padding:0;
     display: flex;
     justify-content: space-around;
+    position:relative;
   }
 `;
 const HeaderNavListElement = styled.li`
   text-decoration: none;
+  display:block;
+  width:5rem;
   position: relative;
-  display: flex;
-
-  margin-top: 5rem; // targets elements of the nav bar besides logo
+  margin-top:1rem;
+  
 `;
 const BurgerMenu = styled.button`
   position: absolute;
-  top: 8%;
+  top: 50px;
   left: 8%;
   transform: translateY(-50%);
   width: 2.2rem;
@@ -177,6 +221,19 @@ const NavMainCategory = styled(Link).attrs(
         font-size: 1.5rem;
         padding-bottom: 5px;
     }
+
+                @media(min-width:1300px){
+        top: ${(props) => (props.$nav ? "auto" : "35%")};
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+
+    
+                @media(min-width:1880px){
+        top: ${(props) => (props.$nav ? "auto" : "35%")};
+        font-size: 2rem;
+        padding-bottom: 5px;
+    }
 `;
 const NavLinkLogo = styled(Link)`
   text-decoration: none;
@@ -189,25 +246,33 @@ const Figure = styled.div`
   width: 100%;
   text-align: center;
 `;
+const BannerWrap=styled.div`
+display:flex;
+position: relative;
+top: 13rem;
+@media(min-width:1025px){
+top: 12rem;
+}
+`
 const HeaderLogo = styled.div`
-  width: 100%;
-  margin-left: -2rem;
-  @media (min-width: 768px) {
-    max-width: 15rem;
-    margin-right: -2rem;
-  }
-  @media (min-width: 1024px) {
-    max-width: 18rem;
-  }
 
-  @media (min-width: 1300px) {
-    max-width: 23rem;
+  width: 100%;
+  max-width:10rem;
+  display:${(props)=>props.$mobile?"block":"none"};
+  @media(max-width: 767px){
+    text-align:center;
   }
-  @media (min-width: 1880px) {
+  @media (min-width: 768px) {
+    display:${(props)=>props.$mobile?"none":"block"};
+    max-width: 12rem;
+    margin-top:1rem;
+  }
+  @media (min-width: 1025px) {
+    max-width: 15rem;
   }
 
   @media (min-width: 1920px) {
-    max-width: 35rem;
+    max-width: 15rem;
     margin-right: -12rem;
   }
 `;
@@ -230,5 +295,7 @@ export {
   NavLinkLogo,
   HeaderLogo,
   Logo,
+  BannerWrap,
   Figure,
+  SpacingBlock
 };

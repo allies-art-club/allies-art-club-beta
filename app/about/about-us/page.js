@@ -8,6 +8,7 @@ import {
   Article,
   TextImageTop,
   HomepageSubtitles,
+  LinkGrid,
   GridSubtitles,
   Section,
   Link,
@@ -18,8 +19,6 @@ import {
   Cultural,
 } from "../../../components/Styled/clipboardHeadings.styled.js";
 import {
-  GridColumn,
-  GridWrap,
   GridText,
   OurVision,
   OurVisionStarL,
@@ -28,12 +27,19 @@ import {
   OurValuesHeartsR,
 } from "../../../components/Styled/aboutUs.styled.js";
 
+import {
+  GridWrap,
+  GridColumn,
+  ImageGrid,
+} from "../../../components/Styled/gridParagraph.styled";
+
 import SideNav from "../../../components/sideNav/sideNav.js";
 import TitleBanner from "../../../components/titleBanner/titleBanner.js";
 import AboutUsSquares from "../../../components/aboutUsSquares.js";
 import Carousel from "../../../components/carousel.js";
 import { carouselClick } from "../../../utils/Actions/homeActions";
 import carouselConfig from "../../../utils/carouselConfig/carouselAboutAac.js";
+import CarouselAboutUs from "../../../components/carouselAboutUs.js";
 
 import "../../fonts/arial-nova-cond-bold/stylesheet.css";
 
@@ -109,12 +115,12 @@ const AboutAac = (props) => {
         {" "}
         <GridWrap id="gridWrap">
           <GridColumn id="gridColumn">
+            <HeadingGrid>
+              <Creative>
+                CREATIVE <br /> EXPRESSION
+              </Creative>
+            </HeadingGrid>
             <GridText id="gridText">
-              <HeadingGrid>
-                <Creative>
-                  CREATIVE <br /> EXPRESSION
-                </Creative>
-              </HeadingGrid>
               <Paragraph>
                 Create inclusive opportunities for people to express their
                 ideas, knowledge and experiences through a range of artistic
@@ -122,16 +128,17 @@ const AboutAac = (props) => {
               </Paragraph>
             </GridText>
           </GridColumn>
+
           <GridColumn>
+            {" "}
+            <HeadingGrid>
+              <Collective>
+                {" "}
+                COLLECTIVE <br />
+                CARE
+              </Collective>{" "}
+            </HeadingGrid>
             <GridText id="gridText">
-              {" "}
-              <HeadingGrid>
-                <Collective>
-                  {" "}
-                  COLLECTIVE <br />
-                  CARE
-                </Collective>{" "}
-              </HeadingGrid>
               <Paragraph>
                 Provide fun, safe and accessible spaces for people to connect,
                 build supportive relationships and improve their health and
@@ -139,18 +146,19 @@ const AboutAac = (props) => {
               </Paragraph>{" "}
             </GridText>
           </GridColumn>
+
           <GridColumn>
+            <HeadingGrid>
+              <Cultural>
+                {" "}
+                CULTURAL
+                <br /> EMPOWERMENT
+              </Cultural>{" "}
+            </HeadingGrid>{" "}
             <GridText id="gridText">
-              <HeadingGrid>
-                <Cultural>
-                  {" "}
-                  CULTURAL
-                  <br /> EMPOWERMENT
-                </Cultural>{" "}
-              </HeadingGrid>
               <Paragraph>
-                Develop people&apos;s creative skills, knowledge and involvement in
-                generating positive social change through art and culture.
+                Develop people&apos;s creative skills, knowledge and involvement
+                in generating positive social change through art and culture.
               </Paragraph>{" "}
             </GridText>
           </GridColumn>
@@ -169,12 +177,14 @@ const AboutAac = (props) => {
             />
           </OurVisionStarL>{" "}
           <HomepageSubtitles>Our Vision</HomepageSubtitles>
+          <br />
           <Paragraph>
             Our vision is a life-affirming world, where a culture of community,
             creativity and care supports all life to flourish.
           </Paragraph>
         </OurVision>
       </Section>
+
       <Section>
         <picture>
           <source
@@ -225,54 +235,65 @@ const AboutAac = (props) => {
         <GridWrap id="gridWrap">
           <GridColumn id="gridColumn">
             <GridSubtitles>Art Care</GridSubtitles>
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics1.png"
-              alt="aboutUsRoundPics1"
-              width={500}
-              height={500}
-              layout="responsive"
-            />
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic1.png"
+                alt="aboutUsRoundPics1"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
-              <i>How can the arts support our health and wellbeing?</i>
+              <LinkGrid href="/activities/projects/art-care">
+                <i>How can the arts support our health and wellbeing?</i>
+              </LinkGrid>
             </Paragraph>
           </GridColumn>
-          <GridColumn>
-            <GridSubtitles>Creative Ecologies </GridSubtitles>
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics2.png"
-              alt="aboutUsRoundPics2"
-              width={500}
-              height={500}
-              layout="responsive"
-            />
+
+          <GridColumn id="gridColumn">
+            <GridSubtitles>Creative Ecologies</GridSubtitles>
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic2.png"
+                alt="aboutUsRoundPics1"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
-              <i> How can our labour practices be life-affirming?</i>
+              <LinkGrid href="#">
+                <i>How can we live well together on our shared planet?</i>
+              </LinkGrid>
             </Paragraph>
           </GridColumn>
-          <GridColumn>
+          <GridColumn id="gridColumn">
             <GridSubtitles>Reimagining Work</GridSubtitles>
-            <Image
-              src="/assets/aboutUsRoundPics/aboutUsRoundPics3.png"
-              alt="aboutUsRoundPics3"
-              width={500}
-              height={500}
-              layout="responsive"
-            />
+            <ImageGrid id="image">
+              <Image
+                src="/assets/gridParagraphPics/gridParagraphPic3.png"
+                alt="aboutUsRoundPics3"
+                width={500}
+                height={500}
+              />
+            </ImageGrid>
             <Paragraph>
-              <i> How can we live well together on our shared planet?</i>
+              <LinkGrid href="#">
+                <i>How can our labour practices be life-affirming?</i>
+              </LinkGrid>
             </Paragraph>
           </GridColumn>
         </GridWrap>
       </Section>
+
       <Section>
         <Paragraph>
-          See our upcoming events <Link href="#">here.</Link>
+          See our upcoming events <Link href="/activities/events">here.</Link>
         </Paragraph>
       </Section>
 
       <Section>
         <OurValues id="ourVision">
-          <OurValuesHeartsR id="OurVisionStarL">
+          <OurValuesHeartsR id="ourValuesHeartsR">
             <Image
               src="/assets/general/heartsR.png"
               alt="Stars L"
@@ -282,14 +303,17 @@ const AboutAac = (props) => {
             />
           </OurValuesHeartsR>{" "}
           <HomepageSubtitles> Our values</HomepageSubtitles>
+          <br />
           <Paragraph>
             As a community, our values can be summarised as:
           </Paragraph>
         </OurValues>
       </Section>
+
       <Section>
         <AboutUsSquares />
       </Section>
+
       <Section>
         <HomepageSubtitles>Our journey</HomepageSubtitles>
         <Paragraph>
@@ -330,7 +354,10 @@ const AboutAac = (props) => {
           benefitting communities.
         </Paragraph>
         <Paragraph>
-          You can read more about what a CBS is <Link href="#">here.</Link>
+          You can read more about what a CBS is{" "}
+          <Link href="/discussions/club-articles/were-a-community-benefit-society">
+            here.
+          </Link>
         </Paragraph>
         <picture>
           <source
@@ -353,16 +380,8 @@ const AboutAac = (props) => {
           Below are some of the projects and events we’ve run since 2021
         </GridSubtitles>
       </Section>
-      <Section id="carousel">
-        <Carousel
-          square={"yes"}
-          photoLoc={"../../assets/articles/about/aac_carousel"}
-          carouselObj={carouselConfig}
-          carouselClick={props.carouselClick}
-          imageIndices={props.home.imageIndices}
-          direction={props.home.direction}
-        />
-      </Section>
+
+      <CarouselAboutUs />
     </Article>
   );
 };
