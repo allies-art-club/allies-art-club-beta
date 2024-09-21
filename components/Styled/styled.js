@@ -53,10 +53,10 @@ const HomepageSubtitles = styled(SubTitle)`
   }
 
   @media (min-width: 1025px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   @media (min-width: 1300px) {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 `;
 
@@ -438,18 +438,21 @@ const TextImage = styled.img`
   border-radius: 50%;
   width: 80%;
   display: block;
-  margin: 0;
+  margin: auto;
   shape-outside: circle();
-  @media (min-width: 421px) {
+  @media (min-width: 481px) {
     width: 60%;
   }
   @media (min-width: 768px) {
     margin: 1rem;
     margin-right: ${(props) => (props.$right ? "-1.5rem" : "5rem")};
-    margin-left: ${(props) => (props.$right ? "5rem" : "-1.5rem")};
+    margin-left: ${(props) => (props.$right ? "1rem" : "-1.5rem")};
     margin-top: -0.1rem;
     float: ${(props) => (props.$right ? "right" : "left")};
-    width: 30rem;
+    width: 50%;
+  }
+  @media(min-width:1025px){
+    width: 40%;
   }
 `;
 const TextImageFigure = styled.figure`
