@@ -39,8 +39,8 @@ const BodyPage = () => {
           />
         </picture>
         <HomepageSubtitles>
-          We are a grassroots community arts <br />
-          co-operative making waves in the <br />
+          We are a grassroots community arts
+          co-operative making waves in the
           cultural landscape.
         </HomepageSubtitles>
         <Paragraph>
