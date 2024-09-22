@@ -183,12 +183,7 @@ const Header = (props) => {
             </HeaderNavListElement>
             <HeaderNavListElement id="contact">
               <NavMainCategory
-                onClick={(e) => {
-                  if (window.innerWidth < 768) {
-                    e.preventDefault();
-                    props.toggleSubMenu("contactUs");
-                  }
-                }}
+                
                 href={"/contactUs"}
                 $nav={"nav" ? 1 : 0}
                 data-test="contactLink"
