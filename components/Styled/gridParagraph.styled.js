@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Image from 'next/image'
 // Container for the grid
 export const GridWrap = styled.div`
   display: flex;
@@ -22,43 +22,29 @@ export const GridColumn = styled.div`
   padding: 1rem;
   border-radius: 10px;
   border: 4px dotted grey;
-
+  width:100%;
   @media (max-width: 768px) {
     flex: 1 1 100%; /* Full width on smaller screens */
   }
 `;
 
 // Responsive image styling
-export const Image = styled.img`
+export const AboutImage = styled(Image)`
   width: 100%; /* Ensure image scales within its container */
+  aspect-ratio: 1 / 1;
+  margin:auto;
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Circular images */
   display: block; /* Block element to avoid inline spacing issues */
   max-width: 100%; /* Ensure it doesn't exceed container width */
 
   /* Responsive size adjustments */
-  @media (max-width: 1200px) {
-    max-width: 18rem; /* Medium size for medium screens */
-  }
 
-  @media (max-width: 768px) {
-    max-width: 14rem; /* Smaller size for tablets */
-  }
-
-  @media (max-width: 480px) {
-    max-width: 10rem; /* Smaller size for mobile devices */
-  }
-
-  @media (max-width: 375px) {
-    max-width: 8rem; /* Smallest size for very small screens */
-  }
 `;
 
 // Wrapper for the image to ensure it is centered
 export const ImageGrid = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
   margin-bottom: 1rem;
   padding: 1rem; /* Adjusted padding for better spacing */
 
