@@ -2,7 +2,7 @@
 
 import React from "react";
 import { connect } from "react-redux";
-import Image from "next/image";
+import Image from 'next/image'
 import {
   Paragraph,
   Article,
@@ -31,6 +31,7 @@ import {
   GridWrap,
   GridColumn,
   ImageGrid,
+  AboutImage
 } from "../../../components/Styled/gridParagraph.styled";
 
 import SideNav from "../../../components/sideNav/sideNav.js";
@@ -236,11 +237,11 @@ const AboutAac = (props) => {
           <GridColumn id="gridColumn">
             <GridSubtitles>Art Care</GridSubtitles>
             <ImageGrid id="image">
-              <Image
+              <AboutImage
                 src="/assets/gridParagraphPics/gridParagraphPic1.png"
                 alt="aboutUsRoundPics1"
-                width={500}
-                height={500}
+                width="500"
+                height="500"
               />
             </ImageGrid>
             <Paragraph>
@@ -253,7 +254,7 @@ const AboutAac = (props) => {
           <GridColumn id="gridColumn">
             <GridSubtitles>Creative Ecologies</GridSubtitles>
             <ImageGrid id="image">
-              <Image
+              <AboutImage
                 src="/assets/gridParagraphPics/gridParagraphPic2.png"
                 alt="aboutUsRoundPics1"
                 width={500}
@@ -269,7 +270,7 @@ const AboutAac = (props) => {
           <GridColumn id="gridColumn">
             <GridSubtitles>Reimagining Work</GridSubtitles>
             <ImageGrid id="image">
-              <Image
+              <AboutImage
                 src="/assets/gridParagraphPics/gridParagraphPic3.png"
                 alt="aboutUsRoundPics3"
                 width={500}
