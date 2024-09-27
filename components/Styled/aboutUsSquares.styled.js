@@ -5,9 +5,8 @@ export const ContainerSquares = styled.div`
   width: 100%;
   grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
   margin-bottom: 1rem;
-
-  @media (min-width: 375px) {
-    gap: 1rem;
+  @media (max-width:767px){
+    flex-direction:column;
   }
   @media (min-width: 580px) {
     gap: 6rem;
@@ -34,7 +33,10 @@ export const ContainerSquares = styled.div`
 const squareWidth = "20rem";
 const squareHeight = "17rem";
 
-export const SquareBox = styled.div``;
+export const SquareBox = styled.div`
+margin:auto;
+
+`;
 
 export const SquareText = styled.div`
   display: flex;
@@ -51,18 +53,18 @@ export const Connect = styled.div`
   height: ${squareHeight};
 
   @media (min-width: 375px) {
-    width: 8rem;
-    height: 8rem;
+    width: 14rem;
+    height: 14rem;
   }
 
   @media (min-width: 768px) {
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
   }
 
   @media (min-width: 1024px) {
-    width: 13rem;
-    height: 14rem;
+    width: 11rem;
+    height: 11rem;
   }
 
   @media (min-width: 1280px) {
@@ -70,8 +72,8 @@ export const Connect = styled.div`
     height: 16rem;
   }
   @media (min-width: 1300px) {
-    width: 14rem;
-    height: 14rem;
+    width: 10rem;
+    height: 10rem;
   }
 
   @media (min-width: 1880px) {
@@ -87,25 +89,25 @@ export const Care = styled.div`
   height: ${squareHeight};
 
   @media (min-width: 375px) {
-    width: 8rem;
-    height: 8rem;
+    width: 14rem;
+    height: 14rem;
   }
   @media (min-width: 768px) {
-    width: 10rem;
-    height: 10rem;
+    width:9rem;
+    height: 9rem;
   }
 
   @media (min-width: 1024px) {
-    width: 13rem;
-    height: 14rem;
+    width: 11rem;
+    height: 11rem;
   }
   @media (min-width: 1280px) {
     width: 16rem;
     height: 16rem;
   }
   @media (min-width: 1300px) {
-    width: 14rem;
-    height: 14rem;
+    width: 10rem;
+    height: 10rem;
   }
   @media (min-width: 1880px) {
     width: 18rem;
@@ -120,26 +122,26 @@ export const Create = styled.div`
   height: ${squareHeight};
 
   @media (min-width: 375px) {
-    width: 8rem;
-    height: 8rem;
+    width: 14rem;
+    height: 14rem;
   }
 
   @media (min-width: 768px) {
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
   }
 
   @media (min-width: 1024px) {
-    width: 13rem;
-    height: 14rem;
+    width: 11rem;
+    height: 11rem;
   }
   @media (min-width: 1280px) {
     width: 16rem;
     height: 16rem;
   }
   @media (min-width: 1300px) {
-    width: 14rem;
-    height: 14rem;
+    width: 10rem;
+    height: 10rem;
   }
   @media (min-width: 1880px) {
     width: 18rem;
@@ -166,7 +168,7 @@ export const SquareTitle = styled.h2`
     font-size: 1rem;
   }
   @media (min-width: 1024px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   @media (min-width: 1280px) {
@@ -174,7 +176,7 @@ export const SquareTitle = styled.h2`
   }
 
   @media (min-width: 1300px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   @media (min-width: 1880px) {
@@ -190,7 +192,7 @@ export const Paragraph = styled.div`
   font-family: var(--font-arial-nova-cond);
 
   @media (min-width: 375px) {
-    font-size: 0.6rem;
+    font-size: 1.5rem;
     margin-top: -1rem;
   }
 
@@ -201,13 +203,13 @@ export const Paragraph = styled.div`
   }
 
   @media (min-width: 1024px) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   @media (min-width: 1280px) {
     font-size: 1.7rem;
   }
   @media (min-width: 1300px) {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1rem;
   }
   @media (min-width: 1880px) {

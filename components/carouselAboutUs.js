@@ -52,9 +52,13 @@ const CarouselAboutUs = () => {
               <Image
                 src={image.src} // Use the image path from metadata
                 alt={image.alt}
-                fill
+                width={400}
+                height={400}
                 style={{
-                  objectFit: "cover",
+                  width:"100%",
+                  height:"100%",
+                  position:"relative",
+                  aspectRatio:"1 / 1",
                   borderRadius: "0", // Make the image circular
                 }}
               />
