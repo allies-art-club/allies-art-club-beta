@@ -27,8 +27,8 @@ export const CarouselSlide = styled.div`
 
 // Container for the image
 export const CarouselImage = styled.div`
-  width: 700px; /* Control the size of the circular image */
-  height: 700px;
+  width: 100%; /* Control the size of the circular image */
+  height: 100%;
   border-radius: 50%;
   overflow: hidden;
   position: relative; /* Required for next/image fill */
