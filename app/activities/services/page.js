@@ -63,9 +63,10 @@ const Services = () => {
         <br />
         <Paragraph>
           Would you like our club to support your project, event or
-          organisation? You can <Link>get in touch via email</Link> and book a
-          free consultation to discuss how we can provide a bespoke service to
-          suit your group, project, event or organisation.
+          organisation? You can{" "}
+          <Link href="/contactUs">get in touch via email</Link> and book a free
+          consultation to discuss how we can provide a bespoke service to suit
+          your group, project, event or organisation.
         </Paragraph>
         <picture>
           <source

@@ -43,12 +43,10 @@ const HeartsSection = styled.div`
   }
 
   @media (min-width: 1300px) {
-    margin-bottom: -4rem;
-    margin-top: -4rem;
   }
 
-    @media (min-width: 1880px) {
-     margin-bottom: -4rem;
+  @media (min-width: 1880px) {
+    margin-bottom: -4rem;
     margin-top: 4rem;
   }
 `;
@@ -62,8 +60,11 @@ const HeartsTextWrap = styled.div`
 
 const HeartsWrap = styled.div`
   width: 100%;
-  max-width: 15rem;
-  margin-top: -8rem;
+
+  @media (min-width: 1300px) {
+    max-width: 15rem;
+    margin-top: -6rem;
+  }
 `;
 
 export {

@@ -12,37 +12,44 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     margin-left: 20%;
-    margin-top: -5rem;
+    margin-top: -4rem;
     margin-bottom: 0.5rem;
-    max-width: 5rem;
+    max-width: 20rem;
   }
   @media (min-width: 1024px) {
-    margin-top: -8rem;
+    margin-top: -7rem;
     margin-bottom: 1rem;
-    margin-left: 10rem;
+    margin-left: 6rem;
     width: 100%;
-    max-width: 8rem;
+    max-width: 25rem;
   }
   @media (min-width: 1280px) {
-    margin-top: -11rem;
+    margin-top: -8rem;
     margin-left: 11rem;
     margin-bottom: 1rem;
     width: 100%;
     max-width: 10rem;
   }
 
+  @media (min-width: 1300px) {
+    margin-top: -6rem;
+    margin-left: 18rem;
+    margin-bottom: -0.5rem;
+    width: 100%;
+    max-width: 7rem;
+  }
   @media (min-width: 1800px) {
     margin-top: -11rem;
     margin-left: 12rem;
-    margin-bottom: 1rem;
-    max-width: 30rem;
+    margin-bottom: 2rem;
+    max-width: 55rem;
   }
   @media (min-width: 2500px) {
-    margin-top: -10rem;
+    margin-top: -8rem;
     margin-bottom: 0rem;
-    margin-left: 15rem;
+    margin-left: 18rem;
     width: 100%;
-    max-width: 35rem;
+    max-width: 60rem;
   }
 `;
 
