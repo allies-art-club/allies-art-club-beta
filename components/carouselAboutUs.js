@@ -55,7 +55,7 @@ const CarouselAboutUs = () => {
                 fill
                 style={{
                   objectFit: "cover",
-                  borderRadius: "50%", // Make the image circular
+                  borderRadius: "0", // Make the image circular
                 }}
               />
             </CarouselImage>

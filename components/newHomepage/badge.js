@@ -1,22 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { BadgeBackground, Container,BadgeLink,BadgeImage} from "../Styled/badge.styled.js";
 
-import { BadgeBackground, Container } from "../Styled/badge.styled.js";
-
-const Badge = () => {
+const Badge = (props) => {
   return (
-    <Container>
-      <a href="/donate/the-diy-fund">
-      <Image
+    <Container $mobile={props.$mobile}>
+      <BadgeLink href="/donate/the-diy-fund">
+      <BadgeImage
         src="/assets/badge.png"
         alt="Badge"
         width={364}
         height={364}
-        layout="responsive"
-      /></a>
+      />
+
+{/* <BadgeBackground id="badgeBackground"></BadgeBackground> */}
+      </BadgeLink>
       {/* <Link to="/donate/donations" style={{ textDecoration: "none" }}> */}
-      <BadgeBackground id="badgeBackground"></BadgeBackground>
       {/* </Link> */}
     </Container>
   );
