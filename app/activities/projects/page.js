@@ -12,18 +12,14 @@ import { carouselClick } from "../../../utils/Actions/homeActions";
 import carouselConfig from "../../../utils/carouselConfig/carouselAboutAac.js";
 
 import {
-  Section,
   Paragraph,
+  Section,
   HomepageSubtitles,
   GridSubtitles,
   LinkGrid,
   TextImageTop,
 } from "../../../components/Styled/styled.js";
-import {
-  GridWrap,
-  GridColumn,
-  ImageGrid,
-} from "../../../components/Styled/gridParagraph.styled.js";
+import { BorderDottedBroken } from "../../../components/Styled/gridParagraph.styled.js";
 import {
   HighlightsWrap,
   HeadingContainer,
@@ -47,52 +43,36 @@ const Projects = (props) => {
         sideSrc2={"/assets/general/starR.png"}
         title={"Allie’s Projects"}
       ></TitleBanner>
-      <Section>
-        <picture>
-          <source
-            media="(max-width: 1024px)"
-            srcSet="/assets/homepage/homepage1-small.png 1x, /assets/homepage/homepage1-large.png 2x"
-          />
-          <source
-            media="(min-width: 1025px)"
-            srcSet="/assets/homepage/homepage1-2x.png"
-          />
-          <TextImageTop
-            $right={true}
-            src={"/assets/homepage/homepage1-2x.png"}
-            alt="Homepage pic 1"
-          />
-        </picture>
-        <br />
-        <br />
-        <br />
+
+
+<Section id="pictureParagraph">
+  <div className="container-fluid">
+    <div className="row align-items-center flex-column flex-lg-row">
+      
+      <div className="col-12 col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
         <HomepageSubtitles>
           Creative explorations and practices for a life-affirming world
         </HomepageSubtitles>
-        <br />
-        <br />
         <Paragraph>
           As an organisation and a community, we practice and explore ways of
           creating and sustaining a life-affirming world in which all living
           beings can thrive.
         </Paragraph>
+      </div>
 
-        <picture>
-          <source
-            media="(max-width: 1024px)"
-            srcSet="/assets/homepage/homepage1-small.png 1x, /assets/homepage/homepage1-large.png 2x"
-          />
-          <source
-            media="(min-width: 1025px)"
-            srcSet="/assets/homepage/homepage1-2x.png"
-          />
-          <TextImageTop
-            $mobile={true}
-            src={"/assets/homepage/homepage1-2x.png"}
-            alt="Homepage pic 1"
-          />
-        </picture>
-      </Section>
+      <div className="col-12 col-lg-4 text-center text-lg-end">
+        <img
+          src="/assets/homepage/homepage1-2x.png"
+          alt="Homepage pic 1"
+          className="img-fluid rounded-circle"
+        />
+      </div>
+
+    </div>
+  </div>
+</Section>
+
+
 
       <Section>
         <Paragraph>
@@ -101,71 +81,78 @@ const Projects = (props) => {
           our ways of living, working and relating.
         </Paragraph>
 
-        <GridWrap id="gridWrap">
-          <GridColumn id="gridColumn">
-            <GridSubtitles>Art Care</GridSubtitles>
-            <ImageGrid id="image">
-              <Image
-                src="/assets/gridParagraphPics/gridParagraphPic1.png"
-                alt="aboutUsRoundPics1"
-                width={500}
-                height={500}
-              />
-            </ImageGrid>
-            <Paragraph>
-              <LinkGrid href="/activities/projects/art-care">
-                <i>How can the arts support our health and wellbeing?</i>
-              </LinkGrid>
-            </Paragraph>
-          </GridColumn>
+        <div className="container my-5">
+          <div className="row text-center">
+            <div className="col-md-4 mb-4">
+              <BorderDottedBroken>
+                <h3>
+                  Art <br /> Care
+                </h3>
+                <Image
+                  src="/assets/gridParagraphPics/gridParagraphPic1.png"
+                  alt="aboutUsRoundPics1"
+                  width={500}
+                  height={500}
+                  className="img-fluid rounded"
+                />
+                <p className="text-center mt-3">
+                  <i>How can the arts support our health and wellbeing?</i>
+                </p>
+              </BorderDottedBroken>
+            </div>
 
-          <GridColumn id="gridColumn">
-            <GridSubtitles>Creative Ecologies</GridSubtitles>
-            <ImageGrid id="image">
-              <Image
-                src="/assets/gridParagraphPics/gridParagraphPic2.png"
-                alt="aboutUsRoundPics1"
-                width={500}
-                height={500}
-              />
-            </ImageGrid>
-            <Paragraph>
-              <LinkGrid href="#">
-                <i>How can we live well together on our shared planet?</i>
-              </LinkGrid>
-            </Paragraph>
-          </GridColumn>
-          <GridColumn id="gridColumn">
-            <GridSubtitles>Reimagining Work</GridSubtitles>
-            <ImageGrid id="image">
-              <Image
-                src="/assets/gridParagraphPics/gridParagraphPic3.png"
-                alt="aboutUsRoundPics3"
-                width={500}
-                height={500}
-              />
-            </ImageGrid>
-            <Paragraph>
-              <LinkGrid href="#">
-                <i>How can our labour practices be life-affirming?</i>
-              </LinkGrid>
-            </Paragraph>
-          </GridColumn>
-        </GridWrap>
+            <div className="col-md-4 mb-4">
+              <BorderDottedBroken>
+                <h3>Creative Ecologies</h3>
+                <Image
+                  src="/assets/gridParagraphPics/gridParagraphPic2.png"
+                  alt="aboutUsRoundPics1"
+                  width={500}
+                  height={500}
+                  className="img-fluid rounded"
+                />
+                <p className="text-center mt-3">
+                  <i>How can we live well together on our shared planet?</i>
+                </p>
+              </BorderDottedBroken>
+            </div>
+
+            <div className="col-md-4 mb-4">
+              <BorderDottedBroken>
+                <h3>Reimagining Work</h3>
+                <Image
+                  src="/assets/gridParagraphPics/gridParagraphPic3.png"
+                  alt="aboutUsRoundPics1"
+                  width={500}
+                  height={500}
+                  className="img-fluid rounded"
+                />
+                <p className="text-center mt-3">
+                  <i>How can our labour practices be life-affirming?</i>
+                </p>
+              </BorderDottedBroken>
+            </div>
+          </div>
+        </div>
       </Section>
 
       <Section>
-        <HighlightsWrap id="highlights">
-          <HomepageSubtitles> Project highlights</HomepageSubtitles>
-          <HighlightsHeartsR id="highlightsHeartsR">
-            <Image
-              src="/assets/general/heartsR.png"
-              alt="Stars L"
-              width={400}
-              height={262}
-            />
-          </HighlightsHeartsR>{" "}
-        </HighlightsWrap>
+        <div className="container-fluid my-5">
+          <div className="row">
+            <div className="col-md-6 d-flex align-items-center">
+              <HomepageSubtitles>Project highlights</HomepageSubtitles>
+            </div>
+            <div className="col-md-6 d-flex justify-content-end align-items-center">
+              <Image
+                src="/assets/general/heartsR.png"
+                alt="Stars L"
+                width={400}
+                height={262}
+                className="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
       </Section>
 
       <Section id="borderWrap">
