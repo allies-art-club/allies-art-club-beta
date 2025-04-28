@@ -48,16 +48,16 @@ const SubTitle = styled.h2`
 const HomepageSubtitles = styled(SubTitle)`
   text-align: left;
   font-size: 2rem;
-  @media (min-width: 320px) {
-    font-size: 2rem;
-  }
+  // @media (min-width: 320px) {
+  //   font-size: 2rem;
+  // }
 
-  @media (min-width: 1025px) {
-    font-size: 2.5rem;
-  }
-  @media (min-width: 1300px) {
-    font-size: 3rem;
-  }
+  // @media (min-width: 1025px) {
+  //   font-size: 2.5rem;
+  // }
+  // @media (min-width: 1300px) {
+  //   font-size: 3rem;
+  // }
 `;
 
 const GridSubtitles = styled(SubTitle)`
@@ -93,7 +93,8 @@ const PageNavItem = styled.li``;
 //Main page elements
 const Section = styled.section`
   padding: 1rem 20px;
-  margin: 1rem 0 1.5rem;
+  // margin: 1rem 0 1.5rem;
+  margin: 0;
   #conclusion {
     margin-top: 200px;
   }
@@ -101,7 +102,7 @@ const Section = styled.section`
 
 const SubSection = styled.div``;
 const Paragraph = styled.p`
-  font-size: 2rem;
+  font-size: 1.5rem;
 `;
 
 const PageDescription = styled(Paragraph)`

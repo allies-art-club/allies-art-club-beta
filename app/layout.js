@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../components/header/header.js'
 import Footer from '../components/footer/footer.js'
 import {Provider} from 'react-redux';

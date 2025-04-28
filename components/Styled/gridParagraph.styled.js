@@ -1,19 +1,87 @@
 import styled from "styled-components";
-import Image from 'next/image'
-// Container for the grid
-export const GridWrap = styled.div`
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap onto new lines */
-  justify-content: space-between; /* Distribute columns evenly */
-  gap: 20px;
-  padding: 0;
-  margin-bottom: -5rem;
+import Image from "next/image";
 
-  @media (max-width: 768px) {
-    flex-direction: column; /* Stack the columns on smaller screens */
-    gap: 1rem;
-    margin-bottom: 0;
+export const BackgroundContainer = styled.div`
+
+  background-color: ${({ bgColor }) =>
+    bgColor === "blue"
+      ? "#2F60DE"  // Blue background
+      : bgColor === "pink"
+      ? "#FF25AB"  // Pink background
+      : bgColor === "yellow"
+      ? "#F4BC33"  // yellow background
+      : "#ffffff"}; 
+  
+  color: ${({ bgColor }) =>
+    bgColor === "blue" || bgColor === "green" || bgColor === "red" ? "white" : "black"};
+
+
+.tilt-left {
+  transform: rotate(-10deg); /* Rotate 10 degrees to the left */
+}
+
+/* Tilt to the right */
+.tilt-right {
+  transform: rotate(10deg); /* Rotate 10 degrees to the right */
+}
+`;
+
+export const TextWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  flex: 1 1 auto;
+  min-width: 0;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  h3, h4, p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
+
+
+`;
+
+
+
+
+export const BorderDottedBroken = styled.div`
+  border: 2px dotted black;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+    color: #000000;
+  }
+
+  img {
+    width: 100%; 
+    max-width: 200px;
+    height: auto;
+    border-radius;
+    margin: 0 auto;
+
+  }
+
 `;
 
 // Individual grid column styling
@@ -22,7 +90,7 @@ export const GridColumn = styled.div`
   padding: 1rem;
   border-radius: 10px;
   border: 4px dotted grey;
-  width:100%;
+  width: 100%;
   @media (max-width: 768px) {
     flex: 1 1 100%; /* Full width on smaller screens */
   }
@@ -32,14 +100,13 @@ export const GridColumn = styled.div`
 export const AboutImage = styled(Image)`
   width: 100%; /* Ensure image scales within its container */
   aspect-ratio: 1 / 1;
-  margin:auto;
+  margin: auto;
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Circular images */
   display: block; /* Block element to avoid inline spacing issues */
   max-width: 100%; /* Ensure it doesn't exceed container width */
 
   /* Responsive size adjustments */
-
 `;
 
 // Wrapper for the image to ensure it is centered
