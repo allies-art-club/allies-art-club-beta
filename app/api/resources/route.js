@@ -1,15 +1,27 @@
+// app/api/resources/route.js
+import { join } from 'path';
+import { readFile } from 'fs/promises';
 
+export async function GET(request) {
+  try {
+    const url = new URL(request.url);
+    const pathParts = url.pathname.split('/');
+    const filename = pathParts[pathParts.length - 1] + '.pdf';
 
-export default function GET(req){
-    try{
-        const article= req.url.split('/')[2]+'.pdf';
-        return Response.status(200).download(path.join(__dirname,'..','..','..','utils','resources',req.body.category,article));
+    const filePath = join(process.cwd(), 'utils', 'resources', 'some-category', filename);
+    const fileBuffer = await readFile(filePath);
 
-    }
-    catch(e){
-        e.status=500;
-        e.input=req.body;
-        Response.status(200).json()
-    }
-
+    return new Response(fileBuffer, {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': `attachment; filename="${filename}"`,
+      },
+    });
+  } catch (e) {
+    return new Response(JSON.stringify({ error: 'File not found', details: e.message }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
 }
