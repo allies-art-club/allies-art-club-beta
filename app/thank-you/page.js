@@ -1,21 +1,24 @@
-"use client"
-import React from 'react';
-import thankYou from '../../components/Styled/bannerSvg/thankYou.svg';
+"use client";
 
-import {RibbonImage} from '../../components/Styled/titleBanner.styled'
+import Link from "next/link";
+import React from "react";
 
-import {ThankYouWrap,BannerTextImg,ImageWrapper, SideImg} from '../../components/Styled/donate.styled.js';
-const ThankYou = () => {
-    return(
-        <ThankYouWrap>
-            <SideImg $left={"true"}alt={"hearts left"} src={"/assets/general/heartsL.png"}/>
-            <SideImg alt={"hearts right"} src={"/assets/general/heartsR.png"} />
-            <ImageWrapper $thankYou={"true"}>
-                    <RibbonImage alt={"Text ribbon"}src={'/assets/general/ribbon.png'}/>
-                    <BannerTextImg aria-label="contains svg" alt="allie's story banner svg text" type="image/svg+xml" data={thankYou}/>
-                </ImageWrapper>
-        </ThankYouWrap>
-    )
-}
+const ThankYouPage = () => {
+  return (
+    <div className="d-flex flex-column align-items-center justify-content-center vh-100 p-4 text-center">
+      <h1 className="mb-4">Thank You!</h1>
+      <p className="mb-4">
+        Your message has been sent successfully. We'll be in touch shortly.
+      </p>
+      <Link
+        href="/"
+        className="btn"
+        style={{ backgroundColor: "#FF66B0", color: "#000" }}
+      >
+        Back to Home
+      </Link>
+    </div>
+  );
+};
 
-export default ThankYou;
+export default ThankYouPage;
