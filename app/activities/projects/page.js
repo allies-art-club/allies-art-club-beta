@@ -61,7 +61,7 @@ const Projects = (props) => {
       </div>
 
       <div className="col-12 col-lg-4 text-center text-lg-end">
-        <img
+        <Image
           src="/assets/homepage/homepage1-2x.png"
           alt="Homepage pic 1"
           className="img-fluid rounded-circle"

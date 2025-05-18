@@ -79,7 +79,7 @@ const AboutAac = (props) => {
            </div>
      
            <div className="col-12 col-lg-4 text-center text-lg-end">
-             <img
+             <Image
                src="/assets/homepage/homepage1-2x.png"
                alt="Homepage pic 1"
                className="img-fluid rounded-circle"
@@ -140,7 +140,7 @@ const AboutAac = (props) => {
             <h5>CULTURAL <br /> EMPOWERMENT</h5>
           </BackgroundContainer>
           <p className="text-center mt-3">
-            Develop people's creative skills, knowledge, and involvement
+            Develop people&apos;s creative skills, knowledge, and involvement
             in generating positive social change through art and culture.
           </p>
         </BorderDottedBroken>
