@@ -29,6 +29,7 @@ const Contact: FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="p-3">
       <div className="mb-3">
+        <p>If you'd like to get in touch with any questions, ideas, feedback or suggestions, please fill out the contact form below.</p>
         <label htmlFor="name" className="form-label">
           Full Name
         </label>
