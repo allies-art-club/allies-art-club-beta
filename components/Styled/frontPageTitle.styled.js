@@ -22,9 +22,14 @@ export const BackgroundContainer = styled.figure`
 @media(min-width:768px){
   margin:0;
   position:relative;
-  top:-5rem;
+  top:-3rem;
 }
 
+@media(min-width:1026px){
+  margin:0;
+  position:relative;
+  top:-4rem;
+}
   
 
 `;
