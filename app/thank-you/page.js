@@ -8,7 +8,7 @@ const ThankYouPage = () => {
     <div className="d-flex flex-column align-items-center justify-content-center vh-100 p-4 text-center">
       <h1 className="mb-4">Thank You!</h1>
       <p className="mb-4">
-        Your message has been sent successfully. We'll be in touch shortly.
+        Your message has been sent successfully. W&apos;ll be in touch shortly.
       </p>
       <Link
         href="/"
