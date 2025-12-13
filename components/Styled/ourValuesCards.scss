@@ -1,0 +1,37 @@
+.three-titles-container {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 10rem;
+
+  .three-titles-card {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+    color: white;
+    line-height: 1.25;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    // Target the first card
+    &:nth-child(1) {
+      transform: rotate(-2deg);
+    }
+
+    // Target the second card
+    &:nth-child(2) {
+      transform: rotate(2deg);
+    }
+
+    // Target the third card
+    &:nth-child(3) {
+      transform: rotate(-2deg);
+    }
+  }
+}
