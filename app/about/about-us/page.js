@@ -2,7 +2,7 @@
 
 import React from "react";
 import { connect } from "react-redux";
-import Image from 'next/image'
+import Image from "next/image";
 import {
   Paragraph,
   Article,
@@ -31,7 +31,7 @@ import {
   GridWrap,
   TextWrap,
   BorderDottedBroken,
-  BackgroundContainer
+  BackgroundContainer,
 } from "../../../components/Styled/gridParagraph.styled";
 
 import SideNav from "../../../components/sideNav/sideNav.js";
@@ -63,34 +63,35 @@ const AboutAac = (props) => {
         title={"About Us"}
       ></TitleBanner>
 
-     <Section>
-       <div className="container-fluid">
-         <div className="row align-items-center flex-column flex-lg-row">
-           
-           <div className="col-12 col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
-             <HomepageSubtitles>
-               Creative explorations and practices for a life-affirming world
-             </HomepageSubtitles>
-             <Paragraph>
-               As an organisation and a community, we practice and explore ways of
-               creating and sustaining a life-affirming world in which all living
-               beings can thrive.
-             </Paragraph>
-           </div>
-     
-           <div className="col-12 col-lg-4 text-center text-lg-end">
-             <Image
-               src="/assets/homepage/homepage1-2x.png"
-               alt="Homepage pic 1"
-               className="img-fluid rounded-circle"
-             />
-           </div>
-     
-         </div>
-       </div>
-     </Section>
+      <Section>
+        <div className="container-fluid">
+          <div className="row align-items-center flex-column flex-lg-row">
+            <div className="col-12 col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+              <HomepageSubtitles>
+                Creative explorations and practices for a life-affirming world
+              </HomepageSubtitles>
+              <Paragraph>
+                As an organisation and a community, we practice and explore ways
+                of creating and sustaining a life-affirming world in which all
+                living beings can thrive.
+              </Paragraph>
+            </div>
 
-
+            <div className="col-12 col-lg-4 text-center text-lg-end">
+              <div
+                style={{ position: "relative", width: "100%", height: "500px" }}
+              >
+                <Image
+                  src="/assets/homepage/homepage1-2x.png"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  alt="Homepage Image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
 
       <Section>
         <HomepageSubtitles>Our Mission</HomepageSubtitles>
@@ -100,58 +101,60 @@ const AboutAac = (props) => {
         </Paragraph>
       </Section>
 
+      <div className="container my-5">
+        <div className="row text-center">
+          <div className="col-lg-4 col-md-12 col-12 mb-4">
+            <TextWrap>
+              <BorderDottedBroken>
+                <BackgroundContainer bgColor="blue">
+                  <h5>
+                    CREATIVE <br /> EXPRESSION
+                  </h5>
+                </BackgroundContainer>
+                <p className="text-center mt-3">
+                  Create inclusive opportunities for people to express their
+                  ideas, knowledge, and experiences through a range of artistic
+                  mediums.
+                </p>
+              </BorderDottedBroken>
+            </TextWrap>
+          </div>
 
-<div className="container my-5">
-  <div className="row text-center">
-    <div className="col-lg-4 col-md-12 col-12 mb-4">
-      <TextWrap>
-        <BorderDottedBroken>
-          <BackgroundContainer bgColor="blue">
-            <h5>CREATIVE <br /> EXPRESSION</h5>
-          </BackgroundContainer>
-          <p className="text-center mt-3">
-            Create inclusive opportunities for people to express their
-            ideas, knowledge, and experiences through a range of artistic
-            mediums.
-          </p>
-        </BorderDottedBroken>
-      </TextWrap>
-    </div>
+          <div className="col-lg-4 col-md-12 col-12 mb-4">
+            <TextWrap>
+              <BorderDottedBroken>
+                <BackgroundContainer bgColor="pink">
+                  <h5>
+                    COLLECTIVE <br /> CARE
+                  </h5>
+                </BackgroundContainer>
+                <p className="text-center mt-3">
+                  Provide fun, safe, and accessible spaces for people to
+                  connect, build supportive relationships and improve their
+                  health and wellbeing.
+                </p>
+              </BorderDottedBroken>
+            </TextWrap>
+          </div>
 
-    <div className="col-lg-4 col-md-12 col-12 mb-4">
-      <TextWrap>
-        <BorderDottedBroken>
-          <BackgroundContainer bgColor="pink">
-            <h5>COLLECTIVE <br /> CARE</h5>
-          </BackgroundContainer>
-          <p className="text-center mt-3">
-            Provide fun, safe, and accessible spaces for people to connect,
-            build supportive relationships and improve their health and
-            wellbeing.
-          </p>
-        </BorderDottedBroken>
-      </TextWrap>
-    </div>
-
-    <div className="col-lg-4 col-md-12 col-12 mb-4">
-      <TextWrap>
-        <BorderDottedBroken>
-          <BackgroundContainer bgColor="yellow">
-            <h5>CULTURAL <br /> EMPOWERMENT</h5>
-          </BackgroundContainer>
-          <p className="text-center mt-3">
-            Develop people&apos;s creative skills, knowledge, and involvement
-            in generating positive social change through art and culture.
-          </p>
-        </BorderDottedBroken>
-      </TextWrap>
-    </div>
-  </div>
-</div>
-
-
-
-
+          <div className="col-lg-4 col-md-12 col-12 mb-4">
+            <TextWrap>
+              <BorderDottedBroken>
+                <BackgroundContainer bgColor="yellow">
+                  <h5>
+                    CULTURAL <br /> EMPOWERMENT
+                  </h5>
+                </BackgroundContainer>
+                <p className="text-center mt-3">
+                  Develop people&apos;s creative skills, knowledge, and
+                  involvement in generating positive social change through art
+                  and culture.
+                </p>
+              </BorderDottedBroken>
+            </TextWrap>
+          </div>
+        </div>
+      </div>
 
       <Section>
         <OurVision id="ourVision">
@@ -220,63 +223,59 @@ const AboutAac = (props) => {
           working and relating.
         </Paragraph>
 
+        <div className="container my-5">
+          <div className="row text-center">
+            <div className="col-lg-4 col-md-12 col-12 mb-4">
+              <BorderDottedBroken>
+                <h3>
+                  Art <br /> Care
+                </h3>
+                <Image
+                  src="/assets/gridParagraphPics/gridParagraphPic1.png"
+                  alt="aboutUsRoundPics1"
+                  width={500}
+                  height={500}
+                  className="img-fluid rounded"
+                />
+                <p className="text-center mt-3">
+                  <i>How can the arts support our health and wellbeing?</i>
+                </p>
+              </BorderDottedBroken>
+            </div>
 
- <div className="container my-5">
-           <div className="row text-center">
-             <div className="col-lg-4 col-md-12 col-12 mb-4">
-               <BorderDottedBroken>
-                 <h3>
-                   Art <br /> Care
-                 </h3>
-                 <Image
-                   src="/assets/gridParagraphPics/gridParagraphPic1.png"
-                   alt="aboutUsRoundPics1"
-                   width={500}
-                   height={500}
-                   className="img-fluid rounded"
-                 />
-                 <p className="text-center mt-3">
-                   <i>How can the arts support our health and wellbeing?</i>
-                 </p>
-               </BorderDottedBroken>
-             </div>
- 
-             <div className="col-lg-4 col-md-12 col-12 mb-4">
-               <BorderDottedBroken>
-                 <h3>Creative Ecologies</h3>
-                 <Image
-                   src="/assets/gridParagraphPics/gridParagraphPic2.png"
-                   alt="aboutUsRoundPics1"
-                   width={500}
-                   height={500}
-                   className="img-fluid rounded"
-                 />
-                 <p className="text-center mt-3">
-                   <i>How can we live well together on our shared planet?</i>
-                 </p>
-               </BorderDottedBroken>
-             </div>
- 
-             <div className="col-lg-4 col-md-12 col-12 mb-4">
-               <BorderDottedBroken>
-                 <h3>Reimagining Work</h3>
-                 <Image
-                   src="/assets/gridParagraphPics/gridParagraphPic3.png"
-                   alt="aboutUsRoundPics1"
-                   width={500}
-                   height={500}
-                   className="img-fluid rounded"
-                 />
-                 <p className="text-center mt-3">
-                   <i>How can our labour practices be life-affirming?</i>
-                 </p>
-               </BorderDottedBroken>
-             </div>
-           </div>
-         </div>
+            <div className="col-lg-4 col-md-12 col-12 mb-4">
+              <BorderDottedBroken>
+                <h3>Creative Ecologies</h3>
+                <Image
+                  src="/assets/gridParagraphPics/gridParagraphPic2.png"
+                  alt="aboutUsRoundPics1"
+                  width={500}
+                  height={500}
+                  className="img-fluid rounded"
+                />
+                <p className="text-center mt-3">
+                  <i>How can we live well together on our shared planet?</i>
+                </p>
+              </BorderDottedBroken>
+            </div>
 
-
-
+            <div className="col-lg-4 col-md-12 col-12 mb-4">
+              <BorderDottedBroken>
+                <h3>Reimagining Work</h3>
+                <Image
+                  src="/assets/gridParagraphPics/gridParagraphPic3.png"
+                  alt="aboutUsRoundPics1"
+                  width={500}
+                  height={500}
+                  className="img-fluid rounded"
+                />
+                <p className="text-center mt-3">
+                  <i>How can our labour practices be life-affirming?</i>
+                </p>
+              </BorderDottedBroken>
+            </div>
+          </div>
+        </div>
       </Section>
 
       <Section>
