@@ -6,14 +6,15 @@
   max-width: 100%;
   justify-content: space-between;
   margin: 2rem 0;
-  gap: 10rem;
+  gap: 5rem;
 
   .three-titles-card {
     flex: 1;
     min-width: 200px;
+    font-family: var(--font-ballon-font);
     padding: 1rem;
     color: white;
-    line-height: 1.25;
+    text-align: left !important;
     text-align: center;
     transition: transform 0.3s ease;
 
@@ -34,6 +35,25 @@
     // Target the third card
     &:nth-child(3) {
       transform: rotate(-2deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .three-titles-container {
+    flex-direction: column; 
+        gap: 2rem; 
+        align-items: center; 
+  }
+
+  .three-titles-container .three-titles-card {
+    width: 100%;
+    min-width: unset; 
+    
+    transform: none !important; 
+
+    &:hover {
+      transform: scale(1.02); 
     }
   }
 }

@@ -491,6 +491,7 @@ const TextImageCaption = styled.figcaption`
 `;
 const TextImageTop = styled(TextImage)`
   display: ${(props) => (props.$mobile ? "block" : "none")};
+  width: ${(props) => props.$width || '30%'};
 
   @media (min-width: 768px) {
     display: ${(props) => (props.$mobile ? "none" : "block")};

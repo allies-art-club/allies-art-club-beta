@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2rem;
     font-family: var(--font-arial-nova-cond);  //global font
   }
-  p, figcaption {
+  figcaption {
     text-align: justify;
   }
 `
