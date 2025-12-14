@@ -3,6 +3,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import Image from "next/image";
+import "../../../globals.scss";
+
 import {
   Paragraph,
   Article,
@@ -77,14 +79,18 @@ const AboutAac = (props) => {
               </Paragraph>
             </div>
 
-            <div className="col-12 col-lg-4 text-center text-lg-end">
+            <div className="col-12 col-lg-4 text-center text-lg-end rounded-xl overflow-hidden">
               <div
+                className="rounded-xl overflow-hidden"
                 style={{ position: "relative", width: "100%", height: "500px" }}
               >
                 <Image
                   src="/assets/homepage/homepage1-2x.png"
                   fill
-                  style={{ objectFit: "cover" }}
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "50%",
+                  }}
                   alt="Homepage Image"
                 />
               </div>

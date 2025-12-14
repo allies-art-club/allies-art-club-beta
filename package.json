@@ -12,6 +12,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@reduxjs/toolkit": "^2.2.7",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/nodemailer": "^6.4.17",
     "bootstrap": "^5.3.5",
     "dotenv": "^16.4.5",
