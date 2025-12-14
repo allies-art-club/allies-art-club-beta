@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import store from '../utils/store';
 import {toggleMenu,toggleSubMenu} from '../utils/Actions/appActions.js';
 import GlobalStyle from '../components/Styled/global.styled.js'
+import '../globals.scss';
 import Container from '../components/clipboard/template.js'
 import {StyledComponentsRegistry} from '../utils/serverstylesheet.js'
 import { bigStem, arialNovaCond,arialNovaCondBold,nickAinley } from './fonts.js';
