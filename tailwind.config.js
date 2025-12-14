@@ -1,13 +1,9 @@
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
+// postcss.config.js (or .mjs) - After fix
 module.exports = {
-  content: [
-    // Look in all files under app/
-    "./app/**/*.{js,ts,jsx,tsx,mdx}", 
-    // Add other directories if needed (e.g., components)
-  ],
-  theme: {
-    extend: {},
+  plugins: {
+    // You may also be able to remove 'postcss-import' and 'autoprefixer'
+    // as Tailwind v4 handles these internally, but keeping them for now is safe.
+    '@tailwindcss/postcss': {}, // ✅ Add this line
+    'autoprefixer': {}, // Keep or remove based on your needs/version (Tailwind v4 includes it)
   },
-  plugins: [],
 }

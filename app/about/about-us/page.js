@@ -43,6 +43,8 @@ import Carousel from "../../../components/carousel.js";
 import { carouselClick } from "../../../utils/Actions/homeActions";
 import carouselConfig from "../../../utils/carouselConfig/carouselAboutAac.js";
 import CarouselAboutUs from "../../../components/carouselAboutUs.js";
+import AboutUsCards from "../../../components/general/aboutUsCards";
+import OurValuesCards from "../../../components/general/ourValuesCards";
 
 import "../../fonts/arial-nova-cond-bold/stylesheet.css";
 
@@ -107,79 +109,17 @@ const AboutAac = (props) => {
         </Paragraph>
       </Section>
 
-      <div className="container my-5">
-        <div className="row text-center">
-          <div className="col-lg-4 col-md-12 col-12 mb-4">
-            <TextWrap>
-              <BorderDottedBroken>
-                <BackgroundContainer bgColor="blue">
-                  <h5>
-                    CREATIVE <br /> EXPRESSION
-                  </h5>
-                </BackgroundContainer>
-                <p className="text-center mt-3">
-                  Create inclusive opportunities for people to express their
-                  ideas, knowledge, and experiences through a range of artistic
-                  mediums.
-                </p>
-              </BorderDottedBroken>
-            </TextWrap>
-          </div>
-
-          <div className="col-lg-4 col-md-12 col-12 mb-4">
-            <TextWrap>
-              <BorderDottedBroken>
-                <BackgroundContainer bgColor="pink">
-                  <h5>
-                    COLLECTIVE <br /> CARE
-                  </h5>
-                </BackgroundContainer>
-                <p className="text-center mt-3">
-                  Provide fun, safe, and accessible spaces for people to
-                  connect, build supportive relationships and improve their
-                  health and wellbeing.
-                </p>
-              </BorderDottedBroken>
-            </TextWrap>
-          </div>
-
-          <div className="col-lg-4 col-md-12 col-12 mb-4">
-            <TextWrap>
-              <BorderDottedBroken>
-                <BackgroundContainer bgColor="yellow">
-                  <h5>
-                    CULTURAL <br /> EMPOWERMENT
-                  </h5>
-                </BackgroundContainer>
-                <p className="text-center mt-3">
-                  Develop people&apos;s creative skills, knowledge, and
-                  involvement in generating positive social change through art
-                  and culture.
-                </p>
-              </BorderDottedBroken>
-            </TextWrap>
-          </div>
-        </div>
-      </div>
+      <AboutUsCards />
 
       <Section>
-        <OurVision id="ourVision">
-          <OurVisionStarL id="OurVisionStarL">
-            <Image
-              src="/assets/general/starR.png"
-              alt="Stars L"
-              width={200}
-              height={162}
-              layout="responsive"
-            />
-          </OurVisionStarL>{" "}
-          <HomepageSubtitles>Our Vision</HomepageSubtitles>
-          <br />
-          <Paragraph>
-            Our vision is a life-affirming world, where a culture of community,
-            creativity and care supports all life to flourish.
-          </Paragraph>
-        </OurVision>
+        <div className="flex items-center justify-between">
+          <h2>Our Vision</h2>
+          <img
+            src="/assets/general/starR.png"
+            alt="Decorative star image"
+            className="w-10 h-10 md:w-28 md:h-28 lg:w-40 lg:h-40"
+          />
+        </div>
       </Section>
 
       <Section>
@@ -206,6 +146,11 @@ const AboutAac = (props) => {
           creating and sustaining a life-affirming world in which all living
           beings can thrive.
         </Paragraph>
+        <Paragraph>
+          We focus on three areas that we believe are vital for this radical
+          vision, and integrate our continuous learning into our ways of living,
+          working and relating.
+        </Paragraph>
         <picture>
           <source
             media="(max-width: 1024px)"
@@ -222,13 +167,11 @@ const AboutAac = (props) => {
           />
         </picture>{" "}
       </Section>
-      <Section>
-        <Paragraph>
-          We focus on three areas that we believe are vital for this radical
-          vision, and integrate our continuous learning into our ways of living,
-          working and relating.
-        </Paragraph>
 
+
+
+
+      <Section>
         <div className="container my-5">
           <div className="row text-center">
             <div className="col-lg-4 col-md-12 col-12 mb-4">
@@ -310,7 +253,7 @@ const AboutAac = (props) => {
       </Section>
 
       <Section>
-        <AboutUsSquares />
+        <OurValuesCards />
       </Section>
 
       <Section>

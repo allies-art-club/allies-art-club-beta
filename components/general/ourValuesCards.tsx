@@ -2,7 +2,6 @@
 import React from "react";
 import "../Styled/ourValuesCards.scss";
 
-
 const OurValuesCards = () => {
   const titles = [
     {
@@ -13,13 +12,13 @@ const OurValuesCards = () => {
       bgColor: "#2f60de",
     },
     {
-      text: "care",
+      text: "CARE",
 
       description: "We value empathy, compassion and social responsibility.",
       bgColor: "#ff25ab",
     },
     {
-      text: "create",
+      text: "CREATE",
 
       description: "We value imagination, self-expression and innovation.",
       bgColor: "#f4bc33",
